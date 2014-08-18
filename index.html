@@ -3,22 +3,26 @@ layout: default
 title: Your New Jekyll Site
 ---
 
-
-<div class="banner">
-	<div class="container"> 
-		<div class="row">	
-			<div class="col-lg-12">
-				<h2 class="headline">Cross platform BDD style testing tool</h2>
-			</div>		
-			<div class="row">
-				<div class="col-lg-4">
-					<h4></h4>
-				</div>
-				<div class="col-lg-4"></div>
-				<div class="col-lg-4"></div>
-			</div>
-		</div>
-	</div>
+<div class="container"> 
+	<section>
+		<h4>
+			Why to use Gauge?
+		</h4>
+		<ul>
+			<li>
+				Write business layer test specifications in rich <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> format.
+			</li>
+			<li>
+				Write your test cases in Ruby, java... more to come
+			</li>
+			<li>
+				Execute via command line or Intellij
+			</li>
+			<li>
+				Build a living documentation.
+			</li>
+		</ul>
+	</section>
 </div>
 
 <div class="container"> 
@@ -26,34 +30,9 @@ title: Your New Jekyll Site
 		<div class="col-lg-12">
 			<section>
 				<h4>
-					Reasons to use Gauge
+					How to install?
 				</h4>
-				<ul>
-					<li>
-						Write business layer test specifications in rich <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> format.
-					</li>
-					<li>
-						Write your test cases in Ruby, java... more to come
-					</li>
-					<li>
-						Execute via command line or Intellij
-					</li>
-					<li>
-						Build a living documentation.
-					</li>
-				</ul>
-			</section>
-		</div>
-	</div>
-</div>
-
-<div class="container"> 
-	<div class="row">	
-		<div class="col-lg-12">
-			<section>
-				<h4>
-					Installation
-				</h4>
+				<p>Download links and install information here</p>
 			 	<code>
 		 			gauge -install
 				</code>	
@@ -66,16 +45,29 @@ title: Your New Jekyll Site
 	<div class="row">	
 		<div class="col-lg-12">
 			<section>
-				<h4>Get started</h4>
+				<h4>How to start?</h4>
 
-				<h6>Execute it</h6>
+				<h6>1. Initialize a project</h6>
 				<code>
 					gauge --init java
 					  <br/>	 
 					gauge --init ruby
 				</code>
-
-				<h6>Executing Specifications</h6>
+				<p>
+				Choose the language the test cases are to written in. This initializes the project. A ruby project structure for example is:
+				</p>
+				<pre>
+├── env
+│   └── default
+│       ├── default.properties
+│       └── ruby.properties
+├── manifest.json
+├── specs
+│   └── hello_world.spec
+└── step_implementations
+    └── step_implementation.rb
+				</pre>
+				<h6>2. Executing Specifications</h6>
 				<code>
 					gauge specs/
 					  <br/>
@@ -91,7 +83,7 @@ title: Your New Jekyll Site
 	<div class="row">	
 		<div class="col-lg-12">
 			<section>
-				<h4>FAQ</h4>
+				<h4>Any doubt?</h4>
 				<ul>
 					<li>
 						<b>So what are the specifications?</b>
@@ -109,7 +101,7 @@ title: Your New Jekyll Site
 	<div class="row">	
 		<div class="col-lg-12">
 			<section>
-				<h4>Contribute us</h4>
+				<h4>What to contribute?</h4>
 				<p>	
 					<a href="https://github.com/getgauge/gauge">GitHub repo</a>												
 				</p>
