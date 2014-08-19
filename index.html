@@ -1,12 +1,13 @@
 ---
-layout: default
-title: Your New Jekyll Site
+layout: home
+title: Gauge
 ---
+
 
 <div class="container"> 
 	<section>
 		<h4>
-			Why to use Gauge?
+			Why use Gauge?
 		</h4>
 		<ul>
 			<li>
@@ -33,7 +34,7 @@ title: Your New Jekyll Site
 					How to install?
 				</h4>
 				<p>Download links and install information here</p>
-			 	<code>
+			 	<code class='code-block'>
 		 			gauge -install
 				</code>	
 			</section>
@@ -48,15 +49,42 @@ title: Your New Jekyll Site
 				<h4>How to start?</h4>
 
 				<h6>1. Initialize a project</h6>
-				<code>
+				<code class='code-block'>
 					gauge --init java
 					  <br/>	 
 					gauge --init ruby
 				</code>
+
+				<section class="demo">
+      <div class="browser-wrapper">
+      </div>
+      <div id="browser-container">
+        <div class="browser-code">           
+	        <pre><code>	        
+gauge --init java
+ create  manifest.json
+ create  specs
+ create  specs/hello_world.spec
+ create  env
+ create  env/default
+ create  env/default/default.properties
+ create  src/test/java
+ create  libs
+ create  src/test/java/StepImplementation.java
+ create  env/default/java.properties
+
+Successfully initialized the project. Run specifications with "gauge specs/"
+
+  			</code></pre>
+        </div>
+      </div>
+  </section>
+
+
 				<p>
 				Choose the language the test cases are to written in. This initializes the project. A ruby project structure for example is:
 				</p>
-				<pre>
+				<pre class='code-block'>
 ├── env
 │   └── default
 │       ├── default.properties
@@ -68,11 +96,61 @@ title: Your New Jekyll Site
     └── step_implementation.rb
 				</pre>
 				<h6>2. Executing Specifications</h6>
-				<code>
+				<code class='code-block'>
 					gauge specs/
 					  <br/>
 					gauge specs/hello_world.spec
 				</code>
+
+				<section class="demo">
+      <div class="browser-wrapper">
+      </div>
+      <div id="browser-container">
+        <div class="browser-code">           
+	        <pre><code>
+gauge specs/hello_world.spec
+Specification Heading
+====================
+* A context step which gets executed before every scenario
+
+First scenario
+--------------
+* A context step which gets executed before every scenario
+* Say "hello" to "gauge"
+hello, gauge
+
+Second scenario for the specification
+--------------------
+* A context step which gets executed before every scenario
+* Say "hello again" to "gauge"
+hello again, gauge
+* Step that takes a table
+     |Product|Description                  |
+     |-------|-----------------------------|
+     |Gauge  |BDD style testing with ease  |
+     |Mingle |Agile project management     |
+     |Snap   |Hosted continuous integration|
+     |Gocd   |Continuous delivery platform |
+Product
+Description
+[Gauge, BDD style testing with ease]
+[Mingle, Agile project management]
+[Snap, Hosted continuous integration]
+[Gocd, Continuous delivery platform]
+
+
+2 scenarios executed, 0 failed
+1 specifications executed, 0 failed
+  			</code></pre>
+        </div>
+      </div>
+  </section>
+
+  
+				<h6>3. Start writing Specifications</h6>
+				Specifications can be written under the specs directory in the project directory. They are <code class='word'>.spec</code> or <code class='word'>.md</code> files. 
+
+				<p><a href="/learn-more.html">Learn more</a> about writing tests.</p>
 
 			</section>
 		</div>

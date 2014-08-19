@@ -1,0 +1,93 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+
+<div class="container">
+<h3>So what are Specifications ?</h3>
+
+<p>Specifications are your business layer test cases which can also act as your feature documentation. Typically a spec or specification will be about a particular feature on the app under test. They are written in a .spec file. Gauge also support .md file format.</p>
+
+<p>A spec contains the following parts:</p>
+
+<h5>Spec Heading:</h5>
+<p>This is name of the specification. It is the first/topmost line of the spec. It is written as a Markdown H1 which can be written in 2 forms:</p>
+
+<pre class="code-block">
+ # Specification heading
+
+       or 
+
+ Specification heading
+ =====================</pre>
+
+<h5>Scenarios:</h5>
+
+<p>Every scenario represents a single flow for the specification. The scope of a scenario starts after a scenario heading/name. The scenario heading or scenario name is a Markdown H2 which can be written as:</p>
+
+
+<pre class="code-block">
+ ## Scenario heading
+
+       or 
+
+ Scenario heading
+ ----------------</pre>
+
+<p>A specification must contain one or more scenarios.</p>
+
+<h5>Steps:</h5>
+
+<p>These are the executable components of your specification. They are bulleted points that start with a "*".</p>
+
+<ul>
+	<li>Login into my app</li>
+	<li>Search for "gauge"</li>
+	<li>Search for "gauge-java"</li>
+</ul>
+
+<p>The values written in quotes are parameters which are passed into the underlying step implementation as a language specific structure.</p>
+
+<h5>Context-Steps:</h5>
+
+<p>The steps which are defined before any scenario in the specification. They are executed before each scenario.</p>
+
+<pre class="code-block">
+# Create project specification
+
+Before creating a project user should be logged in. This context step will log in user before executing every scenario:
+
+* Log in as user "admin"
+
+Create templated project scenario
+---------------------------------
+
+* Create a new project using template.
+
+Create project from scratch scenario
+------------------------------------
+
+* Create a new project with all details
+</pre>
+
+<h6>Parameters</h6>
+<p>The parameters passed into a step can be of different types:</p>
+
+<b>Static parameter:</b>
+<p>They are string or integer values passed into the steps</p>
+
+<h4>Tags:</h4>
+
+<p>They are used to associate labels with specifications or scenarios. Tags are written as comma separated values in the spec.</p>
+
+<pre class="code-block">
+Login specification
+===================
+
+Tags: login, admin, user-abc
+
+Successful login scenario
+-------------------------
+
+Tags: login-success, admin</pre>
+</div>
