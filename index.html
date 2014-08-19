@@ -27,18 +27,16 @@ title: Gauge
 
 				<h6>1. Initialize a project</h6>
 				<code class='code-block'>
-					gauge --init java
-					  <br/>	 
-					gauge --init ruby
+					gauge --init [language | java or ruby]
 				</code>
-
+				<p>For example</p>
 				<section class="demo">
       <div class="browser-wrapper">
       </div>
       <div id="browser-container">
         <div class="browser-code">           
 	        <pre><code>	        
-gauge --init java
+<span class='command'>$ gauge --init java</span>
  create  manifest.json
  create  specs
  create  specs/hello_world.spec
@@ -74,18 +72,16 @@ Successfully initialized the project. Run specifications with "gauge specs/"
 				</pre>
 				<h6>2. Executing Specifications</h6>
 				<code class='code-block'>
-					gauge specs/
-					  <br/>
-					gauge specs/hello_world.spec
+					gauge [.spec file]
 				</code>
-
+<p>For example</p>
 				<section class="demo">
       <div class="browser-wrapper">
       </div>
       <div id="browser-container">
         <div class="browser-code">           
 	        <pre><code>
-gauge specs/hello_world.spec
+<span class='command'>$ gauge specs/hello_world.spec</span>
 Specification Heading
 ====================
 * A context step which gets executed before every scenario
