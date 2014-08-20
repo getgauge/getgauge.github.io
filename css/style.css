@@ -49,6 +49,9 @@ code.word {
     font-size: 4em;
     text-align: center;
 }
+.title{
+    text-align: center;
+}
 .banner {
     background: url('/img/triangular.png') #3FC380;
     background-size: 60px 60px;
