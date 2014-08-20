@@ -6,22 +6,22 @@ title: Help
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-3  col-md-3" style="padding-right:0;">
+        <div class="col-lg-3  col-md-3 col-sm-3" style="padding-right:0;">
             <ul class="sidebar">
                 <li><a href="">So what are Specifications?</a>
                 </li>
                 <li>
 
                     <ul>
-                        <li><a href="">Spec Heading</a>
+                        <li><a href="#spec-heading">Spec Heading</a>
                         </li>
-                        <li><a href="">Scenarios</a>
+                        <li><a href="#scenarios">Scenarios</a>
                         </li>
-                        <li><a class="selected" href="">Steps</a>
+                        <li><a href="#steps" class="selected" >Steps</a>
                         </li>
-                        <li><a href="">Context-Steps</a>
+                        <li><a href="#context-steps">Context-Steps</a>
                         </li>
-                        <li><a href="">Parameters</a>
+                        <li><a href="#parameters">Parameters</a>
                         </li>
                     </ul>
                 </li>
@@ -29,13 +29,15 @@ title: Help
                 </li>
             </ul>
         </div>
-        <div class="col-lg-9 col-md-9 content">
+        <div class="col-lg-9 col-md-9 col-sm-9 content">
+        	<a name="specifications"></a>
             <h3>So what are Specifications ?</h3>
 
             <p>Specifications are your business layer test cases which can also act as your feature documentation. Typically a spec or specification will be about a particular feature on the app under test. They are written in a .spec file. Gauge also support .md file format.</p>
 
             <p>A spec contains the following parts:</p>
 
+        	<a name="spec-heading"></a>
             <h5>Spec Heading:</h5>
             <p>This is name of the specification. It is the first/topmost line of the spec. It is written as a Markdown H1 which can be written in 2 forms:</p>
 
@@ -47,6 +49,7 @@ title: Help
  Specification heading
  =====================</pre>
 
+			<a name="scenarios"></a>
             <h5>Scenarios:</h5>
 
             <p>Every scenario represents a single flow for the specification. The scope of a scenario starts after a scenario heading/name. The scenario heading or scenario name is a Markdown H2 which can be written as:</p>
@@ -62,6 +65,7 @@ title: Help
 
             <p>A specification must contain one or more scenarios.</p>
 
+            <a name="steps"></a>
             <h5>Steps:</h5>
 
             <p>These are the executable components of your specification. They are bulleted points that start with a "*".</p>
@@ -74,7 +78,9 @@ title: Help
 
             <p>The values written in quotes are parameters which are passed into the underlying step implementation as a language specific structure.</p>
 
+            <a name="context-steps"></a>
             <h5>Context-Steps:</h5>
+
 
             <p>The steps which are defined before any scenario in the specification. They are executed before each scenario.</p>
 
@@ -96,12 +102,14 @@ Create project from scratch scenario
 * Create a new project with all details
 </pre>
 
+			<a name="parameters"></a>
             <h6>Parameters</h6>
             <p>The parameters passed into a step can be of different types:</p>
 
             <b>Static parameter:</b>
             <p>They are string or integer values passed into the steps</p>
 
+            <a name="tags"></a>
             <h4>Tags:</h4>
 
             <p>They are used to associate labels with specifications or scenarios. Tags are written as comma separated values in the spec.</p>
@@ -124,8 +132,25 @@ $(function(){
 	$('.sidebar li a').click(function() {
 		$('.sidebar li a').removeClass('selected');
 		$(this).addClass('selected');
+	    
+	     $('html, body').animate({
+        		scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+		}, 500);
+
 	    return false;
-	})	
+	});
+
+	var doc = document.documentElement,
+        body = document.body;
+
+	var headerTop = $('.sidebar').offset().top;
+    window.addEventListener('scroll', function() {
+        var top = doc && doc.scrollTop || body && body.scrollTop || 0;
+        if (top > headerTop)
+            document.getElementsByClassName('sidebar')[0].classList.add('fixedToTop')
+        else
+            document.getElementsByClassName('sidebar')[0].classList.remove('fixedToTop')
+    });
 })
 
 </script>
@@ -141,8 +166,6 @@ body {
 }
 .sidebar {
     margin-top: 30px;
-    padding: 20px;
-    padding-right: 0;
     margin-right: 0;
     list-style: none;
 }
@@ -168,5 +191,9 @@ body {
     padding-left: 0;
     list-style: none;
     margin-bottom: 10px;
+}
+.fixedToTop{
+	position: fixed;
+	top: 0;
 }
 </style>
