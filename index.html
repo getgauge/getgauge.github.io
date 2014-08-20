@@ -3,7 +3,6 @@ layout: home
 title: Gauge
 ---
 
-
 <a name="features"></a>
 <section class="grey-section">
     <div class="container">
@@ -45,35 +44,38 @@ title: Gauge
 
 
 <a name="getstarted"></a>
-<div class="container"> 
-	<div class="row">	
-		<div class="col-lg-12">
-			<section>
-				<h4>
-					Get started
-				</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <section>
+                <h4>
+                    Get started
+                </h4>
 
 
-				<h6>1. Download</h6>
+                <h5>
+                    <a href=""><i class='fa fa-download'></i>Download</a> package and get started quickly
+                </h5>
 
-				<p>Download links and install information here</p>
-			 	<code class='code-block'>
-		 			gauge -install
-				</code>	
-			</section>
 
-			<section>
-				<h6>2. Initialize a project</h6>
-				<code class='code-block'>
-					gauge --init [language | java or ruby]
-				</code>
-				<p>For example</p>
-				<section class="demo">
-      <div class="browser-wrapper">
-      </div>
-      <div id="browser-container">
-        <div class="browser-code">           
-	        <pre><code>	        
+                <section class="demo">
+                    <div class="browser-wrapper">
+                    </div>
+                    <div id="browser-container">
+                        <div class="browser-code">
+                            <pre><code><span class='command'>$ gauge -install</span></code></pre>
+                        </div>
+                    </div>
+                </section>
+                <h5>
+                	Initialize with your preferred language
+                </h5>
+                    <section class="demo">
+                    <div class="browser-wrapper">
+                    </div>
+                    <div id="browser-container">
+                        <div class="browser-code">
+                            <pre><code>	        
 <span class='command'>$ gauge --init java</span>
  create  manifest.json
  create  specs
@@ -89,37 +91,20 @@ title: Gauge
 Successfully initialized the project. Run specifications with "gauge specs/"
 
   			</code></pre>
-        </div>
-      </div>
-  </section>
+                        </div>
+                    </div>
+                </section>
 
+            </section>
 
-				<p>
-				Choose the language the test cases are to written in. This initializes the project. A ruby project structure for example is:
-				</p>
-				<pre class='code-block'>
-├── env
-│   └── default
-│       ├── default.properties
-│       └── ruby.properties
-├── manifest.json
-├── specs
-│   └── hello_world.spec
-└── step_implementations
-    └── step_implementation.rb
-				</pre>
-				<h6>3. Executing Specifications</h6>
-				<code class='code-block'>
-					gauge [.spec file]
-				</code>
-<p>For example</p>
-				<section class="demo">
-      <div class="browser-wrapper">
-      </div>
-      <div id="browser-container">
-        <div class="browser-code">           
-	        <pre><code>
-<span class='command'>$ gauge specs/hello_world.spec</span>
+            <section>
+                <h6>Executing your first Specification</h6>
+                <section class="demo">
+                    <div class="browser-wrapper">
+                    </div>
+                    <div id="browser-container">
+                        <div class="browser-code">
+                            <pre><code><span class='command'>$ gauge specs/hello_world.spec</span>
 Specification Heading
 ====================
 * A context step which gets executed before every scenario
@@ -153,57 +138,81 @@ Description
 2 scenarios executed, 0 failed
 1 specifications executed, 0 failed
   			</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+
+                <h6>Learn more about writing Specifications</h6>
+                Specifications can be written under the specs directory in the project directory. They are
+                <code class='word'>.spec</code>or
+                <code class='word'>.md</code>files.
+
+                <p><a href="/learn-more.html">Learn more</a> about writing tests.</p>
+
+            </section>
         </div>
-      </div>
-  </section>
-
-
-			<h6>4. Start writing Specifications</h6>
-			Specifications can be written under the specs directory in the project directory. They are <code class='word'>.spec</code> or <code class='word'>.md</code> files. 
-
-			<p><a href="/learn-more.html">Learn more</a> about writing tests.</p>
-
-			</section>
-		</div>
-	</div>
+    </div>
 </div>
 
-<div class="container"> 
-	<div class="row">	
-		<div class="col-lg-12">
-			<section>
-				<h4>Any doubt?</h4>
-				<ul>
-					<li>
-						<b>So what are the specifications?</b>
-						<p>
-							Ans will be here
-						</p>
-					</li>
-				</ul>
-			</section>
-		</div>
-	</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <section>
+                <h4>Any doubt?</h4>
+                <ul>
+                    <li>
+                        <b>So what are the specifications?</b>
+                        <p>
+                            Ans will be here
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
 </div>
 
 <div id="social-buttons" class="hidden-print">
-  <div class="container">
-    <ul class="list-inline">
-      <li>
-        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=getgauge&amp;repo=gauge&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-      </li>
-      <li>
-        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=getgauge&amp;repo=gauge&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
-      </li>
-      <li class="follow-btn">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getgauge.io">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <div class="container">
+        <ul class="list-inline">
+            <li>
+                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=getgauge&amp;repo=gauge&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+            </li>
+            <li>
+                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=getgauge&amp;repo=gauge&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+            </li>
+            <li class="follow-btn">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getgauge.io">Tweet</a>
+                <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');
+                </script>
 
-      </li>
-      <li class="tweet-btn hidden-phone">
-        <a href="https://twitter.com/getgauge" class="twitter-follow-button" data-show-count="true">Follow @getgauge</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      </li>
-    </ul>
-  </div>
+            </li>
+            <li class="tweet-btn hidden-phone">
+                <a href="https://twitter.com/getgauge" class="twitter-follow-button" data-show-count="true">Follow @getgauge</a>
+                <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');
+                </script>
+            </li>
+        </ul>
+    </div>
 </div>

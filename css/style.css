@@ -30,8 +30,10 @@ h6 {
 }
 code.code-block, pre.code-block {
     padding: 10px;
-    background: #efefef;
+    background: #333;
     display: block;
+    color: #eee;
+    border-radius: 5px;
 }
 code.word {
     display: inline;
@@ -133,6 +135,7 @@ section.demo #browser-container {
 .browser-code pre {
     background: #494f57;
     border-radius: 0 0 5px 5px;
+    margin: 20px 0;
 }
 .browser-code .row::before {
     background: rgba(255, 255, 255, 0);
@@ -153,7 +156,7 @@ section.demo #browser-container {
     cursor: pointer;
 }
 .browser-code .command {
-    color: white;
+    color: rgb(181, 255, 174);
     font-size: 16px;
     display: block;
     font-family: monospace;
@@ -214,13 +217,24 @@ section.demo #browser-container {
     background: #3FC380;
     width: 350px;
     text-align: center;
-  -webkit-transform: rotate(45deg); 
-      -ms-transform: rotate(45deg); 
-          transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
     padding: 5px;
     color: #160F29 !important;
 }
-.fork-ribbon:hover{
+.fork-ribbon:hover {
     background: #46D58C;
     text-decoration: none;
-} 
+}
+.number-step {
+    padding: 10px;
+    height: 30px;
+    line-height: 0.6;
+    margin-right: 7px;
+    width: 30px;
+    display: inline-block;
+    color: white;
+    border-radius: 50%;
+    background: #3FC380;
+}
