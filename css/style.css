@@ -1,3 +1,4 @@
+
 * {
     font-family: 'Open Sans', sans-serif;
 }
@@ -46,7 +47,7 @@ code.word {
     font-size: 4em;
     text-align: center;
 }
-.title{
+.title {
     text-align: center;
 }
 .banner {
@@ -241,3 +242,4 @@ section.demo #browser-container {
         border-width: 23px 10px 0px 62px;
     }
 }
+    

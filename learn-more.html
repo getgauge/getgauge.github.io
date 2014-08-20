@@ -1,19 +1,45 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Help
 ---
 
+
 <div class="container">
-<h3>So what are Specifications ?</h3>
+    <div class="row">
+        <div class="col-lg-3  col-md-3" style="padding-right:0;">
+            <ul class="sidebar">
+                <li><a href="">So what are Specifications?</a>
+                </li>
+                <li>
 
-<p>Specifications are your business layer test cases which can also act as your feature documentation. Typically a spec or specification will be about a particular feature on the app under test. They are written in a .spec file. Gauge also support .md file format.</p>
+                    <ul>
+                        <li><a href="">Spec Heading</a>
+                        </li>
+                        <li><a href="">Scenarios</a>
+                        </li>
+                        <li><a class="selected" href="">Steps</a>
+                        </li>
+                        <li><a href="">Context-Steps</a>
+                        </li>
+                        <li><a href="">Parameters</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="">Tags</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-9 col-md-9 content">
+            <h3>So what are Specifications ?</h3>
 
-<p>A spec contains the following parts:</p>
+            <p>Specifications are your business layer test cases which can also act as your feature documentation. Typically a spec or specification will be about a particular feature on the app under test. They are written in a .spec file. Gauge also support .md file format.</p>
 
-<h5>Spec Heading:</h5>
-<p>This is name of the specification. It is the first/topmost line of the spec. It is written as a Markdown H1 which can be written in 2 forms:</p>
+            <p>A spec contains the following parts:</p>
 
-<pre class="code-block">
+            <h5>Spec Heading:</h5>
+            <p>This is name of the specification. It is the first/topmost line of the spec. It is written as a Markdown H1 which can be written in 2 forms:</p>
+
+            <pre class="code-block">
  # Specification heading
 
        or 
@@ -21,12 +47,12 @@ title: Your New Jekyll Site
  Specification heading
  =====================</pre>
 
-<h5>Scenarios:</h5>
+            <h5>Scenarios:</h5>
 
-<p>Every scenario represents a single flow for the specification. The scope of a scenario starts after a scenario heading/name. The scenario heading or scenario name is a Markdown H2 which can be written as:</p>
+            <p>Every scenario represents a single flow for the specification. The scope of a scenario starts after a scenario heading/name. The scenario heading or scenario name is a Markdown H2 which can be written as:</p>
 
 
-<pre class="code-block">
+            <pre class="code-block">
  ## Scenario heading
 
        or 
@@ -34,25 +60,25 @@ title: Your New Jekyll Site
  Scenario heading
  ----------------</pre>
 
-<p>A specification must contain one or more scenarios.</p>
+            <p>A specification must contain one or more scenarios.</p>
 
-<h5>Steps:</h5>
+            <h5>Steps:</h5>
 
-<p>These are the executable components of your specification. They are bulleted points that start with a "*".</p>
+            <p>These are the executable components of your specification. They are bulleted points that start with a "*".</p>
 
-<ul>
-	<li>Login into my app</li>
-	<li>Search for "gauge"</li>
-	<li>Search for "gauge-java"</li>
-</ul>
+            <ul>
+                <li>Login into my app</li>
+                <li>Search for "gauge"</li>
+                <li>Search for "gauge-java"</li>
+            </ul>
 
-<p>The values written in quotes are parameters which are passed into the underlying step implementation as a language specific structure.</p>
+            <p>The values written in quotes are parameters which are passed into the underlying step implementation as a language specific structure.</p>
 
-<h5>Context-Steps:</h5>
+            <h5>Context-Steps:</h5>
 
-<p>The steps which are defined before any scenario in the specification. They are executed before each scenario.</p>
+            <p>The steps which are defined before any scenario in the specification. They are executed before each scenario.</p>
 
-<pre class="code-block">
+            <pre class="code-block">
 # Create project specification
 
 Before creating a project user should be logged in. This context step will log in user before executing every scenario:
@@ -70,17 +96,17 @@ Create project from scratch scenario
 * Create a new project with all details
 </pre>
 
-<h6>Parameters</h6>
-<p>The parameters passed into a step can be of different types:</p>
+            <h6>Parameters</h6>
+            <p>The parameters passed into a step can be of different types:</p>
 
-<b>Static parameter:</b>
-<p>They are string or integer values passed into the steps</p>
+            <b>Static parameter:</b>
+            <p>They are string or integer values passed into the steps</p>
 
-<h4>Tags:</h4>
+            <h4>Tags:</h4>
 
-<p>They are used to associate labels with specifications or scenarios. Tags are written as comma separated values in the spec.</p>
+            <p>They are used to associate labels with specifications or scenarios. Tags are written as comma separated values in the spec.</p>
 
-<pre class="code-block">
+            <pre class="code-block">
 Login specification
 ===================
 
@@ -90,4 +116,57 @@ Successful login scenario
 -------------------------
 
 Tags: login-success, admin</pre>
+        </div>
+    </div>
 </div>
+<script type="text/javascript">
+$(function(){
+	$('.sidebar li a').click(function() {
+		$('.sidebar li a').removeClass('selected');
+		$(this).addClass('selected');
+	    return false;
+	})	
+})
+
+</script>
+<style type="text/css">
+body {
+    background: #efefef;
+    color: #444;
+}
+.content {
+    margin-top: 30px;
+    border-radius: 10px;
+    background: white;
+}
+.sidebar {
+    margin-top: 30px;
+    padding: 20px;
+    padding-right: 0;
+    margin-right: 0;
+    list-style: none;
+}
+.sidebar a {
+    display: block;
+    padding: 3px 5px;
+    color: #333;    
+    border-left: 1px solid transparent;
+}
+.sidebar li a.selected,
+.sidebar li a:hover {
+    background: white;
+    text-decoration: none;
+    color: black;
+    border-left: 1px solid #3FC380;
+}
+.sidebar > li > a {
+    font-weight: bold;
+}
+.sidebar > li > ul {
+    margin-left: 0;
+    /*font-size: 0.9em;*/
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 10px;
+}
+</style>
