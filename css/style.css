@@ -38,6 +38,22 @@ code.word {
     padding: 3px;
     border-radius: 3px;
 }
+.navigation{
+    float: right;
+    margin: 0;
+    padding: 40px 0;
+}
+.navigation a{
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border:1px solid white;
+}
+.navigation a:hover{
+    background: white;
+    text-decoration: none;
+    color: #3FC380;
+}
 .grey-section {
     background: #efefef;
     padding: 30px 0;
@@ -49,16 +65,20 @@ code.word {
 }
 .title {
     text-align: center;
-}
+    margin: 20px 0;
+} 
 .page-title{
     text-align: left;
 }
-.banner {
+.banner,.inner-banner {
     background: url('/img/triangular.png') #3FC380;
     background-size: 60px 60px;
     overflow: auto;
     color: white;
     padding-bottom: 30px;
+}
+.inner-banner {
+    padding-bottom: 0;
 }
 .banner .top-feature h4 {
     font-weight: lighter;
