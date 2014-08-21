@@ -50,6 +50,9 @@ code.word {
 .title {
     text-align: center;
 }
+.page-title{
+    text-align: left;
+}
 .banner {
     background: url('/img/triangular.png') #3FC380;
     background-size: 60px 60px;
@@ -70,9 +73,8 @@ section h4 {
     font-size: 30px;
 }
 .footer {
-    background: #313543;
+    border-top: 1px solid #ccc;
     margin-top: 30px;
-    color: white;
 }
 .footer-content {
     padding: 20px 0;
