@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3  col-md-3 col-sm-3" style="padding-right:0;">
+            <ul class="sidebar">
+                <li><a class="selected"  href="">So what are Specifications?</a>
+                </li>
+                <li>
+
+                    <ul>
+                        <li><a href="#spec-heading">Spec Heading</a>
+                        </li>
+                        <li><a href="#scenarios">Scenarios</a>
+                        </li>
+                        <li><a href="#steps" >Steps</a>
+                        </li>
+                        <li><a href="#context-steps">Context-Steps</a>
+                        </li>
+                        <li><a href="#parameters">Parameters</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="">Tags</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 content">
+        	{{ content }}
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.sidebar li a').click(function() {
+		$('.sidebar li a').removeClass('selected');
+		$(this).addClass('selected');
+	    
+	     $('html, body').animate({
+        		scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+		}, 500);
+
+	    return false;
+	});
+
+	var doc = document.documentElement,
+        body = document.body;
+
+	var headerTop = $('.sidebar').offset().top;
+    window.addEventListener('scroll', function() {
+        var top = doc && doc.scrollTop || body && body.scrollTop || 0;
+        if (top > headerTop)
+            document.getElementsByClassName('sidebar')[0].classList.add('fixedToTop')
+        else
+            document.getElementsByClassName('sidebar')[0].classList.remove('fixedToTop')
+    });
+})
+
+</script>
+<style type="text/css">
+body {
+    color: #444;
+}
+.content {
+    margin-top: 30px;
+    border-radius: 10px;
+    background: white;
+}
+.sidebar {
+    margin-top: 30px;
+    padding-left: 0;
+    margin-right: 0;
+    list-style: none;
+}
+.sidebar a {
+    display: block;
+    padding: 3px 5px;
+    color: #333;    
+    border-left: 1px solid transparent;
+}
+.sidebar li a.selected,
+.sidebar li a:hover {
+    background: white;
+    text-decoration: none;
+    color: black;
+    border-left: 1px solid #3FC380;
+}
+.sidebar > li > a {
+    font-weight: bold;
+}
+.sidebar > li > ul {
+    margin-left: 0;
+    /*font-size: 0.9em;*/
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 10px;
+}
+.fixedToTop{
+	position: fixed;
+	top: 0;
+}
+</style>
