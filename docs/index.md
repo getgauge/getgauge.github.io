@@ -13,7 +13,7 @@ A spec contains the following parts:
 
 This is name of the specification. It is the first/topmost line of the spec. It is written as a Markdown H1 which can be written in 2 forms:
 
-{% highlight markdown %}
+{% highlight text %}
 # Specification heading
 
        or 
@@ -27,7 +27,7 @@ This is name of the specification. It is the first/topmost line of the spec. It 
 
 Every scenario represents a single flow for the specification. The scope of a scenario starts after a scenario heading/name. The scenario heading or scenario name is a Markdown H2 which can be written as:
 
-{% highlight markdown %}
+{% highlight text %}
 ## Scenario heading
 
        or 
