@@ -2,6 +2,10 @@
 * {
     font-family: 'Open Sans', sans-serif;
 }
+body {
+    font-size: 15px;
+    line-height: 1.62857;
+}
 h1 {
     font-size: 3em;
     margin: 30px 0;
@@ -12,7 +16,7 @@ h2 {
 }
 h3 {
     font-size: 2.0em;
-    margin: 20px 0;
+    margin: 0px 0px 20px 0;
 }
 h4 {
     font-size: 1.8em;
@@ -21,6 +25,7 @@ h4 {
 h5 {
     font-size: 1.3em;
     margin: 14px 0;
+    font-weight: 300;
 }
 h6 {
     font-size: 1.2em;
@@ -60,7 +65,7 @@ code.word {
 }
 .headline {
     font-weight: lighter;
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
 }
 .title {
@@ -229,7 +234,7 @@ section.demo #browser-container {
     right: -120px;
     z-index: 1;
     border: 0;
-    background: #3FC380;
+    background: rgba(245, 193, 14, 1);
     width: 350px;
     text-align: center;
     -webkit-transform: rotate(45deg);
@@ -239,7 +244,7 @@ section.demo #browser-container {
     color: #160F29 !important;
 }
 .fork-ribbon:hover {
-    background: #46D58C;
+    background: rgba(245, 193, 14, 1);
     text-decoration: none;
 }
 .number-step {
@@ -252,6 +257,10 @@ section.demo #browser-container {
     color: white;
     border-radius: 50%;
     background: #3FC380;
+}
+.homepage-icon {
+    text-align: center;
+    margin-bottom: 20px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
     .banner {
