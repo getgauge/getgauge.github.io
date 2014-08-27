@@ -79,7 +79,7 @@ thead {
     text-align: left;
 }
 .banner,.inner-banner {
-    background: rgba(66, 47, 77, 1);
+    background: #1E824C;
     background-size: 60px 60px;
     overflow: auto;
     color: white;
@@ -232,9 +232,9 @@ section.demo #browser-container {
     padding: 15px 30px;
 }
 .button.documentation {
-    border: 1px solid rgba(66, 47, 77, 1);
+    border: 1px solid #1E824C;
     color: white;
-    background-color: rgba(66, 47, 77, 1);
+    background-color: #1E824C;
 }
 .fork-ribbon {
     position: fixed;
