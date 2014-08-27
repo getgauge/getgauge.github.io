@@ -19,7 +19,7 @@ h3 {
     margin: 0px 0px 20px 0;
 }
 h4 {
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin: 17px 0;
 }
 h5 {
@@ -79,7 +79,7 @@ thead {
     text-align: left;
 }
 .banner,.inner-banner {
-    background: url('/img/triangular.png') #3FC380;
+    background: rgba(66, 47, 77, 1);
     background-size: 60px 60px;
     overflow: auto;
     color: white;
@@ -220,7 +220,7 @@ section.demo #browser-container {
     border: 1px solid white;
     color: white;
     text-shadow: none;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 .button:hover {
     background: white;
@@ -230,6 +230,11 @@ section.demo #browser-container {
 .button.big-button {
     font-size: 16px;
     padding: 15px 30px;
+}
+.button.documentation {
+    border: 1px solid rgba(66, 47, 77, 1);
+    color: white;
+    background-color: rgba(66, 47, 77, 1);
 }
 .fork-ribbon {
     position: fixed;
