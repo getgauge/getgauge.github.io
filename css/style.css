@@ -85,6 +85,12 @@ thead {
     color: white;
     padding-bottom: 30px;
 }
+
+.banner-title {
+    font-size: .8em;
+    font-weight: normal;
+}
+
 .inner-banner {
     padding-bottom: 0;
 }
@@ -138,7 +144,7 @@ section.demo .browser-wrapper {
     max-width: 960px;
 }
 section.demo #browser-container {
-    background: #494f57;
+    background: #071322;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     max-width: 960px;
@@ -156,7 +162,7 @@ section.demo #browser-container {
     overflow-y: hidden;
 }
 .browser-code pre {
-    background: #494f57;
+    background: #071322;
     border-radius: 0 0 5px 5px;
     margin: 20px 0;
 }
@@ -179,7 +185,7 @@ section.demo #browser-container {
     cursor: pointer;
 }
 .browser-code .command {
-    color: rgb(181, 255, 174);
+    color: rgb(65, 185, 79);
     font-size: 16px;
     display: block;
     font-family: monospace;
