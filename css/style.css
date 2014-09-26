@@ -91,6 +91,18 @@ thead {
     font-weight: normal;
 }
 
+.title a {
+    color: white;
+    text-decoration: none;
+}
+
+.title a:hover
+{
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+}
+
 .inner-banner {
     padding-bottom: 0;
 }
@@ -278,6 +290,9 @@ section.demo #browser-container {
 }
 
 /* download */
+.os {
+    margin-bottom: 15px;
+}
  .os .separator {
     margin: 0 5px;
 }
