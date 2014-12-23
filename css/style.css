@@ -359,9 +359,6 @@ section.demo #browser-container {
 /************/
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    .banner {
-        background: url('/img/triangular_@2X.png') #3FC380;
-    }
     section.demo .browser-wrapper {
         -webkit-border-image: url(/img/browser-frame@2x.png) 46 20 0 124 repeat;
         -moz-border-image: url(/img/browser-frame@2x.png) 46 20 0 124 repeat;
@@ -375,6 +372,8 @@ section.demo #browser-container {
 .showterm {
     width: 970px;
     height: 450px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
     
