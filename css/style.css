@@ -13,6 +13,7 @@ h1 {
 h2 {
     font-size: 2.5em;
     margin: 20px 0;
+    color: #000000;
 }
 h3 {
     font-size: 2.0em;
@@ -52,15 +53,14 @@ thead {
     padding: 40px 0;
 }
 .navigation a{
-    color: white;
+    color: black;
     border-radius: 25px;
     padding: 10px 20px;
-    border:1px solid white;
+    border:1px solid black;
 }
 .navigation a:hover{
-    background: white;
     text-decoration: none;
-    color: #3FC380;
+    color: black;
 }
 .grey-section {
     background: #efefef;
@@ -79,7 +79,7 @@ thead {
     text-align: left;
 }
 .banner,.inner-banner {
-    background: #1E824C;
+    background: #ffffff;
     background-size: 60px 60px;
     overflow: auto;
     color: white;
@@ -89,6 +89,7 @@ thead {
 .banner-title {
     font-size: .8em;
     font-weight: normal;
+    color: #000000;
 }
 
 .link a {
@@ -235,24 +236,24 @@ section.demo #browser-container {
     text-align: center;
 }
 .button {
-    border: 1px solid white;
-    color: white;
+    border: 1px solid black;
+    color: black;
     text-shadow: none;
     border-radius: 20px;
 }
 .button:hover {
     background: white;
     text-decoration: none;
-    color: #3FC380;
+    color: black;
 }
 .button.big-button {
     font-size: 16px;
     padding: 15px 30px;
 }
 .button.documentation {
-    border: 1px solid #1E824C;
-    color: white;
-    background-color: #1E824C;
+    border: 1px solid #000000;
+    color: black;
+    background-color: white;
 }
 .fork-ribbon {
     position: fixed;
