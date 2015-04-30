@@ -1,1 +1,8 @@
-_site
+/bin/
+/.bundle/
+vendor/bundle
+vendor/cache
+/build/
+/node_modules/
+/.idea/
+.DS_Store

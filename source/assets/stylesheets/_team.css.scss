@@ -1,0 +1,124 @@
+body.team {
+  &#content {
+    @include outer-container;
+  }
+
+  footer {
+    background-color: lightgray;
+  }
+
+  .our-team-hero {
+    @include span-columns(12);
+    color: #5d5d5d;
+
+    .team-bg {
+      @include span-columns(12 of 12);
+      @include background(image-url('team/abstract-team-hero.svg'));
+      position: relative;
+      background-size: cover;
+      padding: 8em 0;
+
+      .hero-content {
+        @include span-columns(8 of 12);
+        @include shift(2);
+
+        h1 {
+          margin: 0 auto .4em;
+        }
+
+        h3 {
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  .team-members {
+    width: 100%;
+    margin-top: -6em;
+    float: left;
+
+    .team-members-list {
+      @include span-columns(8 of 12);
+      @include shift(2);
+
+      $column_small_screen_width: 17em;
+
+      .team-row {
+        @include media($medium-screen) {
+          @include span-columns(8 of 8);
+          @include fill-parent;
+          @include row(table);
+        }
+
+        .member {
+          @include media($medium-screen) {
+            @include span-columns(2);
+          }
+          position: relative;
+          height: 13em;
+          background-size: cover;
+          background-position: center;
+          overflow: hidden;
+          width: $column_small_screen_width;
+          margin: auto;
+          margin-bottom: 1px;
+
+          & + .member {
+            border-left: 1px solid white;
+          }
+
+          &.akshay {
+            background-image: image-url('profilepics/akshay.jpg');
+          }
+          &.andrei {
+            background-image: image-url('profilepics/andrei.jpg');
+          }
+          &.badri {
+            background-image: image-url('profilepics/badri.jpg');
+          }
+          &.elly {
+            background-image: image-url('profilepics/elly.jpg');
+          }
+          &.fernando {
+            background-image: image-url('profilepics/fernando.jpg');
+          }
+          &.henrique {
+            background-image: image-url('profilepics/henrique.jpg');
+          }
+          &.jen {
+            background-image: image-url('profilepics/jen.jpg');
+          }
+          &.you {
+            background-image: image-url('profilepics/you.jpg');
+          }
+
+          .profile {
+            @include fill-parent;
+            position: absolute;
+            bottom: -0em;
+            height: 3.5em;
+            color: white;
+            padding: 2px 8px;
+            background-color: $transparent-smoke;
+
+            @include media($large-screen) {
+              bottom: -3.5em;
+              opacity: 0;
+            }
+          }
+
+          @include media($large-screen) {
+            &:hover {
+              .profile {
+                @include transform(translateY(-3.5em));
+                @include transition(opacity 0.3s ease, transform 0.3s ease);
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

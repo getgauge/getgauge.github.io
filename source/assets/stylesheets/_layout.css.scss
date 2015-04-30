@@ -1,0 +1,217 @@
+html {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+a:hover {
+  opacity: 0.85;
+  transform: translate(0px,-2px);
+  -webkit-transform: translate(0px,-2px);
+  -moz-transform: translate(0px,-2px);
+  -ms-transform: translate(0px,-2px);
+  -o-transform: translate(0px,-2px);
+}
+
+body, header, footer, #content {
+  // @include span-columns(12);
+}
+
+header, footer {
+  $navigation-height: 4em;
+  $navigation-submenu-padding: 1em;
+
+  a {
+    color: #333;
+  }
+
+  .nav-wrapper {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    @include clearfix;
+
+    .logo {
+      background-size: 90%;
+      background-position: 0 15px;
+      background-repeat: no-repeat;
+
+      float: left;
+      width: 150px;
+      margin-left: 1em;
+      height: $navigation-height;
+    }
+
+    .header-nav {
+      display: none;
+      clear: both;
+
+      @include media($large-screen) {
+        display: block;
+        float: right;
+        clear: none;
+        margin-top: 12px;
+        font-weight: 300;
+      }
+
+      .nav-link {
+        background: white;
+        display: block;
+        line-height: $navigation-height;
+        font-size:1.3em;
+        overflow: hidden;
+        padding-right: 1em;
+        text-align: right;
+        width: 100%;
+        z-index: 9999;
+
+        @include media($large-screen) {
+          line-height: 2.4em;
+          min-width: 80px;
+          padding: 0 10px;
+          display: inline-block;
+          text-align: center;
+          background: transparent;
+          font-size:1em;
+          width: auto;
+        }
+
+        a {
+          font-size: 1.3em;
+        }
+
+        &:hover {
+          border-bottom: 2px solid white;
+        }
+      }
+    }
+
+    .navigation-menu-button {
+      float: right;
+      line-height: $navigation-height;
+      padding-right: $navigation-submenu-padding;
+
+      @include media($large-screen) {
+        display: none;
+      }
+
+      .fa-bars {
+        margin-top: 0.4em;
+        color:#ffffff;
+      }
+    }
+  }
+
+  &.dark {
+    .nav-wrapper {
+      background-color: $transparent-smoke;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+      .logo {
+        background-image: image-url('Gauge-Logo.png');
+      }
+
+      .header-nav {
+        .nav-link:hover {
+          border-bottom: 2px solid white;
+        }
+      }
+
+      @include media($large-screen) {
+        ul.header-nav li.nav-link a {
+          color: #EEE;
+        }
+      }
+    }
+  }
+
+  &.light {
+    .nav-wrapper {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid #CCC;
+
+      .logo {
+        background-image: image-url('Gauge-Logo.png');
+      }
+
+      .header-nav {
+        .nav-link:hover {
+          border-bottom: 2px solid $mustard;
+        }
+        a:hover {
+          color: $mustard;
+        }
+      }
+
+      .fa-bars {
+        color: #000;
+      }
+    }
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  border-top: 3px solid $mustard;
+  z-index: 10;
+}
+
+footer {
+  position: relative;
+  z-index: 100;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 1.25em 0 0.75em 0;
+  ul li {
+    display: inline;
+    padding: 0 .75em;
+  }
+}
+
+#content{
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+#hero {
+  font-size: 4em;
+  font-weight: 300;
+  color: #111;
+
+  h1 {
+    width: 80%;
+    font-size: 0.67em;
+    text-align: center;
+    margin: 0 auto 1em;
+  }
+
+  h3 {
+    font-size: 0.33em;
+    line-height: 1.8;
+    width: 80%;
+    margin: 0 auto 2em;
+    text-align: center;
+  }
+
+  .background-pattern-container {
+    background: #999999;
+    position: relative;
+    background-size: cover;
+    opacity: 0.8;
+    padding: 2em 0 1em;
+  }
+
+  .blur-background-pattern-container {
+    @include background(image-url('geometric-blur.png'));
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

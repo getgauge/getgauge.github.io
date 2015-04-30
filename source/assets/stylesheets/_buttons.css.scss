@@ -1,0 +1,26 @@
+.button-container {
+  display : inline-block;
+  @include outer-container();
+  @include media($large-screen) {
+    @include span-columns(12);
+    @include shift(3);
+  }
+}
+
+.primary-cta {
+  @include span-columns(2);
+  @include media($large-screen) {
+    @include span-columns(3);
+  }
+  display: block;
+  white-space: nowrap;
+  background-color: $mustard;
+  text-align: center;
+  margin: 0 auto;
+  margin: 0.2em;
+  width: 100%;
+  font-size: 0.5em;
+  line-height: 2;
+  color: #222;
+  border-radius: 2px;
+}

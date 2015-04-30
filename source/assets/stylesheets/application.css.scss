@@ -1,0 +1,45 @@
+// framework css
+@import "compass/reset";
+@import "bourbon";
+@import "base/base";
+@import "neat";
+
+
+// our own css
+@import "buttons";
+@import "breakpoints";
+@import "layout";
+@import "home";
+@import "features";
+@import "download";
+@import "team";
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+#powered-by {
+  text-align: center;
+  .section-wrapper {
+    padding-bottom: 5px;
+  }
+  img {
+    max-width: 250px;
+  }
+}
+
+i.fa-twitter {
+  font-size: 1.3em;
+}
+
+.row {
+  @include outer-container;
+}
+
+.section-wrapper {
+  @include outer-container(100%);
+  @include clearfix;
+  padding: 3em;
+  position: relative;
+  background-color: transparent;
+}

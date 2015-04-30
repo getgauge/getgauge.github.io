@@ -1,0 +1,69 @@
+---
+header_theme: light
+---
+
+%section.group
+  .group-heading
+    %h1 Download Gauge
+    %h3 Current Version: #{data.version.current}
+  .platform-row
+    .platform-name
+      .icon
+        %i.fa.fa-windows.fa-3x
+      .name
+        %h5 Windows
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current }/gauge-#{ data.version.current }-windows.x86.exe"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 32-bit
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current }/gauge-#{ data.version.current }-windows.x86_64.exe"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 64-bit
+  .platform-row
+    .platform-name
+      .icon
+        %i.fa.fa-apple.fa-3x
+      .name
+        %h5 Mac OS X
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-darwin.x86.zip"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 32-bit
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-darwin.x86_64.zip"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 64-bit
+  .platform-row
+    .platform-name
+      .icon
+        %i.fa.fa-linux.fa-3x
+      .name
+        %h5 Linux
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-linux.x86.zip"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 32-bit
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-linux.x86_64.exe"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 64-bit
+  .filler
+  .group-heading
+    %h1 Next Steps..
+
+  .button-container
+    %a.primary-cta{:href => "/get-started"} Get Started
+    %a.primary-cta{:href => "/get-started"} Documentation
