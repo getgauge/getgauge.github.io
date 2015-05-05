@@ -1,7 +1,6 @@
 body.team {
 
   &#content {
-    @include outer-container;
   }
 
   footer {
@@ -34,6 +33,7 @@ body.team {
   }
 
   .team-members {
+    @include outer-container;
     width: 100%;
     margin-bottom: 2em;
     .team-members-list {
@@ -42,20 +42,23 @@ body.team {
       float: inherit;
       $column_small_screen_width: 17em;
 
-      &.two-column {
+      &.two-member {
         @include span-columns(6);
-        @include shift(3);
-        float:inherit;
+        @include shift(3)
       }
 
       .team-row {
-        @include media($medium-screen) {
-          @include span-columns(8 of 8);
+        @include span-columns(8 of 8);
+        @include fill-parent;
+        @include row(table);
+        float: inherit;
+
+        &.two-member {
+          @include span-columns(3);
           @include fill-parent;
           @include row(table);
           float: inherit;
         }
-
         .member {
           @include media($medium-screen) {
             @include span-columns(2);
