@@ -62,8 +62,121 @@ header_theme: light
           %h5 64-bit
   .filler
   .group-heading
-    %h1 Next Steps..
-
-  .button-container
-    %a.primary-cta{:href => "/get-started"} Get Started
-    %a.primary-cta{:href => "/get-started"} Documentation
+    %h1 Get Started
+    .platform-heading
+      %h2 Mac OS X
+      .terminal-wrapper
+        .terminal
+          %pre ~ $ brew update
+          %pre ~ $ brew install gauge
+    .filler-low
+    .platform-heading
+      %h2 Windows
+      .install-instruction The windows installer installs gauge to %PROGRAMFILES% by default.
+    .filler-low
+    .platform-heading
+      %h2 Linux
+      .install-instruction Download the zip and execute:
+      .terminal-wrapper
+        .terminal
+          %pre ~ $ unzip gauge-$VERSION-$OS.$ARCH.zip
+          %pre ~ $ ./install.sh
+      .install-instruction Choose the archive file appropriate for your installation. For instance, if you are installing gauge version 0.1.2 for 64-bit x86 on Linux, the archive you want is called gauge-0.1.2-linux.x86_64.tar.gz.
+      %iframe.showterm{:src => "http://showterm.io/53df33d83dc8979f8977f#fast"}
+  .group-heading
+    %h1 Plugins
+    .platform-heading
+      %h2 Available Plugins
+      .platform-row
+        .platform-name
+          .name
+            %h5 Language Runners
+        .download
+          %a{:href => "https://github.com/getgauge/gauge-java/releases"}
+            .name
+              Gauge Java
+        .download
+          %a{:href => "https://github.com/getgauge/gauge-csharp/releases"}
+            .name
+              Gauge C#
+        .download
+          %a{:href => "https://github.com/getgauge/gauge-ruby/releases"}
+            .name
+              Gauge Ruby
+      .platform-row
+        .platform-name
+          .name
+            %h5 IDE Plugins
+        .download
+          %a{:href => "https://github.com/getgauge/Intellij-plugin/releases"}
+            .name
+              Intellij Idea
+        .download
+          %a{:href => "https://github.com/getgauge/gauge-visualstudio/releases"}
+            .name
+              Visual Studio
+        .download
+          %a{:href => "https://github.com/getgauge/gauge-eclipse/releases"}
+            .name
+              Eclipse
+      .platform-row
+        .platform-name
+          .name
+            %h5 Reports
+        .download
+          %a{:href => "https://github.com/getgauge/xml-report/releases"}
+            .name
+              JUnit XML
+        .download
+          %a{:href => "https://github.com/getgauge/html-report/releases"}
+            .name
+              Html
+    .filler-low
+    .platform-heading
+      %h2 Install Plugins
+      .install-instruction
+        Post installation you can install a Gauge plugin using the
+        %code --install
+        flag
+      .terminal-wrapper
+        .terminal
+          %pre ~ $ gauge --install html-report
+      .install-instruction
+        Note : IDE plugins need to be installed as per respective IDE's plugin install instructions.
+    .filler-low
+    .platform-heading
+      %h2 Test your installation
+      .terminal-wrapper
+        .terminal
+          %pre ~ $ gauge
+          %pre.terminal-output gauge - version 0.0.5
+          %pre.terminal-output Copyright 2015 Thoughtworks
+          %pre.terminal-output &nbsp;
+          %pre.terminal-output Usage:
+          %pre.terminal-output &nbsp;gauge specs/
+          %pre.terminal-output &nbsp;gauge specs/spec_name.spec
+          %pre.terminal-output &nbsp;
+          %pre.terminal-output Options:
+          %pre.terminal-output &nbsp;&nbsp;--add-plugin=""                  Adds the specified plugin to the current project
+          %pre.terminal-output &nbsp;&nbsp;--api-port=""                    Specifies the api port to be used. Eg: gauge --daemonize --api-port 7777
+          %pre.terminal-output &nbsp;&nbsp;--daemonize=false                Run as a daemon
+          %pre.terminal-output &nbsp;&nbsp;--dir="."                        Set the working directory for the current command, accepts a path relative to current directory.
+          %pre.terminal-output &nbsp;&nbsp;--env="default"                  Specifies the environment. If not specified, default will be used
+          %pre.terminal-output &nbsp;&nbsp;--file, -f=""                     Installs the plugin from zip file. This is used with --install. Eg: gauge --install java -f ZIP_FILE
+          %pre.terminal-output &nbsp;&nbsp;--format=""                      Formats the specified spec files
+          %pre.terminal-output &nbsp;&nbsp;-g, --group=-1                   Specify which group of specification to execute based on -n flag
+          %pre.terminal-output &nbsp;&nbsp;--init=""                        Initializes project structure in the current directory. Eg: gauge --init java
+          %pre.terminal-output &nbsp;&nbsp;--install=""                     Downloads and installs a plugin. Eg: gauge --install java
+          %pre.terminal-output &nbsp;&nbsp;--log-level=""                   Set level of logging to debug, info, warning, error or critical
+          %pre.terminal-output &nbsp;&nbsp;-n=8                             Specify number of parallel execution streams
+          %pre.terminal-output &nbsp;&nbsp;--parallel, -p=false             Execute specs in parallel
+          %pre.terminal-output &nbsp;&nbsp;--plugin-args=""                 Specified additional arguments to the plugin. This is used together with --add-plugin
+          %pre.terminal-output &nbsp;&nbsp;--plugin-version=""              Version of plugin to be installed. This is used with --install
+          %pre.terminal-output &nbsp;&nbsp;--refactor=""                    Refactor steps
+          %pre.terminal-output &nbsp;&nbsp;--simple-console=false           Removes colouring and simplifies from the console output
+          %pre.terminal-output &nbsp;&nbsp;--sort, -s=false                 run specs in Alphabetical Order. Eg: gauge -s specs
+          %pre.terminal-output &nbsp;&nbsp;--table-rows=""                  Executes the specs and scenarios only for the selected rows. Eg: gauge --table-rows "1-3" specs/hello.spec
+          %pre.terminal-output &nbsp;&nbsp;--tags=""                        Executes the specs and scenarios tagged with given tags. Eg: gauge --tags tag1,tag2 specs
+          %pre.terminal-output &nbsp;&nbsp;--update=""                      Updates a plugin. Eg: gauge --update java
+          %pre.terminal-output &nbsp;&nbsp;-v, --version, -version=false    Print the current version and exit. Eg: gauge --version
+          %pre.terminal-output &nbsp;&nbsp;--verbose=false                  Enable verbose logging for debugging
