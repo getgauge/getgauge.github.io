@@ -111,6 +111,13 @@ body.download {
       font-family: monospace;
     }
   }
+  a.download-link {
+    color: #0E71F5;
+    cursor: pointer;
+    &:hover{
+      color: #0A336B;
+    }
+  }
 
   .terminal {
     width: 100%;

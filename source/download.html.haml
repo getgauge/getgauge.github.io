@@ -4,85 +4,43 @@ header_theme: light
 
 %section.group
   .group-heading
-    %h1 Download Gauge
-    %h3 Current Version: #{data.version.current}
-  .platform-row
-    .platform-name
-      .icon
-        %i.fa.fa-windows.fa-3x
-      .name
-        %h5 Windows
-    .download
-      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current }/gauge-#{ data.version.current }-windows.x86.exe"}
-        .icon
-          %i.fa.fa-download.fa-2x
-        .name
-          %h5 32-bit
-    .download
-      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current }/gauge-#{ data.version.current }-windows.x86_64.exe"}
-        .icon
-          %i.fa.fa-download.fa-2x
-        .name
-          %h5 64-bit
-  .platform-row
-    .platform-name
-      .icon
-        %i.fa.fa-apple.fa-3x
-      .name
-        %h5 Mac OS X
-    .download
-      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-darwin.x86.zip"}
-        .icon
-          %i.fa.fa-download.fa-2x
-        .name
-          %h5 32-bit
-    .download
-      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-darwin.x86_64.zip"}
-        .icon
-          %i.fa.fa-download.fa-2x
-        .name
-          %h5 64-bit
-  .platform-row
-    .platform-name
-      .icon
-        %i.fa.fa-linux.fa-3x
-      .name
-        %h5 Linux
-    .download
-      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-linux.x86.zip"}
-        .icon
-          %i.fa.fa-download.fa-2x
-        .name
-          %h5 32-bit
-    .download
-      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-linux.x86_64.exe"}
-        .icon
-          %i.fa.fa-download.fa-2x
-        .name
-          %h5 64-bit
-  .filler
-  .group-heading
-    %h1 Get Started
+    %h1 Installing Gauge
     .platform-heading
       %h2 Mac OS X
+      %h3 Option 1 : Using Homebrew
+      .install-instruction If you have Homebrew installed, you can install Gauge using it.
       .terminal-wrapper
         .terminal
           %pre ~ $ brew update
           %pre ~ $ brew install gauge
+      .filler-low
+      %h3 Option 2 : Direct Download
+      .install-instruction
+        %a.download-link{:href => '#installers'} Download
+        the Gauge OSx installer and execute:
+      .terminal-wrapper
+        .terminal
+          %pre ~ $ unzip gauge-$VERSION-$OS.$ARCH.zip
+          %pre ~ $ ./install.sh
+
     .filler-low
     .platform-heading
       %h2 Windows
-      .install-instruction The windows installer installs gauge to %PROGRAMFILES% by default.
+      .install-instruction
+        %a.download-link{:href => '#installers'} Download
+        the Gauge Windows Installer. The windows installer installs gauge to %PROGRAMFILES% by default.
     .filler-low
     .platform-heading
       %h2 Linux
-      .install-instruction Download the zip and execute:
+      .install-instruction
+        %a.download-link{:href => '#installers'} Download
+        the Gauge Linux installer zip and execute the below
       .terminal-wrapper
         .terminal
           %pre ~ $ unzip gauge-$VERSION-$OS.$ARCH.zip
           %pre ~ $ ./install.sh
       .install-instruction Choose the archive file appropriate for your installation. For instance, if you are installing gauge version 0.1.2 for 64-bit x86 on Linux, the archive you want is called gauge-0.1.2-linux.x86_64.tar.gz.
-      %iframe.showterm{:src => "http://showterm.io/53df33d83dc8979f8977f#fast"}
+  .filler-low
   .group-heading
     %h1 Plugins
     .platform-heading
@@ -146,10 +104,14 @@ header_theme: light
     .filler-low
     .platform-heading
       %h2 Test your installation
+      .install-instruction
+        Type
+        %code gauge
+        in your terminal and hit ENTER.
       .terminal-wrapper
         .terminal
           %pre ~ $ gauge
-          %pre.terminal-output gauge - version 0.0.5
+          %pre.terminal-output gauge - version 0.1.2
           %pre.terminal-output Copyright 2015 Thoughtworks
           %pre.terminal-output &nbsp;
           %pre.terminal-output Usage:
@@ -180,3 +142,67 @@ header_theme: light
           %pre.terminal-output &nbsp;&nbsp;--update=""                      Updates a plugin. Eg: gauge --update java
           %pre.terminal-output &nbsp;&nbsp;-v, --version, -version=false    Print the current version and exit. Eg: gauge --version
           %pre.terminal-output &nbsp;&nbsp;--verbose=false                  Enable verbose logging for debugging
+  #installers.filler
+  .filler-low
+  .group-heading
+    %h1 Download Gauge
+    %h3
+      %i.fa.fa-github
+      %a.download-link{:href => "https://github.com/getgauge/gauge/releases/tags/v#{data.version.current}"} Current Version: #{data.version.current}
+      &nbsp; | &nbsp;
+      %i.fa.fa-github
+      %a.download-link{:href => "https://github.com/getgauge/gauge/releases/"} Older Versions
+  .platform-row
+    .platform-name
+      .icon
+        %i.fa.fa-windows.fa-3x
+      .name
+        %h5 Windows
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current }/gauge-#{ data.version.current }-windows.x86.exe"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 32-bit
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current }/gauge-#{ data.version.current }-windows.x86_64.exe"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 64-bit
+  .platform-row
+    .platform-name
+      .icon
+        %i.fa.fa-apple.fa-3x
+      .name
+        %h5 Mac OS X
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-darwin.x86.zip"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 32-bit
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-darwin.x86_64.zip"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 64-bit
+  .platform-row
+    .platform-name
+      .icon
+        %i.fa.fa-linux.fa-3x
+      .name
+        %h5 Linux
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-linux.x86.zip"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 32-bit
+    .download
+      %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{ data.version.current }/gauge-#{ data.version.current }-linux.x86_64.exe"}
+        .icon
+          %i.fa.fa-download.fa-2x
+        .name
+          %h5 64-bit
