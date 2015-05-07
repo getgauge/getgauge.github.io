@@ -2,29 +2,56 @@
 header_theme: light
 ---
 
-%section#hero.parallax-window
-  .parallax-content.section1
+%section#hero
+  .section1
     %h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit
     %h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    .button-container
-      %a.primary-cta{:href => "/download"} Download
-      %a.primary-cta{:href => "/get-started"} Get Started
-%section.parallax-window
-  .parallax-content.section2
-    %h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit,.
-    %h3
-      %ul
-        %li Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        %li Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        %li Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        %li Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-%section.parallax-window
-  .parallax-content.section3
-    %h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    %h3 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru.
-%section.parallax-window
-  .parallax-content.section4
-    %h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    %h3 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru.
-
-= javascript_include_tag  'home.js'
+    %a.primary-cta{:href => "/download"} Download
+#features
+%section.continuous-integration-features.feature-group
+  .feature-group-heading
+    %h1 Features
+  .feature-row
+    .feature
+      .icon
+        %i.fa.fa-terminal.fa-5x
+      .name
+        %h5 First class command line support
+      .explanation
+        Do everything with your terminal, well almost everything. Gauge allows you to perform a variety of operations via the command line.
+    .feature
+      .icon
+        %i.fa.fa-language.fa-5x
+      .name
+        %h5 Multiple language support
+      .explanation
+        Write test cases in your favorite programming language.
+    .feature
+      .icon
+        %i.fa.fa-pencil.fa-5x
+      .name
+        %h5 Simple Syntax
+      .explanation
+        Author specifications in markdown, a widely-known markup syntax.
+  .feature-row
+    .feature
+      .icon
+        %i.fa.fa-tasks.fa-5x
+      .name
+        %h5 Parallel Execution
+      .explanation
+        Simplest Parallelization strategy across all the languages.
+    .feature
+      .icon
+        %i.fa.fa-puzzle-piece.fa-5x
+      .name
+        %h5 Extensible and Hackable
+      .explanation
+        Get more out of Gauge via its plugin architecture. Extension points include: language support, driver support, test execution events, and more.
+    .feature
+      .icon
+        %i.fa.fa-code.fa-5x
+      .name
+        %h5 Multiple IDE Support
+      .explanation
+        Gauge is designed to support IDE integration. Intellij idea integration helps to collaborate better by providing smart suggestions.

@@ -1,59 +1,32 @@
 body.index {
-  #hero {
-    h1 em {
-      font-weight: 800;
-    }
-
-    .parallax-content {
-      position: relative;
-      color: #9A9A8A;
-      padding: 4.5em 0;
-      width: 100% !important;
-    }
-
-  }
-
-  $parallax-window-height: 400px;
-  $parallax-background-height: $parallax-window-height * 2;
-
-  .parallax-window {
-    overflow: hidden;
-    position: relative;
-  }
-
-  .parallax-content {
+  .section1 {
     position: relative;
     color: #9A9A8A;
-    padding: 14em 0;
     text-align: center;
 
     background-size: 100%;
   	background-position: 50% 0;
   	background-repeat: no-repeat;
-    h1 {
-      font-size: 72px;
-      font-weight: 800;
+    position: relative;
+    color: #9A9A8A;
+    padding: 5.75em 0;
+    @include media($tablet) {
+      padding: 1.2em 0;
     }
-
-    &.section1, &.section3 {
-      background:
-        radial-gradient(black 15%, transparent 16%) 0 0,
-        radial-gradient(black 15%, transparent 16%) 8px 8px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-      background-color:#282828;
-      background-size:16px 16px;
-      h1, h3 {
-        color: white;
-      }
-
+    width: 100% !important;
+    background:
+      radial-gradient(black 15%, transparent 16%) 0 0,
+      radial-gradient(black 15%, transparent 16%) 8px 8px,
+      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    h1, h3 {
+      color: white;
     }
-
-    &.section2, &.section4 {
-      background-color:#999999;
-      h1, h3 {
-        color: #222;
-      }
-    }
+  }
+  #features {
+    padding: 1.9em;
+    display:block;
   }
 }
