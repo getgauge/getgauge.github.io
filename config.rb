@@ -20,10 +20,6 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
 
-  activate :asset_hash do |opts|
-    opts.exts += %w(.ico)
-  end
-
   abort "ENV['ASSET_HOST'] not specified, bailing!" if ENV['ASSET_HOST'].blank?
   set :asset_host, "//" + ENV['ASSET_HOST']
 end
