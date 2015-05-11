@@ -1,0 +1,1 @@
+$(document).ready(function(n){n(window).stellar({responsive:!0,horizontalScrolling:!1}),n("a.scroll-animate").click(function(){return n("html, body").animate({scrollTop:n('[name="'+n.attr(this,"href").substr(1)+'"]').offset().top},500),!1})}),$(document).ready(function(){var n=$(".header-nav"),o=$(".navigation-menu-button");$(o).on("click",function(){n.slideToggle()})});
