@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'middleman'
-gem 'middleman-livereload', group: [:development, :test]
+gem 'middleman-livereload'
 gem 'rake'
 
 # asset gems

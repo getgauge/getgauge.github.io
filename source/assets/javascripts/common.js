@@ -19,8 +19,4 @@ $(document).ready(function() {
   $(menuToggle).on('click', function(e) {
     menu.slideToggle();
   });
-
-  $(menu).on('click', function(e) {
-    menu.slideToggle();
-  });
 });
