@@ -13,10 +13,10 @@ title: Gauge | ThoughtWorks
             = favicon_tag 'favicons/favicon.ico', :rel => 'shortcut icon'
             = favicon_tag 'favicons/apple-touch-icon.png', :rel => 'apple-touch-icon-precomposed'
             = stylesheet_link_tag "application"
-            = javascript_include_tag  "application"
+            = javascript_include_tag  "application", :async => true
             %link{:href => "//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
   %body{:class => page_classes}
-    %header{:class => current_resource.data.header_theme}
+    %header.light
       %nav.nav-wrapper
         = link_to '', '/', :class => 'logo'
         %a.navigation-menu-button{:href => "javascript:void(0)"}
@@ -24,15 +24,21 @@ title: Gauge | ThoughtWorks
         %ul.header-nav
           %li.nav-link= link_to 'Features', '/#features'
           %li.nav-link= link_to 'Download', '/download'
-          %li.nav-link= link_to 'Documentation', 'http://getgauge.io/documentation/user/current/'
+          %li.nav-link= link_to 'Documentation', '/documentation/user/0.1.3'
           %li.nav-link= link_to 'Team', '/team'
+          %li.nav-link-short
+            %a{:href => "https://twitter.com/getgauge", :target => "_blank"}
+              %i.fa.fa-twitter
+          %li.nav-link-short
+            %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"}
+              %i.fa.fa-github
     #content
       = yield
     %footer
       %section#powered-by
         .section-wrapper
           %a{:href => "http://www.thoughtworks.com/products"}
-            %img{:alt => "Thoughtworks logo", :src => "/assets/images/twlogo-footer-black.png"}/
+            %img{:alt => "Thoughtworks logo", :src => asset_path(:images, 'twlogo-footer-black.png')}
       %ul.footer-nav
         %li.nav-link= link_to 'Privacy', '/#'
         %li.nav-link= link_to 'Terms', '/#'
