@@ -1,11 +1,7 @@
-body {
+body.contribute {
 
   .contribute {
-
     padding: 8em 1.5em;
-    margin: 0 auto 0.5em;
-    width: 80%;
-    text-align: left;
 
     .contribute-heading {
       line-height: 1.5;
@@ -15,77 +11,81 @@ body {
     }
 
     .quick-links {
-
-      padding-bottom: 10px;
-      padding-top: 10px;
-
+      @include outer-container();
       .links-heading {
         color: #333;
-        text-align: left;
         font-size: 1.4em;
-        padding-top: 8px;
-        padding-bottom: 8px;
       }
 
       .links-row {
-        @include outer-container;
-        max-width: 100%;
-
-        li.quick-link {
-          @include span-columns(6);
-
-          background-color: #4B4141;
-          height: 8em;
-          width: 8em;
-          padding: 3px;
-          margin: 4px;
-          text-align: center;
-          align-items: center;
+        @include row(table);
+        .links{
+          @include span-columns(2);
+          @include media($tablet) {
+            @include span-columns(4);
+            @include row(table);
+          }
+          .quick-link {
+            @include span-columns(1);
+            @include media($tablet) {
+              @include span-columns(2);
+            }
+            background-color: #4B4141;
+            text-align: center;
+            align-items: center;
+            padding-top: 0.5em;
 
             .icon {
-              margin: 0 auto;
               background-size: 100%;
               color: #ffffff;
+              .fa{
+                font-size: 3em;
+                @include media($tablet) {
+                  font-size: 2em;
+                };
+              }
+              padding-bottom: 0.5em;
             }
 
             .name {
               font-size: 1em;
+              @include media($tablet) {
+                font-size: 0.75em;
+              };
               text-align: center;
               color: #ffffff;
             }
+          }
         }
       }
     }
-
+    .filler {
+      padding: 2em;
+      @include media($tablet) {
+        padding: 1em;
+      };
+    }
     .contribution-steps {
-      @include outer-container;
-      max-width: 100%;
+      @include outer-container();
 
       .contribution-step {
-        @include span-columns(2);
-
+        @include span-columns(6);
         .involvement-heading {
-          text-align: left;
           font-size: 1.4em;
           color: #333;
-          padding-top: 8px;
-          padding-bottom: 8px;
+          text-align: center;
+          padding-bottom: 0.5em;
         }
 
         .contribution-list {
-          width: 50%;
-
           .contribution-item {
             color: #000000;
-            padding-bottom: 0.5em;
-            padding-top: 0.5em;
             a {
               color: #1b23ff;
             }
           }
         }
       }
-
     }
   }
   footer {
