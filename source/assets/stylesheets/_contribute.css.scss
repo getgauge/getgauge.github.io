@@ -1,0 +1,94 @@
+body {
+
+  .contribute {
+
+    padding: 8em 1.5em;
+    margin: 0 auto 0.5em;
+    width: 80%;
+    text-align: left;
+
+    .contribute-heading {
+      line-height: 1.5;
+      color: black;
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    .quick-links {
+
+      padding-bottom: 10px;
+      padding-top: 10px;
+
+      .links-heading {
+        color: #333;
+        text-align: left;
+        font-size: 1.4em;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      .links-row {
+        @include outer-container;
+        max-width: 100%;
+
+        li.quick-link {
+          @include span-columns(6);
+
+          background-color: #4B4141;
+          height: 8em;
+          width: 8em;
+          padding: 3px;
+          margin: 4px;
+          text-align: center;
+          align-items: center;
+
+            .icon {
+              margin: 0 auto;
+              background-size: 100%;
+              color: #ffffff;
+            }
+
+            .name {
+              font-size: 1em;
+              text-align: center;
+              color: #ffffff;
+            }
+        }
+      }
+    }
+
+    .contribution-steps {
+      @include outer-container;
+      max-width: 100%;
+
+      .contribution-step {
+        @include span-columns(2);
+
+        .involvement-heading {
+          text-align: left;
+          font-size: 1.4em;
+          color: #333;
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+
+        .contribution-list {
+          width: 50%;
+
+          .contribution-item {
+            color: #000000;
+            padding-bottom: 0.5em;
+            padding-top: 0.5em;
+            a {
+              color: #1b23ff;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  footer {
+    background-color:lightgray;
+  }
+}
