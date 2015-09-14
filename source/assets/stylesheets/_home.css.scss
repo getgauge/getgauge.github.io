@@ -1,6 +1,6 @@
 body.index {
   .section1 {
-    position: relative;
+    // position: relative;
     color: #9A9A8A;
     text-align: center;
 
@@ -9,7 +9,7 @@ body.index {
   	background-repeat: no-repeat;
     position: relative;
     color: #9A9A8A;
-    padding: 5.75em 0;
+    padding: 2.3em 0;
     @include media($tablet) {
       padding: 1.2em 0;
     }
@@ -23,6 +23,16 @@ body.index {
     background-size:16px 16px;
     h1, h3 {
       color: white;
+    }
+    .gauge-logo{
+      height:2em;
+      background-size: 8em 2em;
+      @include media($tablet){
+        height:1em;
+        background-size: 4em 1em;
+      }
+      background: image-url('Gauge-Logo-White.png') no-repeat center;
+      margin-bottom: 0.5em;
     }
   }
   #features {

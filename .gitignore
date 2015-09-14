@@ -6,3 +6,5 @@ vendor/cache
 /node_modules/
 /.idea/
 .DS_Store
+documentation/technical/
+documentation/user/

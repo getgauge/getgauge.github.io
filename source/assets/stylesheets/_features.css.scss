@@ -23,7 +23,7 @@ body.index {
 
       .feature {
         padding: 1em;
-        @include span-columns(4);
+        @include span-columns(6);
         @include media($tablet) {
           @include span-columns(2 of 2);
         }
