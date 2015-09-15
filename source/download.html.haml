@@ -148,7 +148,7 @@
       &nbsp; | &nbsp;
       %i.fa.fa-github
       %a.download-link{:href => "https://github.com/getgauge/gauge/releases/"} Older Versions
-  .platform-row
+  .platform-row{ :id => 'Windows' }
     .platform-name
       .icon
         %i.fa.fa-windows.fa-3x
@@ -166,7 +166,7 @@
           %i.fa.fa-download.fa-2x
         .name
           %h5 64-bit
-  .platform-row
+  .platform-row{ :id => 'Mac' }
     .platform-name
       .icon
         %i.fa.fa-apple.fa-3x
@@ -184,7 +184,7 @@
           %i.fa.fa-download.fa-2x
         .name
           %h5 64-bit
-  .platform-row
+  .platform-row{ :id => 'Linux' }
     .platform-name
       .icon
         %i.fa.fa-linux.fa-3x
@@ -202,3 +202,5 @@
           %i.fa.fa-download.fa-2x
         .name
           %h5 64-bit
+          = javascript_include_tag  "jquery.client"
+          = javascript_include_tag  "platform"
