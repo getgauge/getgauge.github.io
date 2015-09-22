@@ -20,8 +20,8 @@ $pink: #e25995;
 $blue: #477dca;
 $mustard: rgba(245, 193, 14, 1);
 $dark-gray: #333;
+$light-gray: #f1f1f1;
 $medium-gray: #999;
-$light-gray: #ddd;
 $transparent-smoke: rgba(0, 0, 0, 0.8);
 $transparent-dark-blue: rgba(0, 24, 148, 0.3);
 
@@ -29,6 +29,7 @@ $transparent-dark-blue: rgba(0, 24, 148, 0.3);
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
 $action-color: $mustard;
+$button-color: $light-gray;
 
 // Border
 $base-border-color: $light-gray;

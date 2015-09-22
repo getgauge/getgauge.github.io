@@ -4,15 +4,6 @@ html {
   font-size: 16px;
 }
 
-a:hover {
-  opacity: 0.85;
-  transform: translate(0px,-2px);
-  -webkit-transform: translate(0px,-2px);
-  -moz-transform: translate(0px,-2px);
-  -ms-transform: translate(0px,-2px);
-  -o-transform: translate(0px,-2px);
-}
-
 body, header, footer, #content {
   // @include span-columns(12);
 }
@@ -182,42 +173,7 @@ footer {
 }
 
 #hero {
-  font-size: 4em;
-  font-weight: 300;
   color: #111;
 
-  h1 {
-    width: 80%;
-    font-size: 0.67em;
-    text-align: center;
-    margin: 0 auto 1em;
-  }
-
-  h3 {
-    font-size: 0.33em;
-    line-height: 1.8;
-    width: 80%;
-    margin: 0 auto 2em;
-    text-align: center;
-  }
-
-  .background-pattern-container {
-    background: #999999;
-    position: relative;
-    background-size: cover;
-    opacity: 0.8;
-    padding: 2em 0 1em;
-  }
-
-  .blur-background-pattern-container {
-    @include background(image-url('geometric-blur.png'));
-    background-size: cover;
-    opacity: 0.5;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  
 }

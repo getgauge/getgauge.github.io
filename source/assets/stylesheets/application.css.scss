@@ -14,9 +14,12 @@
 @import "team";
 @import "contribute";
 @import "cla";
+@import "fonts";
 
 body {
   -webkit-font-smoothing: antialiased;
+    font: normal 112.5%/1.65 "open sans", "Helvetica", "Arial", sans-serif, sans-serif;
+    color:#444;
 }
 
 #powered-by {

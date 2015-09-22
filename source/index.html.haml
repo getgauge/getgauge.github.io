@@ -1,55 +1,82 @@
-%section#hero
-  .section1
-    .gauge-logo
-    %h1 Test, You must !
-    %h3 -- Yoda, if he ever were to write code.
-    %a.primary-cta{:href => "/download"} Download
-#features
-%section.continuous-integration-features.feature-group
-  .feature-group-heading
-    %h1 Features
-  .feature-row
-    .feature
-      .icon
-        %i.fa.fa-terminal.fa-5x
-      .name
-        %h5 First class command line support
-      .explanation
-        Do everything with your terminal, well almost everything. Gauge allows you to perform a variety of operations via the command line.
-    .feature
-      .icon
-        %i.fa.fa-language.fa-5x
-      .name
-        %h5 Multiple language support
-      .explanation
-        Write test cases in your favorite programming language.
-  .feature-row
-    .feature
-      .icon
-        %i.fa.fa-pencil.fa-5x
-      .name
-        %h5 Simple Syntax
-      .explanation
-        Author specifications in markdown, a widely-known markup syntax.
-    .feature
-      .icon
-        %i.fa.fa-tasks.fa-5x
-      .name
-        %h5 Parallel Execution
-      .explanation
-        Simplest Parallelization strategy across all the languages.
-  .feature-row
-    .feature
-      .icon
-        %i.fa.fa-puzzle-piece.fa-5x
-      .name
-        %h5 Extensible and Hackable
-      .explanation
-        Get more out of Gauge via its plugin architecture. Extension points include: language support, driver support, test execution events, and more.
-    .feature
-      .icon
-        %i.fa.fa-code.fa-5x
-      .name
-        %h5 Multiple IDE Support
-      .explanation
-        Gauge is designed to support IDE integration. Intellij idea integration helps to collaborate better by providing smart suggestions.
+%section.hero-banner
+  %section.hero-banner-content
+
+    %h1 SIMPLE. CUSTOMIZABLE. HACKABLE. 
+    .subquote 
+      Write tests in plain-speak, then customize with rich, plug-in supportive artitecture
+      %br Powerful refactoring that allows your test suite to adapt and change as your application evolves.
+    %a.button.primary-button{:href => "/getstarted"} Get Started
+    %a.button{:href => "/contribute"} Contribute
+    %section.features
+      %h2 Why Gauge is better for QAs
+      %ul.feature-list
+        %li.simple-syntax 
+          %h3 Simple Syntax
+          %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice. You don’t have to use Given-When-Then if you don’t want to.
+        %li.parallal-exec 
+          %h3 Parallal Execution
+          %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
+        %li.env-tools
+          %h3 
+            Your Environment
+            %br Your Tools
+          %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
+        %li.ext-data-src 
+          %h3 External Data Source
+          %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
+
+%ul.vision
+  %li 
+    %h3 Open source
+    Passionate about 
+    %b open source
+    and test automation 
+  %li
+    %h3 For everyone
+    We want to be the tool of choice for testers with varying levels of automation experience
+  %li
+    %h3 Plugin architecture
+    Building a community of people with varying preferences is important to us. And Gauge is built with a pluggable architecture that could nurture this vision.
+
+  %li
+    %h3 We're here to stay 
+    Now that we have been in this space for over a decade, we love it, we want to stay and solve the harder problems.
+
+%section.video
+  %h2 Let's Get Started
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj1WUZ9gjLY" frameborder="0" allowfullscreen></iframe>
+  %div.download
+    %a.button.primary-button{:href => "/getstarted"} Download
+
+%section.testimonials
+  %h2 Check what our customer says
+  %ul
+    %li
+      %div
+        "Guage is simple Awesome"
+        .client Sheena Patel, QA
+    %li
+      %div
+        "Love it!"
+        .client Shaun Martin, Test Manager
+
+    %li
+      %div
+        "Guage is simple Awesome"
+        .client Sheena Patel, QA
+
+    %li
+      %div
+        "Guage is simple Awesome"
+        .client Sheena Patel, QA
+
+%section.community
+  %h2 Be part of out community...
+  .community-list
+    %a.join-group Join Our Groups
+          
+    %a.contribute Contribute Code
+        
+    %a.contact Contact Us
+    
+    %a.followus Follow Us

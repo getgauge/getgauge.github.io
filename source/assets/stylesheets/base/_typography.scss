@@ -10,17 +10,18 @@ body {
 h1
 {
   font-family: $heading-font-family;
-  font-size: 3em;
+  font-size: 56px;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
   font-weight: 800;
   text-align: center;
+  font-weight:400;
 }
 
 h2
 {
   font-family: $heading-font-family;
-  font-size: 2em;
+  font-size: 32px;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -28,7 +29,7 @@ h2
 h3
 {
   font-family: $heading-font-family;
-  font-size: 1.5em;
+  font-size: 22px;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
   font-weight: 500;
@@ -49,14 +50,13 @@ p {
 }
 
 a {
-  color: $action-color;
   text-decoration: none;
   transition: color 0.1s linear;
-
+  cursor:pointer; 
+  
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
   }
 
   &:active,

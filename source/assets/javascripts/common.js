@@ -19,4 +19,14 @@ $(document).ready(function() {
   $(menuToggle).on('click', function(e) {
     menu.slideToggle();
   });
+
+  function updateHeight(){
+        var browserheight = $( window ).height();
+        $(".hero-banner").css('height',browserheight);
+  }
+  //updateHeight();
+
+  $( window ).resize(function() {
+ //       updateHeight();
+    });
 });

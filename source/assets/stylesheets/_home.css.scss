@@ -1,42 +1,180 @@
-body.index {
-  .section1 {
-    // position: relative;
-    color: #9A9A8A;
-    text-align: center;
+.hero-banner {
+  color: #f1f1f1;
+  text-align: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow:auto;
+  @include media($tablet) {
+    padding: 1.2em 0;
+  }
+  background-image: image-url('herobanner.jpg');
+  background-color:#000;
+  background-repeat:no-repeat;
+  background-size:100%;
 
-    background-size: 100%;
-  	background-position: 50% 0;
-  	background-repeat: no-repeat;
+  .hero-banner-content{
+    margin: 200px 0px 0px;
+  }
+  h1{
+    padding:0px 0px 0px;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  h1, h3 {
+    color: white;
+  }
+  h3 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .subquote{
+    margin-bottom:50px;
+  }
+  .button{
+      margin-right:30px;
+    }
+  .background-pattern-container {
+    background: #999999;
     position: relative;
-    color: #9A9A8A;
-    padding: 2.3em 0;
-    @include media($tablet) {
-      padding: 1.2em 0;
-    }
-    width: 100% !important;
-    background:
-      radial-gradient(black 15%, transparent 16%) 0 0,
-      radial-gradient(black 15%, transparent 16%) 8px 8px,
-      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
-    background-size:16px 16px;
-    h1, h3 {
-      color: white;
-    }
-    .gauge-logo{
-      height:2em;
-      background-size: 8em 2em;
-      @include media($tablet){
-        height:1em;
-        background-size: 4em 1em;
+    background-size: cover;
+    opacity: 0.8;
+    padding: 2em 0 1em;
+  }
+
+  .blur-background-pattern-container {
+    @include background(image-url('geometric-blur.png'));
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+.features {
+  padding: 30px 20px 0px;
+  background:rgba(0,0,0,.4);
+  margin-top:200px;
+
+  .feature-list{
+    margin:70px 0px 25px;
+    li{
+      display:inline-block;
+      width:24.5%;
+      text-align:center;
+      padding-top:110px;
+      background-repeat:no-repeat;
+      background-position:center top;
+      background-size: 80px 80px;
+      vertical-align:top;
+
+      &.simple-syntax{
+        background-image: image-url('icon_syntax.svg');
       }
-      background: image-url('Gauge-Logo-White.png') no-repeat center;
-      margin-bottom: 0.5em;
+      &.parallal-exec{
+        background-image: image-url('icon_parallel_exec.svg');
+      }
+      &.env-tools{
+        background-image: image-url('icon_tools.svg');
+      }
+      &.ext-data-src{
+        background-image: image-url('icon_data.svg');
+      }
+
+      .feature-desc{
+        font-size:12px;
+        padding:20px;
+      }
     }
   }
-  #features {
-    padding: 1.9em;
-    display:block;
+}
+.vision{
+  padding:0px;
+  margin:0px;
+  overflow:hidden;
+  background:#f1f1f1;
+  li{
+    width:50%;
+    text-align:center;
+    font-size:14px;
+    float:left;
+    padding:30px 0px;
+    margin:0px;
+    &:nth-child(2){
+      background:$mustard;
+    }
+    &:nth-child(3){
+      background:$mustard;
+    }
+  }
+}
+.video{
+  padding:50px 0px;
+  text-align:center;
+
+  iframe{
+    margin:20px 0px 40px;
+    border-top:3px solid $mustard;
+  }
+}
+
+.testimonials{
+  text-align:center;
+  background:#f1f1f1;
+  padding:30px 0px;
+  ul{
+    margin:0px;
+    padding:50px 0px;
+    overflow:hidden;
+  }
+  li{
+    float:left;
+    width:25%;
+    text-align:center;
+    div{
+      background:#fff;
+      margin:0px 20px;
+      padding:15px 20px;
+      .client{
+        font-size:12px;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.community{
+  width:100%;
+  text-align:center;
+  padding:50px 0px 0px;
+  .community-list{
+    padding-top:30px;
+  }
+
+  a{
+    width:24.5%;
+    display:inline-block;
+    padding-top:110px;
+    text-align:center;
+    background-repeat:no-repeat;
+    background-position:center top;
+    background-size: 80px 80px;
+    vertical-align:top;
+  }
+  .join-group{
+      background-image: image-url('icon_syntax.svg');
+  }
+  .contribute{
+      background-image: image-url('icon_syntax.svg');
+  }
+  .contact{
+      background-image: image-url('icon_syntax.svg');
+  }
+  .followus{
+      background-image: image-url('icon_syntax.svg');
   }
 }
