@@ -73,7 +73,7 @@
   }
 }
 .features {
-  padding: 30px 0px 0px;
+  padding: 50px 0px 0px;
   background:rgba(0,0,0,.4);
   margin-top:200px;
   @include media($tablet){
@@ -81,6 +81,7 @@
   }
   @include media($mobile){
     margin-top: 100px;
+    padding: 30px 0px 0px;
   }
   .feature-list{
     margin:70px 0px 25px;
@@ -169,6 +170,9 @@
 }
 .video{
   padding:50px 0px;
+  @include media($mobile){
+    padding:30px 0px;
+  }
   text-align:center;
 
   iframe{
@@ -184,9 +188,15 @@
 .testimonials{
   text-align:center;
   background:#f1f1f1;
-  padding:30px 0px;
+  padding:50px 0px;
+  @include media($mobile){
+    padding:30px 0px;
+  }
   ul{
     padding:50px 0px;
+    @include media($mobile){
+      padding:20px 0px;
+    }
   }
   li{
     text-align:center;
@@ -202,6 +212,7 @@
       background:none;
       @include span-columns(2 of 3);
       @include shift(.5);
+      margin-bottom: 0px
     }
     
     div{
@@ -219,6 +230,9 @@
   width:100%;
   text-align:center;
   padding:50px 0px 0px;
+  @include media($mobile){
+    padding:30px 0px;
+  }
   .community-list{
     padding-top:30px;
     @include outer-container;
