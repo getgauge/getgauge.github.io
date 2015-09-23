@@ -2,10 +2,13 @@ html {
   font-family: 'Open Sans';
   font-weight: 400;
   font-size: 16px;
+  @include media($mobile){
+      font-size: 14px;
+  }
 }
 
 body, header, footer, #content {
-  // @include span-columns(12);
+   @include span-columns(12);
 }
 
 header, footer {
@@ -65,11 +68,7 @@ header, footer {
         }
 
         a {
-          font-size: 1.3em;
-        }
-
-        &:hover {
-          border-bottom: 2px solid white;
+          font-size: 16px;
         }
       }
 
@@ -131,10 +130,9 @@ header, footer {
 
       .header-nav {
         .nav-link:hover {
-          border-bottom: 2px solid $mustard;
-        }
-        a:hover {
-          color: $mustard;
+          a {
+            color: $mustard;
+          }        
         }
       }
 
