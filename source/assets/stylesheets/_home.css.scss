@@ -272,3 +272,34 @@
       background-image: image-url('icon_follow.svg');
   }
 }
+.selectable{
+  color: $mustard;
+  i{
+    top: -14px;
+    position: relative;
+    font-size: 14px;
+  }
+}
+
+.overview-filter-selector-wrap {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+}
+.overview-filter-values-wrap{
+  position:absolute;
+  display:none;
+  right:0px;
+  background:#f1f1f1;
+  border:1px solid #444;
+  color:#000;
+  font-size:14px;
+
+  .overview-filter-value{
+    position:relative;
+    z-idex:1;
+    line-height:22px;
+    padding:10px 25px;
+    border-bottom:1px solid #cecece;
+  }
+}
