@@ -12,7 +12,7 @@ body, header, footer, #content {
 }
 
 header, footer {
-  $navigation-height: 4em;
+  $navigation-height: 3em;
   $navigation-submenu-padding: 1em;
 
   a {
@@ -24,14 +24,10 @@ header, footer {
     @include clearfix;
 
     .logo {
-      background-size: 90%;
-      background-position: 0 15px;
-      background-repeat: no-repeat;
-
       float: left;
       width: 150px;
       margin-left: 1em;
-      height: $navigation-height;
+      padding-top:12px;
     }
 
     .header-nav {
@@ -101,13 +97,15 @@ header, footer {
       background-color: $transparent-smoke;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
-      .logo {
-        background-image: image-url('Gauge-Logo.png');
-      }
 
       .header-nav {
+        .nav-link auto{
+          border-bottom: 2px solid $transparent-smoke;
+        }
         .nav-link:hover {
-          border-bottom: 2px solid white;
+          a{
+            border-bottom: 2px solid white;
+          }
         }
       }
 
@@ -125,7 +123,6 @@ header, footer {
       border-bottom: 1px solid #CCC;
 
       .logo {
-        background-image: image-url('Gauge-Logo.png');
       }
 
       .header-nav {

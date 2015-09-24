@@ -17,9 +17,10 @@ title: Gauge | ThoughtWorks
             = javascript_include_tag  "application", :async => true
             %link{:href => "//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
   %body{:class => page_classes}
-    %header.light
+    %header.dark
       %nav.nav-wrapper
-        = link_to '', '/', :class => 'logo'
+        %a.logo{:href => "http://getgauge.io"} 
+          %img#thumb{:alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         %a.navigation-menu-button{:href => "javascript:void(0)"}
           %i.fa.fa-bars.fa-2x
         %ul.header-nav
