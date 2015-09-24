@@ -7,24 +7,21 @@
       %br Powerful refactoring that allows your test suite to adapt and change as your application evolves.
     %a.button.primary-button{:href => "/getstarted"} Get Started
     %a.button{:href => "/contribute"} Contribute
-    %section.features
+    %section.features.qas
       %h2 
         Why Gauge is better for 
-        <span class="overview-filter-selector-wrap js-filter-selector">
-        <div class="overview-filter-current-value"><a class="selectable">QAs<i class="fa fa-chevron-down"></i></a>
+        <span class="features-filter-selector-wrap">
+        <a class="features-selector"><span class="features-selected-value">QAs</span><i class="fa fa-chevron-down"></i></a>
           
-        </div>
-        <div class="overview-filter-values-wrap js-values-wrap">
-        <div class="overview-filter-values">
-        <div class="overview-filter-value js-value _active" data-value="_all">you</div>
-        <div class="overview-filter-value js-value" data-value="developers">developers</div>
-        <div class="overview-filter-value js-value" data-value="managers">managers</div>
-        <div class="overview-filter-value js-value" data-value="pandas">pandas</div>
+        <div class="features-filter-values-wrap js-values-wrap">
+        <div class="features-filter-values">
+        <div class="features-filter-value" data-value="qas">QA's</div>
+        <div class="features-filter-value" data-value="developers">developers</div>
         </div>
         </div>
         </span>
 
-      %ul.feature-list
+      %ul.feature-list.qas.animated.fadeIn
         %li.simple-syntax 
           %h3 Simple Syntax
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice. You don’t have to use Given-When-Then if you don’t want to.
@@ -39,6 +36,33 @@
         %li.ext-data-src 
           %h3 External Data Source
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
+
+      %ul.feature-list.developers.animated.fadeIn
+        %li.simple-syntax 
+          %h3 Simple Syntax
+          %div.feature-desc Write specifications in Markdown, a plain text, widely used markup. Gauge won't enforce a format: write in the style that works for you.
+        
+        %li.env-tools
+          %h3 
+            Your Environment
+            %br Your Tools
+          %div.feature-desc You can easily write your own language or IDE plugin. Author plugins in Golang or any other popular programming language. Gauge's plugin-loving architecture helps you get the most out of it. 
+
+        %li.env-tools
+          %h3 
+            Test code is
+            %br production code
+          %div.feature-desc Test suites need to be as DRY and as malleable as your production code. Gauge's robust refactoring support makes sure your suite evolve as your application does.
+
+        %li.parallal-exec
+          %h3 
+            Parallel execution
+            %br made easy
+          %div.feature-desc Run your tests in parallel with a single command from the IDE or command line. It'll work exactly the same across all languages.
+
+
+
+
 %section.vision
   %ul
     %li 

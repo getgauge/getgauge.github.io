@@ -29,4 +29,18 @@ $(document).ready(function() {
   $( window ).resize(function() {
  //       updateHeight();
     });
+
+  $(".features-filter-selector-wrap").on('click','.features-selector',function(e){
+    e.preventDefault();
+    $(this).closest(".features-filter-selector-wrap")
+    .toggleClass( "active" );
+  });
+
+  $(".features-filter-selector-wrap").on('click','.features-filter-value',function(e){
+    var value= $(this).attr("data-value");
+    $(this).closest(".features").removeClass().addClass('features '+value ); 
+    $(this).closest(".features-filter-selector-wrap")
+    .removeClass("active")
+    .find('.features-selected-value').text(value);
+  });
 });
