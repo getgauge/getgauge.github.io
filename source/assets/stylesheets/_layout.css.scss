@@ -105,6 +105,12 @@ header, footer {
         .nav-link:hover {
           a{
             border-bottom: 2px solid white;
+            @include media($mobile){
+              display:block;
+            }
+          }
+          @include media($mobile){
+            background:#f1f1f1;
           }
         }
       }
@@ -152,7 +158,8 @@ header {
 footer {
   position: relative;
   z-index: 100;
-  background-color: #ffffff;
+  background-color: #515151;
+  color:#fff;
   text-align: center;
   padding: 1.25em 0 0.75em 0;
   ul li {
