@@ -99,19 +99,23 @@ header, footer {
 
 
       .header-nav {
-        .nav-link auto{
-          border-bottom: 2px solid $transparent-smoke;
-        }
-        .nav-link:hover {
+        .nav-link{
+          @include media($mobile){
+            padding-right:0px;
+          }
           a{
-            border-bottom: 2px solid white;
+            text-align:center;
             @include media($mobile){
               display:block;
             }
-          }
-          @include media($mobile){
-            background:#f1f1f1;
-          }
+            &:hover{
+              border-bottom: 2px solid white;
+              @include media($mobile){
+                border-bottom:none;
+                background:#f1f1f1;
+              }
+            }
+          } 
         }
       }
 
