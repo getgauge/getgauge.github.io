@@ -38,9 +38,10 @@ $(document).ready(function() {
 
   $(".features-filter-selector-wrap").on('click','.features-filter-value',function(e){
     var value= $(this).attr("data-value");
+    var textvalue= $(this).text();
     $(this).closest(".features").removeClass().addClass('features '+value ); 
     $(this).closest(".features-filter-selector-wrap")
     .removeClass("active")
-    .find('.features-selected-value').text(value);
+    .find('.features-selected-value').text(textvalue);
   });
 });

@@ -29,7 +29,6 @@ title: Gauge | ThoughtWorks
           %li.nav-link= link_to 'Documentation', '/documentation/user/0.1.3'
           %li.nav-link= link_to 'Blog', '/contribute'
           %li.nav-link= link_to 'Get Started', '/team'
-  
           %li.nav-link-short
             %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"}
               %i.fa.fa-github
@@ -37,9 +36,7 @@ title: Gauge | ThoughtWorks
       = yield
     %footer
       %section#powered-by
-        .section-wrapper
-          %a{:href => "http://www.thoughtworks.com/products"}
-            %img{:alt => "Thoughtworks logo", :src => asset_path(:images, 'twlogo-footer-black.png')}
+        %a{:href => "http://www.thoughtworks.com/products"}
+          %img{:alt => "Thoughtworks logo", :src => asset_path(:images, 'twlogo-footer-black.png')}
 
-      %p
-      %p Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0
+      %p.disclamer Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0
