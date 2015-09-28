@@ -22,6 +22,7 @@
     padding:0px 0px 0px;
     margin: 0 auto;
     text-align: center;
+    font-size: 64px;
     @include media($tablet){
       font-size: 46px;
     }
@@ -83,7 +84,7 @@
     padding: 30px 0px 0px;
   }
   .feature-list{
-    margin:70px 0px 25px;
+    margin:70px 0px 0px;
     display:none;
     @include outer-container(100%);
     li{
