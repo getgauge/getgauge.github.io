@@ -39,6 +39,7 @@
     margin: 0 auto;
     text-align: center;
   }
+
   .subquote{
     width:80%;
     margin:0px auto 50px;
@@ -185,7 +186,7 @@
       margin:0px;
       min-height:150px;
       &.vision-alt-bg{
-        background:$mustard;
+        background:lighten($mustard, 20%);
         @include media($mobile){
           background:none;
         }
@@ -198,6 +199,43 @@
         background-size: 40px 40px;
         padding-top:24px;
       }
+    }
+  }
+}
+.visiongauge{
+  text-align: center;
+  padding:50px 0px;
+  background: $mustard;
+  strong{
+    font-weight: bold;
+  }
+  .vision-col{
+    padding:0px 20px 25px 70px;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    width: 80%;
+    @include media($mobile){
+      width: 100%;
+    }
+  }
+  .icon-os{ background-image: image-url('vision/iconos.svg');}
+  .icon-explevel{ background-image: image-url('vision/iconlevels.svg');}
+  .icon-plugin{ background-image: image-url('vision/iconpluggable.svg');}
+  .icon-hardprob{ background-image: image-url('vision/iconproblems.svg');}
+  ul{
+    overflow: hidden;
+    width:80%;
+    margin:60px auto 30px;
+  }
+  li{
+    width:50%;
+    float:left;
+    font-size: 14px;
+    margin-bottom: 50px;
+    @include media($mobile){
+      width: 100%;
+      display: block;
     }
   }
 }
@@ -264,21 +302,22 @@
   }
   .community-list{
     padding-top:30px;
-    @include outer-container;
+    @include span-columns(8);
+    @include shift(2);
   }
 
   a{
     @include span-columns(3);
-    padding-top:110px;
+    padding-top:80px;
     padding-bottom:44px;
     text-align:center;
     background-repeat:no-repeat;
     background-position:center top;
-    background-size: 80px 80px;
+    background-size: 50px 50px;
     vertical-align:top;
     color:#444;
     @include media($tablet){
-      background-size: 60px 60px;
+      background-size: 40px 40px;
       padding-top:74px;
     }
     @include media($mobile){
@@ -292,10 +331,10 @@
       background-image: image-url('icon_groups.svg');
   }
   .contribute{
-      background-image: image-url('icon_contribute.svg');
+      background-image: image-url('icon_contact_gitter.svg');
   }
   .contact{
-      background-image: image-url('icon_contact.svg');
+      background-image: image-url('icon_contact_watch.svg');
   }
   .followus{
       background-image: image-url('icon_follow.svg');
