@@ -21,17 +21,16 @@ title: Gauge | ThoughtWorks
   %body{:class => page_classes}
     %header.dark
       %nav.nav-wrapper
-        %a.logo{:href => "#"} 
+        %a.logo{:href => "/#"} 
           %img#thumb{:alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         %a.navigation-menu-button{:href => "javascript:void(0)"}
           %i.fa.fa-bars.fa-2x
         %ul.header-nav
           %li.nav-link
             %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Docs
-          %li.nav-link= link_to 'Blog', '/contribute'
-          %li.nav-link= link_to 'Get Started', '/team'
-          %li.nav-link
-            %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"} Contribute
+          %li.nav-link= link_to 'Blog', '/blog'
+          %li.nav-link= link_to 'Get Started', '/getstarted'
+          %li.nav-link= link_to 'Contribute', '/contribute'
           %li.nav-link-short
             %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"}
               %i.fa.fa-github
