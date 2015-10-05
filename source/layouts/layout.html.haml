@@ -26,9 +26,12 @@ title: Gauge | ThoughtWorks
         %a.navigation-menu-button{:href => "javascript:void(0)"}
           %i.fa.fa-bars.fa-2x
         %ul.header-nav
-          %li.nav-link= link_to 'Documentation', '/documentation/user/0.1.3'
+          %li.nav-link
+            %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Docs
           %li.nav-link= link_to 'Blog', '/contribute'
           %li.nav-link= link_to 'Get Started', '/team'
+          %li.nav-link
+            %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"} Contribute
           %li.nav-link-short
             %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"}
               %i.fa.fa-github

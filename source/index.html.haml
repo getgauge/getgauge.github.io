@@ -21,20 +21,20 @@
         </div>
         </div>
         </span>
-
-      %ul.feature-list.qas.animated.fadeIn
+      %a.more-features{:href => "/getstarted"} view more ...
+      %ul.feature-list.qas.wow.animated.fadeIn{"data-wow-delay" => ".3s"}
         %li.simple-syntax 
           %h3 Simple Syntax
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice. You don’t have to use Given-When-Then if you don’t want to.
-        %li.parallal-exec 
+        %li.parallal-exec  
           %h3 Parallal Execution
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
-        %li.env-tools
+        %li.env-tools 
           %h3 
             Your Environment
             %br Your Tools
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
-        %li.ext-data-src 
+        %li.ext-data-src   
           %h3 External Data Source
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
 
@@ -99,28 +99,28 @@
 
 %section.vision
   %ul
-    %li 
+    %li.wow.animated.fadeInLeft  
       %h3 Open source
       Passionate about open source and test automation 
-    %li.vision-alt-bg
+    %li.vision-alt-bg.wow.animated.fadeInRight
       %h3 For everyone
       We want to be the tool of choice for testers with varying levels of automation experience
   %ul
-    %li.vision-alt-bg
+    %li.vision-alt-bg.wow.animated.fadeInLeft  
       %h3 Plugin architecture
       Building a community of people with varying preferences is important to us. And Gauge is built with a pluggable architecture that could nurture this vision.
 
-    %li
+    %li.wow.animated.fadeInRight  
       %h3 We're here to stay 
       Now that we have been in this space for over a decade, we love it, we want to stay and solve the harder problems.
 
-%section.video
+%section.video.wow.animated.fadeIn{"data-wow-delay" => ".5s"} 
   %h2 Let's Get Started
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj1WUZ9gjLY" frameborder="0" allowfullscreen></iframe>
   %div.download
     %a.button.primary-button{:href => "/getstarted"} Download
 
-%section.testimonials
+%section.testimonials.wow.animated.fadeIn{"data-wow-delay" => ".3s"} 
   %h2 Check what our customer says
   %ul.row
     %li
@@ -138,7 +138,7 @@
       "Guage is simple Awesome"
       .client Sheena Patel, QA
 
-%section.community
+%section.community.wow.animated.fadeIn{"data-wow-delay" => ".3s"} 
   %h2 Be part of out community...
   .community-list
     %a.join-group{:href => "#"} Join Our Groups

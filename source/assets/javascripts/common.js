@@ -10,25 +10,13 @@ $(document).ready(function ($) {
       }, 500);
       return false;
   });
-});
-
-$(document).ready(function() {
+  new WOW().init();
   var menu = $('.header-nav');
   var menuToggle = $('.navigation-menu-button');
 
   $(menuToggle).on('click', function(e) {
     menu.slideToggle();
   });
-
-  function updateHeight(){
-        var browserheight = $( window ).height();
-        $(".hero-banner").css('height',browserheight);
-  }
-  //updateHeight();
-
-  $( window ).resize(function() {
- //       updateHeight();
-    });
 
   $(".features-filter-selector-wrap").on('click','.features-selector',function(e){
     e.preventDefault();

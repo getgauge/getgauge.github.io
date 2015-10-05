@@ -73,9 +73,23 @@
   }
 }
 .features {
-  padding: 50px 0px 0px;
+  padding: 50px 0px 70px;
   background:rgba(0,0,0,.4);
   margin-top:200px;
+  position: relative;
+
+  .more-features{
+    position: absolute;
+    bottom:40px;
+    right:0px;
+    left:0px;
+    z-index: 99;
+    color:$mustard;
+    font-size: 14px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
   @include media($tablet){
     margin-top:150px;
   }
