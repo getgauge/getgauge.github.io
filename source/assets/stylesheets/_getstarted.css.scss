@@ -1,0 +1,99 @@
+$local-max-width: 1024px;
+.subheader{
+  background-image: image-url('headerbg.jpg');
+  background-position: right top;
+  height:170px;
+  .page-label{
+    display:inline-block;
+    color:#fff;
+    margin-top:48px;
+    font-size:42px;
+    margin-left:30px;
+    text-transform:uppercase;
+  }
+}
+.getstarted{
+  .page-content{
+    padding:50px;
+    @include outer-container($local-max-width);
+    font-size: 14px;
+
+  }
+}
+
+.tabs{
+  margin:0px;
+  padding:0px;
+
+  li{
+    display: inline-block;
+    margin-right:30px;
+    &.active{
+      border-bottom:3px solid $mustard;
+      font-weight: bold;
+    }
+  }
+}
+.tabs-content{
+  padding:30px 0px;
+}
+.page-block{
+  margin-bottom: 60px;
+  h2{
+    text-align: left;
+    padding:8px 10px 6px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .instruction{
+    margin: 20px 20px;
+  }
+  .screenshot{
+    margin: 10px 20px 20px;
+    background: #000;
+    .browser-header{
+      background: -webkit-linear-gradient(#c5c5c5, #ececec); 
+      background: -o-linear-gradient(#c5c5c5, #ececec); 
+      background: -moz-linear-gradient(#c5c5c5, #ececec);
+      background: linear-gradient(#c5c5c5, #ececec); 
+      height:20px;
+
+    }
+    .browser-container{
+      padding: 30px 20px;
+    }
+    code{
+      color:#41B94F;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+    pre{
+      padding-left:30px;
+      color:#fff;
+      font-size: 12px;
+    }
+  }
+}
+.download-table{
+  tr:hover{
+    background: #f1f1f1;
+  }
+  .download{
+    display: inline-block;
+    font-size: 20px;
+    color:#319CF5;
+    &:hover{
+      color:$mustard;
+    }
+  }
+  .os{
+    i{
+      font-size:20px;
+      margin: 0px 10px;
+    }
+  }
+  .sha-label a{
+    font-size:12px;
+    color:#319CF5;;
+    font-weight: bold;
+  }  
+}

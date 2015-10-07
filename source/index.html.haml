@@ -16,24 +16,24 @@
         <div class="features-filter-values-wrap js-values-wrap">
         <div class="features-filter-values">
         <div class="features-filter-value" data-value="qas">Testers</div>
-        <div class="features-filter-value" data-value="developers">Developer's</div>
+        <div class="features-filter-value" data-value="developers">Developers</div>
         </div>
         </div>
         </span>
       %a.more-features{:href => "/getstarted"} view more ...
-      %ul.feature-list.qas.wow.animated.fadeIn{"data-wow-delay" => ".3s"}
-        %li.simple-syntax 
+      %ul.feature-list.qas
+        %li.simple-syntax.wow.animated.fadeIn{"data-wow-delay" => ".1s"} 
           %h3 Simple Syntax
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice. You don’t have to use Given-When-Then if you don’t want to.
-        %li.parallal-exec  
+        %li.parallal-exec.wow.animated.fadeIn{"data-wow-delay" => ".2s"}  
           %h3 Parallal Execution
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
-        %li.env-tools 
+        %li.env-tools.wow.animated.fadeIn{"data-wow-delay" => ".3s"} 
           %h3 
             Your Environment
             %br Your Tools
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
-        %li.ext-data-src   
+        %li.ext-data-src.wow.animated.fadeIn{"data-wow-delay" => ".4s"}   
           %h3 External Data Source
           %div.feature-desc Markdown allows you to easily generate readable documentation of your features in the format of your choice.
 
@@ -60,25 +60,40 @@
             %br made easy
           %div.feature-desc Run your tests in parallel with a single command from the IDE or command line. It'll work exactly the same across all languages.
 
-      
-%section.vision
-  %ul
-    %li.wow.animated.fadeInLeft  
-      %h3 Open source
-      Passionate about open source and test automation 
-    %li.vision-alt-bg.wow.animated.fadeInRight
-      %h3 For everyone
-      We want to be the tool of choice for testers with varying levels of automation experience
-  %ul
-    %li.vision-alt-bg.wow.animated.fadeInLeft  
-      %h3 Plugin architecture
-      Building a community of people with varying preferences is important to us. And Gauge is built with a pluggable architecture that could nurture this vision.
 
-    %li.wow.animated.fadeInRight  
-      %h3 We're here to stay 
-      Now that we have been in this space for over a decade, we love it, we want to stay and solve the harder problems.
+%section.visiongauge.wow.animated.fadeIn{"data-wow-delay" => ".3s"}
+  %h2 
+    Why Gauge is better for 
+    <span class="features-filter-selector-wrap"> 
+  %ul
+    %li 
+      .vision-col.icon-os
+        We are a group of people who are passionate about
+        %strong open source
+        and 
+        %strong test automation. 
 
-%section.video.wow.animated.fadeIn{"data-wow-delay" => ".5s"} 
+    %li 
+      .vision-col.icon-explevel
+        We want to be the tool of choice for testers with
+        %strong varying levels
+        of
+        %strong automation experience.
+
+    %li
+      .vision-col.icon-plugin
+        Building a community of people with varying preferences is important to us. And Gauge is built with a 
+        %strong pluggable architecture 
+        that could nurture this vision.
+
+    %li
+      .vision-col.icon-hardprob
+        Now that we have been in this space for more than a decade, we love it, we want to stay and 
+        %strong solve
+        the
+        %strong harder problems.
+    
+%section.video.wow.animated.fadeIn{"data-wow-delay" => ".3s"} 
   %h2 Let's Get Started
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj1WUZ9gjLY" frameborder="0" allowfullscreen></iframe>
   %div.download
@@ -102,13 +117,4 @@
       "Guage is simple Awesome"
       .client Sheena Patel, QA
 
-%section.community.wow.animated.fadeIn{"data-wow-delay" => ".3s"} 
-  %h2 Be part of our community...
-  .community-list
-    %a.join-group{:href => "#"} Join the Community
-          
-    %a.contribute{:href => "https://github.com/getgauge/gauge"} Talk to Us
-        
-    %a.contact{:href => "#"} Watch Us
-    
-    %a.followus{:href => "#"} Follow Us
+

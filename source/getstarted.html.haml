@@ -1,4 +1,107 @@
 .subheader
-  %h1.page-label Get Started
-%section.contribute
+  .page-label Get Started
+
+.page-content
+  %ul.tabs
+    %li.tab1.active Macintosh
+    %li.tab2 Windows
+    %li.tab3 Linux
+
+  %ul.tabs-content
+    %li.tab1
+      .page-block 
+        %h2 1. Install Gauge
+        .instruction  Select your system's configuration to download
+        .screenshot
+          .browser-header
+          .browser-container
+            %code ~ $ gauge specs/hello_world.spec
+            %pre
+              :preserve
+                2 scenarios executed, 0 failed
+                1 specifications executed, 0 failed
+      
+      .page-block 
+        %h2 2. Get Your Language
+        .instruction  Ensure you have the followinf command line
+        .screenshot
+          .browser-header
+          .browser-container
+            %code ~ $ gauge specs/hello_world.spec
+            %pre
+              :preserve
+                2 scenarios executed, 0 failed
+                1 specifications executed, 0 failed
+
+
+      .page-block 
+        %h2 3. Test it
+        .instruction  Select your system's configuration to download
+        .screenshot
+          .browser-header
+          .browser-container
+            %code ~ $ gauge specs/hello_world.spec
+            %pre
+              :preserve
+                2 scenarios executed, 0 failed
+                1 specifications executed, 0 failed           
+
+      .page-block 
+        %h2 4. Run and Use
+        .instruction  Select your system's configuration to download
+        .screenshot
+          .browser-header
+          .browser-container
+            %code ~ $ gauge specs/hello_world.spec
+            %pre
+              :preserve
+                2 scenarios executed, 0 failed
+                1 specifications executed, 0 failed 
+
+      .page-block 
+        %h2 Would You Prefer Offline Instalation?
+        %table.download-table
+          %tr
+            %td 
+            %td 32 bit
+            %td 64 bit
+            %td
+          %tr
+            %td.os
+              %i.fa.fa-windows
+              Windows.exe
+            %td
+              %a.download{:href => "/getstarted"}
+                %i.fa.fa-arrow-circle-o-down
+            %td 
+              %a.download{:href => "/getstarted"}
+                %i.fa.fa-arrow-circle-o-down
+            %td.sha-label
+              %a{:href => "/getstarted"} Show SHA1
+          %tr
+            %td.os 
+              %i.fa.fa-apple
+              Mac OS X.pkg
+            %td
+              %a.download{:href => "/getstarted"}
+                %i.fa.fa-arrow-circle-o-down
+            %td 
+              %a.download{:href => "/getstarted"}
+                %i.fa.fa-arrow-circle-o-down
+            %td.sha-label
+              %a{:href => "/getstarted"} Show SHA1
+          %tr
+            %td.os
+              %i.fa.fa-linux 
+              Linux.zip
+            %td
+              %a.download{:href => "/getstarted"}
+                %i.fa.fa-arrow-circle-o-down
+            %td 
+              %a.download{:href => "/getstarted"}
+                %i.fa.fa-arrow-circle-o-down
+            %td.sha-label 
+              %a{:href => "/getstarted"} Show SHA1
+          %tr          
+
 

@@ -1,0 +1,121 @@
+.page-content{
+  padding:50px 0px;
+  @include outer-container(100%);
+  font-size: 14px;
+}
+  .contribute {
+    h2{
+      text-align: center;
+    }
+    .how-contribute{
+      @include outer-container(1200px);
+    }
+    .contribution-list{
+      margin:50px 0px 0px;
+      padding:0px;
+      @include span-columns(12);
+
+      h4{
+        font-weight: bold;
+        text-align: center;
+      }
+      li{
+        @include span-columns(4);
+        margin-bottom: 30px;
+        .desc{
+          width:80%;
+          margin:0px auto;
+          line-height: 1.4;
+        }
+      }
+      .icon-contribution-list{
+        text-align: center;
+        font-size:50px;
+        color:#8A8A8A;
+      }
+    }
+    .contribution-process{
+      background: $mustard;
+      padding:40px 0px;
+      margin:40px 0px;
+
+      img{
+        display: block;
+        margin:0px auto;
+      }
+    }
+    .contribution-steps {
+      @include outer-container();
+
+      .contribution-step {
+        @include span-columns(6);
+        .involvement-heading {
+          font-size: 1.4em;
+          color: #333;
+          text-align: center;
+          padding-bottom: 0.5em;
+        }
+
+        .contribution-list {
+          .contribution-item {
+            a {
+              color: #1b23ff;
+            }
+          }
+        }
+      }
+    }
+    .help{
+      text-align: center;
+    }
+    .quick-links {
+      @include outer-container();
+      .links-heading {
+        color: #333;
+        font-size: 1.4em;
+      }
+
+      .links-row {
+        @include row(table);
+        .links{
+          @include span-columns(2);
+          @include media($tablet) {
+            @include span-columns(4);
+            @include row(table);
+          }
+          .quick-link {
+            @include span-columns(1);
+            @include media($tablet) {
+              @include span-columns(2);
+            }
+            background-color: #4B4141;
+            text-align: center;
+            align-items: center;
+            padding-top: 0.5em;
+
+            .icon {
+              background-size: 100%;
+              color: #ffffff;
+              .fa{
+                font-size: 3em;
+                @include media($tablet) {
+                  font-size: 2em;
+                };
+              }
+              padding-bottom: 0.5em;
+            }
+
+            .name {
+              font-size: 1em;
+              @include media($tablet) {
+                font-size: 0.75em;
+              };
+              text-align: center;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+    
+  }

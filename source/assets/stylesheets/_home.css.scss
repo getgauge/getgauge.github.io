@@ -168,40 +168,7 @@
     }
   }
 }
-.vision{
-  padding:0px;
-  margin:0px;
-  overflow:hidden;
-  background:#f1f1f1;
-  
-  ul{
-    display:table;
-    width:100%;
-    li{
-      width:50%;
-      text-align:center;
-      font-size:14px;
-      display:table-cell;
-      padding:30px 0px;
-      margin:0px;
-      min-height:150px;
-      &.vision-alt-bg{
-        background:lighten($mustard, 20%);
-        @include media($mobile){
-          background:none;
-        }
-      }
-      @include media($mobile){
-        @include span-columns(8);
-        @include shift(2);
-        border-bottom: 1px solid $mustard;
-        min-height:130px;
-        background-size: 40px 40px;
-        padding-top:24px;
-      }
-    }
-  }
-}
+
 .visiongauge{
   text-align: center;
   padding:50px 0px;
@@ -293,53 +260,6 @@
   }
 }
 
-.community{
-  width:100%;
-  text-align:center;
-  padding:50px 0px 0px;
-  @include media($mobile){
-    padding:30px 0px;
-  }
-  .community-list{
-    padding-top:30px;
-    @include span-columns(8);
-    @include shift(2);
-  }
-
-  a{
-    @include span-columns(3);
-    padding-top:80px;
-    padding-bottom:44px;
-    text-align:center;
-    background-repeat:no-repeat;
-    background-position:center top;
-    background-size: 50px 50px;
-    vertical-align:top;
-    color:#444;
-    @include media($tablet){
-      background-size: 40px 40px;
-      padding-top:74px;
-    }
-    @include media($mobile){
-      @include span-columns(4);
-      @include shift(4);
-      background-size: 40px 40px;
-      padding-top:54px;
-    }
-  }
-  .join-group{
-      background-image: image-url('icon_groups.svg');
-  }
-  .contribute{
-      background-image: image-url('icon_contact_gitter.svg');
-  }
-  .contact{
-      background-image: image-url('icon_contact_watch.svg');
-  }
-  .followus{
-      background-image: image-url('icon_follow.svg');
-  }
-}
 
 
 .features-filter-selector-wrap {

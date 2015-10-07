@@ -173,7 +173,7 @@ footer {
   background-color: #515151;
   color:#fff;
   text-align: center;
-  padding: 1.25em 0 0.75em 0;
+  padding: 0 0 0.75em 0;
   ul li {
     display: inline;
     padding: 0 .75em;
@@ -181,10 +181,63 @@ footer {
   .disclamer{
     font-size:14px;
   }
-}
 
+  .community{
+    width:100%;
+    text-align:center;
+    padding:50px 0px 0px;
+    background:#f1f1f1;
+    color:#444;
+    overflow:hidden;
+    @include media($mobile){
+      padding:30px 0px;
+    }
+    .community-list{
+      padding-top:30px;
+      @include span-columns(8);
+      @include shift(2);
+    }
+
+    a{
+      @include span-columns(3);
+      padding-top:80px;
+      padding-bottom:44px;
+      text-align:center;
+      background-repeat:no-repeat;
+      background-position:center top;
+      background-size: 50px 50px;
+      vertical-align:top;
+      color:#444;
+      @include media($tablet){
+        background-size: 40px 40px;
+        padding-top:74px;
+      }
+      @include media($mobile){
+        @include span-columns(4);
+        @include shift(4);
+        background-size: 40px 40px;
+        padding-top:54px;
+      }
+    }
+    .join-group{
+        background-image: image-url('icon_groups.svg');
+    }
+    .contribute{
+        background-image: image-url('icon_contact_gitter.svg');
+    }
+    .contact{
+        background-image: image-url('icon_contact_watch.svg');
+    }
+    .followus{
+        background-image: image-url('icon_follow.svg');
+    }
+  }
+}
+.index footer .community{
+  background: #fff;
+}
 #content{
-  margin-top: 0;
+  margin-top: 70px;
   position: relative;
   z-index: 1;
 }

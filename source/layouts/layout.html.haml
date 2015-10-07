@@ -37,6 +37,16 @@ title: Gauge | ThoughtWorks
     #content
       = yield
     %footer
+      %section.community.wow.animated.fadeIn{"data-wow-delay" => ".1s"} 
+        %h2 Be part of our community...
+        .community-list
+          %a.join-group{:href => "#"} Join the Community
+                
+          %a.contribute{:href => "https://github.com/getgauge/gauge"} Talk to Us
+              
+          %a.contact{:href => "#"} Watch Us
+          
+          %a.followus{:href => "#"} Follow Us
       %section#powered-by
         %a{:href => "http://www.thoughtworks.com/products"}
           %img{:alt => "Thoughtworks logo", :src => asset_path(:images, 'twlogo-footer-black.png')}
