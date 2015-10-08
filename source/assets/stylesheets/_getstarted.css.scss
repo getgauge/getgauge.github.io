@@ -80,7 +80,9 @@ $local-max-width: 1024px;
 }
 .download-table{
   tr:hover{
-    background: #f1f1f1;
+    td{
+      background: #f1f1f1;
+    }
   }
   .download{
     display: inline-block;
