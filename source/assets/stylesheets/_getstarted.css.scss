@@ -20,22 +20,27 @@ $local-max-width: 1024px;
 
   }
 }
-
 .tabs{
-  margin:0px;
-  padding:0px;
+  .tabs-header{
+    margin:0px;
+    padding:0px;
 
-  li{
-    display: inline-block;
-    margin-right:30px;
-    &.active{
-      border-bottom:3px solid $mustard;
-      font-weight: bold;
+    li{
+      display: inline-block;
+      margin-right:30px;
+      a
+        {
+          color:#000;
+          &.active{
+            border-bottom:3px solid $mustard;
+            font-weight: bold;
+        }
+      }
     }
   }
-}
-.tabs-content{
-  padding:30px 0px;
+  .tabs-content{
+    padding:30px 0px;
+  }
 }
 .page-block{
   margin-bottom: 60px;
@@ -96,4 +101,7 @@ $local-max-width: 1024px;
     color:#319CF5;;
     font-weight: bold;
   }  
+}
+.hide{
+  display:none;
 }

@@ -32,4 +32,5 @@ $(document).ready(function ($) {
     .removeClass("active")
     .find('.features-selected-value').text(textvalue);
   });
+  $( ".tabs" ).tabs();
 });
