@@ -2,6 +2,7 @@
   .page-label Get Started
 
 .page-content
+  %p Gauge is super simple to install. The section below will show you how to get Gauge working in 4 simple steps. We think it will take you 5 mins. That’s how easy it is!
   .tabs
     %ul.tabs-header
       %li.tab1
@@ -13,7 +14,10 @@
 
     %ul.tabs-content
       %li#tab1
+        %p There are multiple ways to get started with Gauge. You can read our detailed documentation for other methods of installation. Here we show you a simple 4 step process to get you running with Gauge on a mac.  
         .page-block 
+          %h2 1. Install Gauge
+          .instruction  You can download the pkg and follow these instructions to install Gauge
           %table.download-table
             %tr
               %th 
@@ -33,10 +37,7 @@
                   %i.fa.fa-arrow-circle-o-down
               %td.sha-label
                 %a{:href => "/getstarted"} Show SHA1
-          
-        .page-block 
-          %h2 1. Install Gauge
-          .instruction  Select your system's configuration to download
+          .instruction Or we would recommend using brew for a very simple installation using this command.
           .screenshot
             .browser-header
             .browser-container
@@ -47,8 +48,8 @@
                   1 specifications executed, 0 failed
         
         .page-block 
-          %h2 2. Get Your Language
-          .instruction  Ensure you have the followinf command line
+          %h2 2. Install Core Plugins
+          .instruction  Gauge has a rich plugin repository. Language runners, IDEs, reports are all plugin. However, since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.
           .screenshot
             .browser-header
             .browser-container
@@ -57,11 +58,15 @@
                 :preserve
                   2 scenarios executed, 0 failed
                   1 specifications executed, 0 failed
+          .instruction 
+            Go 
+            %a{:href=>"#"} here
+            to see how to install other language runners and plugins
 
 
         .page-block 
-          %h2 3. Test it
-          .instruction  Select your system's configuration to download
+          %h2 3. Test your installation
+          .instruction  Run this command to check if all plugins are installed and are at the latest version
           .screenshot
             .browser-header
             .browser-container
@@ -72,8 +77,8 @@
                   1 specifications executed, 0 failed           
 
         .page-block 
-          %h2 4. Run and Use
-          .instruction  Select your system's configuration to download
+          %h2 4. Execute Gauge specs
+          .instruction  Execute the hello world specs so you know Gauge is working!
           .screenshot
             .browser-header
             .browser-container
@@ -81,34 +86,35 @@
               %pre
                 :preserve
                   2 scenarios executed, 0 failed
-                  1 specifications executed, 0 failed 
+                  1 specifications executed, 0 failed
+          .instruction That’s it. You’re ready to start testing! 
 
         
                       
       %li#tab2.hide
         .page-block 
-          .page-block 
-            %table.download-table
-              %tr
-                %th 
-                %th 32 bit
-                %th 64 bit
-                %th
-              %tr
-                %td.os
-                  %i.fa.fa-windows
-                  Windows.exe
-                %td
-                  %a.download{:href => "/getstarted"}
-                    %i.fa.fa-arrow-circle-o-down
-                %td 
-                  %a.download{:href => "/getstarted"}
-                    %i.fa.fa-arrow-circle-o-down
-                %td.sha-label
-                  %a{:href => "/getstarted"} Show SHA1
-
-          %h2 1. Install Gauge For Windows
+          %p Or go here to install using the choco package.
+          %h2 1. Install Gauge and core plugins
           .instruction  Select your system's configuration to download
+          %table.download-table
+            %tr
+              %th 
+              %th 32 bit
+              %th 64 bit
+              %th
+            %tr
+              %td.os
+                %i.fa.fa-windows
+                Windows.exe
+              %td
+                %a.download{:href => "/getstarted"}
+                  %i.fa.fa-arrow-circle-o-down
+              %td 
+                %a.download{:href => "/getstarted"}
+                  %i.fa.fa-arrow-circle-o-down
+              %td.sha-label
+                %a{:href => "/getstarted"} Show SHA1
+
           .screenshot
             .browser-header
             .browser-container
@@ -119,8 +125,18 @@
                   1 specifications executed, 0 failed
         
         .page-block 
-          %h2 2. Get Your Language
-          .instruction  Ensure you have the followinf command line
+          %h2 2. Install core language plugins
+          .instruction  Select the language runner plugin that you want. This is the language you want to write your tests in.
+          .screenshot
+            .browser-header
+            .browser-container
+              %code ~ $ gauge specs/hello_world.spec
+              %pre
+                :preserve
+                  2 scenarios executed, 0 failed
+                  1 specifications executed, 0 failed
+          .instruction Other plugins can be installed via the command line. Look here for more information about this.
+          .instruction This is what a completed installation looks like.
           .screenshot
             .browser-header
             .browser-container
@@ -130,10 +146,9 @@
                   2 scenarios executed, 0 failed
                   1 specifications executed, 0 failed
 
-
         .page-block 
-          %h2 3. Test it
-          .instruction  Select your system's configuration to download
+          %h2 3. Test your installation
+          .instruction  Run this command(from the command line) to check if Gauge, and all plugins are installed correctly.
           .screenshot
             .browser-header
             .browser-container
@@ -144,8 +159,8 @@
                   1 specifications executed, 0 failed           
 
         .page-block 
-          %h2 4. Run and Use
-          .instruction  Select your system's configuration to download
+          %h2 4. Execute Gauge specs
+          .instruction  Execute the hello world specs so you know Gauge is working!
           .screenshot
             .browser-header
             .browser-container
@@ -158,28 +173,36 @@
         
       %li#tab3.hide
         .page-block 
-          .page-block 
-            %table.download-table
-              %tr
-                %th 
-                %th 32 bit
-                %th 64 bit
-                %th
-              %tr
-                %td.os
-                  %i.fa.fa-linux 
-                  Linux.zip
-                %td
-                  %a.download{:href => "/getstarted"}
-                    %i.fa.fa-arrow-circle-o-down
-                %td 
-                  %a.download{:href => "/getstarted"}
-                    %i.fa.fa-arrow-circle-o-down
-                %td.sha-label 
-                  %a{:href => "/getstarted"} Show SHA1
-
           %h2 1. Install Gauge For Linux
-          .instruction  Select your system's configuration to download
+          .instruction  Install Gauge with by downloading the zip and execute the following command
+          %table.download-table
+            %tr
+              %th 
+              %th 32 bit
+              %th 64 bit
+              %th
+            %tr
+              %td.os
+                %i.fa.fa-linux 
+                Linux.zip
+              %td
+                %a.download{:href => "/getstarted"}
+                  %i.fa.fa-arrow-circle-o-down
+              %td 
+                %a.download{:href => "/getstarted"}
+                  %i.fa.fa-arrow-circle-o-down
+              %td.sha-label 
+                %a{:href => "/getstarted"} Show SHA1  
+          .screenshot
+            .browser-header
+            .browser-container
+              %code ~ $ gauge specs/hello_world.spec
+              %pre
+                :preserve
+                  2 scenarios executed, 0 failed
+                  1 specifications executed, 0 failed
+          .instruction Choose the archive file appropriate for your installation. For instance, if you are installing gauge version 0.1.8 for 64-bit x86 on Linux, the archive you want is called gauge-0.1.8-linux.x86_64.tar.gz.
+
           .screenshot
             .browser-header
             .browser-container
@@ -190,8 +213,8 @@
                   1 specifications executed, 0 failed
         
         .page-block 
-          %h2 2. Get Your Language
-          .instruction  Ensure you have the followinf command line
+          %h2 2. Install Core Plugins
+          .instruction  Gauge has a rich plugin repository. Language runners, IDEs, reports are all plugin. However, since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.
           .screenshot
             .browser-header
             .browser-container
@@ -200,11 +223,14 @@
                 :preserve
                   2 scenarios executed, 0 failed
                   1 specifications executed, 0 failed
-
+          .instruction 
+            Go 
+            %a{:href=>"#"} here
+            to see how to install other language runners and plugins
 
         .page-block 
-          %h2 3. Test it
-          .instruction  Select your system's configuration to download
+          %h2 3. Test your installation
+          .instruction  Run this command to check if all plugins are installed and are at the latest version
           .screenshot
             .browser-header
             .browser-container
@@ -215,8 +241,8 @@
                   1 specifications executed, 0 failed           
 
         .page-block 
-          %h2 4. Run and Use
-          .instruction  Select your system's configuration to download
+          %h2 4. Execute Gauge specs
+          .instruction  Execute the hello world specs so you know Gauge is working!
           .screenshot
             .browser-header
             .browser-container

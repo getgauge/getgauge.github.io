@@ -1,6 +1,7 @@
 .blog-block{
 	padding:50px 0px 30px;
 	border-bottom: 1px solid #cecece;
+	position: relative;
     @include outer-container();
     &:last-child{
     	border-bottom: none;
@@ -37,5 +38,13 @@
 	.blog-summary{
 		margin-top:20px;
 		font-size: 16px;
+	}
+	.comments-info{
+		position: absolute;
+		bottom:40px;
+		right:30px;
+		color: #8A8A8A;
+    	font-size: 12px;
+
 	}
 }

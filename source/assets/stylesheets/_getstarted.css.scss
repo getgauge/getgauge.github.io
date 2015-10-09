@@ -17,8 +17,13 @@
     @include outer-container();
 
   }
+  p{
+    font-size: 14px;
+  }
 }
 .tabs{
+  font-size: 14px;
+  margin-top:40px;
   .tabs-header{
     margin:0px;
     padding:0px;
@@ -26,8 +31,8 @@
     li{
       display: inline-block;
       margin-right:30px;
-      a
-        {
+      a{
+          font-size: 20px;
           color:#000;
           &.active{
             border-bottom:3px solid $mustard;
@@ -46,6 +51,7 @@
     text-align: left;
     padding:8px 10px 6px;
     border-bottom: 1px solid #f1f1f1;
+    margin-top: 35px;
   }
   .instruction{
     margin: 20px 20px;
