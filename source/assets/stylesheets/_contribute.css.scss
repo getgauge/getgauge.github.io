@@ -1,14 +1,13 @@
-.page-content{
+.contribute-section{
   padding:50px 0px;
   @include outer-container(100%);
-  font-size: 14px;
 }
   .contribute {
     h2{
       text-align: center;
     }
     .how-contribute{
-      @include outer-container(1200px);
+      @include outer-container();
     }
     .contribution-list{
       margin:50px 0px 0px;
@@ -67,55 +66,8 @@
     }
     .help{
       text-align: center;
-    }
-    .quick-links {
       @include outer-container();
-      .links-heading {
-        color: #333;
-        font-size: 1.4em;
-      }
 
-      .links-row {
-        @include row(table);
-        .links{
-          @include span-columns(2);
-          @include media($tablet) {
-            @include span-columns(4);
-            @include row(table);
-          }
-          .quick-link {
-            @include span-columns(1);
-            @include media($tablet) {
-              @include span-columns(2);
-            }
-            background-color: #4B4141;
-            text-align: center;
-            align-items: center;
-            padding-top: 0.5em;
-
-            .icon {
-              background-size: 100%;
-              color: #ffffff;
-              .fa{
-                font-size: 3em;
-                @include media($tablet) {
-                  font-size: 2em;
-                };
-              }
-              padding-bottom: 0.5em;
-            }
-
-            .name {
-              font-size: 1em;
-              @include media($tablet) {
-                font-size: 0.75em;
-              };
-              text-align: center;
-              color: #ffffff;
-            }
-          }
-        }
-      }
     }
     
   }

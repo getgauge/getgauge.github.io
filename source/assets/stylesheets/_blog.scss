@@ -1,0 +1,41 @@
+.blog-block{
+	padding:50px 0px 30px;
+	border-bottom: 1px solid #cecece;
+    @include outer-container();
+    &:last-child{
+    	border-bottom: none;
+    }
+	h2{
+		text-align: left;
+		margin-bottom:0px;
+
+		a{
+			color:#000;
+		}
+	}
+	.author{
+		font-size: 14px;
+	}
+	time{
+		display: block;
+		font-size: 14px;
+		color: #909090;
+	}
+	.tags{
+		color: #909090;
+		font-size: 16px;
+		padding-top:10px;
+		a{
+			padding:2px 10px;
+			background: #f1f1f1;
+			border-radius:10px;
+			color:#444;
+			font-size: 13px;
+			color:#737373;
+		}
+	}
+	.blog-summary{
+		margin-top:20px;
+		font-size: 16px;
+	}
+}
