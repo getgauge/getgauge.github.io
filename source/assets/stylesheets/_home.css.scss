@@ -17,19 +17,25 @@
     @include media($mobile){
       margin: 80px 0px 0px;
     }
-  }
-  h1{
-    padding:0px 0px 0px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 64px;
-    @include media($tablet){
-      font-size: 46px;
+    h1{
+      padding:0px 0px 0px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 64px;
+      font-weight: 400;
+
+      b{
+        font-weight: 700;
+      }
+      @include media($tablet){
+        font-size: 46px;
+      }
+      @include media($mobile){
+        font-size: 36px;
+      }
     }
-    @include media($mobile){
-      font-size: 36px;
-    }
   }
+  
   h1, h3 {
     color: white;
   }
