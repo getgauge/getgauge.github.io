@@ -18,6 +18,9 @@ h2{
       font-size: 26px;
   }
 }
+p.text-block{
+    margin:0px 20px 15px;  
+}
 header, footer {
   $navigation-height: 3em;
   $navigation-submenu-padding: 1em;
@@ -220,16 +223,16 @@ footer {
       }
     }
     .join-group{
-        background-image: image-url('icon_groups.svg');
+        background-image: image-url('svg/icon_groups.svg');
     }
     .contribute{
-        background-image: image-url('icon_contact_gitter.svg');
+        background-image: image-url('svg/icon_contact_gitter.svg');
     }
     .contact{
-        background-image: image-url('icon_contact_watch.svg');
+        background-image: image-url('svg/icon_contact_watch.svg');
     }
     .followus{
-        background-image: image-url('icon_follow.svg');
+        background-image: image-url('svg/icon_follow.svg');
     }
   }
 }

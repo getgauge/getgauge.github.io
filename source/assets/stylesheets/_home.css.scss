@@ -138,16 +138,16 @@
       }
 
       &.simple-syntax{
-        background-image: image-url('icon_syntax.svg');
+        background-image: image-url('svg/icon_syntax.svg');
       }
       &.parallal-exec{
-        background-image: image-url('icon_parallel_exec.svg');
+        background-image: image-url('svg/icon_parallel_exec.svg');
       }
       &.env-tools{
-        background-image: image-url('icon_tools.svg');
+        background-image: image-url('svg/icon_tools.svg');
       }
       &.ext-data-src{
-        background-image: image-url('icon_data.svg');
+        background-image: image-url('svg/icon_data.svg');
       }
 
       .feature-desc{
@@ -192,10 +192,10 @@
       width: 100%;
     }
   }
-  .icon-os{ background-image: image-url('vision/iconos.svg');}
-  .icon-explevel{ background-image: image-url('vision/iconlevels.svg');}
-  .icon-plugin{ background-image: image-url('vision/iconpluggable.svg');}
-  .icon-hardprob{ background-image: image-url('vision/iconproblems.svg');}
+  .icon-os{ background-image: image-url('svg/vision/iconos.svg');}
+  .icon-explevel{ background-image: image-url('svg/vision/iconlevels.svg');}
+  .icon-plugin{ background-image: image-url('svg/vision/iconpluggable.svg');}
+  .icon-hardprob{ background-image: image-url('svg/vision/iconproblems.svg');}
   ul{
     overflow: hidden;
     width:80%;

@@ -21,10 +21,58 @@
       li{
         @include span-columns(4);
         margin-bottom: 30px;
+        height:250px;
+        &:nth-child(3n){
+          @include omega;
+        }
+
+        .contribution-list-item{
+          width:90%;
+        }
+        .icon-cl{
+          width:50px;
+          height:80px;
+          background-size:50px 50px;
+          margin:0px auto;
+          background-repeat:no-repeat;
+          &.icon-cl.icon-cl-1{
+            background-image: image-url('svg/contribution/icon_contribute_test.svg');
+          }
+          &.icon-cl.icon-cl-2{
+            background-image: image-url('svg/contribution/icon_contribute_discuss.svg');            
+          }
+          &.icon-cl.icon-cl-3{
+            background-image: image-url('svg/contribution/icon_contribute_blog.svg');            
+          }
+          &.icon-cl.icon-cl-4{
+            background-image: image-url('svg/contribution/icon_contribute_examples.svg');            
+          }
+          &.icon-cl.icon-cl-5{
+            background-image: image-url('svg/contribution/icon_contribute_docs.svg');            
+          }
+          &.icon-cl.icon-cl-6{
+            background-image: image-url('svg/contribution/icon_contribute_code.svg');            
+          }
+        }
         .desc{
           width:80%;
           margin:0px auto;
           line-height: 1.4;
+          font-size:16px;
+        }
+        @include media($tablet) {
+          @include span-columns(6);
+          &:nth-child(2n){
+            @include omega;
+          }
+        }
+        @include media($mobile) {
+          @include span-columns(12);  
+          @include omega;
+          height:220px;
+          .contribution-list-item{
+            width:100%;
+          }
         }
       }
       .icon-contribution-list{
@@ -37,10 +85,112 @@
       background: $mustard;
       padding:40px 0px;
       margin:40px 0px;
-
-      img{
-        display: block;
+      text-align: center;
+      @include outer-container(100%);
+      ul{
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        display: inline-block;
+        width: 768px;
         margin:0px auto;
+        @include media($mobile) {
+          width: 100%;
+        }
+        &.block-rtl{
+          li{
+            margin-top:100px;
+            @include media($mobile) {
+              margin-top:10px;
+            }
+            &:before{
+              transform:rotate(180deg);
+            }
+            &:last-child{
+              &:after{
+                content: "";
+                background-image:url("//localhost:4567/assets/images/svg/contribution/icon_arrow.svg");
+                width: 50px;
+                position: absolute;
+                top:-80px;
+                height: 50px;
+                left: 24px;
+                background-size: 50px 50px;
+                transform:rotate(90deg);
+                @include media($mobile) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        li{
+          float: left;
+          height: 110px;
+          width: 115px;
+          background-position: top center;
+          text-align: center;
+          background-size: 50px 50px;
+          background-repeat: no-repeat;
+          padding-top:60px;
+          font-size: 14px;
+          line-height: 16px;
+          margin-left:100px;
+          position: relative;
+          &:first-child{
+            margin-left:0px;
+            @include media($mobile) {
+              margin-left:auto;
+            }
+          }
+          &:before{
+            content: "";
+            background-image: url("//localhost:4567/assets/images/svg/contribution/icon_arrow.svg");
+            width: 50px;
+            position: absolute;
+            top: 6px;
+            height: 50px;
+            left: -65px;
+            background-size: 50px 50px;
+          }
+
+          @include media($mobile) {
+            display: block;
+            float: none;
+            margin:0px auto;
+            &:first-child{
+            }
+            &:before{
+              display: none;
+            }
+          }
+        }
+
+      }
+      .step1{
+            background-image: image-url('svg/contribution/icon_find_issue.svg');
+      }
+      .step2{
+            background-image: image-url('svg/contribution/icon_assign.svg');
+      }
+      .step3{
+            background-image: image-url('svg/contribution/icon_fork.svg');
+      }
+      .step4{
+            background-image: image-url('svg/contribution/icon_form.svg');
+      }
+      .step5{
+            background-image: image-url('svg/contribution/icon_changes.svg');
+      }
+      .step6{
+            background-image: image-url('svg/contribution/icon_pull_request.svg');
+      }
+      .step7{
+            background-image: image-url('svg/contribution/icon_CLA.svg');
+      }
+      .step8{
+            background-image: image-url('svg/contribution/icon_merge.svg');
       }
     }
     .contribution-steps {
@@ -71,3 +221,14 @@
     }
     
   }
+.contribution-process{
+  div{
+    float:left;
+    margin-right:10px;
+    background-image: image-url('contribution.svg#shape-icon-1');
+    background-repeat: no-repeat;
+    background-position: top left;
+    height:100px;
+    width:100px;
+  }
+}

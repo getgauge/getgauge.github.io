@@ -34,6 +34,9 @@
       a{
           font-size: 20px;
           color:#000;
+          @include media($mobile) {
+            font-size: 16px;
+          }
           &.active{
             border-bottom:3px solid $mustard;
             font-weight: bold;
