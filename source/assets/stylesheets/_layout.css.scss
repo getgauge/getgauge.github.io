@@ -223,21 +223,33 @@ footer {
       }
     }
     .join-group{
-        background-image: image-url('svg/icon_groups.svg');
+        background-image: image-url('svg/community/icon_groups_grey.svg');
     }
     .contribute{
-        background-image: image-url('svg/icon_contact_gitter.svg');
+        background-image: image-url('svg/community/icon_contact_grey.svg');
     }
     .contact{
-        background-image: image-url('svg/icon_contact_watch.svg');
+        background-image: image-url('svg/community/icon_watch_grey.svg');
     }
     .followus{
-        background-image: image-url('svg/icon_follow.svg');
+        background-image: image-url('svg/community/icon_follow_grey.svg');
     }
   }
 }
 .index footer .community{
   background: #fff;
+  .join-group{
+        background-image: image-url('svg/community/icon_groups.svg');
+    }
+    .contribute{
+        background-image: image-url('svg/community/icon_contact.svg');
+    }
+    .contact{
+        background-image: image-url('svg/community/icon_watch.svg');
+    }
+    .followus{
+        background-image: image-url('svg/community/icon_follow.svg');
+    }
 }
 #content{
   margin-top: 70px;

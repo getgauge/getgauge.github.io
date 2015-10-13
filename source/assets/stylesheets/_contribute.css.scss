@@ -28,11 +28,14 @@
 
         .contribution-list-item{
           width:90%;
+          h3{
+            height:50px;
+          }
         }
         .icon-cl{
-          width:50px;
-          height:80px;
-          background-size:50px 50px;
+          width:80px;
+          height:100px;
+          background-size:80px 80px;
           margin:0px auto;
           background-repeat:no-repeat;
           &.icon-cl.icon-cl-1{
@@ -58,7 +61,7 @@
           width:80%;
           margin:0px auto;
           line-height: 1.4;
-          font-size:16px;
+          font-size:14px;
         }
         @include media($tablet) {
           @include span-columns(6);
@@ -88,18 +91,22 @@
       text-align: center;
       @include outer-container(100%);
       ul{
-        margin: 0px;
         padding: 0px;
         overflow: hidden;
         display: inline-block;
-        width: 768px;
-        margin:0px auto;
+        width: 1024px;
+        margin:30px auto 0px;
+        @include media($tablet) {
+            width: 768px;
+        }
         @include media($mobile) {
           width: 100%;
         }
+        
         &.block-rtl{
+          margin-top:0px;
           li{
-            margin-top:100px;
+            margin-top:86px;
             @include media($mobile) {
               margin-top:10px;
             }
@@ -114,9 +121,12 @@
                 position: absolute;
                 top:-80px;
                 height: 50px;
-                left: 24px;
+                left: 57px;
                 background-size: 50px 50px;
                 transform:rotate(90deg);
+                @include media($tablet) {
+                  left: 33px;
+                }
                 @include media($mobile) {
                   display: none;
                 }
@@ -127,17 +137,20 @@
 
         li{
           float: left;
-          height: 110px;
-          width: 115px;
+          height: 150px;
+          width: 170px;
           background-position: top center;
           text-align: center;
-          background-size: 50px 50px;
+          background-size: 80px 80px;
           background-repeat: no-repeat;
-          padding-top:60px;
+          padding-top:100px;
           font-size: 14px;
           line-height: 16px;
           margin-left:100px;
           position: relative;
+          @include media($tablet) {
+            width: 115px;
+          }
           &:first-child{
             margin-left:0px;
             @include media($mobile) {
@@ -149,7 +162,7 @@
             background-image: url("//localhost:4567/assets/images/svg/contribution/icon_arrow.svg");
             width: 50px;
             position: absolute;
-            top: 6px;
+            top: 16px;
             height: 50px;
             left: -65px;
             background-size: 50px 50px;
