@@ -8,6 +8,7 @@
     padding: 1.2em 0;
   }
   background-image: image-url('herobanner.jpg');
+  background-attachment: fixed;
   background-color:#000;
   background-repeat:no-repeat;
   background-size:100%;
@@ -204,7 +205,7 @@
   li{
     width:50%;
     float:left;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 50px;
     @include media($mobile){
       width: 100%;
@@ -248,6 +249,7 @@
     height:110px;
     padding:15px 0px;
     background:#fff;
+    border-left:3px solid $mustard;
     @include span-columns(3);
     @include media($tablet){
       @include span-columns(4);
