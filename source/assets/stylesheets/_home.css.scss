@@ -181,7 +181,7 @@
 .visiongauge{
   text-align: center;
   padding:50px 0px 0px;
-  background: $mustard;
+  background: lighten($mustard,10%);
 
   strong{
     font-weight: bold;
