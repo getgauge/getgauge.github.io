@@ -2,6 +2,19 @@
 <html>
 
 <head>
+    <div class='show'>
+        <script type='text/javascript'>
+        var images = new Array()
+
+        function preload() {
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
+        }
+        preload('assets/images/contribution.svg');
+        </script>
+    </div>
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <title>Gauge | ThoughtWorks</title>

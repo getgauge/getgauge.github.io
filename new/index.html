@@ -2,6 +2,19 @@
 <html>
 
 <head>
+    <div class='show'>
+        <script type='text/javascript'>
+        var images = new Array()
+
+        function preload() {
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
+        }
+        preload('assets/images/contribution.svg');
+        </script>
+    </div>
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <title>Gauge | ThoughtWorks</title>
@@ -58,7 +71,7 @@
                     <br>Powerful refactoring that allows your test suite to adapt and change as your application evolves.</br>
                 </div>
                 <a class='button primary-button' href='get-started/index.html'>Get Started</a>
-                <a class='button' href='https://github.com/getgauge/gauge'>Contribute</a>
+                <a class='button' href='contribute/index.html'>Contribute</a>
                 <section class='features qas'>
                     <h2>
               Why Gauge is better for
@@ -163,7 +176,7 @@
             <h2>Let's Get Started</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj1WUZ9gjLY" frameborder="0" allowfullscreen></iframe>
             <div class='download'>
-                <a class='button primary-button' href='/getstarted'>Download</a>
+                <a class='button primary-button' href='get-started/index.html'>Download</a>
             </div>
         </section>
         <section class='testimonials wow animated fadeIn' data-wow-delay='.3s'>
