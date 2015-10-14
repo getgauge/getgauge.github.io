@@ -116,7 +116,7 @@
             &:last-child{
               &:after{
                 content: "";
-                background-image:url("//localhost:4567/assets/images/svg/contribution/icon_arrow.svg");
+                background-image: image-url('svg/contribution/icon_arrow.svg');            
                 width: 50px;
                 position: absolute;
                 top:-80px;
@@ -159,7 +159,7 @@
           }
           &:before{
             content: "";
-            background-image: url("//localhost:4567/assets/images/svg/contribution/icon_arrow.svg");
+            background-image: image-url('svg/contribution/icon_arrow.svg');            
             width: 50px;
             position: absolute;
             top: 16px;

@@ -175,11 +175,14 @@
     }
   }
 }
-
+.vision-wrapper{
+  @include outer-container(100%);
+}
 .visiongauge{
   text-align: center;
-  padding:50px 0px;
+  padding:50px 0px 0px;
   background: $mustard;
+
   strong{
     font-weight: bold;
   }
@@ -188,7 +191,6 @@
     text-align: left;
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    width: 80%;
     @include media($mobile){
       width: 100%;
     }
@@ -199,11 +201,17 @@
   .icon-hardprob{ background-image: image-url('svg/vision/iconproblems.svg');}
   ul{
     overflow: hidden;
-    width:80%;
     margin:60px auto 30px;
+    @include span-columns(8);
+    @include shift(2);
+    @include media($tablet){
+      @include span-columns(10);
+      @include shift(1);
+    }
   }
   li{
-    width:50%;
+    @include span-columns(4 of 8);
+    @include omega(2n);
     float:left;
     font-size: 16px;
     margin-bottom: 50px;
