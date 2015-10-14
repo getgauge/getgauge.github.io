@@ -1,0 +1,16 @@
+.cla{
+	#content{
+    	@include outer-container(100%);
+    }
+    .page-content{
+    	padding:50px;
+    	font-size: 14px;
+    	@include outer-container();
+    	h2{
+    		text-align: left;
+    	}
+    	.block{
+    		margin-bottom: 40px;
+    	}
+  	}
+}
