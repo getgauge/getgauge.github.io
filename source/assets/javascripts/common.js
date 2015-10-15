@@ -35,6 +35,6 @@ $(document).ready(function ($) {
   $( ".tabs" ).tabs();
 
   $(".sha-link").on("click",function(){
-    $(this).find(".sha-tooltip").toggle();
+    $(this).parent().find(".sha-tooltip").toggle();
   })
 });

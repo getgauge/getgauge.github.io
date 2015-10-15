@@ -119,8 +119,9 @@
     padding-top:5px;
     position: relative;
     .sha-link{
-      color:#319CF5;
-      .sha-tooltip{
+      color:#319CF5;      
+    }
+    .sha-tooltip{
         display: none;
         position: absolute;
         padding: 15px 10px;
@@ -143,11 +144,7 @@
           left: 10px;
           top: -10px;
         }
-      }
-      
     }
-    
-    
   }  
 }
 .hide{
