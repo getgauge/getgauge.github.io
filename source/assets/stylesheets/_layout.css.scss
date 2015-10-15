@@ -59,11 +59,11 @@ header, footer {
         display: block;
         line-height: $navigation-height;
         font-size:1.3em;
-        overflow: hidden;
         padding-right: 1em;
         text-align: right;
         width: 100%;
         z-index: 9999;
+        position: relative;
       
         @include media($large-screen) {
           line-height: 2.4em;
@@ -78,6 +78,31 @@ header, footer {
 
         a {
           font-size: 16px;
+        }
+        .nav-drilldown-list{
+          display: none;
+          position: absolute;
+          width:150px;
+          left:0px;
+          top: 38px;
+          background: #fff;
+          z-index: 11;
+          border: 2px solid $mustard;
+          border-radius: 5px;
+          li{
+            font-size: 14px;
+            &:hover{
+              background: #f1f1f1;
+              cursor:pointer;
+            }
+          }
+        }
+        &.nav-drilldown{
+           &:hover{
+            .nav-drilldown-list{
+              display:block;
+            }
+          }
         }
       }
 
@@ -254,7 +279,7 @@ footer {
     }
 }
 #content{
-  margin-top: 70px;
+  margin-top: 68px;
   position: relative;
   z-index: 1;
 }

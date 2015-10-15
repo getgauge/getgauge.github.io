@@ -39,7 +39,11 @@ title: Gauge | ThoughtWorks
           %li.nav-link
             %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Docs
           %li.nav-link= link_to 'Blog', '/blog'
-          %li.nav-link= link_to 'Get Started', '/get-started'
+          %li.nav-link.nav-drilldown
+            = link_to 'Get Started', '/get-started'
+            %ul.nav-drilldown-list
+              %li CLA
+              %li Plugins
           %li.nav-link= link_to 'Contribute', '/contribute'
           %li.nav-link-short
             %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"}
