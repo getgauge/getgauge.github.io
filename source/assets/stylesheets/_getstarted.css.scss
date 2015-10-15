@@ -117,9 +117,37 @@
     font-weight: bold;
     padding-left:28px;
     padding-top:5px;
-    a{
-      color:#319CF5;;
+    position: relative;
+    .sha-link{
+      color:#319CF5;
+      .sha-tooltip{
+        display: none;
+        position: absolute;
+        padding: 15px 10px;
+        background: #fff;
+        top: 26px;
+        border: 1px solid #444;
+        left: 27px;
+        color: #fff;
+        background-color: #444;
+        border-radius:2px;
+        &:before{
+          content: '';
+          display:inline-block;
+          width: 0; 
+          height: 0; 
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid #444;
+          position: absolute;
+          left: 10px;
+          top: -10px;
+        }
+      }
+      
     }
+    
+    
   }  
 }
 .hide{

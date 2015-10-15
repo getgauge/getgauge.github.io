@@ -33,4 +33,8 @@ $(document).ready(function ($) {
     .find('.features-selected-value').text(textvalue);
   });
   $( ".tabs" ).tabs();
+
+  $(".sha-link").on("click",function(){
+    $(this).find(".sha-tooltip").toggle();
+  })
 });
