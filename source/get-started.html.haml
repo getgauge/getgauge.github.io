@@ -6,11 +6,17 @@
   .tabs
     %ul.tabs-header
       %li.tab1
-        %a.active{:href => "#tab1"} Macintosh
+        %a.active{:href => "#tab1"}
+          %i.fa.fa-apple
+          Macintosh  
       %li.tab2 
-        %a{:href => "#tab2"} Windows
+        %a{:href => "#tab2"}
+          %i.fa.fa-windows
+          Windows
       %li.tab3
-        %a{:href => "#tab3"} Linux
+        %a{:href => "#tab3"}
+          %i.fa.fa-linux
+          Linux
 
     %ul.tabs-content
       %li#tab1
@@ -20,23 +26,18 @@
           .instruction  You can download the pkg and follow these instructions to install Gauge
           %table.download-table
             %tr
-              %th 
-              %th 32 bit
-              %th 64 bit
-              %th
-  
-            %tr
-              %td.os 
-                %i.fa.fa-apple
-                Mac OS X.pkg
+              %td.os Mac OS X.pkg
               %td
-                %a.download{:href => "/getstarted"}
+                %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
+                  32 bit
+                <div class="sha-label"><a href="javascript:void(0)">Show SHA</a></div>
               %td 
-                %a.download{:href => "/getstarted"}
+                %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
-              %td.sha-label
-                %a{:href => "/getstarted"} Show SHA1
+                  64 bit
+                <div class="sha-label"><a href="javascript:void(0)">Show SHA</a></div>
+              
           .instruction Or we would recommend using brew for a very simple installation using this command.
           .screenshot
             .browser-header
@@ -98,23 +99,17 @@
           .instruction  Select your system's configuration to download
           %table.download-table
             %tr
-              %th 
-              %th 32 bit
-              %th 64 bit
-              %th
-            %tr
-              %td.os
-                %i.fa.fa-windows
-                Windows.exe
+              %td.os Windows.exe
               %td
-                %a.download{:href => "/getstarted"}
+                %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
+                  32 bit
+                <div class="sha-label"><a href="javascript:void(0)">Show SHA</a></div>
               %td 
-                %a.download{:href => "/getstarted"}
+                %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
-              %td.sha-label
-                %a{:href => "/getstarted"} Show SHA1
-
+                  64 bit
+                <div class="sha-label"><a href="javascript:void(0)">Show SHA</a></div>
           .screenshot
             .browser-header
             .browser-container
@@ -177,22 +172,17 @@
           .instruction  Install Gauge with by downloading the zip and execute the following command
           %table.download-table
             %tr
-              %th 
-              %th 32 bit
-              %th 64 bit
-              %th
-            %tr
-              %td.os
-                %i.fa.fa-linux 
-                Linux.zip
+              %td.os Linix.zip
               %td
-                %a.download{:href => "/getstarted"}
+                %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
+                  32 bit
+                <div class="sha-label"><a href="javascript:void(0)">Show SHA</a></div>
               %td 
-                %a.download{:href => "/getstarted"}
+                %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
-              %td.sha-label 
-                %a{:href => "/getstarted"} Show SHA1  
+                  64 bit
+                <div class="sha-label"><a href="javascript:void(0)">Show SHA</a></div>  
           .screenshot
             .browser-header
             .browser-container

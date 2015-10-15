@@ -27,25 +27,29 @@
   .tabs-header{
     margin:0px;
     padding:0px;
-
+    border-bottom:1px solid #f1f1f1;
     li{
       display: inline-block;
-      margin-right:30px;
+      margin-right:75px;
       a{
           font-size: 20px;
-          color:#000;
+          color:#737373;
           @include media($mobile) {
             font-size: 16px;
           }
           &.active{
             border-bottom:3px solid $mustard;
             font-weight: bold;
+            color:#444;
+        }
+        .fa{
+          margin-right:5px;
         }
       }
     }
   }
   .tabs-content{
-    padding:30px 0px;
+    padding:45px 0px;
   }
 }
 .page-block{
@@ -54,7 +58,7 @@
     text-align: left;
     padding:8px 10px 6px;
     border-bottom: 1px solid #f1f1f1;
-    margin-top: 35px;
+    margin-top: 30px;
   }
   .instruction{
     margin: 20px 20px;
@@ -86,17 +90,20 @@
   }
 }
 .download-table{
-  tr:hover{
+  margin-bottom: 20px;
+  tr{
     td{
       background: #f1f1f1;
+      padding: 10px 10px 5px;
     }
   }
   .download{
     display: inline-block;
-    font-size: 20px;
-    color:#319CF5;
+    font-size: 14px;
+    color:#444;
+    background:#cecece;
     &:hover{
-      color:$mustard;
+      color:#fff;
     }
   }
   .os{
@@ -105,10 +112,14 @@
       margin: 0px 10px;
     }
   }
-  .sha-label a{
+  .sha-label{
     font-size:12px;
-    color:#319CF5;;
     font-weight: bold;
+    padding-left:28px;
+    padding-top:5px;
+    a{
+      color:#319CF5;;
+    }
   }  
 }
 .hide{
