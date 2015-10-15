@@ -21,7 +21,7 @@
       li{
         @include span-columns(4);
         margin-bottom: 30px;
-        height:250px;
+        height:260px;
         &:nth-child(3n){
           @include omega;
         }
