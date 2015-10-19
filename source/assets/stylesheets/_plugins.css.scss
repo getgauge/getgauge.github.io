@@ -1,0 +1,60 @@
+.plugin-list {
+  padding:50px 0px;
+  max-width:68em;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2{
+    text-align: center;
+  }
+
+}
+
+.plugins{
+  @include span-columns(12);
+
+  h3{
+    text-align: left;
+  }
+
+  .grid-3 {
+    @include span-columns(3);
+    display: inline-block;
+    float: left;
+    list-style: none;
+    min-height: 210px;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    position: relative;
+    margin:0 10px 15px 10px;
+
+  }
+
+  .read-more {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  a {
+    color: #1b23ff;
+  }
+
+  h5{
+    margin: 5px 0 15px;
+    font-weight: bold;
+  }
+
+  .action {
+    display:block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+}
+
+
+
