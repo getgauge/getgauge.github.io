@@ -20,7 +20,7 @@
       }
       li{
         @include span-columns(4);
-        margin-bottom: 30px;
+        margin-bottom: 60px;
         height:260px;
         &:nth-child(3n){
           @include omega;
@@ -28,9 +28,6 @@
 
         .contribution-list-item{
           width:90%;
-          h3{
-            height:50px;
-          }
         }
         .icon-cl{
           width:80px;
@@ -116,14 +113,13 @@
             &:last-child{
               &:after{
                 content: "";
-                background-image: image-url('svg/contribution/icon_arrow.svg');            
-                width: 50px;
+                background-image: image-url('svg/contribution/icon_bidirectional_arrow.svg');
                 position: absolute;
-                top:-80px;
-                height: 50px;
+                top:-90px;
+                width: 70px;
+                height: 67px;
                 left: 57px;
-                background-size: 50px 50px;
-                transform:rotate(90deg);
+                background-size: 70px 70px;
                 @include media($tablet) {
                   left: 33px;
                 }
@@ -228,8 +224,11 @@
       }
     }
     .help{
-      text-align: center;
+      text-align: left;
       @include outer-container();
+      i{
+        font-style: italic;
+      }
 
     }
     

@@ -42,9 +42,12 @@ title: Gauge | ThoughtWorks
           %li.nav-link.nav-drilldown
             = link_to 'Get Started', '/get-started'
             %ul.nav-drilldown-list
-              %li CLA
               %li Plugins
-          %li.nav-link= link_to 'Contribute', '/contribute'
+          %li.nav-link.nav-drilldown
+            = link_to 'Contribute', '/contribute'
+            %ul.nav-drilldown-list
+              %li
+                %a{:href => "/cla"}CLA
           %li.nav-link-short
             %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"}
               %i.fa.fa-github
@@ -54,13 +57,10 @@ title: Gauge | ThoughtWorks
       %section.community{"data-wow-delay" => ".1s"} 
         %h2 Be part of our community...
         .community-list
-          %a.join-group{:href => "#"} Join the Community
-                
-          %a.contribute{:href => "https://github.com/getgauge/gauge"} Talk to Us
-              
-          %a.contact{:href => "#"} Watch Us
-          
-          %a.followus{:href => "#"} Follow Us
+          %a.join-group{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} Join the Community
+          %a.contribute{:href => "https://gitter.im/getgauge/chat", :target => "_blank"} Talk to Us
+          %a.contact{:href => "https://github.com/getgauge", :target => "_blank"} Watch Us
+          %a.followus{:href => "https://twitter.com/getgauge", :target => "_blank"} Follow Us
       %section#powered-by
         %a{:href => "http://www.thoughtworks.com/products"}
           %img{:alt => "Thoughtworks logo", :src => asset_path(:images, 'twlogo-footer-black.png')}
