@@ -80,17 +80,18 @@
   }
 
   .action {
-    background-color: #ABABAB;
     bottom: 0;
-    display:block;
-    padding: 7px;
     left: 0;
     position: absolute;
     width: 100%;
     a{
-      /*background-image: image-url('svg/plugins/icon_button_download_plugins.svg');*/
+      background-color: #ABABAB;
       color: #ffffff;
+      padding: 7px 7px 7px 70px;
+      display:block;
       font-weight: bold;
+      background-image: image-url('svg/plugins/icon_button_download_plugins.svg');
+      background-repeat: no-repeat;
     }
   }
 
