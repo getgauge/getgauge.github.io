@@ -33,7 +33,9 @@
             Download the installer below based on your system configuration and follow these detailed instructions to install using the pkg.
           %table.download-table
             %tr
-              %td.os pkg(version: 0.x.x)
+              %td
+                %os= data.version.current
+                %b (Mac.pkg)
               %td
                 %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
@@ -109,7 +111,9 @@
           .instruction  Select your system's configuration to download
           %table.download-table
             %tr
-              %td.os Windows.exe
+              %td
+                %os= data.version.current
+                %b (Windows.exe)
               %td
                 %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
@@ -189,7 +193,9 @@
           .instruction  Install Gauge with by downloading the zip and execute the following command. Choose the archive file appropriate for your installation. For instance, if you are installing gauge version 0.2.1 for 64-bit x86 on Linux, the archive you want is called gauge-0.2.1-linux.x86_64.tar.gz.
           %table.download-table
             %tr
-              %td.os Linix.zip
+              %td
+                %os= data.version.current
+                %b (Linix.zip)
               %td
                 %a.download.button{:href => "/getstarted"}
                   %i.fa.fa-arrow-circle-o-down
