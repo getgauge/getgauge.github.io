@@ -4,15 +4,15 @@
 .page-content
   .tabs
     %ul.tabs-header
-      %li.tab1
-        %a.active{:href => "#tab1"}
+      %li.tab1{:id => "Mac"}
+        %a{:href => "#tab1"}
           %i.fa.fa-apple
-          Macintosh  
-      %li.tab2 
+          Macintosh 
+      %li.tab2{:id => "Windows"}
         %a{:href => "#tab2"}
           %i.fa.fa-windows
           Windows
-      %li.tab3
+      %li.tab3{:id => "Linux"}
         %a{:href => "#tab3"}
           %i.fa.fa-linux
           Linux
@@ -256,3 +256,5 @@
                   Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
                   Total time taken: 15.015s
           .instruction You're all set. Start testing!
+          = javascript_include_tag  "jquery.client"
+          = javascript_include_tag  "platform"
