@@ -139,7 +139,7 @@
         background-image: image-url('svg/icon_data_exec.svg');
       }
       &.test-is-prod{
-        background-image: image-url('svg/icon_data.svg');
+        background-image: image-url('svg/icon_refactor.svg');
       }
       &.start-fast{
         background-image: image-url('svg/icon_start_fast.svg');
@@ -192,9 +192,9 @@
     }
   }
   .icon-os{ background-image: image-url('svg/vision/iconos.svg');}
-  .icon-explevel{ background-image: image-url('svg/vision/iconlevels.svg');}
-  .icon-plugin{ background-image: image-url('svg/vision/iconpluggable.svg');}
-  .icon-hardprob{ background-image: image-url('svg/vision/iconproblems.svg');}
+  .icon-explevel{ background-image: image-url('svg/vision/icon_choice.svg');}
+  .icon-plugin{ background-image: image-url('svg/vision/icon_pluggable.svg');}
+  .icon-hardprob{ background-image: image-url('svg/vision/icon_stay_here.svg');}
   ul{
     overflow: hidden;
     margin:60px auto 30px;
@@ -271,7 +271,6 @@
     }
   }
 }
-
 
 
 .features-filter-selector-wrap {
