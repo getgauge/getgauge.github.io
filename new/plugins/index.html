@@ -76,55 +76,63 @@
             <div class='page-label'>Plugins</div>
         </div>
         <section class='plugin-list'>
-            <h2>About Gauge plugins</h2>
-            <p class='text-block'>Gauge has a very plugin supportive architecture. Gauge core is written in Golang, and it has a rich of plugins. Everything is Gauge is a plugin. Language runners, IDEs are also plugins. You can read more about how to use Gauge plugins here.</p>
-            <p class='text-block'>You can also write a new plugin using the plugin API. More on this here.</p>
+            <h2>Gauge Plugins</h2>
+            <p class='text-block'>Gauge has a very plugin supportive architecture. At a high level, Gauge consists of a core(written in Golang), and a rich repository of plugins. The language runners, IDEs, reports are all plugins. The plugin documentation gives you everything you need to know about using a Gauge plugin. You can also write a new plugin using the Gauge Plugin API.</p>
+            <p class='text-block'>Below is a list of all the plugins supported. We have also listed some of the in-progress plugins that are actively being worked on by external/internal contributors.</p>
             <section class='plugins'>
                 <h3>Language Runners</h3>
                 <div class='grid-3'>
-                    <h5>Gauge Java</h5>
+                    <h5>Java runner</h5>
                     <div class='read-more'>
                         Plugin that lets you write your tests in Java.
                         <a href='http://getgauge.io/documentation/user/current/test_code/java/java.html' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
                     <div class='action'>
                         <a href='https://github.com/getgauge/gauge-java/releases' target='_blank'>Download</a>
                     </div>
                 </div>
                 <div class='grid-3'>
-                    <h5 class='name'>Gauge C#</h5>
+                    <h5 class='name'>C# runner</h5>
                     <div class='read-more'>
                         Plugin that lets you write your tests in C#.
                         <a href='http://getgauge.io/documentation/user/current/test_code/csharp/csharp.html' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
-                    <div class='action'>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
+                    <div class='action button'>
                         <a href='https://github.com/getgauge/gauge-csharp/releases' target='_blank'>Download</a>
                     </div>
                 </div>
                 <div class='grid-3'>
-                    <h5 class='name'>Gauge Ruby</h5>
+                    <h5 class='name'>Ruby runner</h5>
                     <div class='read-more'>
                         Plugin that lets you write your tests in Ruby.
                         <a href='http://getgauge.io/documentation/user/current/test_code/ruby/ruby.html' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
                     <div class='action'>
                         <a href='https://github.com/getgauge/gauge-ruby/releases' target='_blank'>Download</a>
                     </div>
                 </div>
                 <div class='grid-3'>
-                    <h5 class='name'>Gauge Javascript</h5>
+                    <h5 class='name'>Javascript runner</h5>
                     <div class='read-more'>
                         Plugin that lets you write your tests in javascript.
                         <a href='https://github.com/vishnukarthikl/gauge-js' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='https://github.com/vishnukarthikl' target='_blank'>Vishnu Karthik</a>
+                    <div class='read-more'>
+                        by
+                        <a href='https://github.com/vishnukarthikl' target='_blank'>Vishnu Karthik</a>
+                    </div>
                     <div class='action'>
                         In progress
                     </div>
@@ -138,8 +146,10 @@
                         Plugin that lets you use IntelliJ to write tests in Java.
                         <a href='http://getgauge.io/documentation/user/current/ide_support/intellij_idea.html' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
                     <div class='action'>
                         <a href='https://github.com/getgauge/Intellij-Plugin/releases' target='_blank'>Download</a>
                     </div>
@@ -150,10 +160,26 @@
                         Plugin that lets you use Visual Studio to write tests in C#.
                         <a href='http://getgauge.io/documentation/user/current/ide_support/visual_studio.html' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
                     <div class='action'>
                         <a href='https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92' target='_blank'>Download</a>
+                    </div>
+                </div>
+                <div class='grid-3'>
+                    <h5 class='name'>Eclipse</h5>
+                    <div class='read-more'>
+                        Plugin that lets you use Eclipse to write tests in Java.
+                        <a href='http://getgauge.io/documentation/user/current/ide_support/eclipse.html' target='_blank'>Read more</a>
+                    </div>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
+                    <div class='action'>
+                        <a href='https://github.com/getgauge/Gauge-Eclipse/releases' target='_blank'>Download</a>
                     </div>
                 </div>
             </section>
@@ -165,8 +191,10 @@
                         HTML format report with test execution result.
                         <a href='http://getgauge.io/documentation/user/current/plugins/html_report_plugin.html' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
                     <div class='action'>
                         <a href='https://github.com/getgauge/html-report/releases' target='_blank'>Download</a>
                     </div>
@@ -177,8 +205,10 @@
                         XML format report with test execution result.
                         <a href='http://getgauge.io/documentation/user/current/plugins/xml_report_plugin.html' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
                     <div class='action'>
                         <a href='https://github.com/getgauge/xml-report/releases' target='_blank'>Download</a>
                     </div>
@@ -192,8 +222,10 @@
                         To manage Gauge project dependencies
                         <a href='http://getgauge.io/documentation/user/current/dependency_management/maven-plugin.html' target='_blank'>Read more</a>
                     </div>
-                    by
-                    <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    <div class='read-more'>
+                        by
+                        <a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+                    </div>
                     <div class='action'>
                         <a href='https://github.com/getgauge/gauge-maven-plugin/releases' target='_blank'>Download</a>
                     </div>

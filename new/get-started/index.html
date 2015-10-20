@@ -97,13 +97,20 @@
                 </ul>
                 <ul class='tabs-content'>
                     <li id='tab1'>
-                        <p>There are multiple ways to get started with Gauge. You can read our detailed documentation for other methods of installation. Here we show you a simple 4 step process to get you running with Gauge on a mac.</p>
+                        <p>
+                            There are multiple ways to get started with Gauge. You can read our
+                            <a href='#'>detailed documentation</a> for other methods of installation. Here we show you a simple 4 step process to get you running with Gauge on a mac.
+                        </p>
                         <div class='page-block'>
                             <h2>1. Install Gauge</h2>
-                            <div class='instruction'>You can download the pkg and follow these instructions to install Gauge</div>
+                            <div class='instruction'>
+                                The table below allows you to download the pkg and follow
+                                <a href='/documentation/user/current/plugins/installation.html'>these instructions</a> to install Gauge offline. You will need to use this method if your setup or organisation does not allow
+                                <a href='http://brew.sh/'>brew.</a> Download the installer below based on your system configuration and follow these detailed instructions to install using the pkg.
+                            </div>
                             <table class='download-table'>
                                 <tr>
-                                    <td class='os'>Mac OS X.pkg</td>
+                                    <td class='os'>pkg(version: 0.x.x)</td>
                                     <td>
                                         <a class='download button' href='/getstarted'>
                                             <i class='fa fa-arrow-circle-o-down'></i> 32 bit
@@ -128,52 +135,53 @@
                                     </td>
                                 </tr>
                             </table>
-                            <div class='instruction'>Or we would recommend using brew for a very simple installation using this command.</div>
+                            <div class='instruction'>We would recommend using brew for a very simple straightforward installation using this command.</div>
                             <div class='screenshot'>
-                                <div class='browser-header'></div>
                                 <div class='browser-container'>
-                                    <code>~ $ gauge specs/hello_world.spec</code>
-                                    <pre>2 scenarios executed, 0 failed&#x000A;1 specifications executed, 0 failed&#x000A;</pre>
+                                    <div class='browser-code'>
+                                        <code>~ $ brew update</code>
+                                        <code>~ $ brew install gauge</code>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class='page-block'>
                             <h2>2. Install Core Plugins</h2>
-                            <div class='instruction'>Gauge has a rich plugin repository. Language runners, IDEs, reports are all plugin. However, since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.</div>
+                            <div class='instruction'>Gauge has a rich plugin repository. Language runners, IDEs, reports are all plugins. However, since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.</div>
                             <div class='screenshot'>
-                                <div class='browser-header'></div>
                                 <div class='browser-container'>
-                                    <code>~ $ gauge specs/hello_world.spec</code>
-                                    <pre>2 scenarios executed, 0 failed&#x000A;1 specifications executed, 0 failed</pre>
+                                    <div class='browser-code'></div>
+                                    <code>~ $ gauge --install java</code>
                                 </div>
                             </div>
                             <div class='instruction'>
                                 Go
-                                <a href='#'>here</a> to see how to install other language runners and plugins
+                                <a href='/documentation/user/current/plugins/installation.html'>here</a> to see how to install other language runners and other plugins
                             </div>
                         </div>
                         <div class='page-block'>
                             <h2>3. Test your installation</h2>
                             <div class='instruction'>Run this command to check if all plugins are installed and are at the latest version</div>
                             <div class='screenshot'>
-                                <div class='browser-header'></div>
                                 <div class='browser-container'>
-                                    <code>~ $ gauge specs/hello_world.spec</code>
-                                    <pre>2 scenarios executed, 0 failed&#x000A;1 specifications executed, 0 failed           &#x000A;</pre>
+                                    <div class='browser-code'>
+                                        <code>~ $ gauge -v</code>
+                                        <pre>Gauge version: 0.2.0&#x000A;&#x000A;Plugins&#x000A;-------&#x000A;java(0.3.1)</pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class='page-block'>
-                            <h2>4. Execute Gauge specs</h2>
-                            <div class='instruction'>Execute the hello world specs so you know Gauge is working!</div>
+                            <h2>4. See Gauge working</h2>
+                            <div class='instruction'>Execute the hello world specs so you know Gauge is working.</div>
                             <div class='screenshot'>
                                 <div class='browser-header'></div>
                                 <div class='browser-container'>
                                     <code>~ $ gauge specs/hello_world.spec</code>
-                                    <pre>2 scenarios executed, 0 failed&#x000A;1 specifications executed, 0 failed</pre>
+                                    <pre>Specifications:  1 executed, 1 passed, 0 failed, 0 skipped&#x000A;Scenarios:   2 executed, 2 passed, 0 failed, 0 skipped&#x000A;Total time taken: 15.015s</pre>
                                 </div>
                             </div>
-                            <div class='instruction'>That’s it. You’re ready to start testing!</div>
+                            <div class='instruction'>You're all set. Start testing!</div>
                         </div>
                     </li>
                     <li class='hide' id='tab2'>
