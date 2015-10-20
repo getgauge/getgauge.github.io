@@ -31,27 +31,27 @@
             to install Gauge offline. You will need to use this method if your setup or organisation does not allow
             %a{:href => "http://brew.sh/"}brew.
             Download the installer below based on your system configuration and follow these detailed instructions to install using the pkg.
-          %table.download-table
-            %tr
-              %td
-                %os= data.version.current
-                %b (Mac.pkg)
-              %td
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-darwin.x86.pkg"}
-                  %i.fa.fa-arrow-circle-o-down
-                  32 bit
-                .sha-label
-                  %a.sha-link{:href => "javascript:void(0)"} 
-                    Show SHA
-                  .sha-tooltip sjdfkjdsfhjksdhfkjdshfjkdshfjhdsfjhsdkjfhsdkjfhsdjkhgjksdvjkdhgesbdvjsbdjkghkjhfg
-              %td 
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-darwin.x86_64.pkg"}
-                  %i.fa.fa-arrow-circle-o-down
-                  64 bit
-                .sha-label
-                  %a.sha-link{:href => "javascript:void(0)"} 
-                    Show SHA
-                  .sha-tooltip sadassdassa
+
+          .download-container.clearfix
+            .download-section
+              .grid-4
+                .instruction
+                  %strong pkg
+                  (latest stable version:
+                  %os= data.version.current
+                  )
+              .grid-4
+                .download-bit
+                  %a.download.button{:href => "#"} 32 bit
+                  %span.sha
+                    %strong SHA-1:
+                    dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+              .grid-4
+                .download-bit
+                  %a.download.button{:href => "#"} 64 bit
+                  %span.sha
+                    %strong SHA-1:
+                    dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
 
 
           .instruction We would recommend using brew for a very simple straightforward installation using this command.
