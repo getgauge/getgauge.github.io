@@ -106,7 +106,7 @@
       padding-top:110px;
       background-repeat:no-repeat;
       background-position:center top;
-      background-size: 80px 80px;
+      background-size: 150px 90px;
       vertical-align:top;
       &:nth-child(4){
         margin-right:0px;
@@ -136,13 +136,13 @@
         background-image: image-url('svg/icon_tools.svg');
       }
       &.ext-data-src{
-        background-image: image-url('svg/icon_data.svg');
+        background-image: image-url('svg/icon_data_exec.svg');
       }
       &.test-is-prod{
         background-image: image-url('svg/icon_data.svg');
       }
       &.start-fast{
-        background-image: image-url('svg/icon_data.svg');
+        background-image: image-url('svg/icon_start_fast.svg');
       }
 
       .feature-desc{
