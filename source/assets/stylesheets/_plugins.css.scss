@@ -1,3 +1,8 @@
+.clearfix {
+  &:before { content:""; display:table; }
+  &:after { content:""; display:table; clear:both; }
+}
+
 .plugin-list {
   padding:50px 0px;
   max-width:68em;
@@ -10,32 +15,49 @@
 
 }
 
-.plugins{
+.plugin-item{
   @include span-columns(12);
   margin:10px 0 0 0;
-
-  h3{
-    text-align: left;
-    margin-left:20px;
+  .plugin-item-container{
+      margin: 1% 2%;
+      @include media($mobile) {
+        margin: 1% 20px;
+      }
+      h3{
+        text-align: left;
+      }
   }
+
 
   .grid-3 {
     @include span-columns(3);
-    display: inline-block;
-    float: left;
-    list-style: none;
     min-height: 210px;
     padding: 10px 20px 10px 20px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 1px solid #979797;
     position: relative;
-    margin:0px 10px 25px 10px;
+    background-color: #F7F7F7;
+    @include media($tablet) {
+      @include span-columns(6);
+      margin-right: 1%;
+      margin-bottom: 1.2%;
+    }
+    @include media($mobile) {
+      @include span-columns(12);
+      margin-right: 0;
+      margin-bottom: 2.5%;
+      min-height: 100px;
+    }
 
   }
 
-  .read-more {
+  .details {
+    display: block;
     margin-bottom: 10px;
     font-size: 14px;
+    @include media($mobile) {
+      display: none;
+    }
   }
 
   a {
@@ -45,16 +67,42 @@
   h5{
     margin: 5px 0 15px;
     font-weight: bold;
+    span{
+      float: left;
+    }
+    .link{
+      display: none;
+      float: right;
+      @include media($mobile) {
+        display: inline-block;
+      }
+    }
   }
 
   .action {
-    display:block;
-    position: absolute;
+    background-color: #ABABAB;
     bottom: 0;
+    display:block;
+    padding: 7px;
     left: 0;
-    right: 0;
-    padding: 10px;
-    border-top: 1px solid #ccc;
+    position: absolute;
+    width: 100%;
+    a{
+      /*background-image: image-url('svg/plugins/icon_button_download_plugins.svg');*/
+      color: #ffffff;
+      font-weight: bold;
+    }
+  }
+
+  .in-progress{
+    bottom: 0;
+    display:block;
+    padding: 7px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    font-style: italic;
+    font-size: .8em;
   }
 }
 

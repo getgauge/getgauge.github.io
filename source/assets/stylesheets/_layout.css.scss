@@ -226,6 +226,10 @@ footer {
       padding-top:30px;
       @include span-columns(8);
       @include shift(2);
+      @include media($mobile){
+        @include span-columns(6);
+        @include shift(3);
+      }
     }
 
     a{
@@ -243,23 +247,36 @@ footer {
         padding-top:74px;
       }
       @include media($mobile){
-        @include span-columns(4);
-        @include shift(4);
+        @include span-columns(12);
         background-size: 40px 40px;
-        padding-top:54px;
+        margin-right: 0;
+        padding: 4px 0 15px 25px;
+        margin-bottom: 20px;
       }
     }
     .join-group{
         background-image: image-url('svg/community/icon_groups_grey.svg');
+        @include media($mobile){
+         background-position:  0 0;
+        }
     }
     .contribute{
         background-image: image-url('svg/community/icon_contact_grey.svg');
+        @include media($mobile){
+          background-position:  0 0;
+        }
     }
     .contact{
         background-image: image-url('svg/community/icon_watch_grey.svg');
+        @include media($mobile){
+          background-position:  0 0;
+        }
     }
     .followus{
         background-image: image-url('svg/community/icon_follow_grey.svg');
+        @include media($mobile){
+          background-position:  0 0;
+        }
     }
   }
 }

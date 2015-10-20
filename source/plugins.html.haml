@@ -6,114 +6,148 @@
   %p.text-block Gauge has a very plugin supportive architecture. At a high level, Gauge consists of a core(written in Golang), and a rich repository of plugins. The language runners, IDEs, reports are all plugins. The plugin documentation gives you everything you need to know about using a Gauge plugin. You can also write a new plugin using the Gauge Plugin API.
   %p.text-block Below is a list of all the plugins supported. We have also listed some of the in-progress plugins that are actively being worked on by external/internal contributors.
 
-  %section.plugins
-    %h3 Language Runners
-    .grid-3
-      %h5 Java runner
-      .read-more
-        Plugin that lets you write your tests in Java.
-        %a{:href => "http://getgauge.io/documentation/user/current/test_code/java/java.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action
-        %a{:href => "https://github.com/getgauge/gauge-java/releases", :target => "_blank"} Download
-    .grid-3
-      %h5.name C# runner
-      .read-more
-        Plugin that lets you write your tests in C#.
-        %a{:href => "http://getgauge.io/documentation/user/current/test_code/csharp/csharp.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action.button
-        %a{:href => "https://github.com/getgauge/gauge-csharp/releases", :target => "_blank"} Download
-    .grid-3
-      %h5.name Ruby runner
-      .read-more
-        Plugin that lets you write your tests in Ruby.
-        %a{:href => "http://getgauge.io/documentation/user/current/test_code/ruby/ruby.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action
-        %a{:href => "https://github.com/getgauge/gauge-ruby/releases", :target => "_blank"} Download
-    .grid-3
-      %h5.name Javascript runner
-      .read-more
-        Plugin that lets you write your tests in javascript.
-        %a{:href => "https://github.com/vishnukarthikl/gauge-js", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "https://github.com/vishnukarthikl", :target => "_blank"} Vishnu Karthik
-      .action
-        In progress
+  %section.plugin-item
+    .plugin-item-container.clearfix
+      %h3 Language Runners
+      .grid-3
+        %h5.clearfix
+          %span
+            Java runner
+          %a.link{:href => "http://getgauge.io/documentation/user/current/test_code/java/java.html", :target => "_blank"} Read more
+        .details
+          Plugin that lets you write your tests in Java.
+          %a{:href => "http://getgauge.io/documentation/user/current/test_code/java/java.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://github.com/getgauge/gauge-java/releases", :target => "_blank"} Download
+      .grid-3
+        %h5.clearfix
+          %span
+            C# runner
+          %a.link{:href => "http://getgauge.io/documentation/user/current/test_code/csharp/csharp.html", :target => "_blank"} Read more
+        .details
+          Plugin that lets you write your tests in C#.
+          %a{:href => "http://getgauge.io/documentation/user/current/test_code/csharp/csharp.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://github.com/getgauge/gauge-csharp/releases", :target => "_blank"} Download
+      .grid-3
+        %h5.clearfix
+          %span
+            Ruby runner
+          %a.link{:href => "http://getgauge.io/documentation/user/current/test_code/ruby/ruby.html", :target => "_blank"} Read more
+        .details
+          Plugin that lets you write your tests in Ruby.
+          %a{:href => "http://getgauge.io/documentation/user/current/test_code/ruby/ruby.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://github.com/getgauge/gauge-ruby/releases", :target => "_blank"} Download
+      .grid-3
+        %h5.clearfix
+          %span
+            Javascript runner
+          %a.link{:href => "https://github.com/vishnukarthikl/gauge-js", :target => "_blank"} Read more
+        .details
+          Plugin that lets you write your tests in javascript.
+          %a{:href => "https://github.com/vishnukarthikl/gauge-js", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "https://github.com/vishnukarthikl", :target => "_blank"} Vishnu Karthik
+        .in-progress
+          Work in progress
 
-  %section.plugins
-    %h3 IDE plugins
-    .grid-3
-      %h5.name IntelliJ
-      .read-more
-        Plugin that lets you use IntelliJ to write tests in Java.
-        %a{:href => "http://getgauge.io/documentation/user/current/ide_support/intellij_idea.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action
-        %a{:href => "https://github.com/getgauge/Intellij-Plugin/releases", :target => "_blank"} Download
-    .grid-3
-      %h5.name Visual Studio
-      .read-more
-        Plugin that lets you use Visual Studio to write tests in C#.
-        %a{:href => "http://getgauge.io/documentation/user/current/ide_support/visual_studio.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action
-        %a{:href => "https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92", :target => "_blank"} Download
-    .grid-3
-      %h5.name Eclipse
-      .read-more
-        Plugin that lets you use Eclipse to write tests in Java.
-        %a{:href => "http://getgauge.io/documentation/user/current/ide_support/eclipse.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action
-        %a{:href => "https://github.com/getgauge/Gauge-Eclipse/releases", :target => "_blank"} Download
+  %section.plugin-item
+    .plugin-item-container.clearfix
+      %h3 IDE plugins
+      .grid-3
+        %h5.clearfix
+          %span
+            IntelliJ
+          %a.link{:href => "http://getgauge.io/documentation/user/current/ide_support/intellij_idea.html", :target => "_blank"} Read more
+        .details
+          Plugin that lets you use IntelliJ to write tests in Java.
+          %a{:href => "http://getgauge.io/documentation/user/current/ide_support/intellij_idea.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://github.com/getgauge/Intellij-Plugin/releases", :target => "_blank"} Download
+      .grid-3
+        %h5.clearfix
+          %span
+            Visual Studio
+          %a.link{:href => "http://getgauge.io/documentation/user/current/ide_support/visual_studio.html", :target => "_blank"} Read more
+        .details
+          Plugin that lets you use Visual Studio to write tests in C#.
+          %a{:href => "http://getgauge.io/documentation/user/current/ide_support/visual_studio.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92", :target => "_blank"} Download
+      .grid-3
+        %h5.clearfix
+          %span
+            Eclipse
+          %a.link{:href => "http://getgauge.io/documentation/user/current/ide_support/eclipse.html", :target => "_blank"} Read more
+        .details
+          Plugin that lets you use Eclipse to write tests in Java.
+          %a{:href => "http://getgauge.io/documentation/user/current/ide_support/eclipse.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://github.com/getgauge/Gauge-Eclipse/releases", :target => "_blank"} Download
 
-  %section.plugins
-    %h3 Reports
-    .grid-3
-      %h5.name HTML format
-      .read-more
-        HTML format report with test execution result.
-        %a{:href => "http://getgauge.io/documentation/user/current/plugins/html_report_plugin.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action
-        %a{:href => "https://github.com/getgauge/html-report/releases", :target => "_blank"} Download
-    .grid-3
-      %h5.name XML format
-      .read-more
-        XML format report with test execution result.
-        %a{:href => "http://getgauge.io/documentation/user/current/plugins/xml_report_plugin.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action
-        %a{:href => "https://github.com/getgauge/xml-report/releases", :target => "_blank"} Download
+  %section.plugin-item
+    .plugin-item-container.clearfix
+      %h3 Reports
+      .grid-3
+        %h5.clearfix
+          %span
+            HTML format
+          %a.link{:href => "http://getgauge.io/documentation/user/current/plugins/html_report_plugin.html", :target => "_blank"} Read more
+        .details
+          HTML format report with test execution result.
+          %a{:href => "http://getgauge.io/documentation/user/current/plugins/html_report_plugin.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://github.com/getgauge/html-report/releases", :target => "_blank"} Download
+      .grid-3
+        %h5.clearfix
+          %span
+            XML format
+          %a.link{:href => "http://getgauge.io/documentation/user/current/plugins/xml_report_plugin.html", :target => "_blank"} Read more
+        .details
+          XML format report with test execution result.
+          %a{:href => "http://getgauge.io/documentation/user/current/plugins/xml_report_plugin.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://github.com/getgauge/xml-report/releases", :target => "_blank"} Download
 
-  %section.plugins
-    %h3 Others
-    .grid-3
-      %h5 Maven
-      .read-more
-        To manage Gauge project dependencies
-        %a{:href => "http://getgauge.io/documentation/user/current/dependency_management/maven-plugin.html", :target => "_blank"} Read more
-      .read-more
-        by
-        %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
-      .action
-        %a{:href => "https://github.com/getgauge/gauge-maven-plugin/releases", :target => "_blank"} Download
+  %section.plugin-item
+    .plugin-item-container.clearfix
+      %h3 Others
+      .grid-3
+        %h5.clearfix
+          %span
+            Maven
+          %a.link{:href => "http://getgauge.io/documentation/user/current/dependency_management/maven-plugin.html", :target => "_blank"} Read more
+        .details
+          To manage Gauge project dependencies
+          %a{:href => "http://getgauge.io/documentation/user/current/dependency_management/maven-plugin.html", :target => "_blank"} Read more
+        .details
+          by
+          %a{:href => "http://www.thoughtworks.com/products/", :target => "_blank"} ThoughtWorks Inc.
+        .action
+          %a{:href => "https://github.com/getgauge/gauge-maven-plugin/releases", :target => "_blank"} Download
