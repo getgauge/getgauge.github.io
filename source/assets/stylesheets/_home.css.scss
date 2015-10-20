@@ -49,7 +49,7 @@
 
   .subquote{
     width:80%;
-    margin:0px auto 50px;
+    margin:25px auto 50px;
     @include media($mobile){
       width:80%;
     }
@@ -57,7 +57,7 @@
   .button{
       margin-right:30px;
       @include media($mobile){
-        margin-right:10px;;
+        margin-right:10px;
       }
     }
   .background-pattern-container {
@@ -86,18 +86,6 @@
   margin-top:200px;
   position: relative;
 
-  .more-features{
-    position: absolute;
-    bottom:40px;
-    right:0px;
-    left:0px;
-    z-index: 99;
-    color:$mustard;
-    font-size: 14px;
-    &:hover{
-      text-decoration: underline;
-    }
-  }
   @include media($tablet){
     margin-top:150px;
   }
@@ -141,13 +129,19 @@
       &.simple-syntax{
         background-image: image-url('svg/icon_syntax.svg');
       }
-      &.parallal-exec{
+      &.parallel-exec{
         background-image: image-url('svg/icon_parallel_exec.svg');
       }
       &.env-tools{
         background-image: image-url('svg/icon_tools.svg');
       }
       &.ext-data-src{
+        background-image: image-url('svg/icon_data.svg');
+      }
+      &.test-is-prod{
+        background-image: image-url('svg/icon_data.svg');
+      }
+      &.start-fast{
         background-image: image-url('svg/icon_data.svg');
       }
 
@@ -184,8 +178,10 @@
   background: lighten($mustard,10%);
 
   strong{
-    strong-weight: bold;
+    font-weight: bold;
+    font-size: 20px;
   }
+
   .vision-col{
     padding:0px 20px 25px 70px;
     text-align: left;

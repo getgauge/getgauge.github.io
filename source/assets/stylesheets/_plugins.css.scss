@@ -12,9 +12,11 @@
 
 .plugins{
   @include span-columns(12);
+  margin:10px 0 0 0;
 
   h3{
     text-align: left;
+    margin-left:20px;
   }
 
   .grid-3 {
@@ -27,7 +29,7 @@
     box-sizing: border-box;
     border: 1px solid #ddd;
     position: relative;
-    margin:0 10px 15px 10px;
+    margin:0px 10px 25px 10px;
 
   }
 

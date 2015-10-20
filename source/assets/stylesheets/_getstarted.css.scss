@@ -5,10 +5,9 @@
   .page-label{
     display:inline-block;
     color:#fff;
-    font-size:60px;
+    margin-top:48px;
+    font-size:52px;
     margin-left:30px;
-    margin-top:30px;
-
   }
 }
 .get-started{
@@ -22,7 +21,7 @@
   }
 }
 .tabs{
-  font-size: 14px;
+  font-size: 15px;
   margin-top:40px;
   .tabs-header{
     margin:0px;
@@ -53,8 +52,8 @@
   }
 }
 .page-block{
-  margin-bottom: 60px;
-  h2{
+  margin-bottom: 40px;
+  h3{
     text-align: left;
     padding:8px 10px 6px;
     border-bottom: 1px solid #f1f1f1;
@@ -66,26 +65,44 @@
   .screenshot{
     margin: 10px 20px 20px;
     background: #000;
-    .browser-header{
-      background: -webkit-linear-gradient(#c5c5c5, #ececec); 
-      background: -o-linear-gradient(#c5c5c5, #ececec); 
-      background: -moz-linear-gradient(#c5c5c5, #ececec);
-      background: linear-gradient(#c5c5c5, #ececec); 
-      height:20px;
 
-    }
     .browser-container{
       padding: 30px 20px;
+      background: #071322;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+      margin: 0 auto;
+      max-width: 960px;
+      position: relative;
+      font-size: 18px;
+      border-radius: 0px 0px 5px 5px;
+      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
+      display: block;
     }
+
+    .browser-code {
+      position: relative;
+      color: #071322;
+      padding-left: 30px;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      font-size: 1em;
+    }
+
     code{
       color:#41B94F;
-      margin-bottom: 30px;
-      display: inline-block;
+      margin-bottom: 10px;
+      display: block;
+      font-family: monospace, monospace;
+      font-size: 1em;
     }
     pre{
       padding-left:30px;
       color:#fff;
-      font-size: 12px;
+      font-family: monospace, monospace;
+      font-size: 0.8em;
+
     }
   }
 }
