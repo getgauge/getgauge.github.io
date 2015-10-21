@@ -17,9 +17,13 @@ set :images_dir, 'assets/images'
 config[:file_watcher_ignore] += [ /.idea\// ]
 
 configure :build do
+  set :relative_links, true
   activate :minify_css
   activate :minify_javascript
-
-  abort "ENV['ASSET_HOST'] not specified, bailing!" if ENV['ASSET_HOST'].blank?
-  set :asset_host, "//" + ENV['ASSET_HOST']
+  activate :asset_hash
+  activate :relative_assets
+  
+  set :assert_host, './'
+  #abort "ENV['ASSET_HOST'] not specified, bailing!" if ENV['ASSET_HOST'].blank?
+  #set :asset_host, "//" + ENV['ASSET_HOST']
 end

@@ -19,14 +19,13 @@ title: Gauge | ThoughtWorks
       %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
         %title= current_resource.data.title || "Gauge | ThoughtWorks"
         %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-          %link{:href => "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
+          %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
             = favicon_tag 'favicons/favicon.ico', :rel => 'shortcut icon'
             = favicon_tag 'favicons/apple-touch-icon.png', :rel => 'apple-touch-icon-precomposed'
             = stylesheet_link_tag "application"
             = javascript_include_tag  "frameworks/jquery-1.11.2"
             = javascript_include_tag  "application", :async => true
-            %link{:href => "//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
-            %link{:href => "./assets/stylesheets/application.css", :rel => "stylesheet"}
+            %link{:href => "http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
 
   %body{:class => page_classes}
     %header.dark
@@ -38,17 +37,17 @@ title: Gauge | ThoughtWorks
         %ul.header-nav
           %li.nav-link
             %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Documentation
-          %li.nav-link= link_to 'Blog', '/blog'
+          %li.nav-link= link_to 'Blog', 'blog/index.html'
           %li.nav-link.nav-drilldown
-            = link_to 'Get Started', '/get-started'
+            = link_to 'Get Started', 'get-started/index.html'
             %ul.nav-drilldown-list
               %li
-                %a{:href => "/plugins"}Plugins
+                = link_to 'Plugins', 'plugins/index.html'
           %li.nav-link.nav-drilldown
-            = link_to 'Contribute', '/contribute'
+            = link_to 'Contribute', 'contribute/index.html'
             %ul.nav-drilldown-list
               %li
-                %a{:href => "/cla"}CLA
+                = link_to 'CLA', 'cla/index.html'
           %li.nav-link-short
             %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"}
               %i.fa.fa-github
