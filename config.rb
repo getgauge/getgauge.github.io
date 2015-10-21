@@ -23,7 +23,6 @@ configure :build do
   activate :asset_hash
   activate :relative_assets
   
-  set :assert_host, './'
   #abort "ENV['ASSET_HOST'] not specified, bailing!" if ENV['ASSET_HOST'].blank?
   #set :asset_host, "//" + ENV['ASSET_HOST']
 end
