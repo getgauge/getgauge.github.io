@@ -115,11 +115,11 @@
                 content: "";
                 background-image: image-url('svg/contribution/icon_bidirectional_arrow.svg');
                 position: absolute;
-                top:-80px;
-                width: 70px;
-                height: 67px;
-                left: 57px;
-                background-size: 70px 0px;
+                top:-88px;
+                width: 76px;
+                height: 80px;
+                left: 53px;
+                background-size: 77px 77px;
                 @include media($tablet) {
                   left: 33px;
                 }
