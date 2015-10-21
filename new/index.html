@@ -1,88 +1,93 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <div class='show'>
-      <script type='text/javascript'>
+        <script type='text/javascript'>
         var images = new Array()
+
         function preload() {
-        for (i = 0; i < preload.arguments.length; i++) {
-        images[i] = new Image()
-        images[i].src = preload.arguments[i]
-        }
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
         }
         preload('assets/images/contribution.svg');
-      </script>
+        </script>
     </div>
     <meta charset='utf-8'>
-      <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-        <title>Gauge | ThoughtWorks</title>
-        <meta content='width=device-width, initial-scale=1' name='viewport'>
-          <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-            <link rel="shortcut icon" href="./assets/images/favicons/favicon.ico" type="image/ico" />
-            <link rel="apple-touch-icon-precomposed" href="./assets/images/favicons/apple-touch-icon.png" type="image/png" />
-            <link href="./assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
-            <script src="./assets/javascripts/frameworks/jquery-1.11.2.js" type="text/javascript"></script>
-            <script src="./assets/javascripts/application.js" type="text/javascript" async="true"></script>
-            <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
-            <link href='./assets/stylesheets/application.css' rel='stylesheet'>
-          </link>
-        </meta>
-      </meta>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>Gauge | ThoughtWorks</title>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="./assets/images/favicons/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon-precomposed" href="./assets/images/favicons/apple-touch-icon.png" type="image/png" />
+    <link href="./assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+    <script src="./assets/javascripts/frameworks/jquery-1.11.2.js" type="text/javascript"></script>
+    <script src="./assets/javascripts/application.js" type="text/javascript" async="true"></script>
+    <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
+    <link href='./assets/stylesheets/application.css' rel='stylesheet'>
+    </link>
     </meta>
-  </head>
-  <body class='index'>
+    </meta>
+    </meta>
+</head>
+
+<body class='index'>
     <header class='dark'>
-      <nav class='nav-wrapper'>
-        <a class='logo' href='./index.html'>
-          <img alt='Gauge logo' id='thumb' src='./assets/images/Gauge_logo.svg'>
-        </a>
-        <a class='navigation-menu-button' href='javascript:void(0)'>
-          <i class='fa fa-bars fa-2x'></i>
-        </a>
-        <ul class='header-nav'>
-          <li class='nav-link'>
-            <a href='http://getgauge.io/documentation/user/current/' target='_blank'>Docs</a>
-          </li>
-          <li class='nav-link'><a href="./blog/index.html">Blog</a></li>
-          <li class='nav-link nav-drilldown'>
-            <a href="./get-started/index.html">Get Started</a>
-            <ul class='nav-drilldown-list'>
-              <li>Plugins</li>
-            </ul>
-          </li>
-          <li class='nav-link nav-drilldown'>
-            <a href="./contribute/index.html">Contribute</a>
-            <ul class='nav-drilldown-list'>
-              <li>
-                <a href='./cla/index.html'>CLA</a>
-              </li>
-            </ul>
-          </li>
-          <li class='nav-link-short'>
-            <a href='https://github.com/getgauge/gauge' target='_blank'>
-              <i class='fa fa-github'></i>
+        <nav class='nav-wrapper'>
+            <a class='logo' href='./index.html'>
+                <img alt='Gauge logo' id='thumb' src='./assets/images/Gauge_logo.svg'>
             </a>
-          </li>
-        </ul>
-      </nav>
+            <a class='navigation-menu-button' href='javascript:void(0)'>
+                <i class='fa fa-bars fa-2x'></i>
+            </a>
+            <ul class='header-nav'>
+                <li class='nav-link'>
+                    <a href='http://getgauge.io/documentation/user/current/' target='_blank'>Docs</a>
+                </li>
+                <li class='nav-link'><a href="./blog/index.html">Blog</a></li>
+                <li class='nav-link nav-drilldown'>
+                    <a href="./get-started/index.html">Get Started</a>
+                    <ul class='nav-drilldown-list'>
+                        <li>
+                            <a href='./plugins/index.html'>Plugins</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class='nav-link nav-drilldown'>
+                    <a href="./contribute/index.html">Contribute</a>
+                    <ul class='nav-drilldown-list'>
+                        <li>
+                            <a href='./cla/index.html'>CLA</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class='nav-link-short'>
+                    <a href='https://github.com/getgauge/gauge' target='_blank'>
+                        <i class='fa fa-github'></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <div id='content'>
-      <section class='hero-banner'>
-        <section class='hero-banner-content'>
-          <h1>
-            Test
-            <b>automation</b>
-            you will actually
-            <b>like</b>
+        <section class='hero-banner'>
+            <section class='hero-banner-content'>
+                <h1>
+            Test Automation
+            you will
+            <span>actually</span>
+            like
           </h1>
-          <div class='subquote'>
-            Write tests in plain-speak, then customize with rich, plug-in supportive artitecture
-            <br>Powerful refactoring that allows your test suite to adapt and change as your application evolves.</br>
-          </div>
-          <a class='button primary-button' href='./get-started/index.html'><i class="fa fa-cloud-download"></i> Get Started</a>
-          <a class='button' href='./contribute/index.html'>Contribute</a>
-          <section class='features qas'>
-            <h2>
+                <div class='subquote'>
+                    Write tests in plain-speak, then customize with rich, plug-in supportive architecture
+                    <br>Powerful refactoring that allows your test suite to adapt and change as your application evolves.</br>
+                </div>
+                <a class='button primary-button' href='/get-started'><i class="fa fa-cloud-download"></i> Get Started</a>
+                <a class='button' href='/contribute'>Contribute</a>
+                <section class='features qas'>
+                    <h2>
               Why Gauge is better for
               <span class="features-filter-selector-wrap">
               <a class="features-selector"><span class="features-selected-value">Testers</span><i class="fa fa-sort-desc"></i></a>
@@ -94,141 +99,133 @@
               </div>
               </span>
             </h2>
-            <a class='more-features' href='/getstarted'>view more ...</a>
-            <ul class='feature-list qas'>
-              <li class='simple-syntax wow animated fadeIn' data-wow-delay='.1s'>
-                <h3>Simple Syntax</h3>
-                <div class='feature-desc'>Markdown allows you to easily generate readable documentation of your features in the format of your choice. You don’t have to use Given-When-Then if you don’t want to.</div>
-              </li>
-              <li class='parallal-exec wow animated fadeIn' data-wow-delay='.2s'>
-                <h3>Parallal Execution</h3>
-                <div class='feature-desc'>Markdown allows you to easily generate readable documentation of your features in the format of your choice.</div>
-              </li>
-              <li class='env-tools wow animated fadeIn' data-wow-delay='.3s'>
-                <h3>
+                    <ul class='feature-list qas animated fadeIn'>
+                        <li class='simple-syntax'>
+                            <h3>Simple Syntax</h3>
+                            <div class='feature-desc'>Write test specifications in Markdown, a widely known markup language. Gauge won't enforce a structure: write in a way that works for you. Generate readable documentation in the format of your choice.</div>
+                        </li>
+                        <li class='start-fast'>
+                            <h3>Get Started Fast</h3>
+                            <div class='feature-desc'>Gauge is lightweight and needs no configuration. A single command plugin install and initialisation. And you’re good to go.</div>
+                        </li>
+                        <li class='env-tools'>
+                            <h3>
                   Your Environment
                   <br>Your Tools</br>
                 </h3>
-                <div class='feature-desc'>Markdown allows you to easily generate readable documentation of your features in the format of your choice.</div>
-              </li>
-              <li class='ext-data-src wow animated fadeIn' data-wow-delay='.4s'>
-                <h3>External Data Source</h3>
-                <div class='feature-desc'>Markdown allows you to easily generate readable documentation of your features in the format of your choice.</div>
-              </li>
-            </ul>
-            <ul class='feature-list developers animated fadeIn'>
-              <li class='simple-syntax'>
-                <h3>Simple Syntax</h3>
-                <div class='feature-desc'>Write specifications in Markdown, a plain text, widely used markup. Gauge won't enforce a format: write in the style that works for you.</div>
-              </li>
-              <li class='env-tools'>
-                <h3>
+                            <div class='feature-desc'>Gauge supports C#, Java, Ruby, IntelliJ and Visual Studio. Automate in your favourite programming language and work in the IDE of your choice, across platforms.</div>
+                        </li>
+                        <li class='ext-data-src'>
+                            <h3>Data Driven Execution</h3>
+                            <div class='feature-desc'>Easily test with large data sets, while keeping specifications highly readable. Gauge reads test data from text, CSV, and more.</div>
+                        </li>
+                    </ul>
+                    <ul class='feature-list developers animated fadeIn'>
+                        <li class='test-is-prod'>
+                            <h3>
+                  Refactoring support
+                </h3>
+                            <div class='feature-desc'>Keep your test suite as DRY as your production code. Gauge’s robust refactoring propagates changes throughout the test suite, reducing duplication and evolving your tests with your application.</div>
+                        </li>
+                        <li class='ext-data-src'>
+                            <h3>Data Driven Execution</h3>
+                            <div class='feature-desc'>Easily test with large data sets, while keeping specifications highly readable. Gauge reads test data from text, CSV, and more.</div>
+                        </li>
+                        <li class='env-tools'>
+                            <h3>
                   Your Environment
                   <br>Your Tools</br>
                 </h3>
-                <div class='feature-desc'>You can easily write your own language or IDE plugin. Author plugins in Golang or any other popular programming language. Gauge's plugin-loving architecture helps you get the most out of it.</div>
-              </li>
-              <li class='env-tools'>
-                <h3>
-                  Test code is
-                  <br>production code</br>
+                            <div class='feature-desc'>Gauge supports C#, Java, Ruby, IntelliJ and Visual Studio. Need something different? Write your own plugin in Golang or any popular language thanks to Gauge’s plugin-loving architecture.</div>
+                        </li>
+                        <li class='parallel-exec'>
+                            <h3>
+                  Easy Parallel Execution
                 </h3>
-                <div class='feature-desc'>Test suites need to be as DRY and as malleable as your production code. Gauge's robust refactoring support makes sure your suite evolve as your application does.</div>
-              </li>
-              <li class='parallal-exec'>
-                <h3>
-                  Parallel execution
-                  <br>made easy</br>
-                </h3>
-                <div class='feature-desc'>Run your tests in parallel with a single command from the IDE or command line. It'll work exactly the same across all languages.</div>
-              </li>
-            </ul>
-          </section>
+                            <div class='feature-desc'>Run your tests in parallel with a single command from the IDE or command line. It works exactly the same across all languages.</div>
+                        </li>
+                    </ul>
+                </section>
+            </section>
         </section>
-      </section>
-      <section class='visiongauge wow animated fadeIn' data-wow-delay='.3s'>
-        <h2>About Us</h2>
-        <div class='vision-wrapper'>
-          <ul>
-            <li>
-              <div class='vision-col icon-os'>
-                We are a group of people who are passionate about
-                <strong>open source</strong>
-                and
-                <strong>test automation.</strong>
-              </div>
-            </li>
-            <li>
-              <div class='vision-col icon-explevel'>
-                We want to be the tool of choice for testers with
-                <strong>varying levels</strong>
-                of
-                <strong>automation experience.</strong>
-              </div>
-            </li>
-            <li>
-              <div class='vision-col icon-plugin'>
-                Building a community of people with varying preferences is important to us. And Gauge is built with a
-                <strong>pluggable architecture</strong>
-                that could nurture this vision.
-              </div>
-            </li>
-            <li>
-              <div class='vision-col icon-hardprob'>
-                Now that we have been in this space for more than a decade, we love it, we want to stay and
-                <strong>solve</strong>
-                the
-                <strong>harder problems.</strong>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class='video wow animated fadeIn' data-wow-delay='.3s'>
-        <h2>Let's Get Started</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj1WUZ9gjLY" frameborder="0" allowfullscreen></iframe>
-        <div class='download'>
-          <a class='button primary-button' href='./download/index.html'>Download</a>
-        </div>
-      </section>
-      <section class='testimonials wow animated fadeIn' data-wow-delay='.3s'>
-        <h2>Check what our customer says</h2>
-        <ul class='row'>
-          <li>
-            "Guage is simple Awesome"
-            <div class='client'>Sheena Patel, QA</div>
-          </li>
-          <li>
-            "Love it!"
-            <div class='client'>Shaun Martin, Test Manager</div>
-          </li>
-          <li>
-            "Guage is simple Awesome"
-            <div class='client'>Sheena Patel, QA</div>
-          </li>
-          <li>
-            "Guage is simple Awesome"
-            <div class='client'>Sheena Patel, QA</div>
-          </li>
-        </ul>
-      </section>
+        <section class='visiongauge'>
+            <h2>Why we built Gauge</h2>
+            <div class='vision-wrapper'>
+                <ul>
+                    <li>
+                        <div class='vision-col icon-os'>
+                            We are passionate about
+                            <strong>open source</strong> and
+                            <strong>test automation.</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <div class='vision-col icon-explevel'>
+                            We support testers
+                            <strong>all testers</strong> regardless of automation experience.
+                        </div>
+                    </li>
+                    <li>
+                        <div class='vision-col icon-plugin'>
+                            Building a community of people with varying preferences is important to us. And Gauge is built with a
+                            <strong>plugin supportive architecture</strong> that will nurture this vision and adapt to accommodate it.
+                        </div>
+                    </li>
+                    <li>
+                        <div class='vision-col icon-hardprob'>
+                            ThoughtWorks, creator of tools like Selenium and Twist, has been a key player in the automated testing ecosystem for more than a decade. We love it. We're
+                            <strong>here to stay</strong> and we want to get even better to solve the hardest problems.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class='video wow animated fadeIn' data-wow-delay='.3s'>
+            <h2>Let's Get Started</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj1WUZ9gjLY" frameborder="0" allowfullscreen></iframe>
+            <div class='download'>
+                <a class='button primary-button' href='./get-started/index.html'>Download</a>
+            </div>
+        </section>
+        <section class='testimonials wow animated fadeIn' data-wow-delay='.3s'>
+            <h2>What our users say</h2>
+            <ul class='row'>
+                <li>
+                    "Guage is simple Awesome WE havr used sh it sjdfjks, Shfsjfbjs tsnfs ghtesgn s jethsjhsknf s fksfird."
+                    <div class='client'>Sheena Patel, QA</div>
+                </li>
+                <li>
+                    "Love it!"
+                    <div class='client'>Shaun Martin, Test Manager</div>
+                </li>
+                <li>
+                    "Guage is simple Awesome"
+                    <div class='client'>Sheena Patel, QA</div>
+                </li>
+                <li>
+                    "Guage is simple Awesome"
+                    <div class='client'>Sheena Patel, QA</div>
+                </li>
+            </ul>
+        </section>
     </div>
     <footer>
-      <section class='community' data-wow-delay='.1s'>
-        <h2>Be part of our community...</h2>
-        <div class='community-list'>
-          <a class='join-group' href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>Join the Community</a>
-          <a class='contribute' href='https://gitter.im/getgauge/chat' target='_blank'>Talk to Us</a>
-          <a class='contact' href='https://github.com/getgauge' target='_blank'>Watch Us</a>
-          <a class='followus' href='https://twitter.com/getgauge' target='_blank'>Follow Us</a>
-        </div>
-      </section>
-      <section id='powered-by'>
-        <a href='http://www.thoughtworks.com/products'>
-          <img alt='Thoughtworks logo' src='./assets/images/twlogo-footer-black.png'>
-        </a>
-      </section>
-      <p class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</p>
+        <section class='community' data-wow-delay='.1s'>
+            <h2>Be part of our community</h2>
+            <div class='community-list'>
+                <a class='join-group' href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>Join Us</a>
+                <a class='contribute' href='https://gitter.im/getgauge/chat' target='_blank'>Talk to Us</a>
+                <a class='contact' href='https://github.com/getgauge' target='_blank'>Watch Us</a>
+                <a class='followus' href='https://twitter.com/getgauge' target='_blank'>Follow Us</a>
+            </div>
+        </section>
+        <section id='powered-by'>
+            <a href='http://www.thoughtworks.com/products'>
+                <img alt='Thoughtworks logo' src='./assets/images/twlogo-footer-black.png'>
+            </a>
+        </section>
+        <p class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</p>
     </footer>
-  </body>
+</body>
+
 </html>
