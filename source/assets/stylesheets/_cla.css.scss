@@ -1,36 +1,46 @@
-.cla{
-	#content{
-    	@include outer-container(100%);
-    }
-    .page-content{
-    	padding:50px;
-    	font-size: 14px;
-		@include media($mobile) {
-		  padding: 20px 15px 20px 15px;
-		}
-		@include media($mobile) {
-		  padding: 20px 15px 20px 15px;
-		}
-	  strong{
-		font-weight: bold;}
-    	@include outer-container();
-    	h2{
-    		text-align: left;
-		  	margin: 25px 0 10px;
-    	}
-    	.block{
-    		margin-bottom: 40px;
-    	}
-	  .agreement{
-		font-family: monospace, serif;
-		font-size: 1em;
-	  }
-  	}
-  	.cla-form{
-	  width: 85%;
-	  height: 1270px;
-	  @include media($tablet) {
-		width: 100%;
-	  }
+
+.cla-content{
+  @include outer-container(100%);
+  padding: 50px 0px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+
+  .license{
+	@include outer-container();
+	max-width: 68em;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  .cla-form-content{
+	@include outer-container();
+	max-width: 68em;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  @include media($mobile) {
+	padding: 20px 15px 20px 15px;
+  }
+  strong{
+	font-weight: bold;}
+	h2{
+		text-align: left;
+		margin: 25px 0 10px;
 	}
+	.block{
+		margin-bottom: 40px;
+	}
+  .agreement{
+	font-family: monospace, serif;
+	font-size: 1em;
+  }
 }
+
+  .cla-form{
+	width: 85%;
+	height: 1270px;
+	@include media($tablet) {
+	  width: 100%;
+	}
+  }
