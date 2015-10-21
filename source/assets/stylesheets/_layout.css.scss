@@ -67,33 +67,52 @@ header, footer {
       
         @include media($large-screen) {
           line-height: 2.4em;
-          padding: 0 10px;
           display: inline-block;
           text-align: center;
           background: transparent;
           font-size:1em;
           width: auto;
           min-width: 80px;
+          a {
+            font-size: 18px;
+            display: block;
+            border-bottom : 2px #000 solid;
+          }
         }
-
-        a {
-          font-size: 16px;
-        }
+        
         .nav-drilldown-list{
           display: none;
           position: absolute;
           width:150px;
           left:0px;
-          top: 38px;
-          background: #fff;
+          top: 45px;
+          background: #f1f1f1;
           z-index: 11;
-          border: 2px solid $mustard;
           border-radius: 5px;
+          border-radius: 0;
+          /*&:before{
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid #f1f1f1;
+            position: absolute;
+            left: 12px;
+            top: -12px;
+          }*/
           li{
-            font-size: 14px;
-            &:hover{
-              background: #f1f1f1;
-              cursor:pointer;
+            a{
+              color: #000 !important;
+              font-size: 16px;
+              display: block;
+              font-weight: 400;
+              border: none;
+              &:hover{
+                background: #f9da70;
+                border: none;
+              }
             }
           }
         }
@@ -296,13 +315,11 @@ footer {
     }
 }
 #content{
-  margin-top: 20px;
+  margin-top: 5px;
   position: relative;
   z-index: 1;
 }
 
 #hero {
   color: #111;
-
-  
 }

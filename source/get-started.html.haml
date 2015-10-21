@@ -7,7 +7,7 @@
       %li.tab1{:id => "Mac"}
         %a{:href => "#tab1"}
           %i.fa.fa-apple
-          Macintosh 
+          Mac
       %li.tab2{:id => "Windows"}
         %a{:href => "#tab2"}
           %i.fa.fa-windows
@@ -32,26 +32,26 @@
             %a{:href => "http://brew.sh/"}brew.
             Download the installer below based on your system configuration and follow these detailed instructions to install using the pkg.
 
-          .download-container.clearfix
-            .download-section
-              .grid-4
-                .instruction
-                  %strong pkg
+          .download-section.clearfix
+            .grid-4
+              .instruction.title
+                %strong pkg
+                %i
                   (latest stable version:
                   %os= data.version.current
                   )
-              .grid-4
-                .download-bit
-                  %a.download.button{:href => "#"} 32 bit
-                  %span.sha
-                    %strong SHA-1:
-                    dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
-              .grid-4
-                .download-bit
-                  %a.download.button{:href => "#"} 64 bit
-                  %span.sha
-                    %strong SHA-1:
-                    dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+            .grid-4
+              .download-bit
+                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-darwin.x86.pkg"} 32 bit
+                %span.sha
+                  %strong SHA-1:
+                  dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+            .grid-4
+              .download-bit
+                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-darwin.x86_64.pkg"} 64 bit
+                %span.sha
+                  %strong SHA-1:
+                  dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
 
 
           .instruction We would recommend using brew for a very simple straightforward installation using this command.
@@ -105,30 +105,32 @@
 
       %li#tab2.hide
         .page-block 
-          %p There are
+          %p There are two ways to install Gauge on windows. We will show you the process using the exe. However using chocolatey is also an option. Read more here on how to install Gauge using chocolatey.
           %h3 1. Install Gauge and core plugins
-          .instruction  Select your system's configuration to download
-          %table.download-table
-            %tr
-              %td
-                %os= data.version.current
-                %b (Windows.exe)
-              %td
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-windows.x86.exe"}
-                  %i.fa.fa-arrow-circle-o-down
-                  32 bit
-                .sha-label
-                  %a.sha-link{:href => "javascript:void(0)"} 
-                    Show SHA
-                  .sha-tooltip sadassdassa
-              %td 
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-windows.x86_64.exe"}
-                  %i.fa.fa-arrow-circle-o-down
-                  64 bit
-                .sha-label
-                  %a.sha-link{:href => "javascript:void(0)"} 
-                    Show SHA
-                  .sha-tooltip sadassdassa
+          .instruction  Install Gauge by downloading and running the exe
+
+          .download-container.clearfix
+            .download-section
+              .grid-4
+                .instruction.title
+                  %strong exe
+                  %i
+                    (latest stable version:
+                    %os= data.version.current
+                    )
+              .grid-4
+                .download-bit
+                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-windows.x86.exe"} 32 bit
+                  %span.sha
+                    %strong SHA-1:
+                    dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+              .grid-4
+                .download-bit
+                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-windows.x86_64.exe"} 64 bit
+                  %span.sha
+                    %strong SHA-1:
+                    dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+
           .screenshot
             .browser-container
               .browser-code
@@ -184,33 +186,34 @@
                   2 scenarios executed, 0 failed
                   1 specifications executed, 0 failed 
 
-        
       %li#tab3.hide
         .page-block
           %p Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.
           %h3 1. Install Gauge
           .instruction  Install Gauge with by downloading the zip and execute the following command. Choose the archive file appropriate for your installation. For instance, if you are installing gauge version 0.2.1 for 64-bit x86 on Linux, the archive you want is called gauge-0.2.1-linux.x86_64.tar.gz.
-          %table.download-table
-            %tr
-              %td
-                %os= data.version.current
-                %b (Linix.zip)
-              %td
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-linux.x86.zip"}
-                  %i.fa.fa-arrow-circle-o-down
-                  32 bit
-                .sha-label
-                  %a.sha-link{:href => "javascript:void(0)"} 
-                    Show SHA
-                  .sha-tooltip sadassdassa 
-              %td 
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-linux.x86_64.zip"}
-                  %i.fa.fa-arrow-circle-o-down
-                  64 bit
-                .sha-label
-                  %a.sha-link{:href => "javascript:void(0)"} 
-                    Show SHA
-                  .sha-tooltip sadassdassa  
+          .download-container.clearfix
+            .download-section
+              .grid-4
+                .instruction.title
+                  %strong zip
+                  %i
+                    (latest stable version:
+                    %os= data.version.current
+                    )
+              .grid-4
+                .download-bit
+                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-linux.x86.zip"} 32 bit
+                  %span.sha
+                    %strong SHA-1:
+                    dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+              .grid-4
+                .download-bit
+                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-linux.x86.zip"} 64 bit
+                  %span.sha
+                    %strong SHA-1:
+                    dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+
+
           .screenshot
             .browser-container
               .browser-code

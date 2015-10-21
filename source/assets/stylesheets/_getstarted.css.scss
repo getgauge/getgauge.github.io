@@ -35,9 +35,13 @@
     li{
       display: inline-block;
       margin-right:75px;
+      @include media($mobile) {
+        margin-right:22px;
+      }
       a{
           font-size: 20px;
           color:#737373;
+          display: block;
           @include media($mobile) {
             font-size: 16px;
           }
@@ -112,31 +116,40 @@
   }
 }
 
-.download-container{
+.download-section{
   strong{
     font-weight: bold;
   }
-  border: 1px solid #F7F7F7;
+  i{
+    font-style: italic;
+  }
+  border: 1px solid #B5B1B1;
   box-sizing: border-box;
   margin: 20px 20px;
-
-  .download-section {
+    background-color: #F7F7F7;
+    @include media($tablet) {
+      padding: 5px 0;
+    }
     .grid-4 {
-      background-color: #F7F7F7;
       @include span-columns(4);
-      min-height: 60px;
       padding: 10px;
       position: relative;
       margin-right: 0px;
       @include media($tablet) {
-        @include span-columns(12);
-        margin: 0px 10px 10px 10px;
-        min-height: 60px;
+ //       @include span-columns(12);
+        margin: 0px;
       }
       @include media($mobile) {
         @include span-columns(12);
-        margin: 5px 10px 20px 10px;
-        min-height: 70px;
+        margin: 0;
+        text-align: center;
+
+      }
+      .title{
+        @include media($tablet) {
+          margin-bottom: 0;
+          margin-top: 0;
+        }
       }
     }
     .download {
@@ -144,6 +157,7 @@
       font-size: 15px;
       color: #444;
       padding-left: 70px;
+      margin-right: 10px;
       background: #ABABAB;
       &:hover {
         color: #fff;
@@ -154,18 +168,17 @@
     }
     .sha {
       display: inline-block;
+      font-size: 12px;
       @include media($tablet) {
         margin-top: 10px;
-        font-size: .9em;
+        font-size:11px;
 
       }
       @include media($mobile) {
         margin-top: 10px;
-        font-size: .9em;
-
+        font-size:11px;
       }
     }
-  }
 }
 
 .download-table{

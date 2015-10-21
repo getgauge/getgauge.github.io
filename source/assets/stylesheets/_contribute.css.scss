@@ -20,7 +20,7 @@
       }
       li{
         @include span-columns(4);
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         height:260px;
         &:nth-child(3n){
           @include omega;
@@ -67,9 +67,9 @@
           }
         }
         @include media($mobile) {
-          @include span-columns(12);  
+          @include span-columns(12);
           @include omega;
-          height:220px;
+          height:auto;
           .contribution-list-item{
             width:100%;
           }
@@ -115,11 +115,11 @@
                 content: "";
                 background-image: image-url('svg/contribution/icon_bidirectional_arrow.svg');
                 position: absolute;
-                top:-90px;
+                top:-80px;
                 width: 70px;
                 height: 67px;
                 left: 57px;
-                background-size: 70px 70px;
+                background-size: 70px 0px;
                 @include media($tablet) {
                   left: 33px;
                 }
@@ -224,11 +224,8 @@
       }
     }
     .help{
-      text-align: left;
+      text-align: center;
       @include outer-container();
-      i{
-        font-style: italic;
-      }
 
     }
     

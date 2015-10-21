@@ -7,7 +7,7 @@
   @include media($tablet) {
     padding: 1.2em 0;
   }
-  background-image: image-url('herobanner.jpg');
+  background-image: image-url('hero_banner.jpg');
   background-attachment: fixed;
   background-color:#000;
   background-repeat:no-repeat;
@@ -23,10 +23,12 @@
       margin: 0 auto;
       text-align: center;
       font-size: 64px;
-      font-weight: 400;
+      font-weight: 600;
+      text-shadow: 3px 4px 4px rgba(0,0,0,.2);
 
-      b{
-        font-weight: 700;
+      span{
+        font-weight: 400;
+        color: #AE8F27;
       }
       @include media($tablet){
         font-size: 46px;

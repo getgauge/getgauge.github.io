@@ -5,6 +5,12 @@
     .page-content{
     	padding:50px;
     	font-size: 14px;
+		@include media($mobile) {
+		  padding: 20px 15px 20px 15px;
+		}
+		@include media($mobile) {
+		  padding: 20px 15px 20px 15px;
+		}
 	  strong{
 		font-weight: bold;}
     	@include outer-container();
@@ -21,7 +27,10 @@
 	  }
   	}
   	.cla-form{
-	  	width: 650px;
-	  	height: 1250px;
+	  width: 85%;
+	  height: 1270px;
+	  @include media($tablet) {
+		width: 100%;
+	  }
 	}
 }
