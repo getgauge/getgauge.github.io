@@ -224,8 +224,10 @@
       }
     }
     .help{
-      text-align: center;
       @include outer-container();
+      strong{
+        font-weight: bold;
+      }
 
     }
     
