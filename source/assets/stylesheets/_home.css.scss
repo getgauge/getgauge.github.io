@@ -96,6 +96,7 @@
   background:rgba(0,0,0,.4);
   margin-top:200px;
   position: relative;
+  overflow: hidden;
 
   @include media($tablet){
     margin-top:150px;
@@ -106,7 +107,7 @@
   }
 
   .feature-list{
-    margin:70px 0 0 0;
+    margin:70px 0 0;
     @include media($mobile){
       margin:50px 0 0 0;
     }
@@ -164,7 +165,7 @@
     }
 
     .feature-desc{
-      font-size:14px;
+      font-size:15px;
       padding:20px 40px;
       text-align:left;
     }
