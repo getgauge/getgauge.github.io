@@ -1,41 +1,54 @@
 
-.cla-content{
-  @include outer-container(100%);
-  padding: 50px 0px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
+.cla{
+	.short{
+	  display: none;
+	  @include media($mobile, $tablet){
+		display: inline-block;
+	  }
+	}
+	.long{
+	  display: inline-block;
+	  @include media($mobile, $tablet){
+		display: none;
+	  }
+  }
 
-  .license{
-	@include outer-container();
-	max-width: 68em;
+  .cla-content{
+	@include outer-container(100%);
+	padding: 50px 0px;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-  }
-  .cla-form-content{
-	@include outer-container();
-	max-width: 68em;
-	margin-left: auto;
-	margin-right: auto;
-  }
-  @include media($mobile) {
-	padding: 20px 15px 20px 15px;
-  }
-  strong{
-	font-weight: bold;}
+	.license{
+	  @include outer-container();
+	  max-width: 68em;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	.cla-form-content{
+	  @include outer-container();
+	  max-width: 68em;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	@include media($mobile) {
+	  padding: 20px 15px 20px 15px;
+	}
+	strong{
+	  font-weight: bold;}
 	h2{
-		text-align: left;
-		margin: 25px 0 10px;
+	  text-align: left;
+	  margin: 25px 0 10px;
 	}
 	.block{
-		margin-bottom: 40px;
+	  font-size: 14px;
+	  margin-bottom: 40px;
 	}
-  .agreement{
-	font-family: monospace, serif;
-	font-size: 1em;
+	.agreement{
+	  font-family: monospace, serif;
+	  font-size: 1em;
+	}
   }
-}
 
   .cla-form{
 	width: 85%;
@@ -44,3 +57,4 @@
 	  width: 100%;
 	}
   }
+}

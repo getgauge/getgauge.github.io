@@ -34,7 +34,6 @@ configure :build do
   set :relative_links, true
   activate :minify_css
   activate :minify_javascript
-  activate :asset_hash
   activate :relative_assets
   
   #abort "ENV['ASSET_HOST'] not specified, bailing!" if ENV['ASSET_HOST'].blank?

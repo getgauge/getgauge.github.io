@@ -2,12 +2,20 @@
   background-image: image-url('headerbg.jpg');
   background-position: right top;
   height:170px;
+  @include media($mobile, $tablet) {
+    height: 130px;
+  }
   .page-label{
     display:inline-block;
     color:#fff;
     margin-top:60px;
     font-size:52px;
     margin-left:30px;
+    @include media($mobile, $tablet) {
+      font-size: 35px;
+      line-height: 1;
+      margin-top: 70px;
+    }
   }
 }
 .get-started{
@@ -120,6 +128,10 @@
       color:#fff;
       font-family: monospace, monospace;
       font-size: 0.8em;
+      @include media($mobile) {
+        padding: 0;
+        word-wrap: break-word;
+      }
 
     }
   }

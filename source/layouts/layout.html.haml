@@ -43,12 +43,12 @@ title: Gauge | ThoughtWorks
           %li.nav-link
             = nav_bar_link 'Blog', 'blog/index.html'
           %li.nav-link.nav-drilldown
-            = nav_bar_link 'Get Started', 'get-started/index.html'
+            = nav_bar_link 'Get Started <span class="expand"><i class="fa fa-plus"></i></span>', 'get-started/index.html'
             %ul.nav-drilldown-list
               %li
                 = nav_bar_link 'Plugins', 'plugins/index.html'
           %li.nav-link.nav-drilldown
-            = nav_bar_link 'Contribute', 'contribute/index.html'
+            = nav_bar_link 'Contribute <span class="expand"><i class="fa fa-plus"></i></span>', 'contribute/index.html'
             %ul.nav-drilldown-list
               %li
                 = nav_bar_link 'CLA', 'cla/index.html'
@@ -70,3 +70,4 @@ title: Gauge | ThoughtWorks
           %img{:alt => "Thoughtworks logo", :src => asset_path(:images, 'twlogo-footer-black.png')}
 
       %p.disclamer Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0
+      = javascript_include_tag  "mobileNav"
