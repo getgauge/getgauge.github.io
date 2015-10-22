@@ -14,6 +14,21 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
+helpers do
+	def is_home_page()
+		return current_page.url == '/'
+	end
+
+	def nav_bar_link(text, url)
+		set :relative_links, true
+		if current_page.url == '/'
+			link_to(text, url)
+		else
+			link_to(text, '../' + url)
+		end
+	end
+end
+
 config[:file_watcher_ignore] += [ /.idea\// ]
 
 configure :build do
