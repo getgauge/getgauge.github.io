@@ -301,15 +301,6 @@
       .text{
         display: inline-block;
         text-align:left;
-        &:before{
-          content: open-quote;
-          font-weight: bold;
-        }
-        &:after {
-          content: close-quote;
-          font-size: 20px;
-          font-weight: bold;
-        }
       }
 
     }

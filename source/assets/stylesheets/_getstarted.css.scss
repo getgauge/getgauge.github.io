@@ -191,12 +191,12 @@
       font-size: 12px;
       @include media($tablet) {
         margin-top: 10px;
-        font-size:11px;
+        font-size:10px;
 
       }
       @include media($mobile) {
         margin-top: 10px;
-        font-size:11px;
+        font-size:10px;
       }
     }
 }

@@ -39,19 +39,19 @@
             background-image: image-url('svg/contribution/icon_contribute_test.svg');
           }
           &.icon-cl.icon-cl-2{
-            background-image: image-url('svg/contribution/icon_contribute_discuss.svg');            
+            background-image: image-url('svg/contribution/icon_contribute_discuss.svg');
           }
           &.icon-cl.icon-cl-3{
-            background-image: image-url('svg/contribution/icon_contribute_blog.svg');            
+            background-image: image-url('svg/contribution/icon_contribute_blog.svg');
           }
           &.icon-cl.icon-cl-4{
-            background-image: image-url('svg/contribution/icon_contribute_examples.svg');            
+            background-image: image-url('svg/contribution/icon_contribute_examples.svg');
           }
           &.icon-cl.icon-cl-5{
-            background-image: image-url('svg/contribution/icon_contribute_docs.svg');            
+            background-image: image-url('svg/contribution/icon_contribute_docs.svg');
           }
           &.icon-cl.icon-cl-6{
-            background-image: image-url('svg/contribution/icon_contribute_code.svg');            
+            background-image: image-url('svg/contribution/icon_contribute_code.svg');
           }
         }
         .desc{
@@ -81,11 +81,43 @@
         color:#8A8A8A;
       }
     }
-    .contribution-process{
+    .step1{
+      background-image: image-url('svg/contribution/icon_find_issue.svg');
+    }
+    .step2{
+      background-image: image-url('svg/contribution/icon_assign.svg');
+    }
+    .step3{
+      background-image: image-url('svg/contribution/icon_fork.svg');
+    }
+    .step4{
+      background-image: image-url('svg/contribution/icon_form.svg');
+    }
+    .step5{
+      background-image: image-url('svg/contribution/icon_changes.svg');
+    }
+    .step6{
+      background-image: image-url('svg/contribution/icon_pull_request.svg');
+    }
+    .step7{
+      background-image: image-url('svg/contribution/icon_CLA.svg');
+    }
+    .step8{
+      background-image: image-url('svg/contribution/icon_merge.svg');
+    }
+
+    @mixin contrib-background{
       background: $mustard;
       padding:40px 0px;
       margin:40px 0px;
       text-align: center;
+    }
+
+    .contribution-process{
+      @include media($mobile){
+        display: none;
+      }
+      @include contrib-background;
       @include outer-container(100%);
       ul{
         padding: 0px;
@@ -96,10 +128,6 @@
         @include media($tablet) {
             width: 768px;
         }
-        @include media($mobile) {
-          width: 100%;
-        }
-        
         &.block-rtl{
           margin-top:0px;
           li{
@@ -149,13 +177,10 @@
           }
           &:first-child{
             margin-left:0px;
-            @include media($mobile) {
-              margin-left:auto;
-            }
           }
           &:before{
             content: "";
-            background-image: image-url('svg/contribution/icon_arrow.svg');            
+            background-image: image-url('svg/contribution/icon_arrow.svg');
             width: 50px;
             position: absolute;
             top: 16px;
@@ -163,61 +188,38 @@
             left: -65px;
             background-size: 50px 50px;
           }
-
-          @include media($mobile) {
-            display: block;
-            float: none;
-            margin:0px auto;
-            &:first-child{
-            }
-            &:before{
-              display: none;
-            }
-          }
         }
 
       }
-      .step1{
-            background-image: image-url('svg/contribution/icon_find_issue.svg');
-      }
-      .step2{
-            background-image: image-url('svg/contribution/icon_assign.svg');
-      }
-      .step3{
-            background-image: image-url('svg/contribution/icon_fork.svg');
-      }
-      .step4{
-            background-image: image-url('svg/contribution/icon_form.svg');
-      }
-      .step5{
-            background-image: image-url('svg/contribution/icon_changes.svg');
-      }
-      .step6{
-            background-image: image-url('svg/contribution/icon_pull_request.svg');
-      }
-      .step7{
-            background-image: image-url('svg/contribution/icon_CLA.svg');
-      }
-      .step8{
-            background-image: image-url('svg/contribution/icon_merge.svg');
-      }
+
     }
-    .contribution-steps {
-      @include outer-container();
 
-      .contribution-step {
-        @include span-columns(6);
-        .involvement-heading {
-          font-size: 1.4em;
-          color: #333;
-          text-align: center;
-          padding-bottom: 0.5em;
-        }
+    .contribution-steps-list{
+      display: none;
+      @include media($mobile) {
+        display: block;
+        @include contrib-background;
+        @include outer-container(100%);
+        ul {
+          li {
+            .image_alignment {
+              background-size: 60px 60px;
+              background-repeat: no-repeat;
+              height: 60px;
+              margin: 0 20px 20px 20px;
+            }
 
-        .contribution-list {
-          .contribution-item {
-            a {
-              color: #1b23ff;
+            .description {
+              padding-left: 80px;
+              font-size: 14px;
+              text-align: left;
+              padding-top: 10px;
+            }
+
+            .step {
+              margin: 25px 0 10px 0;
+              height: auto;
+              width: auto;
             }
           }
         }
@@ -230,16 +232,6 @@
       }
 
     }
-    
+
   }
-.contribution-process{
-  div{
-    float:left;
-    margin-right:10px;
-    background-image: image-url('contribution.svg#shape-icon-1');
-    background-repeat: no-repeat;
-    background-position: top left;
-    height:100px;
-    width:100px;
-  }
-}
+
