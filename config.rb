@@ -20,7 +20,6 @@ helpers do
 	end
 
 	def nav_bar_link(text, url)
-		set :relative_links, true
 		if current_page.url == '/'
 			link_to(text, url)
 		else
