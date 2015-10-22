@@ -62,6 +62,15 @@
 }
 .page-block{
   margin-bottom: 40px;
+  .img-container{
+    @include span-columns(12);
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    img{
+      background-repeat: no-repeat;
+    }
+  }
   h3{
     text-align: left;
     padding:8px 10px 6px;
