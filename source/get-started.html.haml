@@ -38,20 +38,20 @@
                 %strong pkg
                 %i
                   (latest stable version:
-                  %os= data.version.current
+                  %os= data.info.version
                   )
             .grid-4
               .download-bit
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-darwin.x86.pkg"} 32 bit
+                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-darwin.x86.pkg"} 32 bit
                 %span.sha
                   %strong SHA-1:
-                  dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+                  #{data.info.darwin86}
             .grid-4
               .download-bit
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-darwin.x86_64.pkg"} 64 bit
+                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-darwin.x86_64.pkg"} 64 bit
                 %span.sha
                   %strong SHA-1:
-                  dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+                  #{data.info.darwin86_64}
 
 
           .instruction We would recommend using brew for a very simple straightforward installation using this command.
@@ -115,20 +115,20 @@
                 %strong exe
                 %i
                   (latest stable version:
-                  %os= data.version.current
+                  %os= data.info.version
                   )
             .grid-4
               .download-bit
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-windows.x86.exe"} 32 bit
+                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-windows.x86.exe"} 32 bit
                 %span.sha
                   %strong SHA-1:
-                  dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+                  #{data.info.windows86}
             .grid-4
               .download-bit
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-windows.x86_64.exe"} 64 bit
+                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-windows.x86_64.exe"} 64 bit
                 %span.sha
                   %strong SHA-1:
-                  dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+                  #{data.info.windows86_64}
 
         .page-block 
           %h3 2. Install core language plugins
@@ -183,22 +183,20 @@
                 %strong zip
                 %i
                   (latest stable version:
-                  %os= data.version.current
+                  %os= data.info.version
                   )
             .grid-4
               .download-bit
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-linux.x86.zip"} 32 bit
+                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-linux.x86.zip"} 32 bit
                 %span.sha
                   %strong SHA-1:
-                  dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
+                  #{data.info.linux86}
             .grid-4
               .download-bit
-                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.version.current}/gauge-#{data.version.current}-linux.x86.zip"} 64 bit
+                %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-linux.x86.zip"} 64 bit
                 %span.sha
                   %strong SHA-1:
-                  dfjksfjkdshfjksdhfjdsjfhskjfhsjkd
-
-
+                  #{data.info.linux86_64}
           .screenshot
             .browser-container
               .browser-code
