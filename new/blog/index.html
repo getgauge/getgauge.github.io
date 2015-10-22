@@ -18,10 +18,10 @@
         <meta content='width=device-width, initial-scale=1' name='viewport'>
           <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
             <link rel="shortcut icon" href="../assets/images/favicons/favicon.ico" type="image/ico" />
-            <link rel="apple-touch-icon-precomposed" href="../assets/images/favicons/apple-touch-icon-d4b2a070.png" type="image/png" />
-            <link href="../assets/stylesheets/application-574891ed.css" rel="stylesheet" type="text/css" />
-            <script src="../assets/javascripts/frameworks/jquery-1.11.2-0814964e.js" type="text/javascript"></script>
-            <script src="../assets/javascripts/application-29e9f2a8.js" type="text/javascript" async="true"></script>
+            <link rel="apple-touch-icon-precomposed" href="../assets/images/favicons/apple-touch-icon.png" type="image/png" />
+            <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+            <script src="../assets/javascripts/frameworks/jquery-1.11.2.js" type="text/javascript"></script>
+            <script src="../assets/javascripts/application.js" type="text/javascript" async="true"></script>
             <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
           </link>
         </meta>
@@ -32,7 +32,7 @@
     <header class='dark'>
       <nav class='nav-wrapper'>
         <a class='logo' href='../index.html'>
-          <img alt='Gauge logo' id='thumb' src='../assets/images/Gauge_logo-7caed2fd.svg'>
+          <img alt='Gauge logo' id='thumb' src='../assets/images/Gauge_logo.svg'>
         </a>
         <a class='navigation-menu-button' href='javascript:void(0)'>
           <i class='fa fa-bars fa-2x'></i>
@@ -45,7 +45,7 @@
             <a href="../blog/index.html">Blog</a>
           </li>
           <li class='nav-link nav-drilldown'>
-            <a href="../get-started/index.html">Get Started</a>
+            <a href="../get-started/index.html">Get Started <span class="expand"><i class="fa fa-plus"></i></span></a>
             <ul class='nav-drilldown-list'>
               <li>
                 <a href="../plugins/index.html">Plugins</a>
@@ -53,7 +53,7 @@
             </ul>
           </li>
           <li class='nav-link nav-drilldown'>
-            <a href="../contribute/index.html">Contribute</a>
+            <a href="../contribute/index.html">Contribute <span class="expand"><i class="fa fa-plus"></i></span></a>
             <ul class='nav-drilldown-list'>
               <li>
                 <a href="../cla/index.html">CLA</a>
@@ -141,10 +141,11 @@
       </section>
       <section id='powered-by'>
         <a href='http://www.thoughtworks.com/products'>
-          <img alt='Thoughtworks logo' src='../assets/images/twlogo-footer-black-d8e04642.png'>
+          <img alt='Thoughtworks logo' src='../assets/images/twlogo-footer-black.png'>
         </a>
       </section>
       <p class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</p>
+      <script src="../assets/javascripts/mobileNav.js" type="text/javascript"></script>
     </footer>
   </body>
 </html>
