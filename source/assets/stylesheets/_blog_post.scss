@@ -1,0 +1,37 @@
+.blogpost {
+    padding-top: 65px;
+    padding-left: 40px;
+    padding-right: 40px;
+    @include media($mobile, $tablet) {
+        height: 130px;
+    }
+    .title {
+        margin-top: 10px;
+        font-size: 35px;
+        text-align: center;
+        @include media($mobile, $tablet) {
+            font-size: 25px;
+            line-height: 1;
+            margin-top: 11px;
+            text-align: center;
+        }
+    }
+    .metadata {
+        padding-bottom: 10px;
+        .item {
+            text-align: center;
+            font-size: 12px;
+            font-style: italic;
+        }
+    }
+    p {
+        font-size: 14px;
+    }
+    .section-title {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

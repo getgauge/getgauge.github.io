@@ -16,7 +16,6 @@ set :images_dir, 'assets/images'
 set :layouts_dir, 'layouts'
 
 activate :blog do |blog|
-  # set options on blog
   blog.prefix = "blog/posts"
   blog.tag_template = "blog/tag.html"
 end
