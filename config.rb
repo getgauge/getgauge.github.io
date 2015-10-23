@@ -16,7 +16,8 @@ set :images_dir, 'assets/images'
 
 activate :blog do |blog|
   # set options on blog
-  blog.prefix = "blog"
+  blog.prefix = "blog/posts"
+  blog.tag_template = "blog/tag.html"
 end
 
 helpers do
