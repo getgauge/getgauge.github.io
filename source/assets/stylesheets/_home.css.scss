@@ -28,7 +28,7 @@
 
       span{
         font-weight: 400;
-        color: #AE8F27;
+        color: $mustard;
       }
       @include media($tablet){
         font-size: 46px;
