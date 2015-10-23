@@ -11,7 +11,9 @@
           %h3 Test Gauge
           .icon-cl.icon-cl-1
           .desc
-            You can report an issue you found, or you can help us test Gauge to find new issues. Gauge is tested with Gauge so you can also add to our existing automated tests.
+            You can report an issue you found, or you can help us test Gauge to find new issues.
+            %a{:href => "https://github.com/getgauge/gauge-tests", :target => "_blank"} Gauge is tested with Gauge
+            so you can also add to our existing automated tests.
 
       %li
         .contribution-list-item
@@ -19,7 +21,7 @@
           .icon-cl.icon-cl-2
           .desc
             We have an active
-            %a{:href => "https://groups.google.com/forum/#!forum/getgauge"} forum
+            %a{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} forum
             where issues, features and ideas are discussed. Start a discussion, or help someone get started with Gauge.
 
       %li
@@ -32,20 +34,29 @@
         .contribution-list-item
           %h3 Enhance our Examples
           .icon-cl.icon-cl-4
-          .desc We maintain a set of examples that evolve as we add new features and languages. This is to help someone new to Gauge get started easily. If you’ve tried something you think would be useful to the community, please add it.
+          .desc
+            We maintain a set of
+            %a{:href => "https://github.com/getgauge/gauge-examples", :target => "_blank"} examples
+            that evolve as we add new features and languages. This is to help someone new to Gauge get started easily. If you’ve tried something you think would be useful to the community, please add it.
 
       %li
         .contribution-list-item
           %h3
             Improve our Documentation
           .icon-cl.icon-cl-5
-          .desc If you enjoy doing a detailed analysis of how something works, whether it’s an API or a feature, please use this talent to help us improve our documentation. This will definitely help the Gauge community at large.
+          .desc
+            If you enjoy doing a detailed analysis of how something works, whether it’s an API or a feature, please use this talent to help us improve our
+            %a{:href => "https://github.com/getgauge/documentation" , :target => "_blank"} documentation.
+            This will definitely help the Gauge community at large.
 
       %li
         .contribution-list-item
           %h3 Code for Gauge
           .icon-cl.icon-cl-6
-          .desc Contribute code to Gauge! All repositories are hosted on GitHub, Gauge’s core is written in Golang but plugins are, and can be, written in any popular language. Pick up any pending feature or bug, big or small, then send us a pull request. Even fixing broken links is a big, big help.
+          .desc
+            Contribute code to Gauge! All repositories are hosted on GitHub, Gauge’s core is written in Golang but
+            %a{:href => " https://github.com/getgauge/gauge-repository" , :target => "_blank"} plugins
+            are, and can be, written in any popular language. Pick up any pending feature or bug, big or small, then send us a pull request. Even fixing broken links is a big, big help.
 
   %section.contribution-process
     %h2 Code Contribution Process
@@ -82,18 +93,23 @@
         .step8.image_alignment.description We Merge your Request
 
   %section.help
-    %h2 How do I get help?
+    %h2 How to start contributing
     %p.text-block
-      We have issues of varying levels across all Gauge repositories, start with something simple and work your way up. All these issues tagged as
+      There are issues of varying levels across all Gauge repositories. All issues that need to be addressed are tagged as
       %strong 'Help Needed'.
-      We'd suggest you pick a small bug to start with. These have been tagged as
+      One easy way to get started is to pick a small bug to fix. These have been tagged as
       %strong
         'Easy Picks'.
-      If you need any help getting started, then you can talk to us on
+    %p.text-block
+      If your contribution is a code contribution and you do send us a pull request, you will first need to read and sign the
+      = link_to 'Contributor License Agreement.', '../cla/index.html'
+
+  %section.help
+    %h2 How to get help
+    %p.text-block
+      If you need any help getting started or get stuck along the way, you can talk to us on
       %a{:href => "https://gitter.im/getgauge/chat"} Gitter
       or on our
-      %a{:href => "https://groups.google.com/forum/#!forum/getgauge" }discussion forum.
-      We would be happy to help you and answer any questions you might have along the way.
-    %p.text-block
-      If your contribution is a code contribution, then If you do send us a pull request, we’ll need you read this agreement and sign the
-      = link_to 'Contributor License Agreement.', '../cla/index.html'
+      %a{:href => "https://groups.google.com/forum/#!forum/getgauge" } discussion forum.
+      We are happy to help and answer any questions.
+
