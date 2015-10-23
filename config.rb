@@ -18,6 +18,8 @@ set :layouts_dir, 'layouts'
 activate :blog do |blog|
   blog.prefix = "blog/posts"
   blog.tag_template = "blog/tag.html"
+  blog.new_article_template = "source/blog/template.html.haml"
+  blog.default_extension = ".haml"
 end
 
 helpers do
