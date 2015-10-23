@@ -32,6 +32,9 @@ title: Gauge | ThoughtWorks
         - if is_home_page
           %a.logo{:href => "index.html"} 
             %img#thumb{:alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
+        - elsif is_blog_article
+          %a.logo{:href => "../../../../../index.html"} 
+            %img#thumb{:alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         - else
           %a.logo{:href => "../index.html"} 
             %img#thumb{:alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}

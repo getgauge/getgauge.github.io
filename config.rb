@@ -13,6 +13,7 @@ set :fonts_dir, 'assets/fonts'
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
+set :layouts_dir, 'layouts'
 
 activate :blog do |blog|
   # set options on blog
@@ -25,9 +26,15 @@ helpers do
 		return current_page.url == '/'
 	end
 
+  def is_blog_article()
+    return current_page.url.start_with? "/blog/posts"
+  end
+
 	def nav_bar_link(text, url)
 		if current_page.url == '/'
 			link_to(text, url)
+    elsif current_page.url.start_with? "/blog/posts"
+      link_to(text, '../../../../../' + url)
 		else
 			link_to(text, '../' + url)
 		end

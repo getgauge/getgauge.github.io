@@ -1,8 +1,6 @@
 .subheader
   %h1.page-label Blog
 
-
-/ %ul
 - page_articles.each do |article|
   %section.blog-block
     %h2= link_to article.title, article
