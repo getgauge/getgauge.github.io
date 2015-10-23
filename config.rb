@@ -20,6 +20,9 @@ activate :blog do |blog|
   blog.tag_template = "blog/tag.html"
   blog.new_article_template = "source/blog/template.html.haml"
   blog.default_extension = ".haml"
+  blog.paginate = true
+  blog.page_link = "p{num}"
+  blog.per_page = 10
 end
 
 helpers do
