@@ -1,54 +1,18 @@
 .subheader
   %h1.page-label Blog
-%section.blog-block
-  %h2 
-    %a{:href => "/#"}Blog About Gauge
-  %span.author Deepthi Chandramauli
-  %time{:datetime=>"2015-21-07"} July21,2015
-  %p.blog-summary You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues...
-
-  %p.tags 
-    %a{:href => "/#"} Gauge 
-    %a{:href => "/#"} Test automation
-    %a{:href => "/#"} Test
-  %span.comments-info
-    %i.fa.fa-comment
-    3 comments 
 
 
-%section.blog-block
-  %h2 
-    %a{:href => "/#"}Blog About Gauge
-  %span.author Deepthi Chandramauli
-  %time{:datetime=>"2015-21-07"} July21,2015
-  %p.blog-summary You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues...
-
-  %p.tags 
-    %a{:href => "/#"} Gauge 
-    %a{:href => "/#"} Test automation
-    %a{:href => "/#"} Test
-
-%section.blog-block
-  %h2
-    %a{:href => "/#"} Blog About Gauge
-  %span.author Deepthi Chandramauli
-  %time{:datetime=>"2015-21-07"} July21,2015
-  %p.blog-summary You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues...
-
-  %p.tags 
-    %a{:href => "/#"} Gauge 
-    %a{:href => "/#"} Test automation
-    %a{:href => "/#"} Test
-
-%section.blog-block
-  %h2
-    %a{:href => "/#"} Blog About Gauge
-  %span.author Deepthi Chandramauli
-  %time{:datetime=>"2015-21-07"} July21,2015
-
-  %p.blog-summary You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues. You can report an issue you found, or you can help us test Gauge and find new issues... 
-  
-  %p.tags 
-    %a{:href => "/#"} Gauge 
-    %a{:href => "/#"} Test automation
-    %a{:href => "/#"} Test
+/ %ul
+- page_articles.each do |current_post|
+  %section.blog-block
+    %h2= link_to current_post.title, current_post
+    %span.author= current_post.data['author']
+    %time= current_post.date.strftime('%b %e, %Y')
+    %p.blog-summary
+      = current_post.summary
+    %p.tags
+      - current_post.tags.sort.each do |tag|
+        = link_to tag, "blog/index.html"
+    %span.comments-info
+      %i.fa.fa-comment
+      3 comments 

@@ -14,6 +14,11 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 
+activate :blog do |blog|
+  # set options on blog
+  blog.prefix = "blog"
+end
+
 helpers do
 	def is_home_page()
 		return current_page.url == '/'
