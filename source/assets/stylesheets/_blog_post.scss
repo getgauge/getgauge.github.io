@@ -18,8 +18,8 @@
     }
     .metadata {
         padding-bottom: 10px;
+        text-align: center;
         .item {
-            text-align: center;
             font-size: 12px;
             font-style: italic;
         }
@@ -33,5 +33,18 @@
         font-weight: bold;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    .tags {
+        color: #909090;
+        font-size: 16px;
+        padding-top: 10px;
+        a {
+            padding: 2px 10px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            color: #444;
+            font-size: 13px;
+            color: #737373;
+        }
     }
 }
