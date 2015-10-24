@@ -10,14 +10,14 @@ pageable: true
     %h2= link_to article.title, article
     %span.author= article.data['author']
     %time= article.date.strftime('%b %e, %Y')
-    / %p.blog-summary
-    /   = article.summary
+    %p.blog-summary
+      = article.data['summary']
     %p.tags
       - article.tags.sort.each do |tag|
         = link_to tag, tag_path(tag)
-    %span.comments-info
-      %i.fa.fa-comment
-      3 comments 
+    / %span.comments-info
+    /   %i.fa.fa-comment
+    /   3 comments 
 
 %ul
   %li{:class => prev_page ? "" : "disabled"}

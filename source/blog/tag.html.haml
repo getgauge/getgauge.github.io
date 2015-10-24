@@ -10,5 +10,5 @@
       = link_to article.title, article
       %span.author= article.data['author']
       %time= article.date.strftime('%b %e, %Y')
-      / %p.blog-summary
-      /   = article.summary
+      %p.blog-summary
+        = article.data['summary']
