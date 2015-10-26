@@ -22,10 +22,7 @@
   .page-content{
     padding:50px;
     @include outer-container();
-    @include media($mobile) {
-      padding: 20px 15px 20px 15px;
-    }
-    @include media($mobile) {
+    @include media($tablet) {
       padding: 20px 15px 20px 15px;
     }
   }
@@ -156,6 +153,20 @@
       padding: 10px;
       position: relative;
       margin-right: 0px;
+      @include media($iPad-portrait){
+        width: 35%;
+      }
+      &.table-title{
+        @include media($iPad-portrait){
+          width: 25%;
+        }
+        @include media($mobile) {
+          @include span-columns(12);
+          margin: 0;
+          text-align: center;
+
+        }
+      }
       @include media($tablet) {
         margin: 0px;
       }

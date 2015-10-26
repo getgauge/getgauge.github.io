@@ -1,14 +1,13 @@
 .subheader
   %h1.page-label Blog
-%h1
-  Articles tagged 
-  = tagname
 
-%ul
-  - page_articles.each do |article|
-    %li
-      = link_to article.title, article
-      %span.author= article.data['author']
-      %time= article.date.strftime('%b %e, %Y')
-      %p.blog-summary
-        = article.data['summary']
+
+%section.page-content
+  .tag-title
+    Viewing
+    %span.tag
+    = tagname
+    posts
+
+  = partial 'blog-listing.haml'
+

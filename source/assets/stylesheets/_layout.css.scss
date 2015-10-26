@@ -255,8 +255,12 @@ footer {
       @include span-columns(8);
       @include shift(2);
       @include media($mobile){
-        @include span-columns(6);
-        @include shift(3);
+        //@include span-columns(6);
+        //@include shift(3);
+        width: auto;
+        margin: 0 auto !important;
+        float: none;
+        display: table;
       }
     }
 
@@ -278,23 +282,38 @@ footer {
         @include span-columns(12);
         background-size: 40px 40px;
         margin-right: 0;
-        padding: 4px 0 15px 25px;
+        padding: 4px 0 15px 80px;
         margin-bottom: 20px;
+        background-position: 0 0;
+        text-align: left;
+        float: none;
       }
     }
 
     background: $light-gray;
     .join-group{
       background-image: image-url('svg/community/icon_groups.svg');
+      &:hover{
+        background-image: image-url('svg/community/icon_join_hover.svg');
+      }
     }
     .contribute{
       background-image: image-url('svg/community/icon_contact.svg');
+      &:hover{
+        background-image: image-url('svg/community/icon_gitter_hover.svg');
+      }
     }
     .contact{
       background-image: image-url('svg/community/icon_watch.svg');
+      &:hover{
+        background-image: image-url('svg/community/icon_watch_hover.svg');
+      }
     }
     .followus{
       background-image: image-url('svg/community/icon_twitter.svg');
+      &:hover{
+        background-image: image-url('svg/community/icon_twitter_hover.svg');
+      }
     }
   }
 }
