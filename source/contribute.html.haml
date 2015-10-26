@@ -28,7 +28,10 @@
         .contribution-list-item
           %h3 Blog about Gauge
           .icon-cl.icon-cl-3
-          .desc Contribute to our blog. Maybe you’ve used Gauge in a different way, or you’ve analyzed of how a feature works. If you write about experiences like these, we’d love to add them to the Gauge blog.
+          .desc
+            Contribute to our
+            %a{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} blog.
+            Maybe you’ve used Gauge in a different way, or you’ve analyzed of how a feature works. If you write about experiences like these, we’d love to add them to the Gauge blog.
 
       %li
         .contribution-list-item
@@ -68,10 +71,10 @@
       %li.step3 Fork the repository, keep it in sync with the master
       %li.step4 Talk to us about what you want to do
     %ul.block-rtl
-      %li.step5 Make your changes
-      %li.step6 Submit a Pull Request
-      %li.step7 Fill out the CLA Form
       %li.step8 We Merge your Request
+      %li.step7 Fill out the CLA Form
+      %li.step6 Submit a Pull Request
+      %li.step5 Make your changes
 
 
   %section.contribution-steps-list
