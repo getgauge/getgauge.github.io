@@ -282,47 +282,23 @@ footer {
         margin-bottom: 20px;
       }
     }
+
+    background: $light-gray;
     .join-group{
-        background-image: image-url('svg/community/icon_groups_grey.svg');
-        @include media($mobile){
-         background-position:  0 0;
-        }
+      background-image: image-url('svg/community/icon_groups.svg');
     }
     .contribute{
-        background-image: image-url('svg/community/icon_contact_grey.svg');
-        @include media($mobile){
-          background-position:  0 0;
-        }
+      background-image: image-url('svg/community/icon_contact.svg');
     }
     .contact{
-        background-image: image-url('svg/community/icon_watch_grey.svg');
-        @include media($mobile){
-          background-position:  0 0;
-        }
+      background-image: image-url('svg/community/icon_watch.svg');
     }
     .followus{
-        background-image: image-url('svg/community/icon_follow_grey.svg');
-        @include media($mobile){
-          background-position:  0 0;
-        }
+      background-image: image-url('svg/community/icon_twitter.svg');
     }
   }
 }
-.index footer .community{
-  background: #f1f1f1;
-  .join-group{
-        background-image: image-url('svg/community/icon_groups.svg');
-    }
-    .contribute{
-        background-image: image-url('svg/community/icon_contact.svg');
-    }
-    .contact{
-        background-image: image-url('svg/community/icon_watch.svg');
-    }
-    .followus{
-        background-image: image-url('svg/community/icon_follow.svg');
-    }
-}
+
 #content{
   margin-top: 5px;
   position: relative;

@@ -8,3 +8,4 @@ vendor/cache
 .DS_Store
 documentation/technical/
 documentation/user/
+Gemfile.lock
