@@ -39,10 +39,8 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit 
       %li Item 4
       %li Item 5
 
-    %p
-      And this is an image
-      .img-container
-        %img{:alt => "Select language", :src => asset_path(:images, 'install-lang-runner.jpg')}
+    .img-container
+      %img{:alt => "Select language", :src => asset_path(:images, 'install-lang-runner.jpg')}
 
     .section-title
       Section with code blocks

@@ -62,6 +62,13 @@
         font-size: 14px;
         border-bottom: 1px solid $mustard;
 
+        .sub-section{
+            font-size: 18px;
+            font-style: italic;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
         .section-title {
             font-size: 20px;
             font-style: italic;
@@ -72,6 +79,20 @@
         .img-container{
             display: table;
             margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        p{
+            padding-bottom: 5px;
+        }
+        pre{
+            padding-bottom: 10px;
+        }
+
+        ul{
+            padding-bottom: 10px;
+            list-style-type: circle;
+
+
         }
 
     }
