@@ -1,5 +1,9 @@
+---
+pageable: true
+---
+
 .subheader
   %h1.page-label Blog
 
 %section.page-content
-  = partial 'blog-listing.haml'
+  = partial('blog-listing.haml', :locals =>{ prev_page: prev_page, next_page: next_page, page_number: page_number, num_pages: num_pages})
