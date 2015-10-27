@@ -36,7 +36,7 @@
   .tabs-header{
     margin:0px;
     padding:0px;
-    border-bottom:1px solid #f1f1f1;
+    border-bottom:1px solid $light-gray;
     li{
       display: inline-block;
       margin-right:75px;
@@ -141,7 +141,7 @@
   i{
     font-style: italic;
   }
-  border: 1px solid #B5B1B1;
+  border: 1px solid $border-grey;
   box-sizing: border-box;
   margin: 20px 20px;
     background-color: #F7F7F7;

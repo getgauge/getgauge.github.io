@@ -6,7 +6,7 @@ a{
 }
 
 .hero-banner {
-  color: #f1f1f1;
+  color: $light-gray;
   text-align: center;
   background-repeat: no-repeat;
   position: relative;
@@ -275,8 +275,8 @@ a{
     }
     .grid-4 {
       margin-right: 20px;
-      border: 1px solid #B5B1B1;
-      background:#f1f1f1;
+      border: 1px solid $border-grey;
+      background:$light-gray;
       box-sizing: border-box;
       @include span-columns(4);
       position: relative;
@@ -353,7 +353,7 @@ a{
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 12px solid #f1f1f1;
+    border-bottom: 12px solid $light-gray;
     position: absolute;
     right: 12px;
     top: -12px;

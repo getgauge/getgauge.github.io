@@ -108,7 +108,7 @@ header, footer {
           width:150px;
           left:0px;
           top: 45px;
-          background: #f1f1f1;
+          background: $light-gray;
           z-index: 11;
           border-radius: 5px;
           border-radius: 0;
@@ -178,7 +178,7 @@ header, footer {
               border-bottom: 2px solid white;
               @include media($mobile){
                 border-bottom:none;
-                background:#f1f1f1;
+                background:$light-gray;
               }
             }
           } 
@@ -244,7 +244,7 @@ footer {
     width:100%;
     text-align:center;
     padding:50px 0px 0px;
-    background:#f1f1f1;
+    background:$light-gray;
     color:#444;
     overflow:hidden;
     @include media($mobile){
