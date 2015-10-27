@@ -2,11 +2,15 @@
 - page_articles.each do |article|
   %section.blog-block
     %h2= link_to article.title, article
-    %span.author= article.data['author']
-    %time= article.date.strftime('%b %e, %Y')
-    %p.blog-summary
+    .item
+      Posted By
+      %span.author= article.data['author']
+    .item
+      = article.date.strftime('%-d %B %Y')
+    .blog-summary
       = article.data['summary']
-    %p.tags
+      = link_to 'Read more...', article
+    .tags
       - article.tags.sort.each do |tag|
         = link_to tag, tag_path(tag)
     / %span.comments-info

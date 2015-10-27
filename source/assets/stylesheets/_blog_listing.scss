@@ -16,37 +16,23 @@ h2{
     @include media($tablet){
       padding:30px 0px;
     }
+    &:first-child{
+      padding-top: 0;
+    }
     &:last-child{
       border-bottom: none;
     }
     h2{
       text-align: left;
-      margin-bottom:0px;
-
+      margin-bottom:10px;
       a{
         color:#000;
+        &:hover {
+          color: $mustard;
+        }
       }
     }
-    .author{
-      font-size: 14px;
-    }
-    time{
-      display: block;
-      font-size: 14px;
-      color: #909090;
-    }
-    .tags{
-      color: #909090;
-      font-size: 16px;
-      padding-top:10px;
-      a{
-        padding:2px 10px;
-        background: $light-gray;
-        border-radius:10px;
-        font-size: 13px;
-        color:$dark-gray;
-      }
-    }
+
     .blog-summary{
       margin-top:20px;
       font-size: 16px;
@@ -69,8 +55,10 @@ h2{
       border: 1px solid $border-grey;
       font-size: 14px;
       padding: 10px 20px;
-      float: left;
       margin-right: 20px;
+    }
+    .disabled{
+      color: $medium-gray;
     }
   }
 

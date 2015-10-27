@@ -1,49 +1,84 @@
+.author{
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.1em;
+}
+
+.item {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.tags {
+    color: $dark-gray;
+    font-size: 16px;
+    padding-top: 10px;
+    a {
+        padding: 2px 10px;
+        background: $light-gray;
+        border-radius: 10px;
+        font-size: 13px;
+        color: #737373;
+    }
+}
+
 .blogpost {
-    padding-top: 65px;
-    padding-left: 40px;
-    padding-right: 40px;
-    @include media($mobile, $tablet) {
-        height: 130px;
+
+    padding: 50px 0px;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    @include media($tablet) {
+        padding: 20px 15px 20px 15px;
+        margin-top: 50px;
     }
-    .title {
-        margin-top: 10px;
-        font-size: 35px;
-        text-align: center;
-        @include media($mobile, $tablet) {
-            font-size: 25px;
-            line-height: 1;
-            margin-top: 11px;
-            text-align: center;
-        }
-    }
+
     .metadata {
+        border-bottom: 1px solid $mustard;
         padding-bottom: 10px;
         text-align: center;
-        .item {
-            font-size: 12px;
-            font-style: italic;
+        margin-bottom: 20px;
+        .blog-title {
+            margin-top: 30px;
+            font-size: 35px;
+            text-align: center;
+
+            @include media($mobile, $tablet) {
+                font-size: 25px;
+                margin-top: 11px;
+                text-align: center;
+            }
         }
+
     }
-    p {
+
+
+    .blog-content {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        @include media($tablet){
+            margin-bottom: 20px;
+        }
         font-size: 14px;
-    }
-    .section-title {
-        font-size: 20px;
-        font-style: italic;
-        font-weight: bold;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .tags {
-        color: #909090;
-        font-size: 16px;
-        padding-top: 10px;
-        a {
-            padding: 2px 10px;
-            background: $light-gray;
-            border-radius: 10px;
-            font-size: 13px;
-            color: #737373;
+        border-bottom: 1px solid $mustard;
+
+        .section-title {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
+        .img-container{
+            display: table;
+            margin: 0 auto;
+        }
+
+    }
+
+    .comments{
+
+        margin-top: 20px;
+
     }
 }

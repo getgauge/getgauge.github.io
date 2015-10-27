@@ -8,10 +8,9 @@ pageable: true
 
 %section.page-content
   .tag-title
-    Viewing "
+    All posts with tag:
     %span.tag
     = tagname
-    " posts
 
   = partial('blog-listing.haml', :locals =>{ prev_page: prev_page, next_page: next_page, page_number: page_number, num_pages: num_pages, page_articles: page_articles})
 
