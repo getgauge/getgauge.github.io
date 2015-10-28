@@ -14,14 +14,14 @@
     </div>
     <meta charset='utf-8'>
       <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-        <title>Why markdown</title>
+        <title>Why Markdown</title>
         <meta content='width=device-width, initial-scale=1' name='viewport'>
           <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
             <link rel="shortcut icon" href="../../../../../assets/images/favicons/favicon.ico" type="image/ico" />
             <link rel="apple-touch-icon-precomposed" href="../../../../../assets/images/favicons/apple-touch-icon.png" type="image/png" />
-            <link href="../../../../../assets/stylesheets/application.css" rel="stylesheet" />
-            <script src="../../../../../assets/javascripts/frameworks/jquery-1.11.2.js"></script>
-            <script src="../../../../../assets/javascripts/application.js" async="true"></script>
+            <link href="../../../../../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+            <script src="../../../../../assets/javascripts/frameworks/jquery-1.11.2.js" type="text/javascript"></script>
+            <script src="../../../../../assets/javascripts/application.js" type="text/javascript" async="true"></script>
             <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
             <link href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
             <script src='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js'></script>
@@ -83,7 +83,7 @@
       <div class='blogpost'>
         <div class='metadata'>
           <div class='blog-title'>
-            Why markdown
+            Why Markdown
           </div>
           <div class='item'>
             Posted By
@@ -99,38 +99,10 @@
           </div>
         </div>
         <div class='blog-content'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut. Aenean porttitor, est ut fringilla auctor, odio tellus mattis turpis, eu bibendum massa tortor eget metus. Aenean euismod et justo nec hendrerit. Cras aliquet, nulla vitae semper cursus, ex massa tristique orci, et accumsan lorem orci id arcu. Nunc tristique rutrum lectus id ultrices. Nulla id varius nulla.</p>
-          <div class='section-title'>
-            A New Section
-          </div>
-          <p>Mauris ante lectus, interdum in commodo vitae, consectetur eu risus. Nunc nec viverra mi. In eleifend tristique porttitor. Ut vitae commodo velit. Integer eget ligula aliquet, fermentum erat tincidunt, euismod arcu. Praesent pharetra nibh turpis, at vehicula mauris dictum sed. Sed vulputate, enim sit amet ornare consequat, quam magna gravida eros, vitae ornare massa velit eget urna. Maecenas dignissim lacinia dolor non cursus. Quisque porta mi ac lectus cursus, in pellentesque nulla aliquam. Integer sollicitudin nisl tincidunt neque ullamcorper tincidunt eu et diam. Praesent tempus risus et erat ullamcorper varius. Cras vitae magna in ante imperdiet ultrices et finibus quam. Etiam ac ligula quis arcu laoreet dapibus sit amet vel odio. Aliquam erat volutpat. Vestibulum vestibulum nunc nulla, ut egestas turpis mattis non. Donec et consectetur massa, ut aliquam ipsum.</p>
-          <div class='section-title'>
-            Section with lists and image
-          </div>
-          <p>This is what we think...</p>
-          <ul>
-            <li>Item 2</li>
-            <li>Item 1</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
-          </ul>
-          <p>
-            And this is an image
-            <div class='img-container'>
-              <img alt='Select language' src='../../../../../assets/images/install-lang-runner.jpg'>
-            </div>
-          </p>
-          <div class='section-title'>
-            Section with code blocks
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>You can see the code block below...</p>
-          <pre><code>import com.thoughtworks.gauge.Step;&#x000A;import com.thoughtworks.gauge.Table;&#x000A;&#x000A;import java.lang.Object;&#x000A;import java.lang.String;&#x000A;import java.util.List;&#x000A;&#x000A;public class StepImplementation {&#x000A;    @Step("Say &lt;greeting&gt; to &lt;product name&gt;")&#x000A;    public void helloWorld(String greeting, String name) {&#x000A;        System.out.println(greeting + ", " + name);&#x000A;    }&#x000A;&#x000A;    @Step("Step that takes a table &lt;table&gt;")&#x000A;    public void stepWithTable(Table table) {&#x000A;        for (String columns : table.getColumnNames()) {&#x000A;            System.out.println(columns);&#x000A;        }&#x000A;&#x000A;        for (List<String> rows : table.getRows()) {&#x000A;            System.out.println(rows);&#x000A;        }&#x000A;    }&#x000A;&#x000A;    @Step("A context step which gets executed before every scenario")&#x000A;    public void contextStep() {&#x000A;    }&#x000A;}&#x000A;</code></pre>
-          <div class='section-title'>
-            Conclusion
-          </div>
-          <p>A concluding line or two</p>
+          <p>Gauge uses the very popular markup syntax ‘Markdown’ to author tests. A lot of our conversation with Gauge users, and non-Gauge users has been around why Markdown. Some felt using Markdown overloaded it, some loved it.</p>
+          <p>Very often we have people asking us why we didn’t choose Asciidoc. Asciidoc was definitely an option. It’s simple, popular and has an ecosystem of tools supporting it. Just that Markdown has more. We wanted something simple, something that is widely used. It is a lot more limited in terms of features than asciidoc, but we don’t need anything more complex because we’re authoring tests. We also like that fact that md can be translated to other formats like pdf and html etc so easily. That is how we would like the markup language that is used to generate some form of documentation to be.</p>
+          <p>Living documentation has two parts to it. One - to be authored is a simple format that is readable. Two - to be rendered in many</p>
+          <p>It’s the way you’d write an email, and that is intuitive.</p>
         </div>
         <div class='comments'>
           <h2>Comments</h2>
@@ -178,7 +150,7 @@
         </a>
       </section>
       <p class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</p>
-      <script src="../../../../../assets/javascripts/mobileNav.js"></script>
+      <script src="../../../../../assets/javascripts/mobileNav.js" type="text/javascript"></script>
     </footer>
   </body>
 </html>

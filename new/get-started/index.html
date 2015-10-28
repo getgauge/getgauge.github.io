@@ -19,9 +19,9 @@
           <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
             <link rel="shortcut icon" href="../assets/images/favicons/favicon.ico" type="image/ico" />
             <link rel="apple-touch-icon-precomposed" href="../assets/images/favicons/apple-touch-icon.png" type="image/png" />
-            <link href="../assets/stylesheets/application.css" rel="stylesheet" />
-            <script src="../assets/javascripts/frameworks/jquery-1.11.2.js"></script>
-            <script src="../assets/javascripts/application.js" async="true"></script>
+            <link href="../assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+            <script src="../assets/javascripts/frameworks/jquery-1.11.2.js" type="text/javascript"></script>
+            <script src="../assets/javascripts/application.js" type="text/javascript" async="true"></script>
             <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
             <link href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
             <script src='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js'></script>
@@ -107,19 +107,18 @@
           </ul>
           <ul class='tabs-content'>
             <li id='tab1'>
-              <p>
-                There are multiple ways to get started with Gauge on a mac. You can read our
+              <div class='instruction'>
+                There are multiple ways to get started with Gauge on a mac. Here we show you a simple 4 step process to get you running with Gauge on a mac. You can read our
                 <a href='http://getgauge.io/documentation/user/current/getting_started/README.html' target='_blank'>detailed documentation</a>
-                for other methods of installation. Here we show you a simple 4 step process to get you running with Gauge on a mac.
-              </p>
+                for other methods of installation.
+              </div>
               <div class='page-block'>
                 <h3>1. Install Gauge</h3>
                 <div class='instruction'>
-                  The table below allows you to download the pkg and follow
-                  <a href='/documentation/user/current/plugins/installation.html' target='_blank'>these instructions</a>
-                  to install Gauge offline. You will need to use this method if your setup or organisation does not allow
+                  Download the installer below based on your system configuration and follow
+                  <a href='http://getgauge.io/documentation/user/current/plugins/installation.html' target='_blank'>these detailed instructions</a>
+                  to install using the pkg. You will need to use this method if your setup or organisation does not allow
                   <a href='http://brew.sh/' target='_blank'>brew.</a>
-                  Download the installer below based on your system configuration and follow these detailed instructions to install using the pkg.
                 </div>
                 <div class='download-section clearfix'>
                   <div class='grid-4 table-title'>
@@ -162,8 +161,8 @@
                 </div>
               </div>
               <div class='page-block'>
-                <h3>2. Install Core Plugins</h3>
-                <div class='instruction'>Gauge has a rich plugin repository. Language runners, IDEs, reports are all plugins. However, since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.</div>
+                <h3>2. Install core plugins</h3>
+                <div class='instruction'>Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.</div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'></div>
@@ -171,13 +170,13 @@
                   </div>
                 </div>
                 <div class='instruction'>
-                  You can read more about how to install other language runners and plugins
+                  Read more about how to install other language runners and plugins
                   <a href='/documentation/user/current/plugins/installation.html'>here.</a>
                 </div>
               </div>
               <div class='page-block'>
                 <h3>3. Test your installation</h3>
-                <div class='instruction'>Run this command to check if all plugins are installed and are at the latest version</div>
+                <div class='instruction'>Check that all plugins are installed and are at the latest version by running this command.</div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'>
@@ -189,7 +188,7 @@
               </div>
               <div class='page-block'>
                 <h3>4. See Gauge working</h3>
-                <div class='instruction'>Initialise a new Gauge project in the language of your choice. This creates a template with a sample specification for you. The example below shows how you would execute specs in java, but the same applies to all supported languages.</div>
+                <div class='instruction'>Initialize a new Gauge project in the language of your choice. This creates a template with a sample test specification. The example below shows how to execute test specifications in Java, but the same applies to all supported languages.</div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'></div>
@@ -209,7 +208,11 @@
             </li>
             <li class='hide' id='tab2'>
               <div class='page-block'>
-                <p>There are two ways to install Gauge on windows. We will show you the process using the exe. However using chocolatey is also an option. Read more here on how to install Gauge using chocolatey.</p>
+                <div class='instruction'>
+                  There are two ways to install Gauge on Windows. Below we show the process using the .exe. The other option is to use chocolatey. Read more
+                  <a href='#'>here</a>
+                  about how to install Gauge using chocolatey.
+                </div>
                 <h3>1. Install Gauge</h3>
                 <div class='instruction'>Download the exe based on your system configuration and run it. Click your way through till you're asked to select your language. The next section explains what that means.</div>
                 <div class='download-section clearfix'>
@@ -244,16 +247,16 @@
                 </div>
               </div>
               <div class='page-block'>
-                <h3>2. Install core language plugins</h3>
-                <div class='instruction'>Gauge has a rich plugin repository. Language runners, IDEs, reports are all plugins. However, since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.</div>
-                <div class='instruction'>The windows installer allows you to select the language plugin(s) as part of the the installation process. Just check the box you'd like. You can definitely select more than one language plugin to install. The screen below shows you how to do this.</div>
+                <h3>2. Install core plugins</h3>
+                <div class='instruction'>Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.</div>
+                <div class='instruction'>The Windows installer allows you to select the language plugin(s) as part of the the installation process. Check the box(es) you want to install. You select more than one language plugin to install.</div>
                 <div class='img-container'>
                   <img alt='Select language' src='../assets/images/install-lang-runner.jpg'>
                 </div>
-                <div class='instruction'>Work your way through all the steps of the installer.</div>
+                <div class='instruction'>Follow the remaining installation steps.</div>
                 <div class='page-block'></div>
                 <h3>3. Test your installation</h3>
-                <div class='instruction'>Run this command to check if all plugins are installed and are at the latest version</div>
+                <div class='instruction'>Check that all plugins are installed and are at the latest version by running this command.</div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'>
@@ -266,7 +269,7 @@
               <div class='page-block'>
                 <div class='page-block'></div>
                 <h3>4. See Gauge working</h3>
-                <div class='instruction'>Initialise a new Gauge project in the language of your choice. This creates a template with a sample specification for you. The example below shows how you would execute specs in C#, but the same applies to all supported languages.</div>
+                <div class='instruction'>Initialize a new Gauge project in the language of your choice. This creates a template with a sample test specification. The example below shows how to execute test specifications in C#, but the same applies to all supported languages.</div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'></div>
@@ -286,9 +289,9 @@
             </li>
             <li class='hide' id='tab3'>
               <div class='page-block'>
-                <p>Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.</p>
+                <div class='instruction'>Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.</div>
                 <h3>1. Install Gauge</h3>
-                <div class='instruction'>Install Gauge with by downloading the zip and execute the following command. Choose the archive file appropriate for your installation. For instance, if you are installing gauge version 0.2.1 for 64-bit x86 on Linux, the archive you want is called gauge-0.2.1-linux.x86_64.tar.gz.</div>
+                <div class='instruction'>Install Gauge by downloading the .zip below. Choose the archive file appropriate for your installation. For instance, if you are installing gauge version 0.2.1 for 64-bit x86 on Linux, the archive you want is called gauge-0.2.1-linux.x86_64.tar.gz.</div>
                 <div class='download-section clearfix'>
                   <div class='grid-4'>
                     <div class='instruction title'>
@@ -319,6 +322,9 @@
                     </div>
                   </div>
                 </div>
+                <div class='instruction'>
+                  Then execute the following command:
+                </div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'></div>
@@ -328,8 +334,8 @@
                 </div>
               </div>
               <div class='page-block'>
-                <h3>2. Install Core Plugins</h3>
-                <div class='instruction'>Gauge has a rich plugin repository. Language runners, IDEs, reports are all plugins. However, since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.</div>
+                <h3>2. Install core plugins</h3>
+                <div class='instruction'>Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.</div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'></div>
@@ -343,7 +349,7 @@
               </div>
               <div class='page-block'>
                 <h3>3. Test your installation</h3>
-                <div class='instruction'>Run this command to check if all plugins are installed and are at the latest version</div>
+                <div class='instruction'>Check that all plugins are installed and are at the latest version by running this command.</div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'>
@@ -356,7 +362,7 @@
               <div class='page-block'>
                 <div class='page-block'></div>
                 <h3>4. See Gauge working</h3>
-                <div class='instruction'>Initialise a new Gauge project in the language of your choice. This creates a template with a sample specification for you. The example below shows how you would execute specs in java, but the same applies to all supported languages.</div>
+                <div class='instruction'>Initialize a new Gauge project in the language of your choice. This creates a template with a sample test specification. The example below shows how to execute test specifications in Java, but the same applies to all supported languages.</div>
                 <div class='screenshot'>
                   <div class='browser-container'>
                     <div class='browser-code'></div>
@@ -372,8 +378,8 @@
                   </div>
                 </div>
                 <div class='instruction'>You're all set. Start testing!</div>
-                <script src="../assets/javascripts/jquery.client.js"></script>
-                <script src="../assets/javascripts/platform.js"></script>
+                <script src="../assets/javascripts/jquery.client.js" type="text/javascript"></script>
+                <script src="../assets/javascripts/platform.js" type="text/javascript"></script>
               </div>
             </li>
           </ul>
@@ -396,7 +402,7 @@
         </a>
       </section>
       <p class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</p>
-      <script src="../assets/javascripts/mobileNav.js"></script>
+      <script src="../assets/javascripts/mobileNav.js" type="text/javascript"></script>
     </footer>
   </body>
 </html>

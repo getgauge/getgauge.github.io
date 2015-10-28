@@ -19,9 +19,9 @@
           <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
             <link rel="shortcut icon" href="assets/images/favicons/favicon.ico" type="image/ico" />
             <link rel="apple-touch-icon-precomposed" href="assets/images/favicons/apple-touch-icon.png" type="image/png" />
-            <link href="assets/stylesheets/application.css" rel="stylesheet" />
-            <script src="assets/javascripts/frameworks/jquery-1.11.2.js"></script>
-            <script src="assets/javascripts/application.js" async="true"></script>
+            <link href="assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+            <script src="assets/javascripts/frameworks/jquery-1.11.2.js" type="text/javascript"></script>
+            <script src="assets/javascripts/application.js" type="text/javascript" async="true"></script>
             <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
             <link href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
             <script src='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js'></script>
@@ -89,10 +89,12 @@
             like
           </h1>
           <div class='subquote'>
-            Write tests in plain-speak, refactor fearlessly while your application evolves, and extend via a fully pluggable architecture.
+            Write tests in plain-speak, refactor fearlessly, and extend via a fully pluggable architecture.
           </div>
           <div class='actions'>
-            <a class='button primary-button' href='get-started/index.html'><i class="fa fa-cloud-download"></i> Get Started</a>
+            <a class='button primary-button download-icon' href='get-started/index.html'>
+              <span>Get Started</span>
+            </a>
             <a class='button' href='contribute/index.html'>Contribute</a>
           </div>
           <section class='features qas'>
@@ -115,7 +117,7 @@
               </div>
               <div class='grid-3'>
                 <h3 class='start-fast logo'>Get Started Fast</h3>
-                <div class='feature-desc'>Gauge is lightweight and needs no configuration. A single command plugin install and initialization. And you’re good to go.</div>
+                <div class='feature-desc'>Gauge is lightweight and easy to get started. Install and initialize with a single command.</div>
               </div>
               <div class='grid-3'>
                 <h3 class='env-tools logo'>Your Environment</h3>
@@ -170,14 +172,15 @@
             </li>
             <li>
               <div class='vision-col icon-plugin'>
-                Building a community of people with varying preferences is important to us. And Gauge is built with a
-                <strong>plugin supportive architecture</strong>
-                that will nurture this vision and adapt to accommodate it.
+                We care about solving problems for all, not just those on a specific platform. Gauge is built with a plugin architecture so that you can use it with
+                <strong>any language, IDE and ecosystem you want.</strong>
               </div>
             </li>
             <li>
               <div class='vision-col icon-hardprob'>
-                ThoughtWorks, creator of Selenium and Twist, has been a key innovator in the automated testing ecosystem for more than a decade. We love it and want to help solve the hardest problems people face in the testing and automation world.
+                ThoughtWorks, creator of Selenium and Twist, has been a
+                <strong>key innovator</strong>
+                in the automated testing ecosystem for more than a decade. We love it and want to help solve the hardest problems people face in the testing and automation world.
               </div>
             </li>
           </ul>
@@ -190,20 +193,22 @@
             <div class='testimonial'>
               <div class='text'>
                 <i class="fa fa-quote-left"></i>
-                Guage is simple Awesome WE havr used sh it sjdfjks, Shfsjfbjs tsnfs ghtesgn s jethsjhsknf s fksfird.
+                After more playing
+                <a href='https://twitter.com/getgauge' target='_blank'>@getgauge</a>
+                is upgraded to awesome - loving the IntelliJ integration (Eclipse and VS/C# also supported, as is ruby).
                 <i class="fa fa-quote-right"></i>
               </div>
-              <div class='client'>Sheena Patel, QA</div>
+              <div class='client'>Jez Humble</div>
             </div>
           </div>
           <div class='grid-4'>
             <div class='testimonial'>
               <div class='text'>
                 <i class="fa fa-quote-left"></i>
-                Guage is simple Awesome WE havr used sh it sjdfjks, Shfsjfbjs tsnfs ghtesgn s jethsjhsknf s fksfird. Guage is simple Awesome WE havr used sh it sjdfjks, Shfsjfbjs tsnfs ghtesgn s jethsjhsknf s fksfird. Guage is simple Awesome WE havr used sh it sjdfjks, Shfsjfbjs tsnfs ghtesgn s jethsjhsknf s fksfird.
+                Gauge has revolutionized our automated testing process, allowing us to write an automated testing framework that is simple to use, even for non-technical users. We have a complex Web UI that we run hundreds of tests on, across multiple browser permutations.
                 <i class="fa fa-quote-right"></i>
               </div>
-              <div class='client'>Sheena Patel, QA</div>
+              <div class='client'>Chris Stanush, Test Automation Engineer</div>
             </div>
           </div>
           <div class='grid-4'>
@@ -235,7 +240,7 @@
         </a>
       </section>
       <p class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</p>
-      <script src="assets/javascripts/mobileNav.js"></script>
+      <script src="assets/javascripts/mobileNav.js" type="text/javascript"></script>
     </footer>
   </body>
 </html>
