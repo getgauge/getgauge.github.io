@@ -19,6 +19,9 @@
   }
 }
 .get-started{
+  .instruction{
+    @include link-style();
+  }
   .page-content{
     padding:50px;
     @include outer-container();
@@ -84,7 +87,6 @@
   }
   .instruction{
     margin: 20px 20px;
-    @include link-style();
   }
   .screenshot{
     margin: 10px 20px 20px;

@@ -9,3 +9,4 @@ vendor/cache
 documentation/technical/
 documentation/user/
 Gemfile.lock
+_site/*

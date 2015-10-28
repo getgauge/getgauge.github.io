@@ -307,20 +307,20 @@
         padding:10px 10px;
       }
       .client{
-        margin-top: 10px;
-        font-size:12px;
+        display: block;
+        font-size:13px;
         font-style: italic;
         text-align: right;
       }
       .text{
         display: inline-block;
         text-align:left;
+        margin-bottom: 10px;
       }
 
     }
   }
 }
-
 
 .features-filter-selector-wrap {
     position: relative;

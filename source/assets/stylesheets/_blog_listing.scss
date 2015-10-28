@@ -48,16 +48,28 @@
   .pagination-section{
     text-align: center;
     margin-top: 20px;
+//
+//    .fa{
+//      padding: 0 10px;
+//    }
+
+    .pagination{
+      border: 1px solid $border-grey;
+    }
 
     span{
+      font-weight: 600;
       background-color: $light-gray;
-      border: 1px solid $border-grey;
       font-size: 14px;
-      padding: 10px 20px;
+      padding: 10px 10px;
       margin-right: 20px;
+      a{
+        color: #000;
+        }
     }
     .disabled{
       color: $medium-gray;
+      border: 1px solid $border-grey;
     }
   }
 

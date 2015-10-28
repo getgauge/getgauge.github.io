@@ -19,11 +19,19 @@
 
 .pagination-section.clearfix
   - if prev_page
-    %span.pagination= link_to "Older", prev_page.url
+    %span.pagination
+      -#<i class="fa fa-arrow-left"></i>
+      = link_to "Older", prev_page.url
   - else
-    %span.disabled Older
+    %span.disabled
+      -#<i class="fa fa-arrow-left"></i>
+      Older
 
   - if next_page
-    %span.pagination= link_to "Newer", next_page.url
+    %span.pagination
+      = link_to "Newer", next_page.url
+      -#<i class="fa fa-arrow-right"></i>
   - else
-    %span.disabled Newer
+    %span.disabled
+      Newer
+      -#<i class="fa fa-arrow-right"></i>
