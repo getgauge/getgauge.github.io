@@ -4,6 +4,10 @@
 }
 
 .plugin-list {
+
+  .text-block{
+    @include link-style();
+  }
   padding:50px 0px;
   max-width:68em;
   margin-left: auto;
@@ -58,6 +62,7 @@
     @include media($mobile) {
       display: none;
     }
+    @include link-style();
   }
 
   h5{
@@ -86,7 +91,7 @@
       padding: 7px 7px 7px 70px;
       display:block;
       font-weight: bold;
-      background-image: image-url('svg/plugins/icon_button_download_plugins.svg');
+      background-image: image-url('svg/plugins/icon_button_download_plugin.svg');
       background-repeat: no-repeat;
     }
   }

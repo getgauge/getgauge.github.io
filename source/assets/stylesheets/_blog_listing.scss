@@ -1,7 +1,3 @@
-h2{
-  text-align: center;
-}
-
 .page-content{
   padding: 50px 0px;
   max-width: 68em;
@@ -25,10 +21,12 @@ h2{
     h2{
       text-align: left;
       margin-bottom:10px;
-      a{
-        color:#000;
+      a {
+        color: black;
+        font-weight: 600;
         &:hover {
-          color: $mustard;
+          color: black;
+          background-color: $mustard;
         }
       }
     }
@@ -36,6 +34,7 @@ h2{
     .blog-summary{
       margin-top:20px;
       font-size: 16px;
+      @include link-style();
     }
     .comments-info{
       position: absolute;

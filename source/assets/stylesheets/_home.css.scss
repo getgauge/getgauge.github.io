@@ -1,11 +1,16 @@
-a{
-  color: $link-blue;
-  /*&:hover{
-    text-decoration: underline;
-  }*/
-}
-
 .hero-banner {
+
+  .download-icon{
+    background-image: image-url('svg/home/icon_button_download_home.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding-right: 1.8em;
+    span{
+      display: inline-block;
+      padding-left: 7px;
+    }
+
+  }
   color: $light-gray;
   text-align: center;
   background-repeat: no-repeat;
@@ -66,6 +71,7 @@ a{
   }
 
   .subquote{
+    font-size:22px;
     width:80%;
     margin:25px auto 50px;
     @include media($mobile){
@@ -134,22 +140,22 @@ a{
     }
 
     .simple-syntax{
-      background-image: image-url('svg/icon_syntax.svg');
+      background-image: image-url('svg/home/icon_syntax.svg');
     }
     .parallel-exec{
-      background-image: image-url('svg/icon_parallel_exec.svg');
+      background-image: image-url('svg/home/icon_parallel_exec.svg');
     }
     .env-tools{
-      background-image: image-url('svg/icon_tools.svg');
+      background-image: image-url('svg/home/icon_tools.svg');
     }
     .ext-data-src{
-      background-image: image-url('svg/icon_data_exec.svg');
+      background-image: image-url('svg/home/icon_data_exec.svg');
     }
     .test-is-prod{
-      background-image: image-url('svg/icon_refactor.svg');
+      background-image: image-url('svg/home/icon_refactor.svg');
     }
     .start-fast{
-      background-image: image-url('svg/icon_start_fast.svg');
+      background-image: image-url('svg/home/icon_start_fast.svg');
     }
 
     .grid-3 {
@@ -301,6 +307,7 @@ a{
         padding:10px 10px;
       }
       .client{
+        margin-top: 10px;
         font-size:12px;
         font-style: italic;
         text-align: right;

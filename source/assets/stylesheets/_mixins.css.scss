@@ -1,0 +1,16 @@
+@mixin link-style(){
+  a{
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px $mustard solid;
+    &:visited{
+      color: $visited-link;
+      border-bottom: 1px $visited-link solid;
+    }
+    &:hover{
+      color: black;
+      background-color: $mustard;
+      border-bottom: 1px $mustard solid;
+    }
+  }
+}

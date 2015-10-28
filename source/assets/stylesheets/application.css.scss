@@ -4,6 +4,7 @@
 @import "base/base";
 @import "neat";
 // our own css
+@import "mixins";
 @import "breakpoints";
 @import "layout";
 @import "home";
@@ -17,6 +18,7 @@
 @import "blogs_by_tag";
 @import "fonts";
 @import "animate";
+
 body {
     -webkit-font-smoothing: antialiased;
     font: normal 112.5%/1.65 "open sans", "Helvetica", "Arial", sans-serif, sans-serif;

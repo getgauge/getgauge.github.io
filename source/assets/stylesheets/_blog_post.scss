@@ -45,7 +45,7 @@
 
             @include media($mobile, $tablet) {
                 font-size: 25px;
-                margin-top: 11px;
+                margin-top: 10px;
                 text-align: center;
             }
         }
@@ -61,6 +61,7 @@
         }
         font-size: 14px;
         border-bottom: 1px solid $mustard;
+        @include link-style();
 
         .sub-section{
             font-size: 18px;
@@ -91,15 +92,10 @@
         ul{
             padding-bottom: 10px;
             list-style-type: circle;
-
-
         }
-
     }
 
     .comments{
-
         margin-top: 20px;
-
     }
 }

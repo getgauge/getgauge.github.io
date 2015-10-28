@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_button_download_plugins</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_button_download_plugins" sketch:type="MSLayerGroup" transform="translate(-14.000000, -11.000000)" fill="#000000">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <path d="M26.7969725,11 C19.7300971,11 14,16.8191252 14,24 C14,31.1795177 19.7300971,37 26.7969725,37 C33.863848,37 39.5939451,31.1795177 39.5939451,23.9997286 C39.5939451,16.8191252 33.863848,11 26.7969725,11 L26.7969725,11 L26.7969725,11 Z M26.7988725,31.8949995 C26.6626161,31.8971709 26.5016599,31.7978286 26.2611755,31.5622299 C25.0109823,30.3424366 21.5163587,25.0515085 21.5163587,24.1837561 L21.54703,24.0518426 C21.6102725,23.9267147 21.7804572,23.7958868 23.0618645,23.7036016 C23.558576,23.6666875 24.2979434,23.6403591 25.1358388,23.6267878 L25.1358388,17.7962627 C25.1358388,16.8622821 25.8990918,16.103372 26.8401294,16.103372 C27.7822528,16.103372 28.5452344,16.8622821 28.5452344,17.7962627 L28.5452344,23.6466019 C30.3426245,23.6957302 31.877816,23.8143439 32.0344295,24.031757 L32.077315,24.1802276 C32.0775864,24.9472805 27.6316108,31.8808853 26.7988725,31.8949995 L26.7988725,31.8949995 L26.7988725,31.8949995 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

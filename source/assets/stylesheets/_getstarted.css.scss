@@ -84,6 +84,7 @@
   }
   .instruction{
     margin: 20px 20px;
+    @include link-style();
   }
   .screenshot{
     margin: 10px 20px 20px;
@@ -194,7 +195,8 @@
         color: #fff;
       }
       font-weight: bold;
-      background-image: image-url('svg/icon_button_download.svg');
+      background-image: image-url('svg/get_started/icon_button_download.svg');
+      background-position: 0 -4px;
       background-repeat: no-repeat;
     }
     .sha {

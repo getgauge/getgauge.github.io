@@ -1,6 +1,7 @@
 .contribute-section{
   padding:50px 0px;
   @include outer-container(100%);
+  @include link-style();
 }
   .contribute {
     h2{
