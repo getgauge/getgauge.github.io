@@ -1,0 +1,76 @@
+---
+  Language runners:
+    Java runner:
+      repo_link: "http://getgauge.io/documentation/user/current/test_code/java/java.html"
+      description: "Plugin that lets you write your tests in Java."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/gauge-java/releases"
+    C# runner:
+      repo_link: "http://getgauge.io/documentation/user/current/test_code/csharp/csharp.html"
+      description: "Plugin that lets you write your tests in C#."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/gauge-csharp/releases"
+    Ruby runner:
+      repo_link: "http://getgauge.io/documentation/user/current/test_code/ruby/ruby.html"
+      description: "Plugin that lets you write your tests in Ruby."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/gauge-ruby/releases"
+    Javascript runner:
+      repo_link: "https://github.com/renjithgr/gauge-js"
+      description: "Plugin that lets you write your tests in Javascript."
+      attribution: "Renjith"
+      contributor_link: "https://github.com/renjithgr"
+      action: "Work in progress"
+#      action_link: ""
+  IDE plugins:
+    IntelliJ:
+      repo_link: "http://getgauge.io/documentation/user/current/ide_support/intellij_idea.html"
+      description: "Plugin that lets you use IntelliJ to write tests in Java."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/Intellij-Plugin/releases"
+    Visual Studio:
+      repo_link: "http://getgauge.io/documentation/user/current/ide_support/visual_studio.html"
+      description: "Plugin that lets you use VS to write tests in C#."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92"
+    Eclipse:
+      repo_link: "http://getgauge.io/documentation/user/current/ide_support/eclipse.html"
+      description: "Plugin that lets you use Eclipse to write tests in Java."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/Gauge-Eclipse/releases"
+  Reports:
+    HTML format:
+      repo_link: "http://getgauge.io/documentation/user/current/plugins/html_report_plugin.html"
+      description: "HTML format report with test execution result."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/html-report/releases"
+    XML format:
+      repo_link: "http://getgauge.io/documentation/user/current/plugins/xml_report_plugin.html"
+      description: "XML format report with test execution result."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/xml-report/releases"
+  Others:
+    Maven:
+      title: "Maven"
+      repo_link: "http://getgauge.io/documentation/user/current/dependency_management/maven-plugin.html"
+      description: "To manage Gauge project dependencies"
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/gauge-maven-plugin/releases"
