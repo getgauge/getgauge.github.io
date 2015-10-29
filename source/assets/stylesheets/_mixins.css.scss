@@ -1,9 +1,36 @@
+.subheader{
+  background-position: right top;
+  height:190px;
+  @include media($mobile, $tablet) {
+    height: 130px;
+  }
+  .page-label{
+    display:inline-block;
+    color:$mustard;
+    margin-top:75px;
+    font-size:52px;
+    margin-left:190px;
+    @include media($mobile, $tablet) {
+      font-size: 35px;
+      line-height: 1;
+      margin-top: 70px;
+    }
+  }
+}
+
+.clearfix {
+  &:before { content:""; display:table; }
+  &:after { content:""; display:table; clear:both; }
+}
+
+
 @mixin link-style(){
   a{
     color: black;
     font-weight: 600;
-    border-bottom: 1px $mustard solid;
+    border-bottom: 1px #000 solid;
     &:visited{
+      font-weight: 400;
       color: $visited-link;
       border-bottom: 1px $visited-link solid;
     }

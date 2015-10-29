@@ -1,0 +1,27 @@
+body{
+  &.ie {
+    .features {
+      .feature-list {
+        .simple-syntax {
+          background-size: 90px 90px;
+        }
+        .start-fast {
+          background-size: 90px 90px;
+        }
+        .env-tools {
+          background-size: 120px 90px;
+        }
+        .ext-data-src{
+          background-size: 150px 65px;
+          background-position-y: 15px;
+        }
+        .test-is-prod{
+          background-size: 90px 90px;
+        }
+        .parallel-exec{
+          background-size: 100px 90px;
+        }
+      }
+    }
+  }
+}

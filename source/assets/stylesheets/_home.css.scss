@@ -19,7 +19,19 @@
   @include media($tablet) {
     padding: 1.2em 0;
   }
-  background-image: image-url('Gauge-banner.jpg');
+  &.option1{
+    background-image: image-url('Gauge-banner.jpg');
+
+  }
+  &.option2{
+    background-image: image-url('lego.jpg');
+
+  }
+
+  &.option3{
+    background-image: image-url('wood.jpg');
+
+  }
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-color:#000;
@@ -178,7 +190,7 @@
     }
 
     .feature-desc{
-      font-size:15px;
+      font-size:16px;
       padding:20px 40px;
       text-align:left;
     }

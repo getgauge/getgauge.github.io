@@ -22,6 +22,7 @@ $(document).ready(function ($) {
     e.preventDefault();
     $(this).closest(".features-filter-selector-wrap")
     .toggleClass( "active" );
+    $('body').toggleClass("opened");
   });
 
   $(".features-filter-selector-wrap").on('click','.features-filter-value',function(e){
@@ -36,5 +37,14 @@ $(document).ready(function ($) {
 
   $(".sha-link").on("click",function(){
     $(this).parent().find(".sha-tooltip").toggle();
-  })
+  });
+
+ /* $('body').on('click', function () {
+    if($(this).hasClass('opened')){
+      if($('.features-filter-selector-wrap').hasClass('active')){
+        $('.features-filter-selector-wrap').removeClass('active');
+        $('body').removeClass('opened')
+      }
+    }
+  })*/
 });

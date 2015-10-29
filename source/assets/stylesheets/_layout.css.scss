@@ -7,6 +7,10 @@ html {
   }
 }
 
+.beta{
+  float:right;
+}
+
 body, header, footer, #content {
    @include span-columns(12);
 }
@@ -199,6 +203,9 @@ header, footer {
       border-bottom: 1px solid #CCC;
 
       .logo {
+        img#thumb{
+          width: 150px;
+        }
       }
 
       .header-nav {

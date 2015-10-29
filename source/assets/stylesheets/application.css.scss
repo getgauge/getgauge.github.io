@@ -4,8 +4,10 @@
 @import "base/base";
 @import "neat";
 // our own css
-@import "mixins";
+@import "IEfix";
 @import "breakpoints";
+@import "mixins";
+
 @import "layout";
 @import "home";
 @import "getstarted";

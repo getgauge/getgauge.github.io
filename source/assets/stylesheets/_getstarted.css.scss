@@ -1,24 +1,7 @@
-.subheader{
-  background-image: image-url('headerbg.jpg');
-  background-position: right top;
-  height:170px;
-  @include media($mobile, $tablet) {
-    height: 130px;
-  }
-  .page-label{
-    display:inline-block;
-    color:#fff;
-    margin-top:60px;
-    font-size:52px;
-    margin-left:30px;
-    @include media($mobile, $tablet) {
-      font-size: 35px;
-      line-height: 1;
-      margin-top: 70px;
-    }
-  }
+.header_image_started{
+  background-image: image-url('subpage_get_started.jpg');
 }
-.get-started{
+
   .instruction{
     @include link-style();
   }
@@ -32,7 +15,7 @@
   p{
     font-size: 14px;
   }
-}
+
 .tabs{
   font-size: 15px;
   margin-top:20px;
@@ -111,7 +94,7 @@
       color: #071322;
       padding-left: 30px;
       width: 100%;
-      overflow-x: scroll;
+      overflow-x: hidden;
       overflow-y: hidden;
       font-size: 1em;
     }

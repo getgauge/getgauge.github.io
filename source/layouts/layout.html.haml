@@ -35,15 +35,17 @@ title: Gauge | ThoughtWorks
       %nav.nav-wrapper
         - if is_home_page
           %a.logo{:href => "index.html"} 
-            %img#thumb{:alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
+            %img#thumb{:width => "150", :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         - elsif is_blog_article
           %a.logo{:href => "../../../../../index.html"} 
-            %img#thumb{:alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
+            %img#thumb{:width => "150", :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         - else
           %a.logo{:href => "../index.html"} 
-            %img#thumb{:alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
+            %img#thumb{:width => "150",  :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         %a.navigation-menu-button{:href => "javascript:void(0)"}
           %i.fa.fa-bars.fa-2x
+        .beta
+          %img{:alt => "BETA", :src => asset_path(:images, 'svg/icon_beta.svg')}
         %ul.header-nav
           %li.nav-link
             %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Documentation
@@ -82,3 +84,4 @@ title: Gauge | ThoughtWorks
 
       %p.disclamer Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0
       = javascript_include_tag  "mobileNav"
+      = javascript_include_tag  "browser_support"

@@ -1,6 +1,5 @@
-.clearfix {
-  &:before { content:""; display:table; }
-  &:after { content:""; display:table; clear:both; }
+.header_image_plugins{
+  background-image: image-url('subpage_plugins.jpg');
 }
 
 .plugin-list {
