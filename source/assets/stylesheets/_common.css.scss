@@ -27,7 +27,7 @@
 @mixin link-style(){
   a{
     color: black;
-    font-weight: 600;
+    font-weight: 400;
     border-bottom: 1px #000 solid;
     &:visited{
       font-weight: 400;
