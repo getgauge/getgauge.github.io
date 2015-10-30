@@ -71,6 +71,7 @@
       float: left;
     }
     .link{
+      @include link-style();
       display: none;
       float: right;
       @include media($mobile) {

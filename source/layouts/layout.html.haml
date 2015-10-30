@@ -19,8 +19,8 @@ title: Gauge | ThoughtWorks
         %title= current_resource.data.title || "Gauge | ThoughtWorks"
         %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
           %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
-            = favicon_tag 'favicons/favicon.ico', :rel => 'shortcut icon'
-            = favicon_tag 'favicons/apple-touch-icon.png', :rel => 'apple-touch-icon-precomposed'
+            = favicon_tag 'favicons/favicon.ico',:type => 'image/ico' ,:rel => 'shortcut icon'
+            = favicon_tag 'favicons/apple-touch-icon.png',:type => 'image/ico' ,:rel => 'apple-touch-icon-precomposed'
             = stylesheet_link_tag "application"
             = javascript_include_tag  "frameworks/jquery-1.11.2"
             = javascript_include_tag  "application", :async => true
@@ -42,10 +42,10 @@ title: Gauge | ThoughtWorks
         - else
           %a.logo{:href => "../index.html"} 
             %img#thumb{:width => "150",  :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
-        %a.navigation-menu-button{:href => "javascript:void(0)"}
-          %i.fa.fa-bars.fa-2x
         .beta
           %img{:alt => "BETA", :src => asset_path(:images, 'svg/icon_beta.svg')}
+        %a.navigation-menu-button{:href => "javascript:void(0)"}
+          %i.fa.fa-bars.fa-2x
         %ul.header-nav
           %li.nav-link
             %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Documentation
