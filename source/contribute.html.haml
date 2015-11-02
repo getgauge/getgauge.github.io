@@ -30,8 +30,9 @@
           .icon-cl.icon-cl-3
           .desc
             Contribute to our
-            %a{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} blog.
-            Maybe you’ve used Gauge in a different way, or you’ve analyzed of how a feature works. If you write about experiences like these, we’d love to add them to the Gauge blog.
+            =link_to 'blog', '../blog/index.html'
+            -#%a{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} blog.
+            Maybe you’ve used Gauge in a different way, or you’ve analyzed how a feature works. If you write about experiences like these, we’d love to add them to the Gauge blog.
 
       %li
         .contribution-list-item
@@ -57,7 +58,7 @@
           %h3 Code for Gauge
           .icon-cl.icon-cl-6
           .desc
-            Contribute code to Gauge! All repositories are hosted on GitHub,
+            Contribute code to Gauge! All repositories are hosted on GitHub.
             %a{:href => " https://github.com/getgauge/gauge", :target => "_blank"} Gauge’s core
             is written in Golang but
             %a{:href => "http://getgauge.io/documentation/user/current/plugins/list.html", :target => "_blank"} plugins
@@ -85,7 +86,7 @@
       %li.step
         .step2.image_alignment.description Assign the issue to yourself
       %li.step
-        .step3.image_alignment.description Fork the repository, keep it in sync with the master
+        .step3.image_alignment.description Fork the repository, keep it in sync with  master
       %li.step
         .step4.image_alignment.description Talk to us about what you want to do
       %li.step
@@ -93,9 +94,9 @@
       %li.step
         .step6.image_alignment.description Submit a Pull Request
       %li.step
-        .step7.image_alignment.description Fill out the CLA Form
+        .step7.image_alignment.description Fill out the CLA form
       %li.step
-        .step8.image_alignment.description We Merge your Request
+        .step8.image_alignment.description We merge your request
 
   %section.help
     %h2 How to start contributing
