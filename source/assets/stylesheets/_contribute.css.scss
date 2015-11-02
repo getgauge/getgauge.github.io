@@ -6,6 +6,9 @@
   padding:50px 0px;
   @include outer-container(100%);
   @include link-style();
+  @include media($tablet) {
+    padding: 20px 15px 20px 15px;
+  }
 }
   .contribute {
     h2{
@@ -60,7 +63,7 @@
           }
         }
         .desc{
-          width:80%;
+//          width:80%;
           margin:0px auto;
           line-height: 1.4;
           font-size:14px;

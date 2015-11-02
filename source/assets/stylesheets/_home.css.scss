@@ -20,16 +20,16 @@
     padding: 1.2em 0;
   }
   &.option1{
-    background-image: image-url('Gauge-banner.jpg');
+    background-image: image-url('lego_1.jpg');
 
   }
   &.option2{
-    background-image: image-url('lego.jpg');
+    background-image: image-url('lego_2.jpg');
 
   }
 
   &.option3{
-    background-image: image-url('wood.jpg');
+    background-image: image-url('lego_3.jpg');
 
   }
   background-attachment: fixed;
@@ -281,6 +281,7 @@
 }
 
 .testimonials{
+  @include link-style();
   text-align:center;
   background: #ffffff;
   padding:50px 0px .75em;

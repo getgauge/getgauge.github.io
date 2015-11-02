@@ -20,18 +20,19 @@
 .pagination-section.clearfix
   - if prev_page
     %span.pagination
-      -#<i class="fa fa-arrow-left"></i>
-      = link_to "Older", prev_page.url
+      -#= link_to "Older", prev_page.url
+      %a{:href => "#{prev_page.url}"} <i class="fa fa-arrow-left"></i> Older
   - else
     %span.disabled
-      -#<i class="fa fa-arrow-left"></i>
+      <i class="fa fa-arrow-left"></i>
       Older
 
   - if next_page
     %span.pagination
-      = link_to "Newer", next_page.url
+      -#= link_to "Newer", next_page.url
       -#<i class="fa fa-arrow-right"></i>
+      %a{:href => "#{next_page.url}"} <i class="fa fa-arrow-right"></i> Newer
   - else
     %span.disabled
       Newer
-      -#<i class="fa fa-arrow-right"></i>
+      <i class="fa fa-arrow-right"></i>

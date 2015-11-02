@@ -43,7 +43,7 @@
             font-size: 35px;
             text-align: center;
 
-            @include media($mobile, $tablet) {
+            @include media($tablet) {
                 font-size: 25px;
                 margin-top: 10px;
                 text-align: center;
