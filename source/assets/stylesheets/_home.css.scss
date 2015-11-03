@@ -39,7 +39,7 @@
       margin: 0 auto;
       text-align: center;
       font-size: 64px;
-      font-weight: 600;
+      font-weight: 400;
       text-shadow: 3px 4px 4px rgba(0,0,0,.2);
 
       span{
@@ -75,7 +75,7 @@
   }
 
   .subquote{
-    font-size:22px;
+    font-size:28px;
     width:80%;
     margin:25px auto 50px;
     @include media($mobile){
@@ -219,15 +219,23 @@
     padding:0px 20px 25px 70px;
     text-align: left;
     background-repeat: no-repeat;
-    background-size: 40px 40px;
+    background-size: 30px 30px;
     @include media($mobile){
       width: 100%;
     }
   }
-  .icon-os{ background-image: image-url('svg/vision/iconos.svg');}
-  .icon-explevel{ background-image: image-url('svg/vision/icon_choice.svg');}
-  .icon-plugin{ background-image: image-url('svg/vision/icon_pluggable.svg');}
-  .icon-hardprob{ background-image: image-url('svg/vision/icon_stay_here.svg');}
+  .icon-os{
+    background-position-y: 8px;
+    background-image: image-url('svg/vision/iconos.svg');}
+  .icon-explevel{
+    background-position-y: 10px;
+    background-image: image-url('svg/vision/icon_choice.svg');}
+  .icon-plugin{
+    background-position-y: 6px;
+    background-image: image-url('svg/vision/icon_pluggable.svg');}
+  .icon-hardprob{
+    background-position-y: 6px;
+    background-image: image-url('svg/vision/icon_stay_here.svg');}
   ul{
     overflow: hidden;
     margin:60px auto 30px;
@@ -344,6 +352,9 @@
     }
     .features-selector{
       color: $mustard;
+//      span {
+//        border-bottom: 1px solid $mustard;
+//      }
       i{
         top: -5px;
         position: relative;

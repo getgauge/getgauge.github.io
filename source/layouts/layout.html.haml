@@ -59,10 +59,6 @@ title: Gauge | ThoughtWorks
         %a.navigation-menu-button{:href => "javascript:void(0)"}
           %i.fa.fa-bars.fa-2x
         %ul.header-nav
-          %li.nav-link
-            %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Documentation
-          %li.nav-link
-            = nav_bar_link 'Blog', 'blog/index.html'
           %li.nav-link.nav-drilldown
             = nav_bar_link 'Get Started <span class="expand"><i class="fa fa-plus"></i></span>', 'get-started/index.html'
             %ul.nav-drilldown-list
@@ -77,8 +73,13 @@ title: Gauge | ThoughtWorks
                 = nav_bar_link 'Contribute', 'contribute/index.html'
               %li
                 = nav_bar_link 'CLA', 'cla/index.html'
+          %li.nav-link
+            = nav_bar_link 'Blog', 'blog/index.html'
+          %li.nav-link
+            %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Documentation
+
           %li.nav-link-short
-            %a{:href => "https://github.com/getgauge/gauge", :target => "_blank"}
+            %a{:alt =>"Gauge on Github", :href => "https://github.com/getgauge/gauge", :target => "_blank"}
               %i.fa.fa-github
     #content
       = yield
