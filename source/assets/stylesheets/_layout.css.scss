@@ -235,6 +235,7 @@ header {
   z-index: 10;
 }
 
+
 footer {
   position: relative;
   z-index: 100;
@@ -326,6 +327,7 @@ footer {
       }
     }
   }
+
 }
 
 #content{
@@ -336,4 +338,30 @@ footer {
 
 #hero {
   color: #111;
+}
+
+section.credit{
+  background-color: #3F3C3C;
+  text-align: center;
+  clear: both;
+  .credit-container{
+    display: table;
+    margin: 0 auto;
+
+    img{
+      width: 80px;
+      height: auto;
+      margin: 5px 0;
+      float: left;
+    }
+    .thanks{
+      color: #ffffff;
+      font-size: .6em;
+      display: inline-block;
+      float: left;
+      padding-left: 10px;
+      padding-top: 12px;
+
+    }
+  }
 }

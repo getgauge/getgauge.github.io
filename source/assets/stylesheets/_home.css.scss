@@ -19,23 +19,15 @@
   @include media($tablet) {
     padding: 1.2em 0;
   }
-  &.option1{
-    background-image: image-url('lego_1.jpg');
 
-  }
-  &.option2{
-    background-image: image-url('lego_2.jpg');
-
-  }
-
-  &.option3{
-    background-image: image-url('lego_3.jpg');
-
-  }
+  background-image: image-url('gauge_hero_image.jpg');
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-color:#000;
-  background-size:100%;
+  background-size:100% 100%;
+  @include media($tablet){
+
+  }
 
   .hero-banner-content{
     margin: 200px 0px 0px;
@@ -279,6 +271,7 @@
     }
   }
 }
+
 
 .testimonials{
   @include link-style();

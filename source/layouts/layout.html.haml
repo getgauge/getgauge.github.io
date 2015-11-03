@@ -83,7 +83,7 @@ title: Gauge | ThoughtWorks
     #content
       = yield
     %footer
-      %section.community{"data-wow-delay" => ".1s"} 
+      %section.community
         %h2 Join our community
         .community-list
           %a.join-group{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} Join Us
@@ -97,3 +97,12 @@ title: Gauge | ThoughtWorks
       %p.disclamer Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0
       = javascript_include_tag  "mobileNav"
       = javascript_include_tag  "browser_support"
+
+
+
+    - if current_resource.data.credit
+      %section.credit
+        .credit-container.clearfix
+          %img{:alt => "cc-by", :src => asset_path(:images, 'cc-by.png')}
+          %span.thanks
+            =current_resource.data.credit
