@@ -14,7 +14,7 @@
     </div>
     <meta charset='utf-8'>
       <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-        <title>Plugins in Gauge</title>
+        <title>Overview of Gauge's plugin based architecture</title>
         <meta content='width=device-width, initial-scale=1' name='viewport'>
           <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
             <link type="image/ico" rel="shortcut icon" href="../../../../../assets/images/favicons/favicon.ico" />
@@ -33,7 +33,7 @@
       </meta>
     </meta>
   </head>
-  <body class='blog blog_posts blog_posts_2015 blog_posts_2015_10 blog_posts_2015_10_27 blog_posts_2015_10_27_plugin-architecture-in-gauge'>
+  <body class='blog blog_posts blog_posts_2015 blog_posts_2015_10 blog_posts_2015_10_27 blog_posts_2015_10_27_overview-of-gauges-plugin-bases-architecture'>
     <!-- Google Tag Manager -->
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKRKLF"
@@ -99,11 +99,11 @@
       <div class='blogpost'>
         <div class='metadata'>
           <div class='blog-title'>
-            Plugins in Gauge
+            Overview of Gauge's plugin based architecture
           </div>
           <div class='item'>
             Posted By
-            <span class='author'>Deepthi</span>
+            <span class='author'>Apoorva M</span>
           </div>
           <div class='item'>
             27 October 2015
@@ -114,42 +114,41 @@
         </div>
         <div class='blog-content'>
           <p>A good point to start talking of plugins in Gauge is the Architecture of Gauge. Gauge has a plugin based architecture. What does it mean? How does it work?</p>
-          <div class='section-title'>
-            Gauge Architecture
-          </div>
-          <div class='img-container'>
-            <img alt='Select language' src='../../../../../assets/images/install-lang-runner.jpg'>
-          </div>
           <p>The Gauge architecture basically contains three major components namely</p>
           <ul>
             <li>Gauge Core</li>
             <li>Language Runners</li>
             <li>Other plugins</li>
           </ul>
-          <p>The Gauge core, being the centre of delegation is responsible for Parsing and Execution Orchestration. It does not understand any language specific implementations and thus, its an independent unit. It just delegates the job to other components and is not aware of any execution units.</p>
-          <p>Gauge core communicates with all plugins to perform various actions via messaging API defined through Protocol Buffers. Gauge core and any of the plugin are two independent processes talking to each other. But both of them are aware of protocols to communicate through messages. Plugins can be at different levels.</p>
           <div class='sub-section'>
-            Language level Plugins
+            Gauge Core
           </div>
-          <p>Plugins that have the execution events in different programming languages are Language level plugins(Test Runner). Currently Gauge has Java, Ruby and C# as its supported language level plugins. These plugins performs the job of running executable units in a specific language.</p>
+          <p>The core is the heart of Gauge and takes care of the entire spec execution lifecycle. We have designed the core to be language agnostic. So support for a new language can be easily added without modifying the core.</p>
+          <p>Things that are central to Gauge like setting up environment, parsing specifications, parallel execution, etc. are completely handled by the core. While language specific things are delegated to respective language runners. The core orchestrates the entire delegation with various langauge runners (and other plugins).</p>
+          <p>
+            Gauge core communicates with the plugins via
+            <a href='https://developers.google.com/protocol-buffers/?hl=en'>Protocol Buffers</a>
+            over TCP.
+          </p>
           <div class='sub-section'>
-            Execution event plugins
+            Language Runners
           </div>
-          <p>A plugin like Html-report plugin is an execution event plugin which gets the result of the execution events at different points. After the completion of execution, it accumulates the test results by parsing data in JSON format and generates reports. Currently Gauge has XML and HTML report plugins.</p>
+          <p>Language runners are also Gauge plugins. They handle the language specific parts of the execution life cycle.</p>
           <div class='sub-section'>
-            Setup level plugins
+            Other plugins
           </div>
-          <p>Setup level plugins are plugins which come to picture in the setup phase like adding a Maven Dependency or IDE plugins. Gauge has IntelliJ, VS and Eclipse IDE plugins which also talks to Gauge core.</p>
+          <p>
+            Gauge has a bunch of other
+            <a href='/plugins'>plugins</a>
+            like HTML-report and XML-report that generates the execution reports as well as a Maven plugin that helps you create and manage a Gauge project with Maven.
+          </p>
+          <p>There are even IDE plugins for IntelliJ, Visual Studio and Eclipse which integrates Gauge specific functionality into the IDE.</p>
           <div class='section-title'>
-            An example
+            Overview of Gauge execution lifecycle
           </div>
-          <p>Let’s understand the entire concept via a real example. In Gauge, all specs can be executed in command-line by command:</p>
+          <p>Let’s take a look at the Gauge execution lifecycle at a high level. Gauge specs can be executed in console by running the command</p>
           <pre><code>gauge specs&#x000A;</code></pre>
-          <p>This invokes Gauge core which performs operations like loading environment, check for parse errors in your specs and then calls a language runner to execute them. Gauge core knows about which test runner the execution should be delegated to and Test runner knows to receive messages and perform the execution of language specific implementation. Gauge core consolidates the entire test result and delegates it to a report plugin to generate reports.</p>
-          <div class='section-title'>
-            The benefit of Plugins
-          </div>
-          <p>Do you want to write a report plugin which visually enriches reports with graphs and charts? All the necessary data will be available to an execution event plugin. All that this plugin needs to do is to pictorially represent them as needed.</p>
+          <p>This invokes Gauge core which performs operations like loading environment, parsing the specs, etc. The core then invokes a language runner to delegate the langauge specific tasks. The language runner sends back the results to the core which then consolidates the results and sends them to report plugins to generate reports.</p>
         </div>
         <div class='comments'>
           <h2>Comments</h2>
@@ -182,7 +181,7 @@
       </div>
     </div>
     <footer>
-      <section class='community' data-wow-delay='.1s'>
+      <section class='community'>
         <h2>Join our community</h2>
         <div class='community-list'>
           <a class='join-group' href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>Join Us</a>
