@@ -26,9 +26,7 @@ p.text-block{
     margin:0px 0px 15px;
     line-height: 1.5;
     font-size:15px;
-    @include media($tablet){
-      margin:0px 20px 15px;
-    }
+
 }
 header, footer {
   $navigation-height: 3em;
@@ -78,8 +76,7 @@ header, footer {
           background: transparent;
           font-size:1em;
           width: auto;
-          padding-right: 1em;
-          min-width: 80px;
+          padding-right: 1.5em;
           a {
             font-size: 18px;
             display: block;

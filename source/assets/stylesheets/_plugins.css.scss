@@ -1,8 +1,11 @@
 .header_image_plugins{
-  background-image: image-url('subpage_plugins.jpg');
+  background-image: image-url('subpages/subpage_plugins.jpg');
 }
 
 .plugin-list {
+  @include media($tablet){
+    padding: 20px 15px 20px 15px;
+  }
 
   .text-block{
     @include link-style();
@@ -21,9 +24,7 @@
 .plugin-item{
   @include span-columns(12);
   margin:10px 0 0 0;
-  @include media($tablet) {
-    padding: 20px 15px 20px 15px;;
-  }
+
   h3{
     text-align: left;
   }
