@@ -2,11 +2,12 @@
   background-position: left top;
   height:190px;
   @include media($tablet) {
+    background-position: center center;
     height: 130px;
   }
   .page-label{
     display:inline-block;
-    color:$mustard;
+    color: white;
     margin-top:75px;
     font-size:52px;
     margin-left:100px;
