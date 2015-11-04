@@ -22,7 +22,7 @@ activate :blog do |blog|
   blog.default_extension = ".haml"
   blog.paginate = true
   blog.page_link = "p{num}"
-  blog.per_page = 1
+  blog.per_page = 10
 end
 
 activate :disqus do |d|

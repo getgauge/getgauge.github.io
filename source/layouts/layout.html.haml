@@ -91,19 +91,20 @@ title: Gauge | ThoughtWorks
           %a.contribute{:href => "https://gitter.im/getgauge/chat", :target => "_blank"} Talk to Us
           %a.contact{:href => "https://github.com/getgauge", :target => "_blank"} Watch Us
           %a.followus{:href => "https://twitter.com/getgauge", :target => "_blank"} Follow Us
-      %section#powered-by
+
+      - if current_resource.data.credit
+        %section.credit.clearfix
+          .credit-container.clearfix
+            %img{:alt => "cc-by", :src => asset_path(:images, 'cc-by.png')}
+            %span.thanks
+              %a{:href => "#{current_resource.data.credit_link}", :targer => "_blank"}
+                =current_resource.data.credit
+
+      %section.powered-by
         %a{:href => "http://www.thoughtworks.com/products"}
           %img{:alt => "Thoughtworks logo", :src => asset_path(:images, 'thoughtworks_logo.svg')}
-
-      %p.disclamer Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0
-      = javascript_include_tag  "mobileNav"
-      = javascript_include_tag  "browser_support"
+        .disclamer Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0
 
 
-
-    - if current_resource.data.credit
-      %section.credit
-        .credit-container.clearfix
-          %img{:alt => "cc-by", :src => asset_path(:images, 'cc-by.png')}
-          %span.thanks
-            =current_resource.data.credit
+        = javascript_include_tag  "mobileNav"
+        = javascript_include_tag  "browser_support"

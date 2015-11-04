@@ -232,20 +232,32 @@ header {
   z-index: 10;
 }
 
+.powered-by {
+  background-color: #515151;
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+  .section-wrapper {
+    padding-bottom: 5px;
+  }
+  img {
+    max-width: 250px;
+  }
+}
+
 
 footer {
   position: relative;
   z-index: 100;
-  background-color: #515151;
   color:#fff;
   text-align: center;
-  padding: 0 0 0.75em 0;
   ul li {
     display: inline;
     padding: 0 .75em;
   }
   .disclamer{
     font-size:14px;
+    padding: 0 0 .75em 0;
   }
 
   .community{
@@ -337,7 +349,7 @@ footer {
   color: #111;
 }
 
-section.credit{
+.credit{
   background-color: #3F3C3C;
   text-align: center;
   clear: both;
@@ -358,6 +370,10 @@ section.credit{
       float: left;
       padding-left: 10px;
       padding-top: 12px;
+      a{
+        color: #ffffff;
+        border-bottom: 1px #ffffff solid;
+      }
 
     }
   }
