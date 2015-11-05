@@ -1,0 +1,1 @@
+$(function(){var d=!!document.documentMode,e="undefined"!=typeof InstallTrigger;d||e?$("body").addClass("ie"):$("body").addClass("no-ie")});
