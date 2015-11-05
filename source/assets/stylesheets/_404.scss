@@ -1,0 +1,25 @@
+.error_page{
+  margin-top: 67px;
+  overflow: hidden;
+}
+.error_message{
+  margin: 200px 0;
+  text-align:center;
+
+
+  i{
+    margin-right: 10px;
+    font-size: 70px;
+  }
+  p{
+    font-size:20px;
+    margin-bottom: 0;
+  }
+  i , .message{
+    display:inline-block
+  }
+  .message{
+    text-align: left;
+  }
+
+}

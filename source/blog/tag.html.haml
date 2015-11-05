@@ -7,10 +7,12 @@ pageable: true
 
 
 %section.page-content
-  .tag-title
-    All posts with tag:
-    %span.tag
-    = tagname
+  %h3 We're almost there! Our blog will be published soon. Watch this space.
 
-  = partial('blog-listing.haml', :locals =>{ prev_page: prev_page, next_page: next_page, page_number: page_number, num_pages: num_pages, page_articles: page_articles})
+  -#.tag-title
+  -#  All posts with tag:
+  -#  %span.tag
+  -#  = tagname
+
+  -#= partial('blog-listing.haml', :locals =>{ prev_page: prev_page, next_page: next_page, page_number: page_number, num_pages: num_pages, page_articles: page_articles})
 
