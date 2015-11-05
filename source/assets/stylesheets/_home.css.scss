@@ -19,16 +19,13 @@
   @include media($tablet) {
     padding: 1.2em 0;
   }
-
   background-image: image-url('gauge_hero_image.jpg');
   background-attachment: fixed;
+  @media (min-width: $large-screen) {
+    background-size:100%;
+  }
   background-repeat:no-repeat;
   background-color:#000;
-  background-size:100% 100%;
-  @include media($tablet){
-
-  }
-
   .hero-banner-content{
     margin: 200px 0px 0px;
     @include media($mobile){
@@ -234,8 +231,9 @@
     background-position-y: 6px;
     background-image: image-url('svg/vision/icon_pluggable.svg');}
   .icon-hardprob{
+    background-size: 35px 35px;
     background-position-y: 6px;
-    background-image: image-url('svg/vision/icon_stay_here.svg');}
+    background-image: image-url('svg/vision/icon_innovator.svg');}
   ul{
     overflow: hidden;
     margin:60px auto 30px;
@@ -352,9 +350,9 @@
     }
     .features-selector{
       color: $mustard;
-//      span {
-//        border-bottom: 1px solid $mustard;
-//      }
+      span {
+        border-bottom: 1px solid $mustard;
+      }
       i{
         top: -5px;
         position: relative;
