@@ -6,10 +6,22 @@ task :build do
 end
 
 desc "deploy the website"
-task :deploy do
-  sh("bundle exec middleman s3_sync --force --verbose")
-  sh("bundle exec middleman s3_redirect")
-  sh("bundle exec middleman invalidate")
+task :deploy => [:build] do
+  puts "## Deploying redesign branch to master"
+  cp_r ".nojekyll", "build/.nojekyll"
+  cp_r "build/404/index.html", "build/404.html"
+  sh("rm -rf build/404")
+  system "git checkout master"
+  system "cp -r build/ ."
+  system "rm -rf build"
+  system "git add ."
+  system "git add -u"
+  puts "\n## Commiting: Site updated at #{Time.now.utc}"
+  message = "Site updated at #{Time.now.utc}"
+  system "git commit -m \"#{message}\""
+  # puts "\n## Pushing generated website"
+  # system "git push origin master"
+  # puts "\n## Website deployed successfully"
 end
 
 desc 'find ununsed images'
