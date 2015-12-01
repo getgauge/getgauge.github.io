@@ -73,3 +73,11 @@
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-maven-plugin/releases"
+    Gradle:
+      title: "Gradle"
+      repo_link: "http://getgauge.io/documentation/user/current/dependency_management/gradle-plugin.html"
+      description: "To build and manage project dependencies."
+      attribution: "Manu Sunny"
+      contributor_link: "https://github.com/manupsunny"
+      action: "Download"
+      action_link: "https://github.com/manupsunny/gauge-gradle-plugin/releases"
