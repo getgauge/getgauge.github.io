@@ -27,6 +27,12 @@
       attribution: "Renjith"
       contributor_link: "https://github.com/renjithgr"
       action: "Work in progress"
+    Golang runner:
+      repo_link: "https://github.com/manuviswam/gauge-go"
+      description: "Plugin that lets you write your tests in Golang."
+      attribution: "Manu Viswam"
+      contributor_link: "https://github.com/manuviswam"
+      action: "Work in progress"
   IDE plugins:
     IntelliJ:
       repo_link: "http://getgauge.io/documentation/user/current/ide_support/intellij_idea.html"
