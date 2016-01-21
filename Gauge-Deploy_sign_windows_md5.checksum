@@ -1,0 +1,18 @@
+#
+#Wed Jan 20 00:37:01 PST 2016
+deploy/gauge-0.3.1-darwin.x86.pkg=f98954e47bd5b989f7c49da28920deaa
+#
+#Wed Jan 20 00:37:01 PST 2016
+deploy/gauge-0.3.1-darwin.x86_64.pkg=f1bdcf865f24a573d9a69c4ce3035c68
+#
+#Wed Jan 20 00:37:02 PST 2016
+deploy/gauge-0.3.1-linux.x86.zip=8a701c1848ec67797986bd1aa1b4cd8b
+#
+#Wed Jan 20 00:37:03 PST 2016
+deploy/gauge-0.3.1-linux.x86_64.zip=616d5c357e78a4c9a1dd52b825c14cfe
+#
+#Wed Jan 20 00:37:04 PST 2016
+deploy/gauge-0.3.1-windows.x86.exe=3dbfd531369198e2786a64e206bbaae4
+#
+#Wed Jan 20 00:37:04 PST 2016
+deploy/gauge-0.3.1-windows.x86_64.exe=e04495df356512deefab1031aae88889
