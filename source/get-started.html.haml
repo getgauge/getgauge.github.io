@@ -29,7 +29,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
           There are multiple ways to get started with Gauge on a Mac. Here we show you a simple 4 step process to get you running with Gauge on a Mac. You can read our
           %a{:href=>"http://getgauge.io/documentation/user/current/getting_started/index.html", :target => "_blank"} detailed documentation
           for other methods of installation.
-        .page-block 
+        .page-block
           %h3 1. Install Gauge
           .instruction
             Download the installer below based on your system configuration and just click your way through to install Gauge. You will need to use this method if your setup or organization does not allow
@@ -100,7 +100,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
           .screenshot
             .browser-container
               .browser-code
-              %code ~ $ gauge specs/hello_world.spec
+              %code ~ $ gauge specs
               %pre
                 :preserve
                   Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
@@ -140,7 +140,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                   %strong SHA-1:
                   #{data.info.windows86_64}
 
-        .page-block 
+        .page-block
           %h3 2. Install core plugins
           .instruction  Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.
           .instruction  The Windows installer allows you to select the language plugin(s) as part of the the installation process. Check the box(es) you want to install. You can select more than one language plugin to install.
@@ -177,7 +177,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
           .screenshot
             .browser-container
               .browser-code
-              %code > gauge specs/hello_world.spec
+              %code > gauge specs
               %pre
                 :preserve
                   Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
@@ -259,7 +259,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
           .screenshot
             .browser-container
               .browser-code
-              %code ~ $ gauge specs/hello_world.spec
+              %code ~ $ gauge specs
               %pre
                 :preserve
                   Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
