@@ -22,11 +22,12 @@
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-ruby/releases"
     Javascript runner:
-      repo_link: "https://github.com/renjithgr/gauge-js"
+      repo_link: "https://github.com/getgauge-contrib/gauge-js"
       description: "Plugin that lets you write your tests in Javascript."
       attribution: "Renjith"
       contributor_link: "https://github.com/renjithgr"
-      action: "Work in progress"
+      action: "Download"
+      action_link: "https://github.com/getgauge-contrib/gauge-js/releases"
     Golang runner:
       repo_link: "https://github.com/manuviswam/gauge-go"
       description: "Plugin that lets you write your tests in Golang."
