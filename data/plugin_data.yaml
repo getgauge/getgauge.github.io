@@ -28,6 +28,13 @@
       contributor_link: "https://github.com/renjithgr"
       action: "Download"
       action_link: "https://github.com/getgauge-contrib/gauge-js/releases"
+    Python runner:
+      repo_link: "https://github.com/kashishm/gauge-python"
+      description: "Plugin that lets you write your tests in Python."
+      attribution: "Kashish Munjal"
+      contributor_link: "https://github.com/kashishm"
+      action: "Download"
+      action_link: "https://github.com/kashishm/gauge-python/releases"
     Golang runner:
       repo_link: "https://github.com/manuviswam/gauge-go"
       description: "Plugin that lets you write your tests in Golang."
