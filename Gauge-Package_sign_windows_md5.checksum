@@ -1,0 +1,27 @@
+#
+#Fri Apr 01 05:45:57 PDT 2016
+deploy/gauge-0.4.0-darwin.x86.pkg=a22267ac3f7e95eb9707d6f35dde689b
+#
+#Fri Apr 01 05:45:59 PDT 2016
+deploy/gauge-0.4.0-darwin.x86_64.pkg=61985bf2e7fdce623fcd094de6684e22
+#
+#Fri Apr 01 05:46:00 PDT 2016
+deploy/gauge-0.4.0-linux.x86.zip=c60102180b1c593c3d3b51ccf433e104
+#
+#Fri Apr 01 05:46:01 PDT 2016
+deploy/gauge-0.4.0-linux.x86_64.zip=b845dbff7c3c1efd722a4dfd75f544bf
+#
+#Fri Apr 01 05:46:02 PDT 2016
+deploy/gauge-0.4.0-windows.x86.exe=692471b683cb413ed1f33517b3f0363d
+#
+#Fri Apr 01 05:46:03 PDT 2016
+deploy/gauge-0.4.0-windows.x86_64.exe=c83df19d639f0e37626ffb8838209c04
+#
+#Fri Apr 01 05:46:04 PDT 2016
+test_installers/gauge-darwin.x86_64.pkg=61985bf2e7fdce623fcd094de6684e22
+#
+#Fri Apr 01 05:46:05 PDT 2016
+test_installers/gauge-linux.x86_64.zip=b845dbff7c3c1efd722a4dfd75f544bf
+#
+#Fri Apr 01 05:46:06 PDT 2016
+test_installers/gauge-windows.x86_64.exe=c83df19d639f0e37626ffb8838209c04
