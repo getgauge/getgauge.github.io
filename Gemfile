@@ -8,6 +8,6 @@ gem 'nokogiri'
 gem 'rake'
 
 # asset gems
-gem 'bourbon'
+gem 'bourbon', '~> 4.2'
 gem 'neat'
 gem 'bitters'
