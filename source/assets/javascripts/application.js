@@ -1,5 +1,5 @@
 // Do not write any JS here!
-//= require 'custom/jquery.stellar'
-//= require 'custom/wow.min'
+//= require 'frameworks/responsiveslides.min.js'
 //= require 'tabs'
 //= require 'common'
+//= require 'main'

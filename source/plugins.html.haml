@@ -7,36 +7,38 @@ credit_link: https://www.flickr.com/photos/alexander_mueller_photolover/21659104
 - categories = YAML.load_file('data/plugin_data.yaml')
 !!!
 
-.subheader.header_image_plugins
-  .page-label Gauge Plugins
+.inner-banner.header_image_plugins
+  .container
+    %h1.caption Gauge Plugins
 
-%section.plugin-list.clearfix
-  %p.text-block Gauge was built from the ground up with extensibility via plugins as a guiding principle. The bundled language runners, IDE support, and reports are all plugins. We will keep the Golang core small and simple, while supporting a rich plugin ecosystem.
-  %p.text-block
-    Below is a list of all currently supported plugins, including some plugins that are currently in development (by external and internal contributors). If there is a plugin that you want but do not see, write your own using the
-    %a{:href => "http://getgauge.io/documentation/technical/current/api.html", :target => "_blank"} Gauge Plugin API.
-    Let us know if you are working on a plugin, and we will list it here.
+.plugin-list
+  .container
+    %p.text-block Gauge was built from the ground up with extensibility via plugins as a guiding principle. The bundled language runners, IDE support, and reports are all plugins. We will keep the Golang core small and simple, while supporting a rich plugin ecosystem.
+    %p.text-block
+      Below is a list of all currently supported plugins, including some plugins that are currently in development (by external and internal contributors). If there is a plugin that you want but do not see, write your own using the
+      %a{:href => "http://getgauge.io/documentation/technical/current/api.html", :target => "_blank"} Gauge Plugin API.
+      Let us know if you are working on a plugin, and we will list it here.
 
-
-  - categories.each do |category, plugins|
-    %section.plugin-item
-      .plugin-item-container.clearfix
-        %h3 #{category}
-      - plugins.each do |plugin_name, plugin|
-        .grid-3
-          %h5.clearfix
-            %span
-              #{plugin_name}
-            %a.link{:href => "#{plugin['repo_link']}", :target=> "_blank"}  Read more...
-          .details
-            #{plugin['description']}
-            %a{:href => "#{plugin['repo_link']}", :target => "_blank"} Read more...
-          .details
-            by
-            %a{:href => "#{plugin['contributor_link']}", :target => "_blank"} #{plugin['attribution']}
-          - if plugin['action_link']
-            .action
-              %a{:href => "#{plugin['action_link']}", :target => "_blank"} #{plugin['action']}
-          - else
-            .in-progress
-              #{plugin['action']}
+      .plugins-container
+        - categories.each do |category, plugins|
+          %h3 #{category}
+          %ul.plugins-list
+            - plugins.each do |plugin_name, plugin|
+              %li
+                %h5.name
+                  #{plugin_name}
+                .details  
+                  %p
+                    #{plugin['description']}
+                    %a{:href => "#{plugin['repo_link']}", :target => "_blank"} Read more...
+                  %span 
+                    by 
+                    %a{:href => "#{plugin['contributor_link']}", :target => "_blank"}   #{plugin['attribution']}
+                - if plugin['action_link']
+                  .action
+                    = link_to "#{plugin['action_link']}", class: 'download-icon', target: '_blank' do
+                      %span 
+                      #{plugin['action']}
+                - else
+                  .in-progress
+                    #{plugin['action']}

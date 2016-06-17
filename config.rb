@@ -1,4 +1,5 @@
 require 'active_support/core_ext/numeric/time'
+require 'bootstrap-sass'
 
 activate :automatic_image_sizes
 activate :directory_indexes

@@ -3,136 +3,147 @@ credit: Photo Credit - A C Moraes
 credit_link: https://www.flickr.com/photos/acmoraes/8629549600/
 ---
 
-%section.hero-banner
+.hero-banner
   %section.hero-banner-content
-
-    %h1
-      Test Automation
-      you'll
-      %span actually
-      like
-    .subquote
-      Simple. Collaborative. Adaptable.
+    .captions
+      %h1
+        Test Automation you'll 
+        %span actually like
+      %span.subquote
+        Simple. Collaborative. Adaptable.
     .actions
-      %a.button.primary-button.download-icon{:href => "get-started/index.html"}
-        %span Get Started
-      %a.button{:href => "contribute/index.html"} Contribute
-    %section.features.qas
-      %h2
+      %a.btn.btn-primary{:href => "get-started/index.html"} Get Started
+      %a.btn.btn-default{:href => "contribute/index.html"} Contribute
+    
+    .features.qas
+      %h2.question
         Why Gauge is better for
         <span class="features-filter-selector-wrap">
         <a class="features-selector"><span class="features-selected-value">Testers</span><i class="fa fa-sort-desc"></i></a>
         <div class="features-filter-values-wrap js-values-wrap">
         <div class="features-filter-values">
-        <div class="features-filter-value" data-value="qas">Testers</div>
-        <div class="features-filter-value" data-value="developers">Developers</div>
+        <span class="features-filter-value" data-value="qas">Testers</span>
+        <span class="features-filter-value" data-value="developers">Developers</span>
         </div>
         </div>
         </span>
 
+
+      
       .feature-list.qas.animated.fadeIn
+        .container-fluid
+          .col-sm-6.col-md-6.col-lg-3.gauge-feature
+            %figure
+              = image_tag "svg/home/icon_syntax.svg", {:title => "Simple Syntax", :alt => "Simple Syntax"}
+            %h3 Simple Syntax
+            .feature-desc Write test specifications in Markdown. Gauge won't enforce a structure: write in a way that works for you. Generate readable documentation in the format of your choice.
 
-        .grid-3
-          %h3.simple-syntax.logo Simple Syntax
-          .feature-desc Write test specifications in Markdown. Gauge won't enforce a structure: write in a way that works for you. Generate readable documentation in the format of your choice.
+          .col-sm-6.col-md-6.col-lg-3.gauge-feature
+            %figure
+              = image_tag "svg/home/icon_start_fast.svg", {:title => "Get Started Fast", :alt => "Get Started Fast"}  
+            %h3 Get Started Fast
+            .feature-desc Gauge is lightweight and easy to get started. Install and initialize with a single command.
 
-        .grid-3
-          %h3.start-fast.logo Get Started Fast
-          .feature-desc Gauge is lightweight and easy to get started. Install and initialize with a single command.
+          .col-sm-6.col-md-6.col-lg-3.gauge-feature
+            %figure
+              = image_tag "svg/home/icon_tools.svg", {:title => "Your Environment Your Tools", :alt => "Your Environment Your Tools"}          
+            %h3 Your Environment Your Tools
+            .feature-desc Automate in your favourite programming language and work in the IDE of your choice, across platforms. Gauge supports C#, Java, Ruby, IntelliJ and Visual Studio out-of-the-box.
 
-        .grid-3
-          %h3.env-tools.logo Your Environment
-          %h3 Your Tools
-          .feature-desc Automate in your favourite programming language and work in the IDE of your choice, across platforms. Gauge supports C#, Java, Ruby, IntelliJ and Visual Studio out-of-the-box.
-
-        .grid-3
-          %h3.ext-data-src.logo Data Driven Execution
-          .feature-desc Easily test with large data sets, while keeping specifications highly readable. Gauge reads test data from text, CSV, and more.
+          .col-sm-6.col-md-6.col-lg-3.gauge-feature
+            %figure
+              = image_tag "svg/home/icon_data_exec.svg", {:title => "YData Driven Execution", :alt => "Data Driven Execution"}            
+            %h3 Data Driven Execution
+            .feature-desc Easily test with large data sets, while keeping specifications highly readable. Gauge reads test data from text, CSV, and more.
 
 
       .feature-list.developers.animated.fadeIn
+        .container-fluid
+          .col-sm-6.col-md-6.col-lg-3.gauge-feature
+            %figure
+              = image_tag "svg/home/icon_refactor.svg", {:title => "Refactoring support", :alt => "Refactoring support"}          
+            %h3 Refactoring support         
+            .feature-desc Keep your test suite as DRY as your production code. Gauge’s robust refactoring propagates changes throughout the test suite, reducing duplication and evolving your tests with your application.
 
-        .grid-3
-          %h3.test-is-prod.logo Refactoring support
-          .feature-desc Keep your test suite as DRY as your production code. Gauge’s robust refactoring propagates changes throughout the test suite, reducing duplication and evolving your tests with your application.
+          .col-sm-6.col-md-6.col-lg-3.gauge-feature
+            %figure
+              = image_tag "svg/home/icon_hackable.svg", {:title => "Extensible and Hackable", :alt => "Extensible and Hackable"}          
+            %h3 Extensible and Hackable
+            .feature-desc Take advantage of Gauge's plugin architecture. Extend by adding support for IDEs, langauges, drivers, datasources, text execution events and more. Author plugins in Golang, in which Gauge itself is written, or any other language.
 
-        .grid-3
-          %h3.hackable.logo Extensible and Hackable
-          .feature-desc Take advantage of Gauge's plugin architecture. Extend by adding support for IDEs, languages, drivers, datasources, text execution events and more. Author plugins in Golang, in which Gauge itself is written, or any other language.
+          .col-sm-6.col-md-6.col-lg-3.gauge-feature
+            %figure
+              = image_tag "svg/home/icon_tools.svg", {:title => "Your Environment Your Tools", :alt => "Your Environment Your Tools"}          
+            %h3 Your Environment Your Tools
+            .feature-desc Gauge supports Java, C#, Ruby, IntelliJ, Visual Studio out-of-the-box. Its first class command line support helps integrate seamlessly with your Continuous Delivery setup.
 
-        .grid-3
-          %h3.env-tools.logo Your Environment
-          %h3 Your Tools
-          .feature-desc Gauge supports Java, C#, Ruby, IntelliJ, Visual Studio out-of-the-box. Its first class command line support helps integrate seamlessly with your Continuous Delivery setup.
-
-        .grid-3
-          %h3.parallel-exec.logo Easy Parallel Execution
-          .feature-desc Run your tests in parallel with a single command from the IDE or command line. It works exactly the same across all languages.
+          .col-sm-6.col-md-6.col-lg-3.gauge-feature
+            %figure
+              = image_tag "svg/home/icon_parallel_exec.svg", {:title => "Easy Parallel Execution", :alt => "Easy Parallel Execution"}          
+            %h3 Easy Parallel Execution
+            .feature-desc Run your tests in parallel with a single command from the IDE or command line. It works exactly the same across all languages.
 
 
-%section.visiongauge
-  %h2 Why we built Gauge
-  .vision-wrapper 
-    %ul
+.visiongauge
+  %h2.section-title Why we built Gauge
+  .container
+    .col-sm-12.col-md-6
+      .why
+        %figure
+          = image_tag "svg/vision/icon_innovator.svg", {:title => "key innovator", :alt => "key innovator"}  
+        ThoughtWorks, creator of Selenium and Twist, has been a
+        %strong key innovator
+        in the automated testing ecosystem for more than a decade. We love it and want to help solve the hardest problems people face in the testing and automation world.
+    .col-sm-12.col-md-6
+      .why
+        %figure
+          = image_tag "svg/vision/icon_pluggable.svg", {:title => "Pluggable Icons", :alt => "Pluggable Icons"}       
+        We care about solving problems for all, not just those on a specific platform. Gauge is built with a plugin architecture so that you can use it with
+        %strong any language, IDE
+        and
+        %strong ecosystem
+        you want.
 
+    .col-sm-12.col-md-6
+      .why
+        %figure
+          = image_tag "svg/vision/iconos.svg", {:title => "Open Source", :alt => "Open Source"}         
+        We are passionate about
+        %strong open source
+        and 
+        %strong test automation.
+
+    .col-sm-12.col-md-6
+      .why
+        %figure
+          = image_tag "svg/vision/icon_choice.svg", {:title => "Support All Testers", :alt => "Support All Testers"}        
+        We support
+        %strong all testers
+        regardless of automation experience.
+      
+
+.testimonials
+  .container
+    %h2.section-title What our users say
+    %ul.rslides
       %li
-        .vision-col.icon-hardprob
-          ThoughtWorks, creator of Selenium and Twist, has been a
-          %strong key innovator
-          in the automated testing ecosystem for more than a decade. We love it and want to help solve the hardest problems people face in the testing and automation world.
-      %li
-        .vision-col.icon-plugin
-          We care about solving problems for all, not just those on a specific platform. Gauge is built with a plugin architecture so that you can use it with
-          %strong any language, IDE
-          and
-          %strong ecosystem
-          you want.
-
-      %li 
-        .vision-col.icon-os
-          We are passionate about
-          %strong open source
-          and 
-          %strong test automation.
-
-      %li 
-        .vision-col.icon-explevel
-          We support
-          %strong all testers
-          regardless of automation experience.
-    
--#%section.video
--#  %h2 Let's Get Started
--#  <iframe width="560" height="315" src="https://www.youtube.com/embed/Pj1WUZ9gjLY" frameborder="0" allowfullscreen></iframe>
--#  %div.download
--#    %a.button.primary-button{:href => "/get-started"} Download
-
-%section.testimonials
-  %h2 What our users say
-  .row
-    .grid-4
-      .testimonial
-        .text
-          <i class="fa fa-quote-left"></i>
-          After more playing
-          %a{:href => "https://twitter.com/getgauge", :target => "_blank"}@getgauge
-          is upgraded to awesome - loving the IntelliJ integration (Eclipse and VS/C# also supported, as is ruby).
-          <i class="fa fa-quote-right"></i>
+        <i class="fa fa-quote-left"></i>
+        After more playing
+        %a{:href => "https://twitter.com/getgauge", :target => "_blank"}@getgauge
+        is upgraded to awesome - loving the IntelliJ integration (Eclipse and VS/C# also supported, as is ruby).
+        <i class="fa fa-quote-right"></i>
         %span.client_name Jez Humble
         %span.client via Twitter
-    .grid-4
-      .testimonial
-        .text
-          <i class="fa fa-quote-left"></i>
-          Gauge has revolutionized our automated testing process, allowing us to write an automated testing framework that is simple to use, even for non-technical users. We have a complex Web UI that we run hundreds of tests on, across multiple browser permutations.
-          <i class="fa fa-quote-right"></i>
+      %li
+        <i class="fa fa-quote-left"></i>
+        Gauge has revolutionized our automated testing process, allowing us to write an automated testing framework that is simple to use, even for non-technical users. We have a complex Web UI that we run hundreds of tests on, across multiple browser permutations.
+        <i class="fa fa-quote-right"></i>
         %span.client_name Chris Stanush
         %span.client Test Automation Engineer, Mattersight Corporation
-    .grid-4
-      .testimonial
-        .text
-          <i class="fa fa-quote-left"></i>
-          Gauge is easy and lightweight to work with. We use Gauge for all our clients' automation needs, and we are extremely satisfied with how efficient the automation and deployment experience has been, even on the cloud.
-          <i class="fa fa-quote-right"></i>
+      %li
+        <i class="fa fa-quote-left"></i>
+        Gauge is easy and lightweight to work with. We use Gauge for all our clients' automation needs, and we are extremely satisfied with how efficient the automation and deployment experience has been, even on the cloud.
+        <i class="fa fa-quote-right"></i>
         .client_name Vivekanand Jha
         .client Director, Nineleaps Technology Solutions
+

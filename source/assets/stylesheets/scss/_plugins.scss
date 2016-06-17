@@ -1,0 +1,164 @@
+$plugins-tile-bg: #f2f9fc;
+$tab-container-bg: #d8f0f1;
+$actions-bg: $green;
+$actions-bg-hover: $primary-color;
+
+.header_image_plugins {
+	background-image: image-url('subpages/subpage_plugins.jpg');
+}
+
+.plugins-container {
+	background: #eeeeee;
+	padding: 20px 0;
+	margin-top: 30px;
+
+	h3 {
+		padding: 0px 20px 10px 30px;
+
+		@media (min-width:$screen-tablet) {
+			padding: 0px 20px 10px 25px;
+		}
+
+		@media (min-width:$screen-lg-desktop) {
+			padding: 0px 20px 10px 42px;
+		}
+
+	}
+
+}
+
+.plugins-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	@extend %flexbox;
+	@include flex-wrap(wrap);
+	@include align-content(space-between);
+
+	@media (min-width:$screen-tablet) {
+		margin: 20px 20px 20px 25px;
+	}
+
+	@media (min-width:$screen-desktop) {
+		margin: 20px 20px 10px 30px;
+	}
+
+	@media (min-width:$screen-lg-desktop) {
+		margin: 30px 15px 10px 42px;
+	}
+
+	li {
+		margin: 20px;
+		width: 100%;
+		background: #fff;
+
+		.details {
+			padding: 20px;
+			width: 100%;
+			position: relative;
+			align-items: stretch;
+			transition: all 0.5s ease;
+		}
+
+		&:hover {
+			a.download-icon {
+				background: $primary-color;
+				transition: all 0.5s ease;
+			}
+
+			span:before,
+			span:after {
+				animation: bounce .3s infinite alternate;
+				-webkit-animation: bounce .3s infinite alternate;
+			}
+
+		}
+
+		@media (min-width:$screen-tablet) {
+			width: 48%;
+			margin: 0px 0 20px 25px;
+
+			&:nth-child(2n+1) {
+				margin-left: 0;
+			}
+
+		}
+
+		@media (min-width:$screen-desktop) {
+			width: 31%;
+
+			&:nth-child(2n+1) {
+				margin-left: 25px;
+			}
+
+			&:nth-child(3n+4) {
+				margin-left: 0;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+		}
+
+		@media (min-width:$screen-lg-desktop) {
+			width: 31%;
+		}
+
+		.name {
+			font-size: 20px;
+			margin: 0;
+			padding: 20px 20px 0 20px;
+		}
+
+		.actions {
+			background: $actions-bg;
+			padding: 10px 20px;
+			@include clearfix;
+			transition: all 0.5s ease;
+			color: #333;
+		}
+
+		.in-progress {
+			color: #333;
+			font-weight: bold;
+			text-decoration: none;
+			display: block;
+			padding: 10px 20px;
+			background: $grey-bg;
+		}
+
+		&:hover {
+			-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+			box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+			transition: all 0.5s ease;
+
+			.actions {
+				background: $actions-bg-hover;
+				transition: all 0.5s ease;
+			}
+
+		}
+
+		&.contribute_tile {
+			background: #333333;
+			color: #fff;
+
+			a,
+			h5 {
+				color: #fff;
+			}
+
+		}
+
+		&.go {
+			@media (max-width:$screen-xs-max) {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+}

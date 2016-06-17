@@ -3,124 +3,136 @@ credit: Photo Credit - Turinboy
 credit_link: https://www.flickr.com/photos/turinboy/5217595026
 ---
 
-.subheader.header_image_contribute
-  .page-label Contribute
-%section.contribute-section.clearfix
-  %section.how-contribute
+.inner-banner.header_image_contribute
+  .container
+    %h1.caption
+      Contribute
+.contribute-section
+  .container
     %h2 How to contribute
-    %p.text-block Coding is definitely not the only way you can contribute to Gauge. There are many valuable ways to contribute to the product and to help the growing Gauge community.
+    %p Coding is definitely not the only way you can contribute to Gauge. There are many valuable ways to contribute to the product and to help the growing Gauge community.
 
-    %ul.contribution-list
-      %li
-        .contribution-list-item
+    .howto
+      %ul.contribute-tiles
+          
+        %li.tile
           %h3 Test Gauge
-          .icon-cl.icon-cl-1
-          .desc
+          %figure
+            = image_tag "svg/contribution/icon_contribute_test.svg", {:title => "Test Gauge", :alt => "Test Gauge"}  
+          %p
             You can report an issue you found, or you can help us test Gauge to find new issues.
-            %a{:href => "https://github.com/getgauge/gauge-tests", :target => "_blank"} Gauge is tested with Gauge
+            %a{:href => "https://github.com/getgauge/gauge-tests", :target => "_blank"}Gauge is tested with Gauge
             so you can also add to our existing automated tests.
-
-      %li
-        .contribution-list-item
+      
+        %li.tile
           %h3 Discuss with the Community
-          .icon-cl.icon-cl-2
-          .desc
+          %figure
+            = image_tag "svg/contribution/icon_contribute_discuss.svg", {:title => "Discuss with the Community", :alt => "Discuss with the Community"}           
+          %p
             We have an active
             %a{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} forum
             where issues, features and ideas are discussed. Start a discussion, or help someone get started with Gauge.
-
-      %li
-        .contribution-list-item
+      
+        %li.tile
           %h3 Blog about Gauge
-          .icon-cl.icon-cl-3
-          .desc
+          %figure
+            = image_tag "svg/contribution/icon_contribute_blog.svg", {:title => "Blog about Gauge", :alt => "Blog about Gauge"}           
+          %p
             Contribute to our
             =link_to 'blog', '../blog/index.html'
-            -#%a{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} blog.
             Maybe you’ve used Gauge in a different way, or you’ve analyzed how a feature works. If you write about experiences like these, we’d love to add them to the Gauge blog.
 
-      %li
-        .contribution-list-item
+      
+        %li.tile
           %h3 Enhance our Examples
-          .icon-cl.icon-cl-4
-          .desc
+          %figure
+            = image_tag "svg/contribution/icon_contribute_examples.svg", {:title => "Enhance our Examples", :alt => "Enhance our Examples"}           
+          %p
             We maintain a set of
             %a{:href => "https://github.com/getgauge/gauge-examples", :target => "_blank"} examples
             that evolve as we add new features and languages. This is to help someone new to Gauge get started easily. If you’ve tried something you think would be useful to the community, please add it.
-
-      %li
-        .contribution-list-item
-          %h3
-            Improve our Documentation
-          .icon-cl.icon-cl-5
-          .desc
+      
+        %li.tile
+          %h3 Improve our Documentation
+          %figure
+            = image_tag "svg/contribution/icon_contribute_docs.svg", {:title => "Improve our Documentation", :alt => "Improve our Documentation"}           
+          %p
             If you enjoy doing a detailed analysis of how something works, whether it’s an API or a feature, please use this talent to help us improve our
             %a{:href => "https://github.com/getgauge/documentation" , :target => "_blank"} documentation.
             This will definitely help the Gauge community at large.
-
-      %li
-        .contribution-list-item
+      
+        %li.tile
           %h3 Code for Gauge
-          .icon-cl.icon-cl-6
-          .desc
+          %figure
+            = image_tag "svg/contribution/icon_contribute_code.svg", {:title => "Code for Gauge", :alt => "Code for Gauge"}           
+          %p
             Contribute code to Gauge! All repositories are hosted on GitHub.
             %a{:href => " https://github.com/getgauge/gauge", :target => "_blank"} Gauge’s core
             is written in Golang but
             %a{:href => "http://getgauge.io/documentation/user/current/plugins/list.html", :target => "_blank"} plugins
             are, and can be, written in any popular language. Pick up any pending feature or bug, big or small, then send us a pull request. Even fixing broken links is a big, big help.
 
-  %section.contribution-process
-    %h2 Code Contribution Process
-    %ul
-      %li.step1 Find an issue
-      %li.step2 Assign the issue to yourself
-      %li.step3 Fork the repository, keep it in sync with the master
-      %li.step4 Talk to us about what you want to do
-    %ul.block-rtl
-      %li.step8 We Merge your Request
-      %li.step7 Fill out the CLA Form
-      %li.step6 Submit a Pull Request
-      %li.step5 Make your changes
 
 
-  %section.contribution-steps-list
-    %h2 Contribution Process
-    %ul
-      %li.step
-        .step1.image_alignment.description Find an issue
-      %li.step
-        .step2.image_alignment.description Assign the issue to yourself
-      %li.step
-        .step3.image_alignment.description Fork the repository, keep it in sync with  master
-      %li.step
-        .step4.image_alignment.description Talk to us about what you want to do
-      %li.step
-        .step5.image_alignment.description Make your changes
-      %li.step
-        .step6.image_alignment.description Submit a Pull Request
-      %li.step
-        .step7.image_alignment.description Fill out the CLA form
-      %li.step
-        .step8.image_alignment.description We merge your request
 
-  %section.help
-    %h2 How to start contributing
-    %p.text-block
-      There are issues of varying levels across all Gauge repositories. All issues that need to be addressed are tagged as
-      %strong 'Help Needed'.
-      One easy way to get started is to pick a small bug to fix. These have been tagged as
-      %strong
-        'Easy Picks'.
-    %p.text-block
-      If your contribution is a code contribution and you do send us a pull request, you will first need to read and sign the
-      = link_to 'Contributor License Agreement.', '../cla/index.html'
 
-  %section.help
-    %h2 How to get help
-    %p.text-block
-      If you need any help getting started or get stuck along the way, you can talk to us on
-      %a{:href => "https://gitter.im/getgauge/chat", :target => "_blank"} Gitter
-      or on our
-      %a{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank" } discussion forum.
-      We are happy to help and answer any questions.
+  
+
+  .contribution-process
+    .container
+      %h3 Code Contribution Process
+      %ul.block-ltr
+        %li.step1 Find an issue
+        %li.step2 Assign the issue to yourself
+        %li.step3 Fork the repository, keep it in sync with the master
+        %li.step4 Talk to us about what you want to do
+      %ul.block-rtl
+        %li.step5 Make your changes
+        %li.step6 Submit a Pull Request
+        %li.step7 Fill out the CLA Form
+        %li.step8 We Merge your Request
+
+
+  / %section.contribution-steps-list
+  /   %h2 Contribution Process
+  /   %ul
+  /     %li.step
+  /       .step1.image_alignment.description Find an issue
+  /     %li.step
+  /       .step2.image_alignment.description Assign the issue to yourself
+  /     %li.step
+  /       .step3.image_alignment.description Fork the repository, keep it in sync with  master
+  /     %li.step
+  /       .step4.image_alignment.description Talk to us about what you want to do
+  /     %li.step
+  /       .step5.image_alignment.description Make your changes
+  /     %li.step
+  /       .step6.image_alignment.description Submit a Pull Request
+  /     %li.step
+  /       .step7.image_alignment.description Fill out the CLA form
+  /     %li.step
+  /       .step8.image_alignment.description We merge your request
+
+  .help
+    .container
+      .col-sm-6
+        %h4 How to start contributing
+        %p.text-block
+          There are issues of varying levels across all Gauge repositories. All issues that need to be addressed are tagged as
+          %strong 'Help Needed'.
+          One easy way to get started is to pick a small bug to fix. These have been tagged as
+          %strong
+            'Easy Picks'.
+        %p.text-block
+          If your contribution is a code contribution and you do send us a pull request, you will first need to read and sign the
+          = link_to 'Contributor License Agreement.', '../cla/index.html'
+
+      .col-sm-6
+        %h4 How to get help
+        %p.text-block
+          If you need any help getting started or get stuck along the way, you can talk to us on
+          %a{:href => "https://gitter.im/getgauge/chat", :target => "_blank"} Gitter
+          or on our
+          %a{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank" } discussion forum.
+          We are happy to help and answer any questions.
 

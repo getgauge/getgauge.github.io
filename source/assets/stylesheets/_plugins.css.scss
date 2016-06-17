@@ -2,6 +2,10 @@
     background-image: image-url('subpages/subpage_plugins.jpg');
 }
 
+.plugins{
+        background: #eeeeee;
+}
+
 .plugin-list {
     @include media($tablet) {
         padding: 20px 15px 20px 15px;

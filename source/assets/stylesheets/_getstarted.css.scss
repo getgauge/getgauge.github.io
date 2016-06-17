@@ -1,200 +1,95 @@
-.header_image_started{
-  background-image: image-url('subpages/subpage_get_started.jpg');
-}
-
-  .instruction{
-    @include link-style();
-  }
-  .page-content{
-    padding:50px;
-    @include outer-container();
-    @include media($tablet) {
-      padding: 20px 15px 20px 15px;
-    }
-  }
-  p{
-    font-size: 14px;
-  }
-
-.tabs{
-  font-size: 15px;
-  margin-top:20px;
-  .tabs-header{
-    margin:0px;
-    padding:0px;
-    border-bottom:1px solid $light-gray;
-    li{
-      display: inline-block;
-      margin-right:75px;
-      @include media($mobile) {
-        margin-right:22px;
-      }
-      a{
-          font-size: 20px;
-          color:#737373;
-          display: block;
-          @include media($mobile) {
-            font-size: 16px;
-          }
-          &.active{
-            border-bottom:3px solid $mustard;
-            font-weight: bold;
-            color:#444;
-        }
-        .fa{
-          margin-right:5px;
-        }
-      }
-    }
-  }
-  .tabs-content{
-    padding:25px 0px;
-  }
-}
-.page-block{
-  margin-bottom: 40px;
-  .img-container{
-    @include span-columns(12);
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    img{
-      background-repeat: no-repeat;
-    }
-  }
-  h3{
-    text-align: left;
-    padding:8px 10px 6px;
-    border-bottom: 1px solid #f1f1f1;
-    margin-top: 30px;
-  }
-  .instruction{
-    margin: 20px 20px;
-  }
-  .screenshot{
-    margin: 10px 20px 20px;
-    background: #000;
-
-    .browser-container{
-      padding: 30px 20px;
-      background: #071322;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-      margin: 0 auto;
-      max-width: 960px;
-      position: relative;
-      font-size: 18px;
-      border-radius: 0px 0px 5px 5px;
-      font-family: 'Open Sans', sans-serif;
-      box-sizing: border-box;
-      display: block;
-    }
-
-    .browser-code {
-      position: relative;
-      color: #071322;
-      padding-left: 30px;
-      width: 100%;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      font-size: 1em;
-    }
-
-    code{
-      color:#41B94F;
-      margin-bottom: 10px;
-      display: block;
-      font-family: monospace, monospace;
-      font-size: 1em;
-    }
-    pre{
-      padding-left:30px;
-      color:#fff;
-      font-family: monospace, monospace;
-      font-size: 0.8em;
-      @include media($mobile) {
-        padding: 0;
-        word-wrap: break-word;
-      }
-
-    }
+.page-block {
+  margin:50px 0;
+  @media (min-width:$screen-tablet) {
+  padding-left: 100px;
+    
   }
 }
 
-.download-section{
-  strong{
+.tab_content {
+  counter-reset: section;
+
+  h3 {
+    position: relative;
+  }
+
+  h3::before {
+    counter-increment: section;
+    position: absolute;
+    content: counter(section);
+    left: -50px;
+    font-size: 50px;
+    color: #ccc;
+    top: -4px;
+  }
+
+}
+
+.instruction {
+  margin-bottom: 20px;
+}
+
+.download-title{
+    background: #ccc;
+    display: inline-block;
+    margin-bottom: 0;
+    border-top-right-radius: 5px;
+    padding: 5px 10px;
+    border-top-left-radius: 5px;
+    font-size:12px;
+    strong{
+      font-size:14px;
+    }
+}
+.download-section {
+  border: 1px solid $border;
+  padding: 20px;
+  border-radius: 0 $border-radius $border-radius;
+  margin-bottom: 20px;
+  @include clearfix;
+.download-bit {
+    float: left;
+    width: 50%;
+}
+  .download {
+    display: inline-block;
+    font-size: 15px;
+    color: #eee;
+    margin-right: 10px;
+    height: 39px;
+    background-color: $gray-light;
     font-weight: bold;
+    background-image: url("../images/svg/get_started/icon_button_download.svg");
+    background-position: 0 -4px;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    line-height: 39px;
+    padding: 0px 20px 0px 70px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+    &:hover{
+      background-color: $gray;
+      transition: all 0.3s ease-in-out;
+      color:#fff;
+    }
   }
-  i{
-    font-style: italic;
+  .sha{
+    display:block;
+    font-size:13px;
   }
-  border: 1px solid $border-grey;
-  box-sizing: border-box;
-  margin: 20px 20px;
-    background-color: #F7F7F7;
-    @include media($tablet) {
-      padding: 5px 0;
-    }
-    .grid-4 {
-      @include span-columns(4);
-      padding: 10px;
-      position: relative;
-      margin-right: 0px;
-      @include media($iPad-portrait){
-        width: 35%;
-      }
-      &.table-title{
-        @include media($iPad-portrait){
-          width: 25%;
-        }
-        @include media($mobile) {
-          @include span-columns(12);
-          margin: 0;
-          text-align: center;
+}
 
-        }
-      }
-      @include media($tablet) {
-        margin: 0px;
-      }
-      @include media($mobile) {
-        @include span-columns(12);
-        margin: 0;
-        text-align: center;
-
-      }
-      .title{
-        @include media($tablet) {
-          margin-bottom: 0;
-          margin-top: 0;
-        }
-      }
-    }
-    .download {
-      display: inline-block;
-      font-size: 15px;
-      color: #444;
-      padding-left: 70px;
-      margin-right: 10px;
-      background: #ABABAB;
-      &:hover {
-        color: #fff;
-      }
-      font-weight: bold;
-      background-image: image-url('svg/get_started/icon_button_download.svg');
-      background-position: 0 -4px;
-      background-repeat: no-repeat;
-    }
-    .sha {
-      display: inline-block;
-      font-size: 12px;
-      @include media($tablet) {
-        margin-top: 10px;
-        font-size:10px;
-
-      }
-      @include media($mobile) {
-        margin-top: 10px;
-        font-size:10px;
-      }
-    }
+.code-box {
+    padding: 30px 20px;
+    background: #071322;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    font-size: 18px;
+    margin-bottom: 20px;
+    code {
+    color: #41B94F;
+    margin-bottom: 10px;
+    display: block;
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
 }

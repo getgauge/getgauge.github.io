@@ -1,41 +1,33 @@
 .header_image{
   background-image: image-url('subpage_cla.jpg');
 }
-.cla{
-	.short{
-	  display: none;
-	  @include media($mobile, $tablet){
-		display: inline-block;
-	  }
-	}
-	.long{
-	  display: inline-block;
-	  @include media($mobile, $tablet){
-		display: none;
-	  }
-  }
+// .cla{
+// 	.short{
+// 	  display: none;
+// 	   @media (min-width:$screen-tablet) {
+// 		display: inline-block;
+// 	  }
+// 	}
+// 	.long{
+// 	  display: inline-block;
+// 	   @media (min-width:$screen-tablet) {
+// 		display: none;
+// 	  }
+//   }
 
   .cla-content{
-	@include outer-container(100%);
+	// padding: 50px 0px;
+	
+ @media (min-width:$screen-tablet) {
 	padding: 50px 0px;
-	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+ }
 	.license{
-	  @include outer-container();
 	  max-width: 68em;
 	  margin-left: auto;
 	  margin-right: auto;
 	}
-	.cla-form-content{
-	  @include outer-container();
-	  max-width: 68em;
-	  margin-left: auto;
-	  margin-right: auto;
-	}
-	@include media($tablet) {
-	  padding: 20px 15px 20px 15px;
-	}
+
+
 	strong{
 	  font-weight: bold;}
 	h2{
@@ -53,10 +45,11 @@
   }
 
   .cla-form{
-	width: 65%;
-	height: 1270px;
-	@include media($tablet) {
-	  width: 100%;
-	}
+	width: 100%;
+	height: 1300px;
+ @media (min-width:$screen-tablet) {
+height: 1150px;
+ }
+	 
   }
-}
+

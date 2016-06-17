@@ -1,0 +1,67 @@
+a.download-icon {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px ;
+  background:$secondary-color;
+  transition: all 0.5s ease;
+
+  span {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 32px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-top: transparent;
+    margin-right: 20px;
+    top:4px;
+  }
+}
+
+.download-icon span:before,
+.download-icon span:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+a.download-icon:hover span:before,
+a.download-icon:hover span:after {
+  animation: bounce .3s infinite alternate;
+  -webkit-animation: bounce .3s infinite alternate;
+}
+
+a.download-icon span:before {
+    left: 12px;
+    top: -7px;
+    width: 3px;
+    height: 10px;
+  background: #fff;
+}
+
+a.download-icon span:after {
+  left: 5px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY( 0px);
+  }
+  to {
+    transform: translateY(-6px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-6px);
+  }
+}

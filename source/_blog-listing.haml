@@ -1,38 +1,42 @@
 
-- page_articles.each do |article|
-  %section.blog-block
-    %h2= link_to article.title, article
-    .item
-      Posted By
-      %span.author= article.data['author']
-    .item
-      = article.date.strftime('%-d %B %Y')
-    .blog-summary
-      = article.data['summary']
-      = link_to 'Read more...', article
-    .tags
-      - article.tags.sort.each do |tag|
-        = link_to tag, tag_path(tag)
-    / %span.comments-info
-    /   %i.fa.fa-comment
-    /   3 comments
+.container
+  %ul.blog-posts
+    - page_articles.each do |article|
+      %li.blog-list-item
+        .post-summary
 
-.pagination-section.clearfix
-  - if prev_page
-    %span.pagination
-      -#= link_to "Older", prev_page.url
-      %a{:href => "#{prev_page.url}"} <i class="fa fa-arrow-left"></i> Older
-  - else
-    %span.disabled
-      <i class="fa fa-arrow-left"></i>
-      Older
+          %h2= link_to article.title, article
+          %span.item
+            Posted By
+            %span.author= article.data['author']
+            |  
+            = article.date.strftime('%-d %B %Y')
+          .blog-summary
+            = article.data['summary']
+            = link_to 'Read more...', article
+          .tags
+            - article.tags.sort.each do |tag|
+              = link_to tag, tag_path(tag)
+          / %span.comments-info
+          /   %i.fa.fa-comment
+          /   3 comments
 
-  - if next_page
-    %span.pagination
-      -#= link_to "Newer", next_page.url
-      -#<i class="fa fa-arrow-right"></i>
-      %a{:href => "#{next_page.url}"} Newer <i class="fa fa-arrow-right"></i>
-  - else
-    %span.disabled
-      Newer
-      <i class="fa fa-arrow-right"></i>
+  .pagination-section.clearfix
+    - if prev_page
+      %span.pagination
+        -#= link_to "Older", prev_page.url
+        %a{:href => "#{prev_page.url}"} <i class="fa fa-arrow-left"></i> Older
+    - else
+      %span.disabled
+        <i class="fa fa-arrow-left"></i>
+        Older
+
+    - if next_page
+      %span.pagination
+        -#= link_to "Newer", next_page.url
+        -#<i class="fa fa-arrow-right"></i>
+        %a{:href => "#{next_page.url}"} Newer <i class="fa fa-arrow-right"></i>
+    - else
+      %span.disabled
+        Newer
+        <i class="fa fa-arrow-right"></i>

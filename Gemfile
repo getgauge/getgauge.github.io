@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'middleman', '~> 3.4', '>= 3.4.1'
 gem 'middleman-blog'
-gem 'middleman-disqus'
-gem 'middleman-livereload'
 gem 'nokogiri'
 gem 'rake'
 
@@ -11,3 +9,11 @@ gem 'rake'
 gem 'bourbon', '~> 4.2'
 gem 'neat'
 gem 'bitters'
+
+gem 'middleman-autoprefixer'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+
+group :development do
+  gem 'middleman-livereload'  
+end

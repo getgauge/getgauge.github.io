@@ -1,50 +1,84 @@
 // framework css
-@import "compass/reset";
-@import "bourbon";
+// @import "compass/reset";
+// @import "bourbon";
 @import "base/base";
-@import "neat";
+// @import "neat";
 // our own css
-@import "IEfix";
-@import "breakpoints";
-@import "common";
+// @import "IEfix";
+// @import "breakpoints";
+// @import "common";
 
-@import "layout";
-@import "404";
+// @import "layout";
+// @import "404";
 
-@import "home";
-@import "getstarted";
-@import "contribute";
-@import "blog";
-@import "cla";
-@import "plugins";
-@import "blog_post";
-@import "blog_listing";
-@import "blogs_by_tag";
-@import "fonts";
+
+// @import "getstarted";
+
+// @import "blog";
+// @import "cla";
+// @import "plugins";
+// @import "blog_post";
+// @import "blog_listing";
+// @import "blogs_by_tag";
+// @import "fonts";
 @import "animate";
 
-body {
-    -webkit-font-smoothing: antialiased;
-    font: normal 112.5%/1.65 "open sans", "Helvetica", "Arial", sans-serif, sans-serif;
-    color: #444;
-}
+// body {
+//     -webkit-font-smoothing: antialiased;
+//     font: normal 112.5%/1.65 "open sans", "Helvetica", "Arial", sans-serif, sans-serif;
+//     color: #444;
+// }
 
-i.fa-twitter {
-    font-size: 1.3em;
-}
+// i.fa-twitter {
+//     font-size: 1.3em;
+// }
 
-.row {
-    @include outer-container;
-}
+// .row {
+//     @include outer-container;
+// }
 
-.section-wrapper {
-    @include outer-container(100%);
-    @include clearfix;
-    padding: 3em;
-    position: relative;
-    background-color: transparent;
-}
+// .section-wrapper {
+//     @include outer-container(100%);
+//     @include clearfix;
+//     padding: 3em;
+//     position: relative;
+//     background-color: transparent;
+// }
 
-.book {
-    margin-top: 4em;
-}
+// .book {
+//     margin-top: 4em;
+// }
+
+
+@import "scss/opensans";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "scss/variables";
+@import "bootstrap_override";
+@import "scss/mixins";
+@import "scss/flexbox";
+@import "scss/swing";
+@import "scss/github-fork-ribbon";
+
+
+//components
+@import "scss/tabs";
+@import "scss/general";
+@import "scss/navigation";
+@import "scss/header";
+@import "scss/slider";
+@import "scss/footer";
+@import "scss/download-button";
+
+
+
+
+// pages
+
+@import "home";
+@import "scss/downloads";
+@import "scss/plugins";
+@import "scss/contribute";
+@import "cla";
+@import "scss/blog";
