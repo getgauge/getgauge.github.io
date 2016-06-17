@@ -39,13 +39,13 @@ helpers do
     return current_page.url.start_with? "/blog/posts"
   end
 
-	def nav_bar_link(text, url)
+	def nav_bar_link(text, url, opts={})
 		if current_page.url == '/'
-			link_to(text, url)
+			link_to(text, url, opts)
     elsif current_page.url.start_with? "/blog/posts"
-      link_to(text, '../../../../../' + url)
+      link_to(text, '../../../../../' + url, opts)
 		else
-			link_to(text, '../' + url)
+			link_to(text, '../' + url, opts)
 		end
 	end
 end

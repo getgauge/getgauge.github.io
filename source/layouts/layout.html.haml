@@ -72,23 +72,23 @@ title: Gauge | ThoughtWorks
         %nav.mainnav
           %ul.level0
             %li.dropdown
-              = nav_bar_link 'Get Started', 'get-started/index.html'
+              = nav_bar_link 'Get Started', 'get-started/index.html', :class => "link-get-started"
               %ul.level1
                 %li
-                  = nav_bar_link 'Download', 'get-started/index.html'
+                  = nav_bar_link 'Download', 'get-started/index.html', :class => "link-get-started"
                 %li
-                  = nav_bar_link 'Plugins', 'plugins/index.html'
+                  = nav_bar_link 'Plugins', 'plugins/index.html', :class => "link-plugins"
             %li.dropdown
-              = nav_bar_link 'Contribute', 'contribute/index.html'
+              = nav_bar_link 'Contribute', 'contribute/index.html', :class => "link-contribute"
               %ul.level1
                 %li
-                  = nav_bar_link 'Contribute', 'contribute/index.html'
+                  = nav_bar_link 'Contribute', 'contribute/index.html', :class => "link-contribute"
                 %li
-                  = nav_bar_link 'CLA', 'cla/index.html'
+                  = nav_bar_link 'CLA', 'cla/index.html', :class => "link-cla"
               %li
-                %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank"} Documentation
+                %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank", :class => "link-documentation"} Documentation
             %li
-              = nav_bar_link 'Blog', 'blog/index.html'                
+              = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog"
 
         %button.navbtn.menu.collapse
           %span
