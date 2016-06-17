@@ -85,8 +85,3 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit 
       Conclusion
 
     %p A concluding line or two
-
-  .comments
-    %h2 Comments
-    = disqus
-    = disqus_count

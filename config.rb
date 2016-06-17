@@ -26,10 +26,6 @@ activate :blog do |blog|
   blog.per_page = 10
 end
 
-activate :disqus do |d|
-  d.shortname = 'your-shortname'
-end
-
 helpers do
 	def is_home_page()
 		return current_page.url == '/'
