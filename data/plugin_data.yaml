@@ -1,21 +1,21 @@
 ---
   Language runners:
     Java runner:
-      repo_link: "http://getgauge.io/documentation/user/current/test_code/java/java.html"
+      repo_link: "http://getgauge.io/documentation/user/current/language_features/"
       description: "Plugin that lets you write your tests in Java."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-java/releases"
     C# runner:
-      repo_link: "http://getgauge.io/documentation/user/current/test_code/csharp/csharp.html"
+      repo_link: "http://getgauge.io/documentation/user/current/language_features/"
       description: "Plugin that lets you write your tests in C#."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-csharp/releases"
     Ruby runner:
-      repo_link: "http://getgauge.io/documentation/user/current/test_code/ruby/ruby.html"
+      repo_link: "http://getgauge.io/documentation/user/current/language_features/"
       description: "Plugin that lets you write your tests in Ruby."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -29,7 +29,7 @@
       action: "Download"
       action_link: "https://github.com/getgauge-contrib/gauge-js/releases"
     Python runner:
-      repo_link: "https://github.com/kashishm/gauge-python"
+      repo_link: "http://gauge-python.readthedocs.io/en/latest/"
       description: "Plugin that lets you write your tests in Python."
       attribution: "Kashish Munjal"
       contributor_link: "https://github.com/kashishm"
@@ -65,14 +65,14 @@
       action_link: "https://github.com/getgauge/Gauge-Eclipse/releases"
   Reports:
     HTML report:
-      repo_link: "http://getgauge.io/documentation/user/current/plugins/html_report_plugin.html"
+      repo_link: "http://getgauge.io/documentation/user/current/reporting_features/html_report_plugin.html"
       description: "Generate an HTML report for test execution."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/html-report/releases"
     XML report:
-      repo_link: "http://getgauge.io/documentation/user/current/plugins/xml_report_plugin.html"
+      repo_link: "http://getgauge.io/documentation/user/current/reporting_features/xml_report_plugin.html"
       description: "Generate an XML report for test execution."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -81,7 +81,7 @@
   Others:
     Maven:
       title: "Maven"
-      repo_link: "http://getgauge.io/documentation/user/current/dependency_management/maven-plugin.html"
+      repo_link: "http://getgauge.io/documentation/user/current/advanced_readings/dependency_management/maven-plugin.html"
       description: "To build and manage project dependencies."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -89,7 +89,7 @@
       action_link: "https://github.com/getgauge/gauge-maven-plugin/releases"
     Gradle:
       title: "Gradle"
-      repo_link: "http://getgauge.io/documentation/user/current/dependency_management/gradle-plugin.html"
+      repo_link: "http://getgauge.io/documentation/user/current/advanced_readings/dependency_management/gradle-plugin.html"
       description: "To build and manage project dependencies."
       attribution: "Manu Sunny"
       contributor_link: "https://github.com/manupsunny"
