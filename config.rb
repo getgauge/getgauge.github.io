@@ -16,6 +16,8 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :layouts_dir, 'layouts'
 
+redirect 'download/index.html', to: '../get-started/index.html'
+
 activate :blog do |blog|
   blog.prefix = "blog/posts"
   blog.tag_template = "blog/tag.html"
