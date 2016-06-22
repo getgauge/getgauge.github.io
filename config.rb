@@ -47,6 +47,12 @@ helpers do
 			link_to(text, '../' + url, opts)
 		end
 	end
+
+  def group_articles(articles)
+    g = {0 => [], 1 => [], 2 => []}
+    articles.each_with_index {|a,i| g[i%3] << a}
+    g
+  end
 end
 
 config[:file_watcher_ignore] += [ /.idea\// ]
