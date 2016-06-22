@@ -22,10 +22,11 @@ activate :blog do |blog|
   blog.prefix = "blog/posts"
   blog.tag_template = "blog/tag.html"
   blog.new_article_template = "source/blog/template.tt"
-  blog.default_extension = ".haml"
+  blog.default_extension = ".md"
   blog.paginate = true
   blog.page_link = "page{num}"
   blog.per_page = 6
+  blog.layout = "blog_layout"
 end
 
 helpers do
