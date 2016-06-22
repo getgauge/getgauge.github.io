@@ -25,7 +25,7 @@ activate :blog do |blog|
   blog.default_extension = ".haml"
   blog.paginate = true
   blog.page_link = "p{num}"
-  blog.per_page = 10
+  blog.per_page = 6
 end
 
 helpers do
