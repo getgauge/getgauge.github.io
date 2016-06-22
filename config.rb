@@ -24,7 +24,7 @@ activate :blog do |blog|
   blog.new_article_template = "source/blog/template.tt"
   blog.default_extension = ".haml"
   blog.paginate = true
-  blog.page_link = "p{num}"
+  blog.page_link = "page{num}"
   blog.per_page = 6
 end
 

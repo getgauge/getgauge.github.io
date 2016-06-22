@@ -7,20 +7,20 @@
         %a{:href => "#{article.url}"}
           %figure.post-summary-image
             %img{:src => "https://www.go.cd/assets/images/blog/are-you-ready-for-continuous-delivery/woodline.jpeg", :alt => article.title}
-        %h2.post-title
-          = link_to article.title, article
-        %span.post-date
-          Posted By
-          = article.data['author']
-          |
-          = article.date.strftime('%-d %B %Y')
+        .blog-details
+          %span.author
+            = article.data['author']
+          %span.post-date
+            = article.date.strftime('%-d %B %Y')
+          %h2.post-title
+            = link_to article.title, article
 
-        %p.blog-summary
-          = article.data['summary']
-        = link_to 'Read more...', article
-        .tags
-          - article.tags.sort.each do |tag|
-            = link_to tag, tag_path(tag)
+          %p.excerpt
+            = article.data['summary']
+          = link_to 'Read more...', article
+          .tags
+            - article.tags.sort.each do |tag|
+              = link_to tag, tag_path(tag)
   %ul.blog-posts
     - page_articles.each do |article|
       %li.blog-list-item
@@ -28,23 +28,23 @@
           %a{:href => "#{article.url}"}
             %figure.post-summary-image 
               %img{:src => "https://www.go.cd/assets/images/blog/are-you-ready-for-continuous-delivery/woodline.jpeg", :alt => article.title}
-          %h2.post-title 
-            = link_to article.title, article
-          %span.post-date
-            Posted By
-            = article.data['author']
-            |  
-            = article.date.strftime('%-d %B %Y')
-          
-          %p.blog-summary
-            = article.data['summary']
-          = link_to 'Read more...', article
-          .tags
-            - article.tags.sort.each do |tag|
-              = link_to tag, tag_path(tag)
-          / %span.comments-info
-          /   %i.fa.fa-comment
-          /   3 comments
+          .blog-details              
+            %span.author
+              = article.data['author']
+            %span.post-date
+              = article.date.strftime('%-d %B %Y')
+            %h2.post-title 
+              = link_to article.title, article
+            
+            %p.excerpt
+              = article.data['summary']
+            = link_to 'Read more...', article
+            .tags
+              - article.tags.sort.each do |tag|
+                = link_to tag, tag_path(tag)
+            / %span.comments-info
+            /   %i.fa.fa-comment
+            /   3 comments
 
   .pagination-section.clearfix
     - if prev_page

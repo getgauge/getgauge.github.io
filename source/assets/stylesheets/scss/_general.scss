@@ -6,6 +6,7 @@ body {
 	line-height: 22px;
 	position: relative;
 	margin: 66px 0 0 0;
+	background:$body-bg;
 
 	@media (min-width:$screen-tablet) {
 		font-size: 16px;
