@@ -22,27 +22,8 @@
     margin: 20px;
     width: 100%;
     background: #fff;
-    height:300px;
+    // height:300px;
     overflow:hidden;
-
-    .item {
-      color:$gray-light;
-      font-size:13px;
-    }
-
-    &:hover {
-      a.download-icon {
-        background: $primary-color;
-        transition: all 0.5s ease;
-      }
-
-      span:before,
-      span:after {
-        animation: bounce .3s infinite alternate;
-        -webkit-animation: bounce .3s infinite alternate;
-      }
-
-    }
 
     @media (min-width:$screen-tablet) {
       width: 48%;
@@ -151,16 +132,7 @@
 
 }
 
-.blog-details {
-  background: $gray-lighter;
-  border-top: 5px solid #fff;
-  position: relative;
-  padding: 10px 20px 20px;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  top: 0;
-  box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75);
-}
+
 
 .post-title {
   font-weight: 400;
@@ -423,7 +395,7 @@
 .post-summary {
   border-bottom: 1px solid $border;
   overflow: hidden;
-      padding: 0 20px;
+      // padding: 0 20px;
 
   @media (min-width:$screen-tablet) {
     border: 1px solid $border;

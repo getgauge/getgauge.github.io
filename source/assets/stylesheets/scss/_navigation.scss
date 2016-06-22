@@ -320,14 +320,13 @@ ul.level1 {
 
 //current link styles
 
-.why-gocd .link_whygocd,
-.contribute .toplink_contribute,
-.events .toplink_contribute,
-.plugins .toplink_contribute,
-.blog .link_blog,
-.help .toplink_help,
-.resources .toplink_help,
-.download .link_download {
+.get-started .link-get-started,
+.plugins .link-get-started,
+.contribute .toplink-contribute,
+.plugins .toplink-contribute,
+.cla .toplink-contribute,
+.blog .link-blog
+{
   @media screen and (max-width:$screen-xs-max) {
     color: $primary-color !important;
   }
@@ -358,22 +357,20 @@ ul.level1 {
 }
 
 .contribute .toplink_contribute,
-.events .toplink_contribute,
-.plugins .toplink_contribute,
-.help .toplink_help,
-.resources .toplink_help {
+.plugins .toplink-contribute
+{
   @media screen and (max-width:$screen-xs-max) {
     color: #333 !important;
   }
 
 }
 
-.subscribe .link_subscribe,
-.contribute .link_contribute,
-.help .getting-started,
-.events .link_events,
+.get-started .link-download,
+.plugins .link-plugins,
+.contribute .link-contribute,
+.cla .link-cla,
 .plugins .link_plugins,
-.resources .link_resources {
+{
   @media screen and (max-width:$screen-xs-max) {
     color: $primary-color !important;
   }

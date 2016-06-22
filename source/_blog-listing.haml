@@ -5,17 +5,19 @@
       %li.blog-list-item
         .post-summary
           %a{:href => "#{article.url}"}
-            %figure
+            %figure.post-summary-image 
               %img{:src => "https://www.go.cd/assets/images/blog/are-you-ready-for-continuous-delivery/woodline.jpeg", :alt => article.title}
-          %h2= link_to article.title, article
-          %span.item
+          %h2.post-title 
+            = link_to article.title, article
+          %span.post-date
             Posted By
-            %span.author= article.data['author']
+            = article.data['author']
             |  
             = article.date.strftime('%-d %B %Y')
-          .blog-summary
+          
+          %p.blog-summary
             = article.data['summary']
-            = link_to 'Read more...', article
+          = link_to 'Read more...', article
           .tags
             - article.tags.sort.each do |tag|
               = link_to tag, tag_path(tag)
