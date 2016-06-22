@@ -1,15 +1,31 @@
 .hero-banner {
   color: $light-gray;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: auto;
-  background-image: image-url('gauge_hero_image.jpg');
+  background-image: image-url('gauge-banner-phone.jpg');
+      background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: #000;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  // height: 1910px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width:$screen-tablet) {
+    // height: 1500px;
+    background-image: image-url('gauge-banner-tablet.jpg');
+    background-size: cover;
+  }
+
+  @media (min-width:$screen-desktop) {
+  background-image: image-url('gauge-banner-tablet.jpg');
+    // height: 1560px;
+  }
 
   @media (min-width:$screen-lg-desktop) {
+  background-image: image-url('gauge-banner-desktop.jpg');
     background-size: cover;
+    // height: 1250px;
   }
 
   .captions {
@@ -95,6 +111,7 @@
   }
 
 }
+
 
 .features {
   padding: 50px 0px 70px;

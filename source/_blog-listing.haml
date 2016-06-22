@@ -17,7 +17,7 @@
 
           %p.excerpt
             = article.data['summary']
-          = link_to 'Read more...', article
+          = link_to 'Read more...', article , class: 'readmore'
           .tags
             - article.tags.sort.each do |tag|
               = link_to tag, tag_path(tag)
@@ -38,7 +38,7 @@
             
             %p.excerpt
               = article.data['summary']
-            = link_to 'Read more...', article
+            = link_to 'Read more...', article , class: 'readmore'
             .tags
               - article.tags.sort.each do |tag|
                 = link_to tag, tag_path(tag)

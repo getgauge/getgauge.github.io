@@ -22,8 +22,8 @@
     margin: 20px;
     width: 100%;
     background: #fff;
-    // height:300px;
-    overflow:hidden;
+    // height: 300px;
+    overflow: hidden;
 
     @media (min-width:$screen-tablet) {
       width: 48%;
@@ -58,10 +58,8 @@
 
     h2 a {
       // font-size: 22px;
-      color:#333;
+      color: #333;
     }
-
-    
 
     &:hover {
       -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
@@ -70,12 +68,9 @@
       transition: all 0.5s ease;
     }
 
-
   }
 
 }
-
-
 
 .blog-list {
   padding: 0;
@@ -85,16 +80,16 @@
   background: url(/assets/images/rss-icon.png) no-repeat 0 0;
   color: #fff;
   height: 32px;
-  display:block;
+  display: block;
   line-height: 32px;
   font-size: 16px;
   padding-left: 40px;
   margin-top: 10px;
 
   @media (min-width:$screen-tablet) {
-  margin-top: 0;
-  bottom: 10px;
-  position: absolute;
+    margin-top: 0;
+    bottom: 10px;
+    position: absolute;
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
@@ -129,13 +124,12 @@
     }
 
   }
-      h2 a {
-      color:#333;
-    }
+
+  h2 a {
+    color: #333;
+  }
 
 }
-
-
 
 .post-title {
   font-weight: 400;
@@ -251,7 +245,6 @@
     }
 
   }
-
 
 }
 
@@ -399,7 +392,7 @@
 .post-summary {
   // border-bottom: 1px solid $border;
   overflow: hidden;
-      // padding: 0 20px;
+  // padding: 0 20px;
 
   @media (min-width:$screen-tablet) {
     border: 1px solid $border;
@@ -417,7 +410,7 @@
 
   }
 
-.blog-details {
+  .blog-details {
     background: #fff;
     border-top: 5px solid #fff;
     position: relative;
@@ -426,11 +419,18 @@
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     top: 0;
-    box-shadow: 0 -5px 5px -5px rgba(0,0,0,0.75);
-}
+    box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75);
+  }
+
   .post-date {
-display: inline-block;
-}
+    display: inline-block;
+  }
+
+  a.readmore {
+    color: #333;
+    font-size: 13px;
+    text-decoration: underline;
+  }
 
 }
 
@@ -491,6 +491,16 @@ display: inline-block;
 
 }
 
-.blog_index .go, .blog-post .go {
+.blog_index .go,
+.blog-post .go {
   text-transform: none;
+}
+
+.tags a {
+  background: #f5f5f5;
+  color: #333;
+  padding: 0px 7px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 12px;
 }
