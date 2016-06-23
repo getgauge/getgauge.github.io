@@ -1,15 +1,15 @@
 = wrap_layout :layout do
-  .blogpost
-    .metadata
-      .blog-title
-      = current_page.data.title
-      .item
-      Posted By
-      %span.author= current_page.data['author']
-      .item
-      = current_page.data['date']
-      .tags
-      - current_page.tags.sort.each do |tag|
-        = link_to tag, tag_path(tag)
-  .blog-content
-    = yield
+  .container
+    .blog-post
+      %header.metadata.blog-post-header
+        %h1
+          = current_page.data.title
+        Posted By
+        %span.author= current_page.data['author']
+        %span.post-date 
+          = current_page.data['date']
+        .tags
+          - current_page.tags.sort.each do |tag|
+            = link_to tag, tag_path(tag)
+    .blog-content
+      = yield

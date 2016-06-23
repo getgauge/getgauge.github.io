@@ -8,7 +8,6 @@ published: false
 summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
 ---
 
-# Multiple language support in Gauge
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut. Aenean porttitor, est ut fringilla auctor, odio tellus mattis turpis, eu bibendum massa tortor eget metus. Aenean euismod et justo nec hendrerit. Cras aliquet, nulla vitae semper cursus, ex massa tristique orci, et accumsan lorem orci id arcu. Nunc tristique rutrum lectus id ultrices. Nulla id varius nulla.
 

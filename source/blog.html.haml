@@ -7,6 +7,6 @@ credit_link: https://www.flickr.com/photos/maximeraphael/14267582860
 
 .inner-banner.header_image_blog
   .container
-    .page-label Blog
+    %h1.caption Blog
 
-  = partial('blog-listing.haml', :locals =>{ prev_page: prev_page, next_page: next_page, page_number: page_number, num_pages: num_pages, page_articles: page_articles})
+= partial('blog-listing.haml', :locals =>{ prev_page: prev_page, next_page: next_page, page_number: page_number, num_pages: num_pages, page_articles: page_articles})

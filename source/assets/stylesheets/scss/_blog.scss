@@ -310,10 +310,11 @@
   margin: 10px 0;
 
   @media (min-width:$screen-desktop) {
-    margin: 30px 0 0;
+    margin: 30px 0 ;
+    padding:30px 0;
   }
 
-  h2 {
+  h1 {
     text-transform: uppercase;
   }
 
@@ -328,7 +329,7 @@
 .post-date {
   font-size: 12px;
   color: $gray-light;
-  display: block;
+  display: inline-block;
 }
 
 .post-author {
@@ -426,6 +427,7 @@
     display: inline-block;
   }
 
+
   a.readmore {
     color: #333;
     font-size: 13px;
@@ -433,7 +435,19 @@
   }
 
 }
-
+  .author{
+        position: relative;
+    display: inline-block;
+    margin-right: 15px;
+  &:after {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #ccc;
+    height: 13px;
+    top: 7px;
+    right: -10px;
+}
+}
 .blog-list-item {
   margin-bottom: 15px;
 

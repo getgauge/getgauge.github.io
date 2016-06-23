@@ -96,7 +96,7 @@ img {
 // Inner pages  general styles
 
 .inner-banner {
-	background: url('/assets/images/inner-banner-bg.jpg') repeat-x center center;
+	background: $inner-banner-bg;
 	padding: 20px 0;
 	margin-bottom: 30px;
 
