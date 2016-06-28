@@ -5,7 +5,7 @@ tags: Markdown, BDD, testing
 author: Deepthi
 summary: Why Gauge uses Markdown, the benefits of using it. What can be the limitations of using Markdown. Why is it useful for test specification.
 published: false
-summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
+summary_image: https://images.unsplash.com/photo-1465152251391-e94453ee3f5a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=2f3699fc4dbc682fbecdc4fa4d5f6cad
 ---
 
 # Why Markdown

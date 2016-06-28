@@ -1,0 +1,320 @@
+.hero-banner {
+  color: $light-gray;
+  background-image: image-url('gauge-banner-phone.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  // height: 1910px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width:$screen-tablet) {
+    // height: 1500px;
+    background-image: image-url('gauge-banner-tablet.jpg');
+    background-size: cover;
+  }
+
+  @media (min-width:$screen-desktop) {
+    background-image: image-url('gauge-banner-tablet.jpg');
+    // height: 1560px;
+  }
+
+  @media (min-width:$screen-lg-desktop) {
+    background-image: image-url('gauge-banner-desktop.jpg');
+    background-size: cover;
+    // height: 1250px;
+  }
+
+  .captions {
+    h1 {
+      padding: 0px 0px 0px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 400;
+      text-shadow: 3px 4px 4px rgba(0, 0, 0, .2);
+
+      span {
+        font-weight: 400;
+        color: $primary-color;
+      }
+
+      @media (min-width:$screen-tablet) {
+        font-size: 43px;
+      }
+
+      @media (min-width:$screen-desktop) {
+        font-size: 55px;
+      }
+
+      @media (min-width:$screen-lg-desktop) {
+        font-size: 64px;
+      }
+
+    }
+
+    .subquote {
+      display: block;
+      font-size: 16px;
+      width: 80%;
+      margin: 25px auto 50px;
+      text-align: center;
+
+      @media (min-width:$screen-tablet) {
+        font-size: 28px;
+      }
+
+      @media (min-width:$screen-desktop) {
+        font-size: 40px;
+      }
+
+    }
+
+  }
+
+  .actions {
+    text-align: center;
+
+    a {
+      margin: 0 5px;
+
+      @media (min-width:$screen-tablet) {
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+
+    }
+
+  }
+
+  .hero-banner-content {
+    margin: 80px 0px 0px;
+
+    @media (min-width:$screen-tablet) {
+      margin: 200px 0px 0px;
+    }
+
+    .question {
+      color: #fff;
+      text-align: center;
+    }
+
+  }
+
+  h1,
+  h3 {
+    color: white;
+    font-weight: 400;
+  }
+
+}
+
+.features {
+  padding: 50px 0px 70px;
+  background: rgba(0, 0, 0, .4);
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width:$screen-tablet) {
+    margin-top: 150px;
+  }
+
+  @media (min-width:$screen-desktop) {
+    margin-top: 200px;
+  }
+
+  &.qas {
+    .qas.feature-list {
+      display: block;
+    }
+
+  }
+
+  &.developers {
+    .developers.feature-list {
+      display: block;
+    }
+
+  }
+
+}
+
+.feature-list {
+  margin: 70px 0 0;
+  display: none;
+}
+
+
+
+.gauge-feature {
+@media (min-width:$screen-tablet) {
+  height: 380px;
+}
+
+figure {
+  text-align: center;
+  width: 100%;
+  height: 130px;
+  line-height: 130px;
+}
+
+.feature-desc {
+  font-size: 16px;
+  margin-bottom: 60px;
+
+  @media (min-width:$screen-tablet) {
+    margin-bottom: 0;
+  }
+
+}
+
+}
+
+.vision-wrapper {
+// @include outer-container(100%);
+}
+
+.visiongauge {
+text-align: center;
+padding: 30px 0px 30px;
+background: $primary-color;
+
+strong {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.why {
+  padding-left: 70px;
+  position: relative;
+  text-align: left;
+  margin-bottom: 30px;
+  min-height: 50px;
+
+  @media (min-width:$screen-desktop) and (max-width:$screen-md-max) {
+    min-height: 160px;
+  }
+
+}
+
+figure {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  // float: left;
+  // margin-right: 20px;
+}
+
+}
+
+//testimonials
+
+.testimonials {
+padding: 30px 0;
+
+.client_name {
+  display: block;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.client {
+    display: block;
+    color: #ccc;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+}
+
+// feature list
+
+.features-filter-selector-wrap {
+position: relative;
+display: inline-block;
+overflow: visible;
+
+&.active {
+  .features-filter-values-wrap {
+    display: block;
+  }
+
+}
+
+.features-selector {
+  color: $primary-color;
+
+  span {
+    border-bottom: 1px solid $primary-color;
+  }
+
+  i {
+    top: -5px;
+    position: relative;
+    font-size: 20px;
+    right: -6px;
+  }
+
+}
+
+}
+
+.features-filter-values-wrap {
+position: absolute;
+display: none;
+right: 0px;
+top: 50px;
+background: rgba(255, 255, 255, 0.9);
+color: #fff;
+font-size: 14px;
+z-index: 1;
+border-radius: 2px;
+padding: 0px 0px 10px;
+
+&:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid $light-gray;
+  position: absolute;
+  right: 12px;
+  top: -12px;
+}
+
+.features-filter-value {
+  position: relative;
+  display: block;
+  line-height: 22px;
+  padding: 10px 50px;
+  font-size: 18px;
+  color: #000;
+  text-transform: capitalize;
+
+  &:hover {
+    cursor: pointer;
+    background: lighten($primary-color, 20%);
+    color: #000;
+  }
+
+}
+
+}
+
+.section-title {
+font-size: 25px;
+text-align: center;
+margin-bottom: 50px;
+
+@media (min-width:$screen-tablet) {
+  font-size: 30px;
+}
+
+}

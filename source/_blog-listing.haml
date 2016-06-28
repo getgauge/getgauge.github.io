@@ -17,9 +17,9 @@
           %p.excerpt
             = article.data['summary']
           = link_to 'Read more...', article , class: 'readmore'
-          .tags
-            - article.tags.sort.each do |tag|
-              = link_to tag, tag_path(tag)
+        .tags
+          - article.tags.sort.each do |tag|
+            = link_to tag, tag_path(tag)
   .row
     - [0,1,2].each do |i|
       .col-sm-6.col-md-4
@@ -39,14 +39,14 @@
                 %p.excerpt
                   = article.data['summary']
                 = link_to 'Read more...', article , class: 'readmore'
-                .tags
-                  - article.tags.sort.each do |tag|
-                    = link_to tag, tag_path(tag)
+              .tags
+                - article.tags.sort.each do |tag|
+                  = link_to tag, tag_path(tag)
                 / %span.comments-info
                 /   %i.fa.fa-comment
                 /   3 comments
 
-  .pagination-section.clearfix
+  .pagination-section
     - if prev_page
       %span.pagination
         %a{:href => "#{prev_page.url}"} <i class="fa fa-arrow-left"></i> Newer

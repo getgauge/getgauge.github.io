@@ -101,7 +101,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
               %p.instruction You're all set. Start testing!
           %h3.tab-accordion_heading{ :rel => "tab2"} Windows
           #tab2.tab_content{ :rel => "tab2"}
-            .instruction
+            %P.instruction
               There are two ways to install Gauge on Windows. Below we show the process using the .exe. The other option is to use
               %a{:href => "https://chocolatey.org"}Chocolatey.
               Read more
@@ -131,7 +131,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
 
             .page-block
               %h3 Install core plugins
-              .instruction  Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.
+              %P.instruction  Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.
               %P.instruction  The Windows installer allows you to select the language plugin(s) as part of the the installation process. Check the box(es) you want to install. You can select more than one language plugin to install.
               .img-container
                 %img{:alt => "Select language", :src => asset_path(:images, 'install-lang-runner.jpg')}
@@ -233,5 +233,5 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                     Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
                     Total time taken: 15.015s
               %p.instruction You're all set. Start testing!
-          = javascript_include_tag  "jquery.client"
-          = javascript_include_tag  "platform"
+
+          = javascript_include_tag  "tabs"

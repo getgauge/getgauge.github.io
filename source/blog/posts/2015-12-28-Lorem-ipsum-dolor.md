@@ -1,13 +1,12 @@
 ---
-title: multiple language support in Gauge
-date: 28 October 2015
+title: Lorem ipsum dolor
+date: 28 December 2015
 tags: test automation
 author: Deepthi
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut. 
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut.
 published: false
-summary_image: https://images.unsplash.com/photo-1462733441571-9312d0b53818?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=deb060f2ba359f2691166b4278ecdc5b
+summary_image: https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=6d1a6d1c5a7eb63d0c411b1d019f0b30
 ---
-
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut. Aenean porttitor, est ut fringilla auctor, odio tellus mattis turpis, eu bibendum massa tortor eget metus. Aenean euismod et justo nec hendrerit. Cras aliquet, nulla vitae semper cursus, ex massa tristique orci, et accumsan lorem orci id arcu. Nunc tristique rutrum lectus id ultrices. Nulla id varius nulla.
 

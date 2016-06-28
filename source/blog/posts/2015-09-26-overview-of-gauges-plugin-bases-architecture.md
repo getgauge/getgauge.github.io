@@ -5,7 +5,7 @@ tags: Plugins
 author: Apoorva M
 summary: Gauge has a plugin based architecture. This post gives a high level overview of what are Gauge plugins and how Gauge core communicates with them.
 published: false
-summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
+summary_image: https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=6d1a6d1c5a7eb63d0c411b1d019f0b30
 ---
 
 # Overview of Gauge's plugin based architecture

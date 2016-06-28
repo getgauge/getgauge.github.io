@@ -10,7 +10,7 @@ footer {
 }
 
 .join-community {
-	background: #333;
+	background: #555555;
 	padding: 30px 0;
 	position: relative;
 
@@ -40,13 +40,13 @@ footer {
 		cursor: pointer;
 
 		@media (min-width:$screen-tablet) {
-			border-right: 1px solid #212121;
+			border-right: 1px solid #484848;
 			padding: 0 50px;
 		}
 
 		&:first-child {
 			@media (min-width:$screen-tablet) {
-				border-left: 1px solid #212121;
+				border-left: 1px solid #484848;
 			}
 
 		}
@@ -118,24 +118,48 @@ footer {
 	background: url('/assets/images/svg/go.cd_jc-twitter.svg');
 }
 
-
-.powered-by{
-	padding:30px 0 0px;
+.powered-by {
+	padding: 20px 0;
 	text-align: center;
-	a{
-	margin-bottom: 20px;
-	display:inline-block;
+	color:$gray-light;
+
+	a {
+		margin-bottom: 20px;
+		display: inline-block;
+
 		@media (min-width:$screen-tablet) {
 		}
+
 	}
+
 }
-.credits{
-text-align:center;
-img{
-	height:30px;
+
+.credits {
+	text-align: center;
+
+	img {
+		height: 30px;
+	}
+
+	a {
+		font-size: 12px;
+		color: #333;
+	}
+
 }
-a{
-	font-size:12px;
-	color:#333;
-}
+
+.powered-by {
+	background-color: #333333;
+	clear: both;
+	text-align: center;
+	padding-top: 20px;
+
+	.section-wrapper {
+		padding-bottom: 5px;
+	}
+
+	img {
+		max-width: 250px;
+	}
+
 }

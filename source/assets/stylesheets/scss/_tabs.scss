@@ -1,5 +1,5 @@
 //customise here
-$border-color: #ccc;
+$border-color: $border;
 $tab-hover-bg: #f5f5f5;
 $accorion-header-bg: #fff;
 $accorion-header-bg-active: #e5e5e5;
@@ -251,7 +251,8 @@ ul.tabs {
   .tab-accordion_heading {
     background-color: $green;
     color: #fff;
-    border-color: #fff;
+    border-color: $green;
+    border-bottom-color: #fff;
   }
 
   .tab_content {

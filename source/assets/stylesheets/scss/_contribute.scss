@@ -68,7 +68,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5bf0e', endColorstr='#d4a300', GradientType=1);
   background-size: cover;
 
-  margin: 0;
+  margin:-30px 0 30px 0;
   padding: 40px 0;
   @include clearfix;
 
@@ -81,7 +81,6 @@
   h3 {
     margin: 0px 0 30px;
     font-size: 24px;
-    color: #fff;
     text-align: center;
 
     @media (min-width:$screen-tablet) {
@@ -328,4 +327,11 @@
 
 .howto{
   margin:30px 0;
+}
+
+
+.help{
+  .col-sm-6{
+    margin-bottom: 30px;
+  }
 }

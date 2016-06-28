@@ -5,8 +5,7 @@ tags: Parallel execution, test automation
 author: Deepthi
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut. 
 published: false
-summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
----
+summary_image: https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=600fdca8f6340569864d4f94f5f9dfc1
 
 # Parallel Execution with Gauge
 

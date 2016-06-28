@@ -1,22 +1,5 @@
 $(document).ready(function ($) {
-//   $(window).stellar({
-//     responsive: true,
-//     horizontalScrolling: false
-//   });
 
-//   $('a.scroll-animate').click(function(){
-//       $('html, body').animate({
-//           scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-//       }, 500);
-//       return false;
-//   });
-//   new WOW().init();
-//   var menu = $('.header-nav');
-//   var menuToggle = $('.navigation-menu-button');
-
-//   $(menuToggle).on('click', function(e) {
-//     menu.slideToggle();
-//   });
 
   $(".features-filter-selector-wrap").on('click','.features-selector',function(e){
     e.preventDefault();
@@ -33,7 +16,6 @@ $(document).ready(function ($) {
     .removeClass("active")
     .find('.features-selected-value').text(textvalue);
   });
-  $( ".tabs" ).tabs();
 
   $(".sha-link").on("click",function(){
     $(this).parent().find(".sha-tooltip").toggle();

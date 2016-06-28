@@ -240,3 +240,26 @@ $btn-dark-border: #333;
 .btn-primary {
 	color:#000;
 }
+
+@mixin link-style(){
+  a{
+    color: black;
+    font-weight: 400;
+    border-bottom: 1px #000 solid;
+    padding:0 5px;
+    &:visited{
+      font-weight: 400;
+      color: $visited-link;
+      border-bottom: 1px $visited-link solid;
+    }
+    &:hover{
+      color: black;
+      background-color: $primary-color;
+      border-bottom: 1px $primary-color solid;
+    }
+  }
+}
+
+p {
+	 @include link-style()
+}
