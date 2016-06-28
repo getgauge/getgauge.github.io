@@ -310,7 +310,7 @@
   margin: 10px 0;
 
   @media (min-width:$screen-desktop) {
-    margin: 30px 0 ;
+    margin:0 0  30px 0 ;
     padding:30px 0;
   }
 
@@ -525,5 +525,20 @@
   &:hover{
     background:$primary-color;
   }
+}
+}
+.blog_posts{
+figure.post-summary-image {
+    height: 200px;
+    overflow: hidden;
+    @media (min-width:$screen-tablet) {
+        height: 400px;
+      }
+    @media (min-width:$screen-lg-desktop) {
+        height: 600px;
+      }      
+    img {
+    width: 100%;
+}
 }
 }

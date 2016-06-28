@@ -1,5 +1,9 @@
 = wrap_layout :layout do
+
+  %figure.post-summary-image
+    %img{:src => current_page.data.summary_image, :alt => current_page.title}
   .container
+
     .blog-post
       %header.metadata.blog-post-header
         %h1

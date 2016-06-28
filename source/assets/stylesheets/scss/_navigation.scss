@@ -327,7 +327,7 @@ ul.level1 {
 .blog .link-blog
 {
   @media screen and (max-width:$screen-xs-max) {
-    color: $primary-color !important;
+    // color: $primary-color !important;
   }
 
   @media (min-width:$screen-tablet) {
@@ -353,6 +353,11 @@ ul.level1 {
     transform: translateY(0px) !important;
   }
 
+}
+.blog .link-blog{
+   @media screen and (max-width:$screen-xs-max) {
+     color: $primary-color !important;
+  } 
 }
 
 .contribute .toplink_contribute,
