@@ -14,18 +14,18 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
       .container
         %h2.sub-title Choose your OS & download
         %ul.tabs.os
-          %li.active{:rel => "tab1"} 
+          %li.active{:rel => "tab1"}
             %figure.os-logo
               = image_tag "download/osx.png", {:title => "Osx", :alt => "Osx"}
               %figcaption.desc OSX
-          %li{:rel => "tab2"} 
+          %li{:rel => "tab2"}
             %figure.os-logo
               = image_tag "download/windows.png", {:title => "windows", :alt => "windows"}
               %figcaption.desc windows
-          %li{:rel => "tab3"} 
+          %li{:rel => "tab3"}
             %figure.os-logo
               = image_tag "download/linux.png", {:title => "linux", :alt => "linux"}
-              %figcaption.desc Linux                            
+              %figcaption.desc Linux
     .os-tab-content
       .container
         .tab_container
@@ -42,8 +42,8 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 %a{:href => "http://brew.sh/", :target => "_blank"} brew.
               %span.download-title
                 %strong pkg
-                ( latest stable version: 
-                %os= data.info.version 
+                ( latest stable version:
+                %os= data.info.version
                 )
               .download-section
                 .download-bit
@@ -77,11 +77,11 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 %code ~ $ gauge -v
                 %pre
                   :preserve
-                    Gauge version: 0.2.0
+                    Gauge version: 0.5.0
 
                     Plugins
                     -------
-                    java(0.3.1)
+                    java(0.4.1)
             .page-block
               %h3 See Gauge working
               %p.instruction
@@ -95,9 +95,10 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 %code ~ $ gauge specs
                 %pre
                   :preserve
-                    Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
-                    Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
-                    Total time taken: 15.015s
+                    Specifications:	1 executed	1 passed	0 failed	0 skipped
+                    Scenarios:    	2 executed	2 passed	0 failed	0 skipped
+
+                    Total time taken: 80ms
               %p.instruction You're all set. Start testing!
           %h3.tab-accordion_heading{ :rel => "tab2"} Windows
           #tab2.tab_content{ :rel => "tab2"}
@@ -144,11 +145,11 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 %code > gauge -v
                 %pre
                   :preserve
-                    Gauge version: 0.2.1
+                    Gauge version: 0.5.0
 
                     Plugins
                     -------
-                    csharp(0.7.0)
+                    csharp(0.7.2)
             .page-block
               %h3 See Gauge working
               %P.instruction
@@ -162,9 +163,10 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 %code > gauge specs
                 %pre
                   :preserve
-                    Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
-                    Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
-                    Total time taken: 15.015s
+                    Specifications:	1 executed	1 passed	0 failed	0 skipped
+                    Scenarios:    	2 executed	2 passed	0 failed	0 skipped
+
+                    Total time taken: 80ms
               %P.instruction You're all set. Start testing!
           %h3.tab-accordion_heading{ :rel => "tab3"} Linux
           #tab3.tab_content{ :rel => "tab3"}
@@ -211,11 +213,11 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 %code ~ $ gauge -v
                 %pre
                   :preserve
-                    Gauge version: 0.2.0
+                    Gauge version: 0.5.0
 
                     Plugins
                     -------
-                    java(0.3.1)
+                    java(0.4.1)
             .page-block
               %h3 See Gauge working
               .instruction
@@ -229,9 +231,10 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 %code ~ $ gauge specs
                 %pre
                   :preserve
-                    Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
-                    Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
-                    Total time taken: 15.015s
+                    Specifications:	1 executed	1 passed	0 failed	0 skipped
+                    Scenarios:    	2 executed	2 passed	0 failed	0 skipped
+
+                    Total time taken: 80ms
               %p.instruction You're all set. Start testing!
 
           = javascript_include_tag  "tabs"
