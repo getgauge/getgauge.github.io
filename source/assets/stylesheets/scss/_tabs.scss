@@ -184,12 +184,13 @@ ul.tabs {
   border-bottom: 0;
   display: block;
   text-align: center;
-  width:450px;
+  width: 450px;
+
   li {
     background: #fff;
     color: #333;
     height: 100px;
-        width: calc(450px/3);
+    width: calc(450px/3);
     float: left;
     display: inline-block;
     transition: all .2s ease-in-out;
@@ -267,7 +268,6 @@ ul.tabs {
 
 .all-releases {
   .tab_container {
-
     @media (min-width:$screen-tablet) {
       min-height: 517px;
       width: 540px;

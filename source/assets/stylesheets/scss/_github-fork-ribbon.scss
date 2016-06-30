@@ -4,7 +4,7 @@
 */
 
 $ribbon-color: $primary-color;
-$ribbon-txt-color :#000;
+$ribbon-txt-color: #000;
 
 .github-fork-ribbon {
   width: 12.1em;
@@ -50,7 +50,7 @@ $ribbon-txt-color :#000;
 .github-fork-ribbon:before {
   content: "";  /* Add a bit of padding to give some substance outside the "stitching" */
   padding: 1.4em 0;  /* Set the base colour */
-  background-color: $ribbon-color ;  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+  background-color: $ribbon-color;  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));

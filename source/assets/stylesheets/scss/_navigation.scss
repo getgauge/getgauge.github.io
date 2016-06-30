@@ -59,8 +59,9 @@ $menu-color: #fff;
     margin: 0;
     padding: 0;
   }
-  .fa-github{
-    font-size:30px;
+
+  .fa-github {
+    font-size: 30px;
   }
 
 }
@@ -324,8 +325,7 @@ ul.level1 {
 .plugins .link-get-started,
 .contribute .toplink-contribute,
 .cla .toplink-contribute,
-.blog .link-blog
-{
+.blog .link-blog {
   @media screen and (max-width:$screen-xs-max) {
     // color: $primary-color !important;
   }
@@ -354,15 +354,16 @@ ul.level1 {
   }
 
 }
-.blog .link-blog{
-   @media screen and (max-width:$screen-xs-max) {
-     color: $primary-color !important;
-  } 
+
+.blog .link-blog {
+  @media screen and (max-width:$screen-xs-max) {
+    color: $primary-color !important;
+  }
+
 }
 
 .contribute .toplink_contribute,
-.plugins .toplink-contribute
-{
+.plugins .toplink-contribute {
   @media screen and (max-width:$screen-xs-max) {
     color: #333 !important;
   }
@@ -373,8 +374,7 @@ ul.level1 {
 .plugins .link-plugins,
 .contribute .link-contribute,
 .cla .link-cla,
-.plugins .link_plugins,
-{
+.plugins .link_plugins {
   @media screen and (max-width:$screen-xs-max) {
     color: $primary-color !important;
   }

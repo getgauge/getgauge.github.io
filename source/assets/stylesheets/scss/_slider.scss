@@ -14,7 +14,6 @@
 
 }
 
-
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -22,21 +21,22 @@
   width: 100%;
   left: 0;
   top: 0;
-  
   text-align: center;
+
+  @media (min-width:$screen-tablet) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .fa {
+    font-size: 20px;
+    color: #ccc;
+
     @media (min-width:$screen-tablet) {
-  font-size: 22px;
-  line-height: 32px;
-   
+      font-size: 30px;
+    }
+
   }
-.fa{
-  font-size:20px;
-  color:#ccc;
-      @media (min-width:$screen-tablet) {
-  font-size: 30px;
-    
-  }
-}
 
 }
 

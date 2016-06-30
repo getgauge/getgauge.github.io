@@ -3,8 +3,8 @@ a.download-icon {
   font-weight: bold;
   text-decoration: none;
   display: block;
-  padding: 10px 20px ;
-  background:$secondary-color;
+  padding: 10px 20px;
+  background: $secondary-color;
   transition: all 0.5s ease;
 
   span {
@@ -16,8 +16,9 @@ a.download-icon {
     border: 3px solid #fff;
     border-top: transparent;
     margin-right: 20px;
-    top:4px;
+    top: 4px;
   }
+
 }
 
 .download-icon span:before,
@@ -34,10 +35,10 @@ a.download-icon:hover span:after {
 }
 
 a.download-icon span:before {
-    left: 12px;
-    top: -7px;
-    width: 3px;
-    height: 10px;
+  left: 12px;
+  top: -7px;
+  width: 3px;
+  height: 10px;
   background: #fff;
 }
 
@@ -50,18 +51,22 @@ a.download-icon span:after {
 
 @keyframes bounce {
   from {
-    transform: translateY( 0px);
+    transform: translateY(0px);
   }
+
   to {
     transform: translateY(-6px);
   }
+
 }
 
 @-webkit-keyframes bounce {
   from {
     -webkit-transform: translateY(0);
   }
+
   to {
     -webkit-transform: translateY(-6px);
   }
+
 }
