@@ -3,9 +3,12 @@ $(document).ready(function ($) {
 
   $(".features-filter-selector-wrap").on('click','.features-selector',function(e){
     e.preventDefault();
-    $(this).closest(".features-filter-selector-wrap")
-    .toggleClass( "active" );
+    event.stopPropagation();
+    $(this).closest(".features-filter-selector-wrap").addClass('active');
+    // $(".features-filter-selector-wrap").toggleClass('active');
+    console.log('foo');
     $('body').toggleClass("opened");
+
   });
 
   $(".features-filter-selector-wrap").on('click','.features-filter-value',function(e){
@@ -22,11 +25,13 @@ $(document).ready(function ($) {
   });
 
   $('body').on('click', function () {
+   
     if($(this).hasClass('opened')){
       if($('.features-filter-selector-wrap').hasClass('active')){
         $('.features-filter-selector-wrap').removeClass('active');
         $('body').removeClass('opened')
       }
     }
+
   })
 });
