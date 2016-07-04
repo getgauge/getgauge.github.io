@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+  <head>
+    <script type='text/javascript'>
+      var images = new Array()
+      function preload() {
+      for (i = 0; i < preload.arguments.length; i++) {
+      images[i] = new Image()
+      images[i].src = preload.arguments[i]
+      }
+      }
+    </script>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>Gauge | ThoughtWorks</title>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link>
+      <link type="image/ico" rel="shortcut icon" href="../../../../../assets/images/favicons/favicon.ico" />
+      <link type="image/ico" rel="apple-touch-icon-precomposed" href="../../../../../assets/images/favicons/apple-touch-icon.png" />
+      <link href="../../../../../assets/stylesheets/application.css" rel="stylesheet" />
+      <script src="../../../../../assets/javascripts/frameworks/jquery-1.11.2.js"></script>
+      <script src="../../../../../assets/javascripts/application.js" async="true"></script>
+    </link>
+    <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
+    <link href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js'></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body class='blog blog_posts blog_posts_2015 blog_posts_2015_09 blog_posts_2015_09_25 blog_posts_2015_09_25_parallel-execution-with-gauge'>
+    <!-- Google Tag Manager -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKRKLF"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KKRKLF');
+    </script>
+    <!-- Google Tag Manager end -->
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-54838477-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- Google Analytics end -->
+    <header class='top'>
+      <div class='container'>
+        <a class='logo' href='../../../../../index.html'>
+          <img alt='Gauge logo' height='38' id='thumb' src='../../../../../assets/images/Gauge_logo.svg' width='150'>
+        </a>
+        <span class='beta'>
+          Beta
+        </span>
+        <nav class='mainnav'>
+          <ul class='level0'>
+            <li class='dropdown'>
+              <a class="link-get-started" href="../../../../../get-started/index.html">Get Started</a>
+              <ul class='level1'>
+                <li>
+                  <a class="link-download" href="../../../../../get-started/index.html">Download</a>
+                </li>
+                <li>
+                  <a class="link-plugins" href="../../../../../plugins/index.html">Plugins</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown'>
+              <a class="toplink-contribute" href="../../../../../contribute/index.html">Contribute</a>
+              <ul class='level1'>
+                <li>
+                  <a class="link-contribute" href="../../../../../contribute/index.html">Contribute</a>
+                </li>
+                <li>
+                  <a class="link-cla" href="../../../../../cla/index.html">CLA</a>
+                </li>
+              </ul>
+              <li>
+                <a class='link-documentation' href='http://getgauge.io/documentation/user/current/' target='_blank'>Documentation</a>
+              </li>
+            </li>
+          </ul>
+          <!-- %li -->
+          <!-- = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog" -->
+        </nav>
+        <button class='navbtn menu collapse'>
+          <span></span>
+        </button>
+        <a alt='Gauge on Github' class='github-fork-ribbon' href='https://github.com/getgauge/gauge' target='_blank' title='Fork me on GitHub'></a>
+      </div>
+    </header>
+    <div id='content'>
+      <figure class='post-summary-image'>
+        <img>
+      </figure>
+      <div class='container'>
+        <div class='blog-post'>
+          <header class='metadata blog-post-header'>
+            <h1>
+              
+            </h1>
+            Posted By
+            <span class='author'></span>
+            <span class='post-date'>
+              
+            </span>
+            <div class='tags'>
+            </div>
+          </header>
+        </div>
+        <div class='blog-content'>
+          <hr />
+          <p>title: Parallel Execution with Gauge
+          date: 25 September 2015
+          tags: Parallel execution, test automation
+          author: Deepthi
+          summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut. 
+          published: false
+          summary_image: https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;s=600fdca8f6340569864d4f94f5f9dfc1</p>
+          
+          <h1 id="parallel-execution-with-gauge">Parallel Execution with Gauge</h1>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut. Aenean porttitor, est ut fringilla auctor, odio tellus mattis turpis, eu bibendum massa tortor eget metus. Aenean euismod et justo nec hendrerit. Cras aliquet, nulla vitae semper cursus, ex massa tristique orci, et accumsan lorem orci id arcu. Nunc tristique rutrum lectus id ultrices. Nulla id varius nulla.</p>
+          
+          <h2 id="a-new-section">A New Section</h2>
+          
+          <p>Mauris ante lectus, interdum in commodo vitae, consectetur eu risus. Nunc nec viverra mi. In eleifend tristique porttitor. Ut vitae commodo velit. Integer eget ligula aliquet, fermentum erat tincidunt, euismod arcu. Praesent pharetra nibh turpis, at vehicula mauris dictum sed. Sed vulputate, enim sit amet ornare consequat, quam magna gravida eros, vitae ornare massa velit eget urna. Maecenas dignissim lacinia dolor non cursus. Quisque porta mi ac lectus cursus, in pellentesque nulla aliquam. Integer sollicitudin nisl tincidunt neque ullamcorper tincidunt eu et diam. Praesent tempus risus et erat ullamcorper varius. Cras vitae magna in ante imperdiet ultrices et finibus quam. Etiam ac ligula quis arcu laoreet dapibus sit amet vel odio. Aliquam erat volutpat. Vestibulum vestibulum nunc nulla, ut egestas turpis mattis non. Donec et consectetur massa, ut aliquam ipsum.</p>
+          
+          <h2 id="section-with-lists-and-image">Section with lists and image</h2>
+          
+          <p>This is what we think…</p>
+          
+          <ul>
+            <li>Item 2</li>
+            <li>Item 1</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+          </ul>
+          
+          <p>And this is an image</p>
+          
+          <p><img alt="Select language" src="../../../../../assets/images/%=asset_path(:images,'install-lang-runner.jpg')%" /></p>
+          
+          <h2 id="section-with-code-blocks">Section with code blocks</h2>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          
+          <p>You can see the code block below…</p>
+          
+          <p>```
+          import com.thoughtworks.gauge.Step;
+          import com.thoughtworks.gauge.Table;</p>
+          
+          <p>import java.lang.Object;
+          import java.lang.String;
+          import java.util.List;</p>
+          
+          <p>public class StepImplementation {
+              @Step("Say &lt;greeting&gt; to &lt;product name&gt;")
+              public void helloWorld(String greeting, String name) {
+                  System.out.println(greeting + ", " + name);
+              }</p>
+          
+          <pre><code>@Step("Step that takes a table &amp;lt;table&amp;gt;")
+          public void stepWithTable(Table table) {
+              for (String columns : table.getColumnNames()) {
+                  System.out.println(columns);
+              }
+          
+              for (List&lt;String&gt; rows : table.getRows()) {
+                  System.out.println(rows);
+              }
+          }
+          
+          @Step("A context step which gets executed before every scenario")
+          public void contextStep() {
+          } } ```
+          </code></pre>
+          
+          <h2 id="conclusion">Conclusion</h2>
+          
+          <p>A concluding line or two</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class='join-community'>
+        <div class='container'>
+          <h3>Join our community</h3>
+          <ul>
+            <li>
+              <a class='join-group' href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>
+                <i class='icon join-us'></i>
+                Join Us
+              </a>
+            </li>
+            <li>
+              <a class='contribute' href='https://gitter.im/getgauge/chat' target='_blank'>
+                <i class='icon develop-with-us'></i>
+                Talk to Us
+              </a>
+            </li>
+            <li>
+              <a class='contact' href='https://github.com/getgauge' target='_blank'>
+                <i class='icon watch-us'></i>
+                Watch Us
+              </a>
+            </li>
+            <li>
+              <a class='followus' href='https://twitter.com/getgauge' target='_blank'>
+                <i class='icon follow-us'></i>
+                Follow Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class='powered-by'>
+        <div class='container'>
+          <a href='http://www.thoughtworks.com/products'>
+            <img alt='Thoughtworks logo' height='44' src='../../../../../assets/images/thoughtworks_logo.svg'>
+          </a>
+          <div class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
