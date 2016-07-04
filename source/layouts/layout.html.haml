@@ -40,7 +40,7 @@ title: Gauge | ThoughtWorks
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KKRKLF');
-    
+
     <!-- Google Tag Manager end -->
 
     <!-- Google Analytics -->
@@ -58,13 +58,13 @@ title: Gauge | ThoughtWorks
     %header.top
       .container
         - if is_home_page
-          %a.logo{:href => "index.html"} 
+          %a.logo{:href => "index.html"}
             %img#thumb{:width => "150", :height=>"38", :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         - elsif is_blog_article
-          %a.logo{:href => "../../../../../index.html"} 
+          %a.logo{:href => "../../../../../index.html"}
             %img#thumb{:width => "150", :height=>"38", :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         - else
-          %a.logo{:href => "../index.html"} 
+          %a.logo{:href => "../index.html"}
             %img#thumb{:width => "150", :height=>"38",  :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         %span.beta
           Beta
@@ -86,8 +86,8 @@ title: Gauge | ThoughtWorks
                   = nav_bar_link 'CLA', 'cla/index.html', :class => "link-cla"
               %li
                 %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank", :class => "link-documentation"} Documentation
-            %li
-              = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog"
+          /  %li
+          /    = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog"
 
         %button.navbtn.menu.collapse
           %span
@@ -101,19 +101,19 @@ title: Gauge | ThoughtWorks
           %h3 Join our community
           %ul
             %li
-              %a.join-group{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"} 
+              %a.join-group{:href => "https://groups.google.com/forum/#!forum/getgauge", :target => "_blank"}
                 %i.icon.join-us
                 Join Us
             %li
-              %a.contribute{:href => "https://gitter.im/getgauge/chat", :target => "_blank"} 
+              %a.contribute{:href => "https://gitter.im/getgauge/chat", :target => "_blank"}
                 %i.icon.develop-with-us
                 Talk to Us
             %li
-              %a.contact{:href => "https://github.com/getgauge", :target => "_blank"} 
+              %a.contact{:href => "https://github.com/getgauge", :target => "_blank"}
                 %i.icon.watch-us
                 Watch Us
             %li
-              %a.followus{:href => "https://twitter.com/getgauge", :target => "_blank"} 
+              %a.followus{:href => "https://twitter.com/getgauge", :target => "_blank"}
                 %i.icon.follow-us
                 Follow Us
 
