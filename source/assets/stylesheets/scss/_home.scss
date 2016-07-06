@@ -146,6 +146,11 @@
 .feature-list {
   margin: 70px 0 0;
   display: none;
+  .container-fluid{
+  @media (min-width:1600px) {
+    width: 80%;
+  }  
+  }
 }
 
 .gauge-feature {
