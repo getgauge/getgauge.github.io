@@ -11,7 +11,7 @@ task :deploy => [:build] do
   cp_r ".nojekyll", "build/.nojekyll"
   cp_r "build/404/index.html", "build/404.html"
   sh("rm -rf build/404")
-  system "git checkout master"
+  system "git checkout -f master"
   system "cp -r build/ ."
   system "rm -rf build"
   system "git add ."
