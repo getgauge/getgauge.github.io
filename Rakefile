@@ -19,9 +19,9 @@ task :deploy => [:build] do
   puts "\n## Commiting: Site updated at #{Time.now.utc}"
   message = "Site updated at #{Time.now.utc}"
   system "git commit -m \"#{message}\""
-  # puts "\n## Pushing generated website"
-  # system "git push origin master"
-  # puts "\n## Website deployed successfully"
+  puts "\n## Pushing generated website"
+  system "git push origin master"
+  puts "\n## Website deployed successfully"
 end
 
 desc 'find ununsed images'
