@@ -65,7 +65,7 @@ Every language runner needs to have a `<runner_id>.json` file, which contains th
 `<runner_name>.json` file serves three primary functions:
 
 - Plugin name, description, version are specified in this file.
-- The properties “init” and “run” in this file are used to specify initialize and run commands for different platforms. For example: while initializing a Gauge project, Gauge will execute the command present in `init` section of the json file.
+- The properties `init` and `run` in this file are used to specify initialize and run commands for different platforms. For example: while initializing a Gauge project, Gauge will execute the command present in `init` section of the json file.
 - Minimum and maximum Gauge version support are specified here..
 
 ### README.md
@@ -115,6 +115,7 @@ Put the following content in the `start.py`. This will copy the skeleton files t
 
 ```python
 #! /usr/bin/env python
+
 import sys
 import shutil
 import os
@@ -123,6 +124,7 @@ PROJECT_ROOT_ENV = 'GAUGE_PROJECT_ROOT'
 STEP_IMPL_DIR = "step_impl"
 project_root = os.environ[PROJECT_ROOT_ENV]
 impl_dir = os.path.join(project_root, STEP_IMPL_DIR)
+
 def main():
     if sys.argv[1] == "--init":
         try:
@@ -169,7 +171,7 @@ Defining:
 ```python
 def step(step_text):
     def _step(func):
-     # Storing function in registry, so that it can be called when Gauge requests
+        # Storing function in registry, so that it can be called when Gauge requests
         registry.add_step_definition(step_text, func)
         return func
     return _step
@@ -182,7 +184,6 @@ Usage:
 def assert_no_of_vowels_in(word, number):
     assert str(number) == str(number_of_vowels(word))
 ```
-
 
 See [registry.py](https://github.com/kashishm/gauge-python/blob/master/getgauge/registry.py) for more information on storing the implementation and step text.
 
@@ -206,27 +207,28 @@ PROJECT_ROOT_ENV = 'GAUGE_PROJECT_ROOT'
 STEP_IMPL_DIR = "step_impl"
 project_root = os.environ[PROJECT_ROOT_ENV]
 impl_dir = os.path.join(project_root, STEP_IMPL_DIR)
+
 def _current_time(): return int(round(time.time() * 1000))
 
-processors = {Message.ExecutionStarting: set_response_values,
-              Message.ExecutionEnding: set_response_values,
-              Message.SpecExecutionStarting: set_response_values,
-              Message.SpecExecutionEnding: set_response_values,
-              Message.ScenarioExecutionStarting: set_response_values,
-              Message.ScenarioExecutionEnding: set_response_values,
-              Message.StepExecutionStarting: set_response_values,
-              Message.StepExecutionEnding: set_response_values,
-              Message.ExecuteStep: _execute_step,
-              Message.StepValidateRequest: _validate_step,
-              Message.StepNamesRequest: set_response_values,
-              Message.ScenarioDataStoreInit: set_response_values,
-              Message.SpecDataStoreInit: set_response_values,
-              Message.SuiteDataStoreInit: set_response_values,
-              Message.StepNameRequest: set_response_values,
-              Message.RefactorRequest: set_response_values,
-              Message.KillProcessRequest: _kill_runner,
-              }
-
+processors = {
+    Message.ExecutionStarting: set_response_values,
+    Message.ExecutionEnding: set_response_values,
+    Message.SpecExecutionStarting: set_response_values,
+    Message.SpecExecutionEnding: set_response_values,
+    Message.ScenarioExecutionStarting: set_response_values,
+    Message.ScenarioExecutionEnding: set_response_values,
+    Message.StepExecutionStarting: set_response_values,
+    Message.StepExecutionEnding: set_response_values,
+    Message.ExecuteStep: _execute_step,
+    Message.StepValidateRequest: _validate_step,
+    Message.StepNamesRequest: set_response_values,
+    Message.ScenarioDataStoreInit: set_response_values,
+    Message.SpecDataStoreInit: set_response_values,
+    Message.SuiteDataStoreInit: set_response_values,
+    Message.StepNameRequest: set_response_values,
+    Message.RefactorRequest: set_response_values,
+    Message.KillProcessRequest: _kill_runner,
+}
 
 def dispatch_messages(socket):
     sys.path.append(impl_dir)
@@ -254,7 +256,7 @@ After validating steps, Gauge will send request to execute a step, request will 
 def _execute_step(req, res, socket):
     params = []
     for param in req.executeStepRequest.parameters:
- params.append(param.value)
+        params.append(param.value)
     set_response_values(req, res)
     execute_method(params, registry.get_info(req.executeStepRequest.parsedStepText).impl, res)
 
@@ -270,7 +272,6 @@ def execute_method(params, func, response):
     except Exception as e:
         _add_exception(e, response)
     response.executionStatusResponse.executionResult.executionTime = _current_time() - start
-
 
 def _add_exception(e, response):
     response.executionStatusResponse.executionResult.failed = True
