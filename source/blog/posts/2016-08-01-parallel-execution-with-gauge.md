@@ -14,7 +14,7 @@ In this post, we take a look at how Gauge does parallel execution.
 
 First, let’s see how to run Gauge specs in parallel. With Gauge, parallel execution is as simple as running the command
 
-```
+```sh
 gauge -p specs
 ```
 
@@ -22,7 +22,7 @@ This distributes the tests into multiple streams and all the streams are execute
 
 However, more often than not, you may want to control the number of parallel streams. Maybe you only want to use 2 cores and not all 4. Gauge allows you to do this with the -n flag
 
-```
+```sh
 gauge -p -n=2 specs
 ```
 
@@ -30,7 +30,7 @@ This command will distribute the tests in n streams, which in this case is 2.
 
 You can even filter your specs with tags and run them in parallel.
 
-```
+```sh
 gauge -p -n=2 --tags="filtered" specs
 ```
 
@@ -47,7 +47,7 @@ Gauge supports two different strategies for distributing the specs across parall
 
 To mention which strategy Gauge should use, you can run the command
 
-```
+```sh
 gauge -p -n=2 --strategy="eager" specs
 ```
 
@@ -59,7 +59,7 @@ With the above definitions, it might seem apparent that Lazy execution strategy 
 
 Lazy strategy’s distribution is dynamic, and two subsequent parallel runs may have different distribution of specs, depending on the execution time of every spec. In some use-cases it makes sense to control the grouping of specs. In such cases, Eager strategy allows one to do something like
 
-```
+```sh
 gauge -p -n=2 -g=2 --strategy="eager" specs
 ```
 

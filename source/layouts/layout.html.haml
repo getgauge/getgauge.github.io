@@ -24,12 +24,9 @@ title: Gauge | ThoughtWorks
     = favicon_tag 'favicons/favicon.ico',:type => 'image/ico' ,:rel => 'shortcut icon'
     = favicon_tag 'favicons/apple-touch-icon.png',:type => 'image/ico' ,:rel => 'apple-touch-icon-precomposed'
     = stylesheet_link_tag "application"
+    = stylesheet_link_tag "syntax"
     = javascript_include_tag  "frameworks/jquery-1.11.2"
     = javascript_include_tag  "application", :async => true
-
-    %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"}
-    :javascript
-      hljs.initHighlightingOnLoad();
 
   %body{:class => page_classes}
     <!-- Google Tag Manager -->

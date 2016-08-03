@@ -16,6 +16,11 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :layouts_dir, 'layouts'
 
+set :markdown, input: "GFM", :tables => true
+set :haml, { ugly: true }
+
+activate :syntax
+
 redirect 'download/index.html', to: '../get-started/index.html'
 
 activate :blog do |blog|

@@ -27,7 +27,7 @@ Language Runner is a plugin which lets you write test code implementations in a 
 
 This post will help you write a basic Python language runner which supports initialization and step execution. Let's call it `mypython`, so that our tutorial code does not conflict with [Gauge's Python language runner](https://github.com/kashishm/gauge-python). By the end of this article, will be able to use it through Gauge to create a new project and run specifications, like this:
 
-```
+```sh
 gauge --init mypython
 gauge specs
 ```
@@ -47,7 +47,7 @@ For writing a language runner, you will need:
 
 Create a directory in called `mypython` and create these files and sub-directories in it:
 
-```
+```text
 mypython
   | -- mypython.json
   | -- README.md
@@ -80,7 +80,7 @@ Each language runner should come with a sample implementation file that can be u
 
 Put the following content in `step_impl/step_impl.py`:
 
-```
+```python
 from getgauge.python import step
 
 vowels = ["a", "e", "i", "o", "u"]
@@ -105,7 +105,7 @@ def assert_words_vowel_count(table):
 
 ## Initializing project
 
-```
+```sh
 gauge --init mypython
 ```
 
@@ -113,7 +113,7 @@ When you run this command, Gauge will ask the language runner to copy implementa
 
 Put the following content in the `start.py`. This will copy the skeleton files to the user's project directory which is present in an environment variable `GAUGE_PROJECT_ROOT`.
 
-```
+```python
 #! /usr/bin/env python
 import sys
 import shutil
@@ -145,20 +145,20 @@ Communication between Gauge and Language Runner happens via TCP using Protocol B
 
 To communicate with Gauge, there are different request/response messages are configured in the [`gauge-proto`](https://github.com/getgauge/gauge-proto) repository. Let's add the `gauge-proto` repository as a git submodule to our language runner.
 
-```
+```sh
 git submodule add https://github.com/getgauge/gauge-proto.git
 ```
 
 Create `getgauge/messages` directory. In this directory we will put the Python code which is generated from the proto files present in the submodule.
 
-```
+```sh
 protoc --python_out=../getgauge/messages/ spec.proto
 protoc --python_out=../getgauge/messages/ messages.proto
 ```
 
 ## Execution
 
-```
+```sh
 gauge specs/
 ```
 
@@ -166,7 +166,7 @@ Let's define a step function which will be used as decorator in the step impleme
 
 Defining:
 
-```
+```python
 def step(step_text):
     def _step(func):
      # Storing function in registry, so that it can be called when Gauge requests
@@ -177,7 +177,7 @@ def step(step_text):
 
 Usage:
 
-```
+```python
 @step("The word <word> has <number> vowels.")
 def assert_no_of_vowels_in(word, number):
     assert str(number) == str(number_of_vowels(word))
@@ -192,7 +192,7 @@ Now, the language runner needs to send response to the requests send by Gauge. T
 
 Create `getgauge/processor.py` and put the following code in it. This will wait for requests and sends respective responses till kill request is received:
 
-```
+```python
 import os
 import sys
 import traceback
@@ -240,7 +240,7 @@ def dispatch_messages(socket):
 
 Before executing steps, Gauge sends a request to check if the implementation for the given steps are present or not. `_validate_step` will check in the registry, it will set is_valid to True if present otherwise False.
 
-```
+```python
 def _validate_step(req, res, socket):
     res.messageType = Message.StepValidateResponse
     res.stepValidateResponse.isValid = registry.is_step_implemented(req.stepValidateRequest.stepText)
@@ -250,7 +250,7 @@ def _validate_step(req, res, socket):
 
 After validating steps, Gauge will send request to execute a step, request will contains parameters and implementation function is called with those parameters. It will send the response back with the result(failed, error, stack trace, type, execution time).
 
-```
+```python
 def _execute_step(req, res, socket):
     params = []
     for param in req.executeStepRequest.parameters:
@@ -281,7 +281,7 @@ def _add_exception(e, response):
 
 After execution is complete Gauge will send a kill request to language runner and runner needs to close the socket and end the program.
 
-```
+```python
 def _kill_runner(req, res, socket):
     socket.close()
     sys.exit()

@@ -14,6 +14,9 @@ gem 'middleman-autoprefixer'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 
+# markdown & syntax
+gem "middleman-syntax"
+
 group :development do
-  gem 'middleman-livereload'  
+  gem 'middleman-livereload'
 end
