@@ -17,14 +17,16 @@ title: Gauge | ThoughtWorks
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %title= current_resource.data.title || "Gauge | ThoughtWorks"
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-    %link
-      = favicon_tag 'favicons/favicon.ico',:type => 'image/ico' ,:rel => 'shortcut icon'
-      = favicon_tag 'favicons/apple-touch-icon.png',:type => 'image/ico' ,:rel => 'apple-touch-icon-precomposed'
-      = stylesheet_link_tag "application"
-      = javascript_include_tag  "frameworks/jquery-1.11.2"
-      = javascript_include_tag  "application", :async => true
+
     %link{:href => "http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css", :rel => "stylesheet"}
     %link{:href => "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css", :rel => "stylesheet"}
+
+    = favicon_tag 'favicons/favicon.ico',:type => 'image/ico' ,:rel => 'shortcut icon'
+    = favicon_tag 'favicons/apple-touch-icon.png',:type => 'image/ico' ,:rel => 'apple-touch-icon-precomposed'
+    = stylesheet_link_tag "application"
+    = javascript_include_tag  "frameworks/jquery-1.11.2"
+    = javascript_include_tag  "application", :async => true
+
     %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"}
     :javascript
       hljs.initHighlightingOnLoad();
@@ -84,10 +86,10 @@ title: Gauge | ThoughtWorks
                   = nav_bar_link 'Contribute', 'contribute/index.html', :class => "link-contribute"
                 %li
                   = nav_bar_link 'CLA', 'cla/index.html', :class => "link-cla"
-              %li
-                %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank", :class => "link-documentation"} Documentation
-          /  %li
-          /    = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog"
+                %li
+                  %a{:href => "http://getgauge.io/documentation/user/current/", :target => "_blank", :class => "link-documentation"} Documentation
+            -# %li
+              = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog"
 
         %button.navbtn.menu.collapse
           %span
