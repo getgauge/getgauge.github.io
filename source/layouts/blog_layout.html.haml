@@ -1,5 +1,8 @@
 = wrap_layout :layout do
 
+  - if current_page.data.draft?
+    %div.draft-post Draft
+
   %figure.post-summary-image
     %img{:src => current_page.data.summary_image, :alt => current_page.title}
   .container
@@ -10,7 +13,7 @@
           = current_page.data.title
         Posted By
         %span.author= current_page.data['author']
-        %span.post-date 
+        %span.post-date
           = current_page.data['date']
         .tags
           - current_page.tags.sort.each do |tag|

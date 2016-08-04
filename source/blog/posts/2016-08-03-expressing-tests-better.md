@@ -4,7 +4,8 @@ date: 03 August 2016
 tags: test automation, best practices
 author: Soumya
 summary: A discussion on how to write expressive tests using Gauge
-published: false
+published: true
+draft: true
 summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
 ---
 

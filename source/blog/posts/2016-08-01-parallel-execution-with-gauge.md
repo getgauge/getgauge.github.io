@@ -4,7 +4,8 @@ date: 01 August 2016
 tags: Parallel execution, test automation
 author: Mahendra
 summary: Gauge has first class parallel execution support out of the box. In this post, we take a look at how Gauge does parallel execution.
-published: false
+published: true
+draft: true
 summary_image: https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=600fdca8f6340569864d4f94f5f9dfc1
 ---
 

@@ -61,6 +61,12 @@ helpers do
     articles.each_with_index {|a,i| g[i%3] << a}
     g
   end
+
+  def filter_drafts(articles)
+    articles.select do | item |
+      !item.data.draft?
+    end
+  end
 end
 
 config[:file_watcher_ignore] += [ /.idea\// ]
