@@ -24,14 +24,17 @@ activate :syntax
 redirect 'download/index.html', to: '../get-started/index.html'
 
 activate :blog do |blog|
-  blog.prefix = "blog/posts"
+  blog.prefix = "blog"
+  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   blog.tag_template = "blog/tag.html"
   blog.new_article_template = "source/blog/template.tt"
   blog.default_extension = ".md"
   blog.paginate = true
-  blog.page_link = "page{num}"
+  blog.page_link = "page-{num}"
   blog.per_page = 6
   blog.layout = "blog_layout"
+  blog.permalink = "{title}.html"
+  blog.taglink = "tags/{tag}.html"
 end
 
 helpers do
@@ -67,7 +70,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :relative_assets
-  
+
   #abort "ENV['ASSET_HOST'] not specified, bailing!" if ENV['ASSET_HOST'].blank?
   #set :asset_host, "//" + ENV['ASSET_HOST']
 end
