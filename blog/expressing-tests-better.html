@@ -12,7 +12,7 @@ images[i].src = preload.arguments[i]
 </script>
 <meta charset='utf-8'>
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-<title>Gauge | ThoughtWorks</title>
+<title>Expressing Tests Better</title>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
 <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
 <link href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
@@ -23,7 +23,7 @@ images[i].src = preload.arguments[i]
 <script src="../assets/javascripts/frameworks/jquery-1.11.2.js"></script>
 <script src="../assets/javascripts/application.js" async="true"></script>
 </head>
-<body class='blog blog_index'>
+<body class='blog blog_expressing-tests-better'>
 <!-- Google Tag Manager -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKRKLF"
@@ -91,14 +91,79 @@ Beta
 </div>
 </header>
 <div id='content'>
-<div class='inner-banner'>
+<div class='draft-post'>Draft</div>
+<figure class='post-summary-image'>
+<img alt='Expressing Tests Better' src='https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;s=1bed2a6743851633b655ae774c15ac07'>
+</figure>
 <div class='container'>
-<h1 class='caption'>Blog</h1>
+<div class='blog-post'>
+<header class='metadata blog-post-header'>
+<h1>
+Expressing Tests Better
+</h1>
+Posted By
+<span class='author'>Soumya</span>
+<span class='post-date'>
+03 August 2016
+</span>
+<div class='tags'>
+<a href="tags/best-practices.html">best practices</a>
+<a href="tags/test-automation.html">test automation</a>
 </div>
+</header>
 </div>
-<div class='page-content'>
-<div class='container'>
-<h3>We're almost there! Our blog will be published soon. Watch this space.</h3>
+<div class='blog-content'>
+<p>Automated tests should aim to increase the effectiveness, be a source of truth and be the best line of defence against change.</p>
+
+<p>More people have begun to appreciate this, and tools such as Cucumber, Concordion, Twist etc, have gained traction over the last few years. Each tool has offered more when it comes to writing test cases fairly agnostic of the language used to mechanise the tests, and so is it with Gauge.</p>
+
+<p>Gauge chooses to be different in allowing a user to describe the test case in a free-flowing manner and the emphasis is on <strong>"readability"</strong> and <strong>"expression of intent"</strong>.</p>
+
+<p>Test cases written in a free-flowing manner helps the user to write prerequisites, assumptions, steps, verifications, postconditions and more catering to the growing need of the test cases being readable. Consider the following example:</p>
+
+<pre class="highlight markdown"><code><span class="gu">Payment process
+===============
+</span><span class="p">*</span> Add "Toy Story 1" to the shopping cart
+<span class="p">*</span> Add "Toy Story 2" to the shopping cart
+<span class="p">*</span> Verify there are "2" items in the shopping cart<span class="sb">
+
+
+</span><span class="gh">Proceed to checkout
+-------------------
+</span><span class="p">*</span> Verify total is displayed correctly<span class="sb">
+
+
+</span><span class="gh">Make payment
+-------------
+</span><span class="p">*</span> Verify payment occurred<span class="sb">
+
+
+</span><span class="gs">____________________________________</span><span class="ge">__</span>_
+<span class="p">*</span> User logs out
+<span class="p">*</span> Verify that home page is displayed
+</code></pre>
+<p>Unlike stating a series of assumptions up front and verifying multiple expectations at the end, the whole test takes the manner of a journey, and in such scenarios, tests written in this fashion read cleanly.</p>
+
+<p>Gauge supports wording of the same functionality in different ways to enable the user express the intent better. Consider the following example.</p>
+
+<pre class="highlight markdown"><code><span class="gu">User flows
+===========
+</span><span class="gh">Create a new account
+--------------------
+</span><span class="p">*</span> User creates a new account
+<span class="p">*</span> A "welcome" email is sent to the user
+
+<span class="gh">Shop with saved items
+---------------------
+</span><span class="p">*</span> User logs in
+<span class="p">*</span> User reopens the cart and proceeds to payment
+<span class="p">*</span> Payment is successfully received
+<span class="p">*</span> An email confirming the "order" is sent
+</code></pre>
+<p>In this case, the underlying functionality of the last step (sending an email) in both the scenarios is the same. But the way it is worded is different helps conveying the intent and the functionality more clearly. When it comes to expressing intent, the adage that a picture is worth a thousand words can't be beaten. Gauge also has the ability to insert other media to make a point.</p>
+
+<p>The ability to write tests in a free flowing manner in order to express broad ranging journeys has become vital, and Gauge helps in addressing this aspect of test automation.</p>
+
 </div>
 </div>
 
@@ -143,13 +208,6 @@ Follow Us
 <div class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</div>
 </div>
 </div>
-<div class='credits'>
-<!-- %img{:alt => "cc-by", :src => asset_path(:images, 'cc-by.png')} -->
-<a href='https://www.flickr.com/photos/maximeraphael/14267582860' targer='_blank'>
-Photo Credit - Maxime Raphael
-</a>
-</div>
-<script src="../assets/javascripts/browser_support.js"></script>
 </footer>
 </body>
 </html>

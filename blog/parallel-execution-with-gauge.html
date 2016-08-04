@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<script type='text/javascript'>
+var images = new Array()
+function preload() {
+for (i = 0; i < preload.arguments.length; i++) {
+images[i] = new Image()
+images[i].src = preload.arguments[i]
+}
+}
+</script>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title>Parallel Execution with Gauge</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
+<link href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
+<link type="image/ico" rel="shortcut icon" href="../assets/images/favicons/favicon.ico" />
+<link type="image/ico" rel="apple-touch-icon-precomposed" href="../assets/images/favicons/apple-touch-icon.png" />
+<link href="../assets/stylesheets/application.css" rel="stylesheet" />
+<link href="../assets/stylesheets/syntax.css" rel="stylesheet" />
+<script src="../assets/javascripts/frameworks/jquery-1.11.2.js"></script>
+<script src="../assets/javascripts/application.js" async="true"></script>
+</head>
+<body class='blog blog_parallel-execution-with-gauge'>
+<!-- Google Tag Manager -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKRKLF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKRKLF');
+</script>
+<!-- Google Tag Manager end -->
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-54838477-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+<header class='top'>
+<div class='container'>
+<a class='logo' href='../index.html'>
+<img alt='Gauge logo' height='38' id='thumb' src='../assets/images/Gauge_logo.svg' width='150'>
+</a>
+<span class='beta'>
+Beta
+</span>
+<nav class='mainnav'>
+<ul class='level0'>
+<li class='dropdown'>
+<a class="link-get-started" href="../get-started/index.html">Get Started</a>
+<ul class='level1'>
+<li>
+<a class="link-download" href="../get-started/index.html">Download</a>
+</li>
+<li>
+<a class="link-plugins" href="../plugins/index.html">Plugins</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a class="toplink-contribute" href="../contribute/index.html">Contribute</a>
+<ul class='level1'>
+<li>
+<a class="link-contribute" href="../contribute/index.html">Contribute</a>
+</li>
+<li>
+<a class="link-cla" href="../cla/index.html">CLA</a>
+</li>
+<li>
+<a class='link-documentation' href='http://getgauge.io/documentation/user/current/' target='_blank'>Documentation</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<button class='navbtn menu collapse'>
+<span></span>
+</button>
+<a alt='Gauge on Github' class='github-fork-ribbon' href='https://github.com/getgauge/gauge' target='_blank' title='Fork me on GitHub'></a>
+</div>
+</header>
+<div id='content'>
+<div class='draft-post'>Draft</div>
+<figure class='post-summary-image'>
+<img alt='Parallel Execution with Gauge' src='https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;s=600fdca8f6340569864d4f94f5f9dfc1'>
+</figure>
+<div class='container'>
+<div class='blog-post'>
+<header class='metadata blog-post-header'>
+<h1>
+Parallel Execution with Gauge
+</h1>
+Posted By
+<span class='author'>Mahendra</span>
+<span class='post-date'>
+01 August 2016
+</span>
+<div class='tags'>
+<a href="tags/parallel-execution.html">Parallel execution</a>
+<a href="tags/test-automation.html">test automation</a>
+</div>
+</header>
+</div>
+<div class='blog-content'>
+<p>Gauge has first class parallel execution support out of the box. If you have used it, you'd know that it is simple, zero configuration. It's the way we intended for it to be.</p>
+
+<p>In this post, we take a look at how Gauge does parallel execution.</p>
+
+<p>First, let's see how to run Gauge specs in parallel. With Gauge, parallel execution is as simple as running the command</p>
+
+<pre class="highlight shell"><code>gauge -p specs
+</code></pre>
+<p>This distributes the tests into multiple streams and all the streams are executed in parallel. By default, the number of streams is the number of CPU cores. So if you're on a 4 core machine, your specs run in 4 parallel streams.</p>
+
+<p>However, more often than not, you may want to control the number of parallel streams. Maybe you only want to use 2 cores and not all 4. Gauge allows you to do this with the -n flag</p>
+
+<pre class="highlight shell"><code>gauge -p -n<span class="o">=</span>2 specs
+</code></pre>
+<p>This command will distribute the tests in n streams, which in this case is 2.</p>
+
+<p>You can even filter your specs with tags and run them in parallel.</p>
+
+<pre class="highlight shell"><code>gauge -p -n<span class="o">=</span>2 --tags<span class="o">=</span><span class="s2">"filtered"</span> specs
+</code></pre>
+<p>Parallel execution works the same way irrespective of the filter criteria.</p>
+
+<h2 id="parallel-execution-strategies">Parallel execution strategies</h2>
+
+<p>Gauge supports two different strategies for distributing the specs across parallel streams.</p>
+
+<p><strong>Lazy:</strong> Lazy strategy is the default one. With this strategy, Gauge starts n parallel streams and assigns a spec to each, as and when they finish executing the one it was already assigned. Gauge keeps accumulating the results from each stream.</p>
+
+<p><strong>Eager:</strong> With this strategy, Gauge takes all the specs and distributes them equally across all streams, upfront. Each stream gets the same number of specs to execute. As a result, if there is a slow running spec in one of the streams, it delays the execution of all the other specs assigned to it, in spite of the fact that there may be some other stream available. This still means that the test execution is as fast as the slowest stream.</p>
+
+<p>To mention which strategy Gauge should use, you can run the command</p>
+
+<pre class="highlight shell"><code>gauge -p -n<span class="o">=</span>2 --strategy<span class="o">=</span><span class="s2">"eager"</span> specs
+</code></pre>
+<p>Irrespective of the strategy, Gauge consolidates the execution results from all the streams and generates a consolidated report. So, the execution report looks the same, whether the specs were run in parallel or not.</p>
+
+<h2 id="why-would-one-use-eager-strategy">Why would one use Eager Strategy?</h2>
+
+<p>With the above definitions, it might seem apparent that Lazy execution strategy for parallel execution is more efficient. This brings a question — Why does Gauge even have an Eager strategy?</p>
+
+<p>Lazy strategy's distribution is dynamic, and two subsequent parallel runs may have different distribution of specs, depending on the execution time of every spec. In some use-cases it makes sense to control the grouping of specs. In such cases, Eager strategy allows one to do something like</p>
+
+<pre class="highlight shell"><code>gauge -p -n<span class="o">=</span>2 -g<span class="o">=</span>2 --strategy<span class="o">=</span><span class="s2">"eager"</span> specs
+</code></pre>
+<p>Note the use of <code>-g</code> flag to select the group for the test run.</p>
+
+<p>If you have any questions or suggestions, we'd love to hear it. Talk to us on our <a href="https://groups.google.com/forum/#!forum/getgauge">public forum</a> or on our <a href="https://gitter.im/getgauge/chat">dev chat</a>.</p>
+
+</div>
+</div>
+
+</div>
+<footer>
+<div class='join-community'>
+<div class='container'>
+<h3>Join our community</h3>
+<ul>
+<li>
+<a class='join-group' href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>
+<i class='icon join-us'></i>
+Join Us
+</a>
+</li>
+<li>
+<a class='contribute' href='https://gitter.im/getgauge/chat' target='_blank'>
+<i class='icon develop-with-us'></i>
+Talk to Us
+</a>
+</li>
+<li>
+<a class='contact' href='https://github.com/getgauge' target='_blank'>
+<i class='icon watch-us'></i>
+Watch Us
+</a>
+</li>
+<li>
+<a class='followus' href='https://twitter.com/getgauge' target='_blank'>
+<i class='icon follow-us'></i>
+Follow Us
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='powered-by'>
+<div class='container'>
+<a href='http://www.thoughtworks.com/products'>
+<img alt='Thoughtworks logo' height='44' src='../assets/images/thoughtworks_logo.svg'>
+</a>
+<div class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<script type='text/javascript'>
+var images = new Array()
+function preload() {
+for (i = 0; i < preload.arguments.length; i++) {
+images[i] = new Image()
+images[i].src = preload.arguments[i]
+}
+}
+</script>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title>Gauge Architecture Overview</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
+<link href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
+<link type="image/ico" rel="shortcut icon" href="../assets/images/favicons/favicon.ico" />
+<link type="image/ico" rel="apple-touch-icon-precomposed" href="../assets/images/favicons/apple-touch-icon.png" />
+<link href="../assets/stylesheets/application.css" rel="stylesheet" />
+<link href="../assets/stylesheets/syntax.css" rel="stylesheet" />
+<script src="../assets/javascripts/frameworks/jquery-1.11.2.js"></script>
+<script src="../assets/javascripts/application.js" async="true"></script>
+</head>
+<body class='blog blog_gauge-architecture-overview'>
+<!-- Google Tag Manager -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKRKLF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKRKLF');
+</script>
+<!-- Google Tag Manager end -->
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-54838477-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+<header class='top'>
+<div class='container'>
+<a class='logo' href='../index.html'>
+<img alt='Gauge logo' height='38' id='thumb' src='../assets/images/Gauge_logo.svg' width='150'>
+</a>
+<span class='beta'>
+Beta
+</span>
+<nav class='mainnav'>
+<ul class='level0'>
+<li class='dropdown'>
+<a class="link-get-started" href="../get-started/index.html">Get Started</a>
+<ul class='level1'>
+<li>
+<a class="link-download" href="../get-started/index.html">Download</a>
+</li>
+<li>
+<a class="link-plugins" href="../plugins/index.html">Plugins</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a class="toplink-contribute" href="../contribute/index.html">Contribute</a>
+<ul class='level1'>
+<li>
+<a class="link-contribute" href="../contribute/index.html">Contribute</a>
+</li>
+<li>
+<a class="link-cla" href="../cla/index.html">CLA</a>
+</li>
+<li>
+<a class='link-documentation' href='http://getgauge.io/documentation/user/current/' target='_blank'>Documentation</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<button class='navbtn menu collapse'>
+<span></span>
+</button>
+<a alt='Gauge on Github' class='github-fork-ribbon' href='https://github.com/getgauge/gauge' target='_blank' title='Fork me on GitHub'></a>
+</div>
+</header>
+<div id='content'>
+<div class='draft-post'>Draft</div>
+<figure class='post-summary-image'>
+<img alt='Gauge Architecture Overview' src='https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;s=1bed2a6743851633b655ae774c15ac07'>
+</figure>
+<div class='container'>
+<div class='blog-post'>
+<header class='metadata blog-post-header'>
+<h1>
+Gauge Architecture Overview
+</h1>
+Posted By
+<span class='author'>Apoorva</span>
+<span class='post-date'>
+04 August 2016
+</span>
+<div class='tags'>
+<a href="tags/plugins.html">plugins</a>
+<a href="tags/test-automation.html">test automation</a>
+</div>
+</header>
+</div>
+<div class='blog-content'>
+<p>Gauge exposes a plugin architecture which allows extending Gauge with features without bloating the core of Gauge. Gauge's features — like language support, IDE integration, execution reports and documentation generators —  are implemented as plugins.</p>
+
+<p>Here is an overview of how the plugin architecture looks like:</p>
+
+<p><img alt="Gauge Architecture Overview" width="712" height="450" src="../assets/images/blog/gauge-architecture-overview.png" /></p>
+
+<p>Gauge's architecture consists of the Gauge core and its plugins. Plugins can be of multiple types: language runners, reporting plugins, IDE plugins and documentation plugins. The list of plugin types is not exhaustive. Gauge's architecture is flexible enough to allow new types of plugins to be added later on as necessary.</p>
+
+<h2 id="gauge-core">Gauge Core</h2>
+
+<p>Gauge core is the centre of delegation. It is responsible for parsing specifications and orchestrating execution. It doesn't understand any language specific test implementations.</p>
+
+<p>Gauge core communicates with all plugins to perform various actions via messaging API defined through Protocol Buffers. Gauge core and any of the plugin are two independent processes talking to each other over TCP.</p>
+
+<p><img alt="Gauge plugins communication with core" width="646" height="150" src="../assets/images/blog/gauge-architecture-overview_plugin.png" /></p>
+
+<h2 id="language-runners">Language Runners</h2>
+
+<p>Language runners are plugins which enable users to write Gauge test implementations in different programming languages. Currently, Gauge supports Java, Ruby, C# and [few other languages](http://getgauge.io/plugins/index.html. These plugins are responsible for running test implementations written in the target programming language, depending on the step that Gauge core asks them to execute.</p>
+
+<h2 id="reporting-plugins">Reporting Plugins</h2>
+
+<p>Reporting Plugins generate reports about the tests run by Gauge. Once test suite execution is complete, Gauge core sends aggregated data about the execution to these plugins. These plugins convert that test data to meaningful reports based on their purpose.Currently, Gauge has HTML and XML reporting plugins. The HTML reporting plugin produces a static HTML execution report, while the XML report produces a JUnit-style XML.</p>
+
+<p>You can add multiple plugins in a Gauge project to have Gauge produces different types of reports.</p>
+
+<h2 id="ide-plugins">IDE Plugins</h2>
+
+<p>IDE plugins integrate Gauge closely with IDEs, allowing test authors to use their IDEs to author and execute Gauge tests. These plugins use Gauge API to talk with Gauge core. Currently Gauge has IDE plugins for IntelliJ and Visual Studio. These provide navigation, auto complete and a number of <a href="http://getgauge.io/documentation/user/current/ide_support/other_usability_features.html">other usability features</a> by integrating with IDE.</p>
+
+<p>There are a number of other types of plugins like documentation generator, plugins to build and manage project dependencies etc.</p>
+
+<h2 id="what-happens-when-you-run-gauge-specs-from-command-line">What happens when you run <code>gauge specs</code> from command line?</h2>
+
+<p>This invokes Gauge core which loads the environment, checks for parse errors in specs and validates them. It then calls the language runner to execute them. Gauge core knows about which language runner the execution should be delegated to and langauge runner knows to execute the language specific implementations. Gauge core consolidates the entire test result and delegates it to a report plugin to generate reports.</p>
+
+<h2 id="how-does-this-architecture-help-gauge">How does this architecture help Gauge?</h2>
+
+<p>As most of the functionalities which are common across all the languages are handled by Gauge core, the runners are very light weight. As a result, writing a test runner is fairly straightforward and can be easily plugged in to Gauge core. This also makes Gauge more extensible.</p>
+
+<p>With the Plugin based architecture, Gauge has a lot more to offer to you. We are just getting warmed up. If you have a cool idea for a new plugin or if you just want to say "hi", we would <a href="https://groups.google.com/forum/#!forum/getgauge">love to talk</a> to you! :)</p>
+
+</div>
+</div>
+
+</div>
+<footer>
+<div class='join-community'>
+<div class='container'>
+<h3>Join our community</h3>
+<ul>
+<li>
+<a class='join-group' href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>
+<i class='icon join-us'></i>
+Join Us
+</a>
+</li>
+<li>
+<a class='contribute' href='https://gitter.im/getgauge/chat' target='_blank'>
+<i class='icon develop-with-us'></i>
+Talk to Us
+</a>
+</li>
+<li>
+<a class='contact' href='https://github.com/getgauge' target='_blank'>
+<i class='icon watch-us'></i>
+Watch Us
+</a>
+</li>
+<li>
+<a class='followus' href='https://twitter.com/getgauge' target='_blank'>
+<i class='icon follow-us'></i>
+Follow Us
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='powered-by'>
+<div class='container'>
+<a href='http://www.thoughtworks.com/products'>
+<img alt='Thoughtworks logo' height='44' src='../assets/images/thoughtworks_logo.svg'>
+</a>
+<div class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
