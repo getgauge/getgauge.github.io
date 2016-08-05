@@ -3,11 +3,11 @@
   - if current_page.data.draft?
     %div.draft-post Draft
 
-  %figure.post-summary-image
-    %img{:src => current_page.data.summary_image, :alt => current_page.title}
   .container
-
     .blog-post
+      %figure.post-summary-image
+        %img{:src => current_page.data.summary_image, :alt => current_page.title}
+
       %header.metadata.blog-post-header
         %h1
           = current_page.data.title
