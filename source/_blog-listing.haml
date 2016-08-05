@@ -1,4 +1,3 @@
-
 .container
   - if !prev_page
     .blog-list-item.latest-blog
@@ -9,7 +8,7 @@
             %img{:src => article.data.summary_image, :alt => article.title}
         .blog-details
           %span.author
-            = article.data['author'] 
+            = article.data['author']
           %span.post-date
             = article.date.strftime('%-d %B %Y')
           %h2.post-title
@@ -23,6 +22,7 @@
   .row
     - [0,1,2].each do |i|
       .col-sm-6.col-md-4
+        - page_articles = !prev_page ? page_articles.drop(1) : page_articles
         - group_articles(page_articles)[i].each do |article|
           .blog-list-item
             .post-summary
@@ -31,7 +31,7 @@
                   %img{:src => article.data.summary_image, :alt => article.title}
               .blog-details
                 %span.author
-                  = article.data['author'] 
+                  = article.data['author']
                 %span.post-date
                   = article.date.strftime('%-d %B %Y')
                 %h2.post-title
