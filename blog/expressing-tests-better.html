@@ -113,13 +113,17 @@ Posted By
 </header>
 </div>
 <div class='blog-content'>
-<p>Automated tests should aim to increase the effectiveness, be a source of truth and be the best line of defence against change.</p>
+<p>Automated tests should aim to be:
+<ul><li>The tool to increase effectiveness of testing,</li>
+<li>A source of truth, </li>
+<li>The best line of defence against change.</li></ul></p>
 
-<p>More people have begun to appreciate this, and tools such as Cucumber, Concordion, Twist etc, have gained traction over the last few years. Each tool has offered more when it comes to writing test cases fairly agnostic of the language used to mechanise the tests, and so is it with Gauge.</p>
+<p>Writing (implementation) language agnostic test cases has gained traction over the last few years. Each tool has tried to offer more and so has Gauge.</p>
 
-<p>Gauge chooses to be different in allowing a user to describe the test case in a free-flowing manner and the emphasis is on <strong>"readability"</strong> and <strong>"expression of intent"</strong>.</p>
+<p>Gauge chooses to be different in allowing a user to describe test cases in a free-flowing manner. The emphasis is on <strong>‘readability’</strong> and <strong>‘expression of intent’</strong>.</p>
 
-<p>Test cases written in a free-flowing manner helps the user to write prerequisites, assumptions, steps, verifications, postconditions and more catering to the growing need of the test cases being readable. Consider the following example:</p>
+<h3><b>Better readability: Semantics over Syntax</b></h3>
+<p>Test cases written in a free-flowing manner are easy to read. This also helps writing pre/post requisites, assumptions, steps, verifications and more catering to the growing need of the test cases being readable. Consider the following example</p>
 
 <pre class="highlight markdown"><code><span class="gu">Payment process
 ===============
@@ -127,24 +131,22 @@ Posted By
 <span class="p">*</span> Add "Toy Story 2" to the shopping cart
 <span class="p">*</span> Verify there are "2" items in the shopping cart<span class="sb">
 
-
 </span><span class="gh">Proceed to checkout
 -------------------
 </span><span class="p">*</span> Verify total is displayed correctly<span class="sb">
-
 
 </span><span class="gh">Make payment
 -------------
 </span><span class="p">*</span> Verify payment occurred<span class="sb">
 
-
 </span><span class="gs">____________________________________</span><span class="ge">__</span>_
 <span class="p">*</span> User logs out
 <span class="p">*</span> Verify that home page is displayed
 </code></pre>
-<p>Unlike stating a series of assumptions up front and verifying multiple expectations at the end, the whole test takes the manner of a journey, and in such scenarios, tests written in this fashion read cleanly.</p>
+<p>As the above example shows, tests in Gauge can take the manner of a user journey. The description in natural language makes it easy to understand.</p>
 
-<p>Gauge supports wording of the same functionality in different ways to enable the user express the intent better. Consider the following example.</p>
+<h3><b>Express intent effectively</b></h3>
+<p>Sometimes given a context we would like to word the same functionality differently. This gives more clarity and helps us express our intent better. Consider the following example.</p>
 
 <pre class="highlight markdown"><code><span class="gu">User flows
 ===========
@@ -160,10 +162,20 @@ Posted By
 <span class="p">*</span> Payment is successfully received
 <span class="p">*</span> An email confirming the "order" is sent
 </code></pre>
-<p>In this case, the underlying functionality of the last step (sending an email) in both the scenarios is the same. But the way it is worded is different helps conveying the intent and the functionality more clearly. When it comes to expressing intent, the adage that a picture is worth a thousand words can't be beaten. Gauge also has the ability to insert other media to make a point.</p>
+<p>Steps <i>`A "welcome" email is sent to the user`</i> and <i>`An email confirming the “order” is sent`</i> of sending email have the same underlying functionality. Gauge allows wording them differently without having to repeat the implementation. Thus effectively catering to the user’s need to express the intent better.</p>
 
-<p>The ability to write tests in a free flowing manner in order to express broad ranging journeys has become vital, and Gauge helps in addressing this aspect of test automation.</p>
+<h3><b>A picture is worth thousand words</b></h3>
+<p>When it comes to expressing intent, the proverb that a picture is worth a thousand words can't be beaten. Gauge has the ability to insert media, for e.g. an image, to make a point. Consider the following example.</p>
 
+<pre class="highlight markdown"><code><span class="gu">UI patterns
+===========
+</span><span class="gh">Refer the [image](assets/images/blog/expressing-tests-better-picture.png) to verify UI.
+</span><span class="p">*</span> Verify styling
+--------------
+<span class="p">*</span> Should manually verify UI styling.
+</code></pre>
+
+<p>Ability to write tests in the Markdown format in order to express broad ranging journeys has become vital, and Gauge helps in addressing this aspect of test automation.</p>
 </div>
 </div>
 
