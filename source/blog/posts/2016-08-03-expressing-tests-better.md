@@ -79,9 +79,9 @@ Verify styling
 * Verify “8” icons present.
 Should Verify the UI positioning manually.
 ```
-The following is the screenshot of the html report generated on implementing and executing the above spec.
+The following is the screenshot of the generated html report after implementing and executing the above spec.
 <img src="../assets/images/blog/expressing-tests-better-UI-Patterns-example.png" width:auto height:auto>
 
-As shown in the example, other formats can be used in describing upcoming implementations, indicate manual verifications etc. This feature of Gauge helps a user convey the essence more effectively than a description.
+An image can be used to indicate manual verifications, upcoming implementations etc. This feature of Gauge helps a user convey the essence more effectively than a description.
 
 The ability to write tests in the Markdown format to express broad ranging journeys has become vital, and Gauge helps in addressing this aspect of test automation.
