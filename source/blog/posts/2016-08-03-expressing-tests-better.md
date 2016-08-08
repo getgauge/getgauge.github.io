@@ -73,12 +73,14 @@ When it comes to expressing intent, the proverb that a picture is worth a thousa
 UI patterns
 ===========
 This is the representation of an upcoming implementation
-![image](assets/images/blog/expressing-tests-better-picture.png).
+![image](image_url_here).
 Verify styling
 --------------
 * Verify “8” icons present.
 Should Verify the UI positioning manually.
 ```
+The following is the screenshot of the html report generated on implementing and executing the above spec.
+<img src="../assets/images/blog/expressing-tests-better-UI-Patterns-example.png" width:auto height:auto>
 
 As shown in the example, other formats can be used in describing upcoming implementations, indicate manual verifications etc. This feature of Gauge helps a user convey the essence more effectively than a description.
 
