@@ -1,5 +1,5 @@
 ---
-title: Expressing Tests Better
+title: Get most out of Markdown in Gauge
 date: 03 August 2016
 tags: test automation, best practices
 author: Soumya
@@ -8,15 +8,9 @@ published: true
 draft: true
 summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
 ---
+The[benefits of using Markdown](https://www.quora.com/What-are-the-benefits-to-using-Markdown/answer/Eric-Lauritzen?srid=umwAo)are that it is platform-independent, intuitive, easy to learn, human-readable, and uses plain text while providing basic formatting and easy conversion to HTML, the language of the Web.
 
-Automated tests should aim to be:
-The tool to increase effectiveness of testing,
-A source of truth,
-The best line of defence against change.
-
-Writing (implementation) language agnostic test cases has gained traction over the last few years. Each tool in this space has tried to offer more and so has Gauge.
-
-Gauge chooses to be different in allowing a user to describe test cases in a free-flowing manner. The emphasis is on **‘readability’** and **‘expression of intent’**.
+Gauge allows a user to describe test cases in a free-flowing manner using Markdown. This helps to enhance *"readability"* and *"expression of intent"*.
 
 Better readability: Semantics over Syntax
 -----------------------------------------
@@ -79,9 +73,6 @@ Verify styling
 * Verify “8” icons present.
 Should Verify the UI positioning manually.
 ```
-The following is the screenshot of the generated html report after implementing and executing the above spec.
-<img src="../assets/images/blog/expressing-tests-better-UI-Patterns-example.png" width:auto height:auto>
-
-An image can be used to indicate manual verifications, upcoming implementations etc. This feature of Gauge helps a user convey the essence more effectively than a description.
+The generated html report on implementing and executing the above spec will contain the specified image. These  images can be used to indicate manual verifications, upcoming implementations etc. This feature of Gauge helps a user convey the essence more effectively than a description.
 
 The ability to write tests in the Markdown format to express broad ranging journeys has become vital, and Gauge helps in addressing this aspect of test automation.
