@@ -102,19 +102,19 @@ Beta
 <div class='container'>
 <h2 class='sub-title'>Choose your OS & download</h2>
 <ul class='tabs os'>
-<li class='active' rel='tab1'>
+<li class='mac' rel='tab1'>
 <figure class='os-logo'>
 <img title="Osx" alt="Osx" width="50" height="50" src="../assets/images/download/osx.png" />
 <figcaption class='desc'>OSX</figcaption>
 </figure>
 </li>
-<li rel='tab2'>
+<li class='windows' rel='tab2'>
 <figure class='os-logo'>
 <img title="windows" alt="windows" width="50" height="50" src="../assets/images/download/windows.png" />
-<figcaption class='desc'>windows</figcaption>
+<figcaption class='desc'>Windows</figcaption>
 </figure>
 </li>
-<li rel='tab3'>
+<li class='linux' rel='tab3'>
 <figure class='os-logo'>
 <img title="linux" alt="linux" width="50" height="50" src="../assets/images/download/linux.png" />
 <figcaption class='desc'>Linux</figcaption>
@@ -126,8 +126,8 @@ Beta
 <div class='os-tab-content'>
 <div class='container'>
 <div class='tab_container'>
-<h3 class='tab-accordion_heading d_active' rel='tab1'>OSX</h3>
-<div class='tab_content' id='tab1' rel='tab1'>
+<h3 class='tab-accordion_heading mac' rel='tab1'>OSX</h3>
+<div class='tab_content mac' id='tab1' rel='tab1'>
 <p class='instruction'>
 There are multiple ways to get started with Gauge on a Mac. Here we show you a simple 4 step process to get you running with Gauge on a Mac. You can read our
 <a href='http://getgauge.io/documentation/user/current/getting_started/index.html' target='_blank'>detailed documentation</a>
@@ -204,8 +204,8 @@ This creates a template with a sample test specification. The example below show
 <p class='instruction'>You're all set. Start testing!</p>
 </div>
 </div>
-<h3 class='tab-accordion_heading' rel='tab2'>Windows</h3>
-<div class='tab_content' id='tab2' rel='tab2'>
+<h3 class='tab-accordion_heading windows' rel='tab2'>Windows</h3>
+<div class='tab_content windows' id='tab2' rel='tab2'>
 <P class='instruction'>
 There are two ways to install Gauge on Windows. Below we show the process using the .exe. The other option is to use
 <a href='https://chocolatey.org'>Chocolatey.</a>
@@ -275,8 +275,8 @@ This creates a template with a sample test specification. The example below show
 <P class='instruction'>You're all set. Start testing!</P>
 </div>
 </div>
-<h3 class='tab-accordion_heading' rel='tab3'>Linux</h3>
-<div class='tab_content' id='tab3' rel='tab3'>
+<h3 class='tab-accordion_heading linux' rel='tab3'>Linux</h3>
+<div class='tab_content linux' id='tab3' rel='tab3'>
 <P class='instruction'>Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.</P>
 <div class='page-block'>
 <h3>Install Gauge</h3>
@@ -350,6 +350,7 @@ This creates a template with a sample test specification. The example below show
 <p class='instruction'>You're all set. Start testing!</p>
 </div>
 </div>
+<script src="../assets/javascripts/jquery.client.js"></script>
 <script src="../assets/javascripts/tabs.js"></script>
 </div>
 </div>
