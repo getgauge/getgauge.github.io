@@ -14,23 +14,23 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
       .container
         %h2.sub-title Choose your OS & download
         %ul.tabs.os
-          %li.active{:rel => "tab1"}
+          %li.mac{:rel => "tab1"}
             %figure.os-logo
               = image_tag "download/osx.png", {:title => "Osx", :alt => "Osx"}
               %figcaption.desc OSX
-          %li{:rel => "tab2"}
+          %li.windows{:rel => "tab2"}
             %figure.os-logo
               = image_tag "download/windows.png", {:title => "windows", :alt => "windows"}
-              %figcaption.desc windows
-          %li{:rel => "tab3"}
+              %figcaption.desc Windows
+          %li.linux{:rel => "tab3"}
             %figure.os-logo
               = image_tag "download/linux.png", {:title => "linux", :alt => "linux"}
               %figcaption.desc Linux
     .os-tab-content
       .container
         .tab_container
-          %h3.tab-accordion_heading.d_active{ :rel => "tab1"} OSX
-          #tab1.tab_content{ :rel=> "tab1"}
+          %h3.tab-accordion_heading.mac{ :rel => "tab1"} OSX
+          #tab1.tab_content.mac{ :rel=> "tab1"}
             %p.instruction
               There are multiple ways to get started with Gauge on a Mac. Here we show you a simple 4 step process to get you running with Gauge on a Mac. You can read our
               %a{:href=>"http://getgauge.io/documentation/user/current/getting_started/index.html", :target => "_blank"} detailed documentation
@@ -100,8 +100,8 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
 
                     Total time taken: 80ms
               %p.instruction You're all set. Start testing!
-          %h3.tab-accordion_heading{ :rel => "tab2"} Windows
-          #tab2.tab_content{ :rel => "tab2"}
+          %h3.tab-accordion_heading.windows{ :rel => "tab2"} Windows
+          #tab2.tab_content.windows{ :rel => "tab2"}
             %P.instruction
               There are two ways to install Gauge on Windows. Below we show the process using the .exe. The other option is to use
               %a{:href => "https://chocolatey.org"}Chocolatey.
@@ -168,8 +168,8 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
 
                     Total time taken: 80ms
               %P.instruction You're all set. Start testing!
-          %h3.tab-accordion_heading{ :rel => "tab3"} Linux
-          #tab3.tab_content{ :rel => "tab3"}
+          %h3.tab-accordion_heading.linux{ :rel => "tab3"} Linux
+          #tab3.tab_content.linux{ :rel => "tab3"}
             %P.instruction Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.
             .page-block
               %h3 Install Gauge
@@ -237,4 +237,5 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                     Total time taken: 80ms
               %p.instruction You're all set. Start testing!
 
+          = javascript_include_tag  "jquery.client"
           = javascript_include_tag  "tabs"
