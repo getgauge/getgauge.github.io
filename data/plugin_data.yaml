@@ -36,11 +36,12 @@
       action: "Download"
       action_link: "https://github.com/kashishm/gauge-python/releases"
     Golang runner:
-      repo_link: "https://github.com/manuviswam/gauge-go"
+      repo_link: "https://github.com/getgauge-contrib/gauge-go"
       description: "Plugin that lets you write your tests in Golang."
       attribution: "Manu Viswam"
       contributor_link: "https://github.com/manuviswam"
-      action: "Work in progress"
+      action: "Download"
+      action_link: "https://github.com/getgauge-contrib/gauge-go/releases"
   IDE plugins:
     IntelliJ:
       repo_link: "http://getgauge.io/documentation/user/current/ide_support/intellij_idea.html"
