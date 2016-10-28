@@ -79,6 +79,13 @@
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/xml-report/releases"
+    Spectacle:
+      repo_link: "http://getgauge.io/documentation/user/current/reporting_features/spectacle_plugin.html"
+      description: "Export specifications to HTML."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/spectacle/releases"
   Others:
     Maven:
       title: "Maven"
