@@ -6,7 +6,7 @@ author: Soumya
 summary: A discussion on how to write expressive tests using Gauge
 published: true
 draft: true
-summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
+summary_image: blog/expressing_tests_better.jpg
 ---
 The[benefits of using Markdown](https://www.quora.com/What-are-the-benefits-to-using-Markdown/answer/Eric-Lauritzen?srid=umwAo)are that it is platform-independent, intuitive, easy to learn, human-readable, and uses plain text while providing basic formatting and easy conversion to HTML, the language of the Web.
 

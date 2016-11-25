@@ -6,7 +6,7 @@ author: Apoorva
 summary: An overview of the extensible plugin architecture of Gauge
 published: true
 draft: true
-summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
+summary_image: blog/architecture_overview.jpg
 ---
 
 Gauge exposes a plugin architecture which allows extending Gauge with features without bloating the core of Gauge. Gauge's features &mdash; like language support, IDE integration, execution reports and documentation generators &mdash;  are implemented as plugins.

@@ -6,7 +6,7 @@
   .container
     .blog-post
       %figure.post-summary-image
-        %img{:src => current_page.data.summary_image, :alt => current_page.title}
+        %img{:src => image_path(current_page.data.summary_image), :alt => current_page.title}
 
       %header.metadata.blog-post-header
         %h1
