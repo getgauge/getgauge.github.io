@@ -85,8 +85,9 @@ title: Gauge | ThoughtWorks
                   = nav_bar_link 'CLA', 'cla/index.html', :class => "link-cla"
             %li.dropdown
               = nav_bar_link 'Documentation', 'documentation/user/current/', :class => "link-documentation"
-            -# %li
-              = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog"
+            - if !is_prod
+              %li
+                = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog"
 
         %button.navbtn.menu.collapse
           %span

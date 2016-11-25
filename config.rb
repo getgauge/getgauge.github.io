@@ -63,8 +63,12 @@ helpers do
   end
 
   def filter_drafts(articles)
-    articles.select do | item |
-      !item.data.draft?
+    if config[:environment] == :development then
+      articles
+    else
+      articles.select do | item |
+        !item.data.draft?
+      end
     end
   end
 end
