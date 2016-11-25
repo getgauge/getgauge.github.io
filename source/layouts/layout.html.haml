@@ -60,7 +60,7 @@ title: Gauge | ThoughtWorks
                   = nav_bar_link 'CLA', 'cla/index.html', :class => "link-cla"
             %li.dropdown
               = nav_bar_link 'Documentation', 'documentation/user/current/', :class => "link-documentation"
-            - if !is_prod
+            - if is_preview
               %li
                 = nav_bar_link 'Blog', 'blog/index.html', :class => "link-blog"
 

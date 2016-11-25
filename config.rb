@@ -63,13 +63,17 @@ helpers do
   end
 
   def filter_drafts(articles)
-    if config[:environment] == :development then
+    if is_preview then
       articles
     else
       articles.select do | item |
         !item.data.draft?
       end
     end
+  end
+
+  def is_preview
+    config[:environment] == :development
   end
 end
 
