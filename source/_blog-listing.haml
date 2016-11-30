@@ -20,10 +20,10 @@
           - article.tags.sort.each do |tag|
             = link_to tag, tag_path(tag)
   .row
+    - page_articles = group_articles(!prev_page ? page_articles.drop(1) : page_articles)
     - [0,1,2].each do |i|
       .col-sm-6.col-md-4
-        - page_articles = !prev_page ? page_articles.drop(1) : page_articles
-        - group_articles(page_articles)[i].each do |article|
+        - page_articles[i].each do |article|
           .blog-list-item
             .post-summary
               %a.post-link{:href => "#{article.url}"}
