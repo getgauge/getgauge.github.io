@@ -3,10 +3,9 @@ $(document).ready(function ($) {
 
   $(".features-filter-selector-wrap").on('click','.features-selector',function(e){
     e.preventDefault();
-    event.stopPropagation();
+    e.stopPropagation();
     $(this).closest(".features-filter-selector-wrap").addClass('active');
     // $(".features-filter-selector-wrap").toggleClass('active');
-    console.log('foo');
     $('body').toggleClass("opened");
 
   });
