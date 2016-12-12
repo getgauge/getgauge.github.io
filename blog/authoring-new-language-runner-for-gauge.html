@@ -90,7 +90,7 @@ Posted By
 </header>
 </div>
 <div class='blog-content'>
-<p>Extensibility is one of the core features of Gauge. It is built from the ground up with plugin support in mind. In this post I'll show how to write a new language runner for Gauge.</p>
+<p>Extensibility is one of the core features of Gauge. It is built from the ground up with plugin support in mind. In this post we'll show how to write a new language runner for Gauge.</p>
 
 <h2 id="what-is-a-language-runner">What is a Language Runner?</h2>
 
@@ -105,13 +105,13 @@ Posted By
 <p><strong>Execution</strong>:</p>
 
 <ul>
-  <li>Execute hooks (when requested by Gauge core).</li>
+  <li>Execute hooks (when requested by Gauge Core).</li>
   <li>Execute method corresponding to a step and send execution response back to Gauge.</li>
   <li>Send custom report messages to Gauge.</li>
   <li>Read/write to datastore (currently, datastore is intra process, hence parallel processes cannot use a shared datastore).</li>
 </ul>
 
-<p>This post will help you write a basic Python language runner which supports initialization and step execution. Let's call it <code>mypython</code>, so that our tutorial code does not conflict with <a href="https://github.com/kashishm/gauge-python">Gauge's Python language runner</a>. By the end of this article, will be able to use it through Gauge to create a new project and run specifications, like this:</p>
+<p>This post will help you write a basic Python language runner which supports initialization and step execution. Let's call it <code>mypython</code>, so that our tutorial code does not conflict with <a href="https://github.com/kashishm/gauge-python">Gauge's Python language runner</a>. By the end of this article, you will be able to use this newly created plugin through Gauge to create a new project and run specifications, like this:</p>
 
 <pre class="highlight shell"><code>gauge --init mypython
 gauge specs
@@ -126,12 +126,12 @@ gauge specs
   <li>Gauge installed and available on the PATH</li>
   <li>A version control system. Preferably, git.</li>
   <li>A text editor or IDE of your choice.</li>
-  <li>Familiarity with the programming language that you writing the language runner in.</li>
+  <li>Familiarity with the programming language that you are using to write the language runner. Which in this example is Python.</li>
 </ul>
 
 <h3 id="getting-started">Getting Started</h3>
 
-<p>Create a directory in called <code>mypython</code> and create these files and sub-directories in it:</p>
+<p>Create a directory called <code>mypython</code> and create the following files and sub-directories in it:</p>
 
 <pre class="highlight plaintext"><code>mypython
   | -- mypython.json
@@ -140,18 +140,18 @@ gauge specs
        | -- step_impl.py
   | -- start.py
 </code></pre>
-<p>We recommend you use a version control system, preferably git, so that we can track changes and add dependencies from other repositories as we go ahead.</p>
+<p>We recommend you use a version control system, preferably git, so that we can track changes and add dependencies from other repositories as we progress.</p>
 
-<h3 id="runners-metadata-file">Runner's metadata file</h3>
+<h3 id="runners-metadata-file">Language Runner's Metadata File</h3>
 
 <p>Every language runner needs to have a <code>&lt;runner_id&gt;.json</code> file, which contains the metadata for the language runner. For an example, see the <a href="https://github.com/kashishm/gauge-python/blob/master/python.json">python.json</a> file in the Python language runner.</p>
 
 <p><code>&lt;runner_name&gt;.json</code> file serves three primary functions:</p>
 
 <ul>
-  <li>Plugin name, description, version are specified in this file.</li>
-  <li>The properties <code>init</code> and <code>run</code> in this file are used to specify initialize and run commands for different platforms. For example: while initializing a Gauge project, Gauge will execute the command present in <code>init</code> section of the json file.</li>
-  <li>Minimum and maximum Gauge version support are specified here..</li>
+  <li>Plugin name, description, and version are specified in this file.</li>
+  <li>The properties <code>init</code> and <code>run</code> in this file are used to specify, initialize, and run commands for different platforms. For example, while initializing a Gauge project, Gauge will execute the command present in the <code>init</code> section of this json file.</li>
+  <li>Minimum and maximum Gauge versions supported are specified here.</li>
 </ul>
 
 <h3 id="readmemd">README.md</h3>
@@ -191,7 +191,7 @@ gauge specs
 
 <pre class="highlight shell"><code>gauge --init mypython
 </code></pre>
-<p>When you run this command, Gauge will ask the language runner to copy implementation specific skeleton files in the project directory. Gauge will run the command which is present in the init section in <code>mypython.json</code> file.</p>
+<p>When you run this command, Gauge will ask the language runner to copy implementation specific skeleton files in the project directory. Gauge will run the command which is present in the init section in the <code>mypython.json</code> file.</p>
 
 <p>Put the following content in the <code>start.py</code>. This will copy the skeleton files to the user's project directory which is present in an environment variable <code>GAUGE_PROJECT_ROOT</code>.</p>
 
@@ -225,7 +225,7 @@ gauge specs
 
 <p>Communication between Gauge and Language Runner happens via TCP using Protocol Buffers.</p>
 
-<p>To communicate with Gauge, there are different request/response messages are configured in the <a href="https://github.com/getgauge/gauge-proto"><code>gauge-proto</code></a> repository. Let's add the <code>gauge-proto</code> repository as a git submodule to our language runner.</p>
+<p>To communicate with Gauge, there are different request/response messages configured in the <a href="https://github.com/getgauge/gauge-proto"><code>gauge-proto</code></a> repository. Let's add the <code>gauge-proto</code> repository as a git submodule to our language runner.</p>
 
 <pre class="highlight shell"><code>git submodule add https://github.com/getgauge/gauge-proto.git
 </code></pre>
@@ -257,11 +257,11 @@ protoc --python_out<span class="o">=</span>../getgauge/messages/ messages.proto
 </code></pre>
 <p>See <a href="https://github.com/kashishm/gauge-python/blob/master/getgauge/registry.py">registry.py</a> for more information on storing the implementation and step text.</p>
 
-<p>Gauge opens up a port for protobuf communication and runner connects to the socket by reading the environment variable <code>GAUGE_INTERNAL_PORT</code>.</p>
+<p>Gauge opens a port for protobuf communication and the runner connects to the socket by reading the environment variable <code>GAUGE_INTERNAL_PORT</code>.</p>
 
-<p>Now, the language runner needs to send response to the requests send by Gauge. To read the request and send the response, language runner needs to use socket. (See <a href="https://github.com/kashishm/gauge-python/blob/master/getgauge/connection.py">connection.py</a> for socket communication code). The detailed documentation for every request/response is explained <a href="http://getgauge.io/documentation/technical/current/language_plugin_api.html">here</a>.</p>
+<p>Now, the language runner needs to send a response to the requests sent by Gauge. To read the request and send the response, the language runner needs to use socket. (See <a href="https://github.com/kashishm/gauge-python/blob/master/getgauge/connection.py">connection.py</a> for socket communication code). The detailed documentation for every request/response is explained <a href="http://getgauge.io/documentation/technical/current/language_plugin_api.html">here</a>.</p>
 
-<p>Create <code>getgauge/processor.py</code> and put the following code in it. This will wait for requests and sends respective responses till kill request is received:</p>
+<p>Create <code>getgauge/processor.py</code> and put the following code in it. This will wait for requests and sends respective responses until the kill request is received:</p>
 
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -308,7 +308,7 @@ protoc --python_out<span class="o">=</span>../getgauge/messages/ messages.proto
         <span class="n">processors</span><span class="p">[</span><span class="n">request</span><span class="o">.</span><span class="n">messageType</span><span class="p">](</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">socket</span><span class="p">)</span>
         <span class="n">send_message</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">socket</span><span class="p">)</span>
 </code></pre>
-<p>Before executing steps, Gauge sends a request to check if the implementation for the given steps are present or not. <code>_validate_step</code> will check in the registry, it will set is_valid to True if present otherwise False.</p>
+<p>Before executing steps, Gauge sends a request to check if the implementation for the given steps are present or not. <code>_validate_step</code> will check in the registry, it will set is_valid to True if present, otherwise to False.</p>
 
 <pre class="highlight python"><code><span class="k">def</span> <span class="nf">_validate_step</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">socket</span><span class="p">):</span>
     <span class="n">res</span><span class="o">.</span><span class="n">messageType</span> <span class="o">=</span> <span class="n">Message</span><span class="o">.</span><span class="n">StepValidateResponse</span>
@@ -316,7 +316,7 @@ protoc --python_out<span class="o">=</span>../getgauge/messages/ messages.proto
     <span class="k">if</span> <span class="n">res</span><span class="o">.</span><span class="n">stepValidateResponse</span><span class="o">.</span><span class="n">isValid</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
         <span class="n">res</span><span class="o">.</span><span class="n">stepValidateResponse</span><span class="o">.</span><span class="n">errorType</span> <span class="o">=</span> <span class="n">StepValidateResponse</span><span class="o">.</span><span class="n">STEP_IMPLEMENTATION_NOT_FOUND</span>
 </code></pre>
-<p>After validating steps, Gauge will send request to execute a step, request will contains parameters and implementation function is called with those parameters. It will send the response back with the result(failed, error, stack trace, type, execution time).</p>
+<p>After validating steps, Gauge will send a request to execute a step, the request will contain parameters, and the implementation function is called with those parameters. It will send the response back with the result (failed, error, stack trace, type, execution time).</p>
 
 <pre class="highlight python"><code><span class="k">def</span> <span class="nf">_execute_step</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">socket</span><span class="p">):</span>
     <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
@@ -344,7 +344,7 @@ protoc --python_out<span class="o">=</span>../getgauge/messages/ messages.proto
     <span class="n">response</span><span class="o">.</span><span class="n">executionStatusResponse</span><span class="o">.</span><span class="n">executionResult</span><span class="o">.</span><span class="n">stackTrace</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()</span>
     <span class="n">response</span><span class="o">.</span><span class="n">executionStatusResponse</span><span class="o">.</span><span class="n">executionResult</span><span class="o">.</span><span class="n">errorType</span> <span class="o">=</span> <span class="n">ProtoExecutionResult</span><span class="o">.</span><span class="n">ASSERTION</span>
 </code></pre>
-<p>After execution is complete Gauge will send a kill request to language runner and runner needs to close the socket and end the program.</p>
+<p>After execution is complete, Gauge will send a kill request to the language runner, and the runner needs to close the socket and end the program.</p>
 
 <pre class="highlight python"><code><span class="k">def</span> <span class="nf">_kill_runner</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">socket</span><span class="p">):</span>
     <span class="n">socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -352,7 +352,7 @@ protoc --python_out<span class="o">=</span>../getgauge/messages/ messages.proto
 </code></pre>
 <h2 id="install--test">Install &amp; Test</h2>
 
-<p>There are two ways to install the plugin</p>
+<p>There are two ways to install the plugin:</p>
 
 <ul>
   <li>Copy the content of your project to Gauge plugins path i.e  <code>%APPDATA%\gauge\plugins\mypython\0.0.1</code> for Windows and <code>~/.gauge/plugins/mypython/0.0.1</code> for OSX and Linux.</li>
@@ -367,7 +367,7 @@ protoc --python_out<span class="o">=</span>../getgauge/messages/ messages.proto
 
 <p>In this article, you have seen how to write a basic language runner for Gauge and start executing steps. A language runner can do a lot more. Take a look at the feature matrix of language runners for an overall idea of the current state of language runners for Gauge.</p>
 
-<p>Gauge is an open-source project, and is driven by contributions from its growing community. If you do not find a language runner in your favourite language, start writing one!</p>
+<p>Gauge is an open-source project and is driven by contributions from its growing community. If you do not find a language runner in your favourite language, start writing one!</p>
 
 <h2 id="resources">Resources</h2>
 
