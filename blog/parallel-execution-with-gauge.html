@@ -90,7 +90,7 @@ Posted By
 </header>
 </div>
 <div class='blog-content'>
-<p>Gauge has first class parallel execution support out of the box. If you have used it, you'd know that it is simple, zero configuration. It's the way we intended for it to be.</p>
+<p>Gauge has first class parallel execution support out of the box. It is exactly what we intended it to be: simple, zero configuration.</p>
 
 <p>In this post, we take a look at how Gauge does parallel execution.</p>
 
@@ -108,7 +108,7 @@ Posted By
 
 <p>You can even filter your specs with tags and run them in parallel.</p>
 
-<pre class="highlight shell"><code>gauge -p -n<span class="o">=</span>2 --tags<span class="o">=</span><span class="s2">"filtered"</span> specs
+<pre class="highlight shell"><code>gauge -p -n<span class="o">=</span>2 --tags<span class="o">=</span><span class="s2">"login"</span> specs
 </code></pre>
 <p>Parallel execution works the same way irrespective of the filter criteria.</p>
 
@@ -116,11 +116,11 @@ Posted By
 
 <p>Gauge supports two different strategies for distributing the specs across parallel streams.</p>
 
-<p><strong>Lazy:</strong> Lazy strategy is the default one. With this strategy, Gauge starts n parallel streams and assigns a spec to each, as and when they finish executing the one it was already assigned. Gauge keeps accumulating the results from each stream.</p>
+<p><strong>Lazy:</strong> Lazy strategy is the default. With this strategy, Gauge starts n parallel streams and assigns a spec to each, as and when they finish executing the one it was already assigned. Gauge keeps accumulating the results from each stream.</p>
 
 <p><strong>Eager:</strong> With this strategy, Gauge takes all the specs and distributes them equally across all streams, upfront. Each stream gets the same number of specs to execute. As a result, if there is a slow running spec in one of the streams, it delays the execution of all the other specs assigned to it, in spite of the fact that there may be some other stream available. This still means that the test execution is as fast as the slowest stream.</p>
 
-<p>To mention which strategy Gauge should use, you can run the command</p>
+<p>To indicate which strategy Gauge should use, run the command:</p>
 
 <pre class="highlight shell"><code>gauge -p -n<span class="o">=</span>2 --strategy<span class="o">=</span><span class="s2">"eager"</span> specs
 </code></pre>
@@ -128,15 +128,15 @@ Posted By
 
 <h2 id="why-would-one-use-eager-strategy">Why would one use Eager Strategy?</h2>
 
-<p>With the above definitions, it might seem apparent that Lazy execution strategy for parallel execution is more efficient. This brings a question — Why does Gauge even have an Eager strategy?</p>
+<p>With the above definitions, it might seem apparent that lazy execution strategy for parallel execution is more efficient. This brings a question: why does Gauge even have an eager strategy?</p>
 
-<p>Lazy strategy's distribution is dynamic, and two subsequent parallel runs may have different distribution of specs, depending on the execution time of every spec. In some use-cases it makes sense to control the grouping of specs. In such cases, Eager strategy allows one to do something like</p>
+<p>Lazy strategy's distribution is dynamic, and two subsequent parallel runs may have different distribution of specs, depending on the execution time of every spec. In some use cases it makes sense to control the grouping of specs. In such cases, eager strategy allows one to do something like:</p>
 
 <pre class="highlight shell"><code>gauge -p -n<span class="o">=</span>2 -g<span class="o">=</span>2 --strategy<span class="o">=</span><span class="s2">"eager"</span> specs
 </code></pre>
 <p>Note the use of <code>-g</code> flag to select the group for the test run.</p>
 
-<p>If you have any questions or suggestions, we'd love to hear it. Talk to us on our <a href="https://groups.google.com/forum/#!forum/getgauge">public forum</a> or on our <a href="https://gitter.im/getgauge/chat">dev chat</a>.</p>
+<p>If you have any questions or suggestions, we'd love to hear them. Talk to us on our <a href="https://groups.google.com/forum/#!forum/getgauge">public forum</a> or on our <a href="https://gitter.im/getgauge/chat">dev chat</a>.</p>
 
 </div>
 </div>

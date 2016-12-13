@@ -12,7 +12,7 @@ images[i].src = preload.arguments[i]
 </script>
 <meta charset='utf-8'>
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-<title>Get most out of Markdown in Gauge</title>
+<title>Get the most out of Markdown in Gauge</title>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
 <link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
 <link href='http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
@@ -72,11 +72,11 @@ Beta
 <div class='container'>
 <div class='blog-post'>
 <figure class='post-summary-image'>
-<img alt='Get most out of Markdown in Gauge' src='../assets/images/blog/expressing_tests_better.jpg'>
+<img alt='Get the most out of Markdown in Gauge' src='../assets/images/blog/expressing_tests_better.jpg'>
 </figure>
 <header class='metadata blog-post-header'>
 <h1>
-Get most out of Markdown in Gauge
+Get the most out of Markdown in Gauge
 </h1>
 Posted By
 <span class='author'>Soumya</span>
@@ -95,7 +95,7 @@ Posted By
 <p>Gauge allows a user to describe test cases in a free-flowing manner using Markdown. This helps to enhance <em>"readability"</em> and <em>"expression of intent"</em>.</p>
 
 <h2 id="better-readability-semantics-over-syntax">Better readability: Semantics over Syntax</h2>
-<p>Test cases written in a free-flowing manner are easy to read. This also helps writing pre/post requisites, assumptions, steps, verifications and more catering to the growing need of the test cases being readable. Consider the following example:</p>
+<p>Test cases written in a free-flowing manner are easy to read. This also helps writing pre/post requisites, assumptions, steps, verifications and promotes test case readability. Consider the following example:</p>
 
 <pre class="highlight markdown"><code><span class="gu">Payment process
 ===============
@@ -114,10 +114,10 @@ Posted By
 <span class="p">*</span> User logs out
 <span class="p">*</span> Verify that home page is displayed
 </code></pre>
-<p>As the above example shows, tests in Gauge can take the manner of a user journey. The description in natural language makes it easy to understand.</p>
+<p>As the above example shows, tests in Gauge can take the manner of a user journey. The description in natural language makes the test very easy to understand.</p>
 
 <h2 id="being-effective-expressing-intent">Being effective: expressing intent</h2>
-<p>Sometimes given a context we would like to word the same functionality differently. This gives more clarity and helps us express our intent better. Consider the following example.</p>
+<p>Sometimes given the context of what we are testing, we would like to word the same functionality differently. This gives more clarity and helps us express our intent better. Consider the following example:</p>
 
 <pre class="highlight markdown"><code><span class="gu">User flows
 ===========
@@ -133,22 +133,22 @@ Posted By
 <span class="p">*</span> Payment is successfully received
 <span class="p">*</span> An email confirming the “order” is sent
 </code></pre>
-<p>Steps <code>A "welcome" email is sent to the user</code> and <code>An email confirming the “order” is sent</code> of sending email have the same underlying functionality. Gauge allows wording them differently without having to repeat the implementation. Thus effectively catering to the user’s need to express the intent better.</p>
+<p>Steps <strong><code>A "welcome" email is sent to the user</code></strong> and <strong><code>An email confirming the “order” is sent</code></strong> are both testing the same underlying functionality: sending an email, but they are in completely different contexts. Gauge allows wording the test cases differently, without repeating the implementation. This enables the user to express the intent better.</p>
 
 <h2 id="convey-more-with-images">Convey more: with images</h2>
-<p>When it comes to expressing intent, the proverb that a picture is worth a thousand words can't be beaten. Ability to insert media, for e.g. an image, helps to make a point. Consider the following example.</p>
+<p>When it comes to expressing intent, the proverb, a picture is worth a thousand words, can't be beat. Ability to insert media, e.g. an image, helps make the point. Consider the following example:</p>
 
 <pre class="highlight markdown"><code><span class="gu">UI patterns
 ===========
 </span>This is the representation of an upcoming implementation
-<span class="p">![</span><span class="nv">image</span><span class="p">](</span><span class="sx">image_url_here</span><span class="p">)</span>.
+<span class="p">![</span><span class="nv">image</span><span class="p">](</span><span class="sx">image_url_here</span><span class="p">)</span>
 <span class="gh">Verify styling
 --------------
 </span><span class="p">*</span> Verify “8” icons present.
 Should Verify the UI positioning manually.
-</code></pre><p>The generated html report on implementing and executing the above spec will contain the specified image. These  images can be used to indicate manual verifications, upcoming implementations etc. This feature of Gauge helps a user convey the essence more effectively than a description.</p>
+</code></pre><p>The generated html report on implementing and executing the above spec will contain the specified image. These images can be used to indicate manual verifications, upcoming implementations, etc. This feature in Gauge helps a user convey the essence more effectively than a description alone.</p>
 
-<p>The ability to write tests in the Markdown format to express broad ranging journeys has become vital, and Gauge helps in addressing this aspect of test automation.</p>
+<p>The ability to write tests in Markdown to express wide ranging journeys has become vital, and Gauge helps promote this aspect of test automation.</p>
 
 </div>
 </div>
