@@ -47,6 +47,6 @@ This invokes Gauge Core which loads the environment, checks for parse errors in 
 
 ## How does this architecture help Gauge?
 
-As most of the functionalities which are common across all the languages are handled by Gauge Core, the runners are very light weight. As a result, writing a test runner is fairly straightforward and can be easily plugged in to Gauge Core. This also makes Gauge more extensible.
+The functionalities which are common across all the language implementations are handled by Gauge Core. This makes the langauge runners and other plugins very light weight. As a result, writing a test runner is fairly straightforward and can be easily plugged in to Gauge Core. This also makes Gauge more extensible.
 
 With the Plugin based architecture, Gauge has a lot more to offer to you. We are just getting warmed up. If you have a cool idea for a new plugin or if you just want to say "hi", we would [love to talk](https://groups.google.com/forum/#!forum/getgauge) to you! :)
