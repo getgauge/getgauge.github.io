@@ -32,7 +32,7 @@ This command will distribute the tests in n streams, which in this case is 2.
 You can even filter your specs with tags and run them in parallel.
 
 ```sh
-gauge -p -n=2 --tags="filtered" specs
+gauge -p -n=2 --tags="login" specs
 ```
 
 Parallel execution works the same way irrespective of the filter criteria.

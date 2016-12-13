@@ -67,7 +67,7 @@ When it comes to expressing intent, the proverb, a picture is worth a thousand w
 UI patterns
 ===========
 This is the representation of an upcoming implementation
-![image](image_url_here).
+![image](image_url_here)
 Verify styling
 --------------
 * Verify “8” icons present.
