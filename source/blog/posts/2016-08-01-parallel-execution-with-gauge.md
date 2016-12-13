@@ -9,7 +9,7 @@ draft: true
 summary_image: blog/parallel_execution.jpg
 ---
 
-Gauge has first class parallel execution support out of the box. If you have used it, you'd know that it is simple, zero configuration. It's the way we intended for it to be.
+Gauge has first class parallel execution support out of the box. It is exactly what we intended it to be: simple, zero configuration.
 
 In this post, we take a look at how Gauge does parallel execution.
 
@@ -41,12 +41,12 @@ Parallel execution works the same way irrespective of the filter criteria.
 
 Gauge supports two different strategies for distributing the specs across parallel streams.
 
-**Lazy:** Lazy strategy is the default one. With this strategy, Gauge starts n parallel streams and assigns a spec to each, as and when they finish executing the one it was already assigned. Gauge keeps accumulating the results from each stream.
+**Lazy:** Lazy strategy is the default. With this strategy, Gauge starts n parallel streams and assigns a spec to each, as and when they finish executing the one it was already assigned. Gauge keeps accumulating the results from each stream.
 
 **Eager:** With this strategy, Gauge takes all the specs and distributes them equally across all streams, upfront. Each stream gets the same number of specs to execute. As a result, if there is a slow running spec in one of the streams, it delays the execution of all the other specs assigned to it, in spite of the fact that there may be some other stream available. This still means that the test execution is as fast as the slowest stream.
 
 
-To mention which strategy Gauge should use, you can run the command
+To indicate which strategy Gauge should use, run the command:
 
 ```sh
 gauge -p -n=2 --strategy="eager" specs
@@ -56,9 +56,9 @@ Irrespective of the strategy, Gauge consolidates the execution results from all 
 
 ## Why would one use Eager Strategy?
 
-With the above definitions, it might seem apparent that Lazy execution strategy for parallel execution is more efficient. This brings a question &mdash; Why does Gauge even have an Eager strategy?
+With the above definitions, it might seem apparent that lazy execution strategy for parallel execution is more efficient. This brings a question: why does Gauge even have an eager strategy?
 
-Lazy strategy's distribution is dynamic, and two subsequent parallel runs may have different distribution of specs, depending on the execution time of every spec. In some use-cases it makes sense to control the grouping of specs. In such cases, Eager strategy allows one to do something like
+Lazy strategy's distribution is dynamic, and two subsequent parallel runs may have different distribution of specs, depending on the execution time of every spec. In some use cases it makes sense to control the grouping of specs. In such cases, eager strategy allows one to do something like:	
 
 ```sh
 gauge -p -n=2 -g=2 --strategy="eager" specs
@@ -66,4 +66,4 @@ gauge -p -n=2 -g=2 --strategy="eager" specs
 
 Note the use of `-g` flag to select the group for the test run.
 
-If you have any questions or suggestions, we'd love to hear it. Talk to us on our [public forum](https://groups.google.com/forum/#!forum/getgauge) or on our [dev chat](https://gitter.im/getgauge/chat).
+If you have any questions or suggestions, we'd love to hear them. Talk to us on our [public forum](https://groups.google.com/forum/#!forum/getgauge) or on our [dev chat](https://gitter.im/getgauge/chat).

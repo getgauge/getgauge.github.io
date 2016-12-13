@@ -9,7 +9,7 @@ draft: true
 summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
 ---
 
-Extensibility is one of the core features of Gauge. It is built from the ground up with plugin support in mind. In this post I'll show how to write a new language runner for Gauge.
+Extensibility is one of the core features of Gauge. It is built from the ground up with plugin support in mind. In this post we'll show how to write a new language runner for Gauge.
 
 ## What is a Language Runner?
 
@@ -21,12 +21,12 @@ Language Runner is a plugin which lets you write test code implementations in a 
 
 **Execution**:
 
- - Execute hooks (when requested by Gauge core).
+ - Execute hooks (when requested by Gauge Core).
  - Execute method corresponding to a step and send execution response back to Gauge.
  - Send custom report messages to Gauge.
  - Read/write to datastore (currently, datastore is intra process, hence parallel processes cannot use a shared datastore).
 
-This post will help you write a basic Python language runner which supports initialization and step execution. Let's call it `mypython`, so that our tutorial code does not conflict with [Gauge's Python language runner](https://github.com/kashishm/gauge-python). By the end of this article, will be able to use it through Gauge to create a new project and run specifications, like this:
+This post will help you write a basic Python language runner which supports initialization and step execution. Let's call it `mypython`, so that our tutorial code does not conflict with [Gauge's Python language runner](https://github.com/kashishm/gauge-python). By the end of this article, you will be able to use this newly created plugin through Gauge to create a new project and run specifications, like this:
 
 ```sh
 gauge --init mypython
@@ -42,11 +42,11 @@ For writing a language runner, you will need:
 - Gauge installed and available on the PATH
 - A version control system. Preferably, git.
 - A text editor or IDE of your choice.
-- Familiarity with the programming language that you writing the language runner in.
+- Familiarity with the programming language that you are using to write the language runner, which in this example is Python.
 
 ### Getting Started
 
-Create a directory in called `mypython` and create these files and sub-directories in it:
+Create a directory called `mypython` and create the following files and sub-directories in it:
 
 ```text
 mypython
@@ -57,17 +57,17 @@ mypython
   | -- start.py
 ```
 
-We recommend you use a version control system, preferably git, so that we can track changes and add dependencies from other repositories as we go ahead.
+We recommend you use a version control system, preferably git, so that we can track changes and add dependencies from other repositories as we progress.
 
-### Runner's metadata file
+### Language Runner's Metadata File
 
 Every language runner needs to have a `<runner_id>.json` file, which contains the metadata for the language runner. For an example, see the [python.json](https://github.com/kashishm/gauge-python/blob/master/python.json) file in the Python language runner.
 
 `<runner_name>.json` file serves three primary functions:
 
-- Plugin name, description, version are specified in this file.
-- The properties `init` and `run` in this file are used to specify initialize and run commands for different platforms. For example: while initializing a Gauge project, Gauge will execute the command present in `init` section of the json file.
-- Minimum and maximum Gauge version support are specified here..
+- Plugin name, description and version are specified in this file.
+- The properties `init` and `run` in this file are used to specify, initialize and run commands for different platforms. For example, while initializing a Gauge project, Gauge will execute the command present in the `init` section of this JSON file.
+- Minimum and maximum Gauge versions supported are specified here.
 
 ### README.md
 
@@ -110,7 +110,7 @@ def assert_words_vowel_count(table):
 gauge --init mypython
 ```
 
-When you run this command, Gauge will ask the language runner to copy implementation specific skeleton files in the project directory. Gauge will run the command which is present in the init section in `mypython.json` file.
+When you run this command, Gauge will ask the language runner to copy implementation specific skeleton files in the project directory. Gauge will run the command which is present in the init section in the <code>mypython.json</code> file.
 
 Put the following content in the `start.py`. This will copy the skeleton files to the user's project directory which is present in an environment variable `GAUGE_PROJECT_ROOT`.
 
@@ -146,7 +146,7 @@ if __name__ == '__main__':
 
 Communication between Gauge and Language Runner happens via TCP using Protocol Buffers.
 
-To communicate with Gauge, there are different request/response messages are configured in the [`gauge-proto`](https://github.com/getgauge/gauge-proto) repository. Let's add the `gauge-proto` repository as a git submodule to our language runner.
+To communicate with Gauge, there are different request/response messages configured in the [`gauge-proto`](https://github.com/getgauge/gauge-proto) repository. Let's add the `gauge-proto` repository as a git submodule to our language runner.
 
 ```sh
 git submodule add https://github.com/getgauge/gauge-proto.git
@@ -188,11 +188,11 @@ def assert_no_of_vowels_in(word, number):
 
 See [registry.py](https://github.com/kashishm/gauge-python/blob/master/getgauge/registry.py) for more information on storing the implementation and step text.
 
-Gauge opens up a port for protobuf communication and runner connects to the socket by reading the environment variable `GAUGE_INTERNAL_PORT`.
+Gauge opens a port for protobuf communication and the runner connects to the socket by reading the environment variable `GAUGE_INTERNAL_PORT`.
 
-Now, the language runner needs to send response to the requests send by Gauge. To read the request and send the response, language runner needs to use socket. (See [connection.py](https://github.com/kashishm/gauge-python/blob/master/getgauge/connection.py) for socket communication code). The detailed documentation for every request/response is explained [here](http://getgauge.io/documentation/technical/current/language_plugin_api.html).
+Now, the language runner needs to send a response to the requests sent by Gauge. To read the request and send the response, the language runner needs to use socket. (See [connection.py](https://github.com/kashishm/gauge-python/blob/master/getgauge/connection.py) for socket communication code). The detailed documentation for every request/response is explained [here](http://getgauge.io/documentation/technical/current/language_plugin_api.html).
 
-Create `getgauge/processor.py` and put the following code in it. This will wait for requests and sends respective responses till kill request is received:
+Create `getgauge/processor.py` and put the following code in it. This will wait for requests and sends respective responses until the kill request is received:
 
 ```python
 import os
@@ -241,7 +241,7 @@ def dispatch_messages(socket):
         send_message(response, request, socket)
 ```
 
-Before executing steps, Gauge sends a request to check if the implementation for the given steps are present or not. `_validate_step` will check in the registry, it will set is_valid to True if present otherwise False.
+Before executing steps, Gauge sends a request to check if the implementation for the given steps are present or not. <code>_validate_step</code> will check in the registry, it will set is_valid to True if present, otherwise to False.
 
 ```python
 def _validate_step(req, res, socket):
@@ -251,7 +251,7 @@ def _validate_step(req, res, socket):
         res.stepValidateResponse.errorType = StepValidateResponse.STEP_IMPLEMENTATION_NOT_FOUND
 ```
 
-After validating steps, Gauge will send request to execute a step, request will contains parameters and implementation function is called with those parameters. It will send the response back with the result(failed, error, stack trace, type, execution time).
+After validating steps, Gauge will send a request to execute a step, the request will contain parameters, and the implementation function is called with those parameters. It will send the response back with the result (failed, error, stack trace, type, execution time).
 
 ```python
 def _execute_step(req, res, socket):
@@ -281,7 +281,7 @@ def _add_exception(e, response):
     response.executionStatusResponse.executionResult.errorType = ProtoExecutionResult.ASSERTION
 ```
 
-After execution is complete Gauge will send a kill request to language runner and runner needs to close the socket and end the program.
+After execution is complete, Gauge will send a kill request to the language runner, and the runner needs to close the socket and end the program.
 
 ```python
 def _kill_runner(req, res, socket):
@@ -291,7 +291,7 @@ def _kill_runner(req, res, socket):
 
 ## Install & Test
 
-There are two ways to install the plugin
+There are two ways to install the plugin:
 
 - Copy the content of your project to Gauge plugins path i.e  `%APPDATA%\gauge\plugins\mypython\0.0.1` for Windows and `~/.gauge/plugins/mypython/0.0.1` for OSX and Linux.
 - Create a zip file of your project and install it using: `gauge --install mypython`.
@@ -304,7 +304,7 @@ After this, you should be able to initialize and execute a Python Gauge project.
 
 In this article, you have seen how to write a basic language runner for Gauge and start executing steps. A language runner can do a lot more. Take a look at the feature matrix of language runners for an overall idea of the current state of language runners for Gauge.
 
-Gauge is an open-source project, and is driven by contributions from its growing community. If you do not find a language runner in your favourite language, start writing one!
+Gauge is an open-source project and is driven by contributions from its growing community. If you do not find a language runner in your favourite language, start writing one!
 
 ## Resources
 

@@ -1,5 +1,5 @@
 ---
-title: Get most out of Markdown in Gauge
+title: Get the most out of Markdown in Gauge
 date: 03 August 2016
 tags: test automation, best practices
 author: Soumya
@@ -14,7 +14,7 @@ Gauge allows a user to describe test cases in a free-flowing manner using Markdo
 
 Better readability: Semantics over Syntax
 -----------------------------------------
-Test cases written in a free-flowing manner are easy to read. This also helps writing pre/post requisites, assumptions, steps, verifications and more catering to the growing need of the test cases being readable. Consider the following example:
+Test cases written in a free-flowing manner are easy to read. This also helps writing pre/post requisites, assumptions, steps, verifications and promotes test case readability. Consider the following example:
 
 ```markdown
 Payment process
@@ -35,11 +35,11 @@ _______________________________________
 * Verify that home page is displayed
 ```
 
-As the above example shows, tests in Gauge can take the manner of a user journey. The description in natural language makes it easy to understand.
+As the above example shows, tests in Gauge can take the manner of a user journey. The description in natural language makes the test very easy to understand.
 
 Being effective: expressing intent
 ----------------------------------
-Sometimes given a context we would like to word the same functionality differently. This gives more clarity and helps us express our intent better. Consider the following example.
+Sometimes given the context of what we are testing, we would like to word the same functionality differently. This gives more clarity and helps us express our intent better. Consider the following example:
 
 ```markdown
 User flows
@@ -57,11 +57,11 @@ Shop with saved items
 * An email confirming the “order” is sent
 ```
 
-Steps `A "welcome" email is sent to the user` and `An email confirming the “order” is sent` of sending email have the same underlying functionality. Gauge allows wording them differently without having to repeat the implementation. Thus effectively catering to the user’s need to express the intent better.
+Steps **`A "welcome" email is sent to the user`** and **`An email confirming the “order” is sent`** are both testing the same underlying functionality: sending an email, but they are in completely different contexts. Gauge allows wording the test cases differently, without repeating the implementation. This enables the user to express the intent better.
 
 Convey more: with images
 ------------------------
-When it comes to expressing intent, the proverb that a picture is worth a thousand words can't be beaten. Ability to insert media, for e.g. an image, helps to make a point. Consider the following example.
+When it comes to expressing intent, the proverb, a picture is worth a thousand words, can't be beat. Ability to insert media, e.g. an image, helps make the point. Consider the following example:
 
 ```markdown
 UI patterns
@@ -73,6 +73,6 @@ Verify styling
 * Verify “8” icons present.
 Should Verify the UI positioning manually.
 ```
-The generated html report on implementing and executing the above spec will contain the specified image. These  images can be used to indicate manual verifications, upcoming implementations etc. This feature of Gauge helps a user convey the essence more effectively than a description.
+The generated html report on implementing and executing the above spec will contain the specified image. These images can be used to indicate manual verifications, upcoming implementations, etc. This feature in Gauge helps a user convey the essence more effectively than a description alone.
 
-The ability to write tests in the Markdown format to express broad ranging journeys has become vital, and Gauge helps in addressing this aspect of test automation.
+The ability to write tests in Markdown to express wide ranging journeys has become vital, and Gauge helps promote this aspect of test automation.
