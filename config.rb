@@ -88,3 +88,7 @@ configure :build do
   #abort "ENV['ASSET_HOST'] not specified, bailing!" if ENV['ASSET_HOST'].blank?
   #set :asset_host, "//" + ENV['ASSET_HOST']
 end
+
+activate :disqus do |d|
+  d.shortname = 'getgauge'
+end
