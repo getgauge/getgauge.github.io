@@ -59,46 +59,34 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
 
 
               %p.instruction We would recommend using brew for a very simple straightforward installation using this command.
-              .code-box
-                %code ~ $ brew update
-                %code ~ $ brew install gauge
+              %script{:type=>"text/javascript",:src=>"https://asciinema.org/a/cnrdqd6f8myg9wv306c2rpe0b.js", :id=>"asciicast-cnrdqd6f8myg9wv306c2rpe0b", :async=>"true", :data=>{:autoplay=>"true", :preload=>"true", :loop=>"false"}}
             .page-block
               %h3 Install core plugins
-              %p.instruction  Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.
-              .code-box
-                %code ~ $ gauge --install java
+              %p.instruction  Gauge is a first class command line tool, you only <em>need</em> one plugin to get your Gauge tests running. That is your language runner plugin.
+              %script{:type=>"text/javascript",:src=>"https://asciinema.org/a/b6yalhj3fh3u3hlmpw7m7uxip.js", :id=>"asciicast-b6yalhj3fh3u3hlmpw7m7uxip", :async=>"true", :data=>{:autoplay=>"true", :preload=>"true", :loop=>"false"}}
               %p.instruction
-                Read more about how to install other language runners and plugins
-                %a{:href=>"http://getgauge.io/documentation/user/current/plugins/installation.html", :target => "_blank"} here.
+                Read more about how to install the language runners and features
+                %a{:href=>"http://getgauge.io/documentation/user/current/language_features/", :target => "_blank"} here.
+            .page-block
+              %h3 Install reporting plugins
+              %p.instruction Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. The reporting plugin generates reports <em>independent of the language runner</em> plugin used.
+              %script{:type=>"text/javascript",:src=>"https://asciinema.org/a/dc69if1u60wiesgaajcqo8xoh.js", :id=>"asciicast-dc69if1u60wiesgaajcqo8xoh", :async=>"true", :data=>{:autoplay=>"true", :preload=>"true", :loop=>"false"}}
+              %p.instruction
+                Read more about how to install the reporting plugins and features
+                %a{:href=>"http://getgauge.io/documentation/user/current/reporting_features/", :target => "_blank"} here.
             .page-block
               %h3 Test your installation
               %p.instruction  Check that all plugins are installed and are at the latest version by running this command.
-              .code-box
-                %code ~ $ gauge -v
-                %pre
-                  :preserve
-                    Gauge version: 0.5.0
-
-                    Plugins
-                    -------
-                    java(0.4.1)
+              %script{:type=>"text/javascript",:src=>"https://asciinema.org/a/f0sd7uwelxj7ohfomllsncvz6.js", :id=>"asciicast-f0sd7uwelxj7ohfomllsncvz6", :async=>"true", :data=>{:autoplay=>"true", :preload=>"true", :loop=>"false"}}
             .page-block
               %h3 See Gauge working
               %p.instruction
                 Initialize a new Gauge project in the language of your choice. You can read more about initialization
                 %a{:href => "http://getgauge.io/documentation/user/current/getting_started/creating_a_gauge_project.html", :target => "_blank" }here.
                 This creates a template with a sample test specification. The example below shows how to execute test specifications in Java, but the same applies to all supported languages.
-              .code-box
-                %code ~ $ gauge --init java
+                %script{:type=>"text/javascript",:src=>"https://asciinema.org/a/8t1mrkmfb5njs45g4tq91pjqr.js", :id=>"asciicast-8t1mrkmfb5njs45g4tq91pjqr", :async=>"true", :data=>{:autoplay=>"true", :preload=>"true", :loop=>"false"}}
               %p.instruction Now run the sample specification to see how Gauge works.
-              .code-box
-                %code ~ $ gauge specs
-                %pre
-                  :preserve
-                    Specifications:	1 executed	1 passed	0 failed	0 skipped
-                    Scenarios:    	2 executed	2 passed	0 failed	0 skipped
-
-                    Total time taken: 80ms
+              %script{:type=>"text/javascript",:src=>"https://asciinema.org/a/0nimlxhe42oc1ie33cs887tdd.js", :id=>"asciicast-0nimlxhe42oc1ie33cs887tdd", :async=>"true", :data=>{:autoplay=>"true", :preload=>"true", :loop=>"false"}}
               %p.instruction You're all set. Start testing!
           %h3.tab-accordion_heading.windows{ :rel => "tab2"} Windows
           #tab2.tab_content.windows{ :rel => "tab2"}
