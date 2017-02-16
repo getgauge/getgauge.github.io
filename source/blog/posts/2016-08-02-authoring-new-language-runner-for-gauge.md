@@ -4,7 +4,6 @@ date: 02 August 2016
 tags: test automation, plugins
 author: Kashish
 summary: Extensibility is one of the core features of Gauge. It is built from the ground up with plugin support in mind. In this post I'll show how to write a new language runner for Gauge.
-published: true
 draft: true
 summary_image: https://images.unsplash.com/photo-1463003416389-296a1ad37ca0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=1bed2a6743851633b655ae774c15ac07
 ---

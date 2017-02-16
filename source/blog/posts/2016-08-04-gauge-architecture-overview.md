@@ -4,7 +4,6 @@ date: 04 August 2016
 tags: test automation, plugins
 author: Apoorva
 summary: An overview of the extensible plugin architecture of Gauge
-published: true
 draft: true
 summary_image: blog/architecture_overview.jpg
 ---
