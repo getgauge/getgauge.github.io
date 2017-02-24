@@ -24,7 +24,6 @@ title: Gauge | ThoughtWorks
     = favicon_tag 'favicons/favicon.ico',:type => 'image/ico' ,:rel => 'shortcut icon'
     = favicon_tag 'favicons/apple-touch-icon.png',:type => 'image/ico' ,:rel => 'apple-touch-icon-precomposed'
     = stylesheet_link_tag "application"
-    = stylesheet_link_tag "syntax"
     = javascript_include_tag  "frameworks/jquery-1.11.2"
     = javascript_include_tag  "application", :async => true
 
@@ -34,9 +33,6 @@ title: Gauge | ThoughtWorks
         - if is_home_page
           %a.logo{:href => "index.html"}
             %img#thumb{:width => "150", :height=>"38", :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
-        - elsif is_blog_article
-          %a.logo{:href => "../../../../../index.html"}
-            %img#thumb{:width => "150", :height=>"38", :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
         - else
           %a.logo{:href => "../index.html"}
             %img#thumb{:width => "150", :height=>"38",  :alt => "Gauge logo", :src => asset_path(:images, 'Gauge_logo.svg')}
@@ -45,19 +41,19 @@ title: Gauge | ThoughtWorks
         %nav.mainnav
           %ul.level0
             %li.dropdown
-              = nav_bar_link 'Get Started', 'get-started/index.html', :class => "link-get-started"
+              = nav_bar_link 'Get Started', 'get-started.html', :class => "link-get-started"
               %ul.level1
                 %li
-                  = nav_bar_link 'Download', 'get-started/index.html', :class => "link-download"
+                  = nav_bar_link 'Download', 'get-started.html', :class => "link-download"
                 %li
-                  = nav_bar_link 'Plugins', 'plugins/index.html', :class => "link-plugins"
+                  = nav_bar_link 'Plugins', 'plugins.html', :class => "link-plugins"
             %li.dropdown
-              = nav_bar_link 'Contribute', 'contribute/index.html', :class => "toplink-contribute"
+              = nav_bar_link 'Contribute', 'contribute.html', :class => "toplink-contribute"
               %ul.level1
                 %li
-                  = nav_bar_link 'Contribute', 'contribute/index.html', :class => "link-contribute"
+                  = nav_bar_link 'Contribute', 'contribute.html', :class => "link-contribute"
                 %li
-                  = nav_bar_link 'CLA', 'cla/index.html', :class => "link-cla"
+                  = nav_bar_link 'CLA', 'cla.html', :class => "link-cla"
             %li.dropdown
               = link_to 'Documentation', 'https://docs.getgauge.io', :class => "link-documentation"
 
@@ -91,7 +87,7 @@ title: Gauge | ThoughtWorks
 
       .powered-by
         .container
-          %a{:href => "http://www.thoughtworks.com/products"}
+          %a{:href => "https://www.thoughtworks.com/products"}
             %img{:alt => "Thoughtworks logo", :height=>"44", :src => asset_path(:images, 'thoughtworks_logo.svg')}
           .disclamer Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0
 

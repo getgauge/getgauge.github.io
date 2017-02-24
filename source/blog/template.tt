@@ -1,9 +1,0 @@
----
-title: <%= @title %>
-date: <%= @date.strftime('%-d %B %Y') %>
-tags:
-author: <%= ENV['USER'] %>
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet porta augue. Fusce facilisis porta turpis et congue. Praesent tempor, mauris sed vestibulum aliquam, est ligula aliquet diam, placerat lacinia orci purus vitae nunc. Nullam efficitur ipsum dui, eu rhoncus dolor tincidunt ut. 
----
-
-# <%= @title %>
