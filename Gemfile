@@ -6,6 +6,7 @@ gem 'nokogiri'
 gem 'rake'
 
 gem 'middleman-autoprefixer'
+gem 'middleman-sprockets'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 

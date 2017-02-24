@@ -1,6 +1,7 @@
 require 'active_support/core_ext/numeric/time'
 require 'bootstrap-sass'
 
+activate :sprockets
 activate :automatic_image_sizes
 
 configure :development do
