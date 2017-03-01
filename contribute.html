@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+<script type='text/javascript'>
+var images = new Array()
+function preload() {
+for (i = 0; i < preload.arguments.length; i++) {
+images[i] = new Image()
+images[i].src = preload.arguments[i]
+}
+}
+</script>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title>Gauge | ThoughtWorks</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link href='https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
+<link href="assets/images/favicons/favicon.ico" rel="shortcut icon" type="image/ico" />
+<link href="assets/images/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed" type="image/ico" />
+<link href="assets/stylesheets/application.css" rel="stylesheet" />
+<script src="assets/javascripts/frameworks/jquery-1.11.2.js"></script>
+<script src="assets/javascripts/application.js" async="true"></script>
+</head>
+<body class='contribute'>
+<header class='top'>
+<div class='container'>
+<a class='logo' href='../index.html'>
+<img alt='Gauge logo' height='38' id='thumb' src='assets/images/Gauge_logo.svg' width='150'>
+</a>
+<span class='beta'>
+Beta
+</span>
+<nav class='mainnav'>
+<ul class='level0'>
+<li class='dropdown'>
+<a href="get-started.html" class="link-get-started">Get Started</a>
+<ul class='level1'>
+<li>
+<a href="get-started.html" class="link-download">Download</a>
+</li>
+<li>
+<a href="plugins.html" class="link-plugins">Plugins</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a href="contribute.html" class="toplink-contribute">Contribute</a>
+<ul class='level1'>
+<li>
+<a href="contribute.html" class="link-contribute">Contribute</a>
+</li>
+<li>
+<a href="cla.html" class="link-cla">CLA</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a href="https://docs.getgauge.io" class="link-documentation">Documentation</a>
+</li>
+</ul>
+</nav>
+<button class='navbtn menu collapse'>
+<span></span>
+</button>
+<a alt='Gauge on Github' class='github-fork-ribbon' href='https://github.com/getgauge/gauge' target='_blank' title='Fork me on GitHub'></a>
+</div>
+</header>
+<div id='content'>
+<div class='inner-banner'>
+<div class='container'>
+<h1 class='caption'>
+Contribute
+</h1>
+</div>
+</div>
+<div class='contribute-section'>
+<div class='container'>
+<h2>How to contribute</h2>
+<p>Coding is definitely not the only way you can contribute to Gauge. There are many valuable ways to contribute to the product and to help the growing Gauge community.</p>
+<div class='howto'>
+<ul class='contribute-tiles'>
+<li class='tile'>
+<h3>Test Gauge</h3>
+<figure>
+<img src="assets/images/svg/contribution/icon_contribute_test.svg" title="Test Gauge" alt="Test Gauge" width="124" height="90" />
+</figure>
+<p>
+You can report an issue you found, or you can help us test Gauge to find new issues.
+<a href='https://github.com/getgauge/gauge-tests' target='_blank'>Gauge is tested with Gauge</a>
+so you can also add to our existing automated tests.
+</p>
+</li>
+<li class='tile'>
+<h3>Discuss with the Community</h3>
+<figure>
+<img src="assets/images/svg/contribution/icon_contribute_discuss.svg" title="Discuss with the Community" alt="Discuss with the Community" width="123" height="105" />
+</figure>
+<p>
+We have an active
+<a href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>forum</a>
+where issues, features and ideas are discussed. Start a discussion, or help someone get started with Gauge.
+</p>
+</li>
+<li class='tile'>
+<h3>Blog about Gauge</h3>
+<figure>
+<img src="assets/images/svg/contribution/icon_contribute_blog.svg" title="Blog about Gauge" alt="Blog about Gauge" width="147" height="93" />
+</figure>
+<p>
+Contribute to our
+<a href="../blog/index.html">blog</a>
+Maybe you’ve used Gauge in a different way, or you’ve analyzed how a feature works. If you write about experiences like these, we’d love to add them to the Gauge blog.
+</p>
+</li>
+<li class='tile'>
+<h3>Enhance our Examples</h3>
+<figure>
+<img src="assets/images/svg/contribution/icon_contribute_examples.svg" title="Enhance our Examples" alt="Enhance our Examples" width="106" height="92" />
+</figure>
+<p>
+We maintain a set of
+<a href='http://getgauge.io/documentation/user/current/examples/' target='_blank'>examples</a>
+that evolve as we add new features and languages. This is to help someone new to Gauge get started easily. If you’ve tried something you think would be useful to the community, please add it.
+</p>
+</li>
+<li class='tile'>
+<h3>Improve our Documentation</h3>
+<figure>
+<img src="assets/images/svg/contribution/icon_contribute_docs.svg" title="Improve our Documentation" alt="Improve our Documentation" width="88" height="100" />
+</figure>
+<p>
+If you enjoy doing a detailed analysis of how something works, whether it’s an API or a feature, please use this talent to help us improve our
+<a href='https://github.com/getgauge/documentation' target='_blank'>documentation.</a>
+This will definitely help the Gauge community at large.
+</p>
+</li>
+<li class='tile'>
+<h3>Code for Gauge</h3>
+<figure>
+<img src="assets/images/svg/contribution/icon_contribute_code.svg" title="Code for Gauge" alt="Code for Gauge" width="67" height="90" />
+</figure>
+<p>
+Contribute code to Gauge! All repositories are hosted on GitHub.
+<a href=' https://github.com/getgauge/gauge' target='_blank'>Gauge’s core</a>
+is written in Golang but
+<a href='http://getgauge.io/documentation/user/current/plugins/list.html' target='_blank'>plugins</a>
+are, and can be, written in any popular language. Pick up any pending feature or bug, big or small, then send us a pull request. Even fixing broken links is a big, big help.
+</p>
+</li>
+</ul>
+</div>
+</div>
+<div class='contribution-process'>
+<div class='container'>
+<h3>Code Contribution Process</h3>
+<ul class='block-ltr'>
+<li class='step1'>Find an issue</li>
+<li class='step2'>Assign the issue to yourself</li>
+<li class='step3'>Fork the repository, keep it in sync with the master</li>
+<li class='step4'>Talk to us about what you want to do</li>
+</ul>
+<ul class='block-rtl'>
+<li class='step5'>Make your changes</li>
+<li class='step6'>Submit a Pull Request</li>
+<li class='step7'>Fill out the CLA Form</li>
+<li class='step8'>We Merge your Request</li>
+</ul>
+</div>
+</div>
+<!-- %section.contribution-steps-list -->
+<!-- %h2 Contribution Process -->
+<!-- %ul -->
+<!-- %li.step -->
+<!-- .step1.image_alignment.description Find an issue -->
+<!-- %li.step -->
+<!-- .step2.image_alignment.description Assign the issue to yourself -->
+<!-- %li.step -->
+<!-- .step3.image_alignment.description Fork the repository, keep it in sync with  master -->
+<!-- %li.step -->
+<!-- .step4.image_alignment.description Talk to us about what you want to do -->
+<!-- %li.step -->
+<!-- .step5.image_alignment.description Make your changes -->
+<!-- %li.step -->
+<!-- .step6.image_alignment.description Submit a Pull Request -->
+<!-- %li.step -->
+<!-- .step7.image_alignment.description Fill out the CLA form -->
+<!-- %li.step -->
+<!-- .step8.image_alignment.description We merge your request -->
+<div class='help'>
+<div class='container'>
+<div class='col-sm-6'>
+<h4>How to start contributing</h4>
+<p class='text-block'>
+There are issues of varying levels across all Gauge repositories. All issues that need to be addressed are tagged as
+<strong>'Help Needed'.</strong>
+One easy way to get started is to pick a small bug to fix. These have been tagged as
+<strong>
+'Easy Picks'.
+</strong>
+</p>
+<p class='text-block'>
+If your contribution is a code contribution and you do send us a pull request, you will first need to read and sign the
+<a href="../cla/index.html">Contributor License Agreement.</a>
+</p>
+</div>
+<div class='col-sm-6'>
+<h4>How to get help</h4>
+<p class='text-block'>
+If you need any help getting started or get stuck along the way, you can talk to us on
+<a href='https://gitter.im/getgauge/chat' target='_blank'>Gitter</a>
+or on our
+<a href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>discussion forum.</a>
+We are happy to help and answer any questions.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<footer>
+<div class='join-community'>
+<div class='container'>
+<h3>Join our community</h3>
+<ul>
+<li>
+<a class='join-group' href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>
+<i class='icon join-us'></i>
+Join Us
+</a>
+</li>
+<li>
+<a class='contribute' href='https://gitter.im/getgauge/chat' target='_blank'>
+<i class='icon develop-with-us'></i>
+Talk to Us
+</a>
+</li>
+<li>
+<a class='contact' href='https://github.com/getgauge' target='_blank'>
+<i class='icon watch-us'></i>
+Watch Us
+</a>
+</li>
+<li>
+<a class='followus' href='https://twitter.com/getgauge' target='_blank'>
+<i class='icon follow-us'></i>
+Follow Us
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='powered-by'>
+<div class='container'>
+<a href='https://www.thoughtworks.com/products'>
+<img alt='Thoughtworks logo' height='44' src='assets/images/thoughtworks_logo.svg'>
+</a>
+<div class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</div>
+</div>
+</div>
+<div class='credits'>
+<!-- %img{:alt => "cc-by", :src => asset_path(:images, 'cc-by.png')} -->
+<a href='https://www.flickr.com/photos/turinboy/5217595026' targer='_blank'>
+Photo Credit - Turinboy
+</a>
+</div>
+<script src="assets/javascripts/browser_support.js"></script>
+</footer>
+<!-- Google Tag Manager -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKRKLF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKRKLF');
+</script>
+<!-- Google Tag Manager end -->
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-54838477-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+</body>
+</html>

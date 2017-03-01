@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+<head>
+<script type='text/javascript'>
+var images = new Array()
+function preload() {
+for (i = 0; i < preload.arguments.length; i++) {
+images[i] = new Image()
+images[i].src = preload.arguments[i]
+}
+}
+</script>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title>Gauge | ThoughtWorks</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link href='https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css' rel='stylesheet'>
+<link href="assets/images/favicons/favicon.ico" rel="shortcut icon" type="image/ico" />
+<link href="assets/images/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed" type="image/ico" />
+<link href="assets/stylesheets/application.css" rel="stylesheet" />
+<script src="assets/javascripts/frameworks/jquery-1.11.2.js"></script>
+<script src="assets/javascripts/application.js" async="true"></script>
+</head>
+<body class='plugins'>
+<header class='top'>
+<div class='container'>
+<a class='logo' href='../index.html'>
+<img alt='Gauge logo' height='38' id='thumb' src='assets/images/Gauge_logo.svg' width='150'>
+</a>
+<span class='beta'>
+Beta
+</span>
+<nav class='mainnav'>
+<ul class='level0'>
+<li class='dropdown'>
+<a href="get-started.html" class="link-get-started">Get Started</a>
+<ul class='level1'>
+<li>
+<a href="get-started.html" class="link-download">Download</a>
+</li>
+<li>
+<a href="plugins.html" class="link-plugins">Plugins</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a href="contribute.html" class="toplink-contribute">Contribute</a>
+<ul class='level1'>
+<li>
+<a href="contribute.html" class="link-contribute">Contribute</a>
+</li>
+<li>
+<a href="cla.html" class="link-cla">CLA</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a href="https://docs.getgauge.io" class="link-documentation">Documentation</a>
+</li>
+</ul>
+</nav>
+<button class='navbtn menu collapse'>
+<span></span>
+</button>
+<a alt='Gauge on Github' class='github-fork-ribbon' href='https://github.com/getgauge/gauge' target='_blank' title='Fork me on GitHub'></a>
+</div>
+</header>
+<div id='content'>
+<!DOCTYPE html>
+<div class='inner-banner'>
+<div class='container'>
+<h1 class='caption'>Gauge Plugins</h1>
+</div>
+</div>
+<div class='plugin-list'>
+<div class='container'>
+<p class='text-block'>Gauge was built from the ground up with extensibility via plugins as a guiding principle. The bundled language runners, IDE support, and reports are all plugins. We will keep the Golang core small and simple, while supporting a rich plugin ecosystem.</p>
+<p class='text-block'>
+Below is a list of all currently supported plugins, including some plugins that are currently in development (by external and internal contributors). If there is a plugin that you want but do not see, write your own using the
+<a href='http://getgauge.io/documentation/technical/current/api.html' target='_blank'>Gauge Plugin API.</a>
+Let us know if you are working on a plugin, and we will list it here.
+<div class='plugins-container'>
+<h3>Language runners</h3>
+<ul class='plugins-list'>
+<li>
+<h5 class='name'>
+Java runner
+</h5>
+<div class='details'>
+<p>
+Plugin that lets you write your tests in Java.
+<a href='http://getgauge.io/documentation/user/current/language_features/' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/gauge-java/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+C# runner
+</h5>
+<div class='details'>
+<p>
+Plugin that lets you write your tests in C#.
+<a href='http://getgauge.io/documentation/user/current/language_features/' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/gauge-csharp/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+Ruby runner
+</h5>
+<div class='details'>
+<p>
+Plugin that lets you write your tests in Ruby.
+<a href='http://getgauge.io/documentation/user/current/language_features/' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/gauge-ruby/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+Javascript runner
+</h5>
+<div class='details'>
+<p>
+Plugin that lets you write your tests in Javascript.
+<a href='https://github.com/getgauge-contrib/gauge-js' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='https://github.com/renjithgr' target='_blank'>Renjith</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge-contrib/gauge-js/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+Python runner
+</h5>
+<div class='details'>
+<p>
+Plugin that lets you write your tests in Python.
+<a href='http://gauge-python.readthedocs.io/en/latest/' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='https://github.com/kashishm' target='_blank'>Kashish Munjal</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/kashishm/gauge-python/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+Golang runner
+</h5>
+<div class='details'>
+<p>
+Plugin that lets you write your tests in Golang.
+<a href='https://github.com/getgauge-contrib/gauge-go' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='https://github.com/manuviswam' target='_blank'>Manu Viswam</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge-contrib/gauge-go/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+</ul>
+<h3>IDE plugins</h3>
+<ul class='plugins-list'>
+<li>
+<h5 class='name'>
+IntelliJ
+</h5>
+<div class='details'>
+<p>
+Lets you use IntelliJ to write tests in Java.
+<a href='http://getgauge.io/documentation/user/current/ide_support/intellij_idea.html' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/Intellij-Plugin/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+Visual Studio
+</h5>
+<div class='details'>
+<p>
+Lets you use Visual Studio to write tests in C#.
+<a href='http://getgauge.io/documentation/user/current/ide_support/visual_studio.html' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+Eclipse
+</h5>
+<div class='details'>
+<p>
+Lets you use Eclipse to write tests in Java.
+<a href='http://getgauge.io/documentation/user/current/ide_support/eclipse.html' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/Gauge-Eclipse/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+</ul>
+<h3>Reports</h3>
+<ul class='plugins-list'>
+<li>
+<h5 class='name'>
+HTML report
+</h5>
+<div class='details'>
+<p>
+Generate an HTML report for test execution.
+<a href='http://getgauge.io/documentation/user/current/reporting_features/html_report_plugin.html' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/html-report/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+XML report
+</h5>
+<div class='details'>
+<p>
+Generate an XML report for test execution.
+<a href='http://getgauge.io/documentation/user/current/reporting_features/xml_report_plugin.html' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/xml-report/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+Spectacle
+</h5>
+<div class='details'>
+<p>
+Export specifications to HTML.
+<a href='http://getgauge.io/documentation/user/current/reporting_features/spectacle_plugin.html' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/spectacle/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+</ul>
+<h3>Others</h3>
+<ul class='plugins-list'>
+<li>
+<h5 class='name'>
+Maven
+</h5>
+<div class='details'>
+<p>
+To build and manage project dependencies.
+<a href='http://getgauge.io/documentation/user/current/advanced_readings/dependency_management/maven-plugin.html' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='http://www.thoughtworks.com/products/' target='_blank'>ThoughtWorks Inc.</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/getgauge/gauge-maven-plugin/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+<li>
+<h5 class='name'>
+Gradle
+</h5>
+<div class='details'>
+<p>
+To build and manage project dependencies.
+<a href='http://getgauge.io/documentation/user/current/advanced_readings/dependency_management/gradle-plugin.html' target='_blank'>Read more...</a>
+</p>
+<span>
+by
+<a href='https://github.com/manupsunny' target='_blank'>Manu Sunny</a>
+</span>
+</div>
+<div class='action'>
+<a href="https://github.com/manupsunny/gauge-gradle-plugin/releases" class="download-icon" target="_blank"><span></span>
+Download
+</a></div>
+</li>
+</ul>
+</div>
+</p>
+</div>
+</div>
+
+</div>
+<footer>
+<div class='join-community'>
+<div class='container'>
+<h3>Join our community</h3>
+<ul>
+<li>
+<a class='join-group' href='https://groups.google.com/forum/#!forum/getgauge' target='_blank'>
+<i class='icon join-us'></i>
+Join Us
+</a>
+</li>
+<li>
+<a class='contribute' href='https://gitter.im/getgauge/chat' target='_blank'>
+<i class='icon develop-with-us'></i>
+Talk to Us
+</a>
+</li>
+<li>
+<a class='contact' href='https://github.com/getgauge' target='_blank'>
+<i class='icon watch-us'></i>
+Watch Us
+</a>
+</li>
+<li>
+<a class='followus' href='https://twitter.com/getgauge' target='_blank'>
+<i class='icon follow-us'></i>
+Follow Us
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='powered-by'>
+<div class='container'>
+<a href='https://www.thoughtworks.com/products'>
+<img alt='Thoughtworks logo' height='44' src='assets/images/thoughtworks_logo.svg'>
+</a>
+<div class='disclamer'>Gauge is an open source project, sponsored by ThoughtWorks Inc. under the GPL License, Version 3.0</div>
+</div>
+</div>
+<div class='credits'>
+<!-- %img{:alt => "cc-by", :src => asset_path(:images, 'cc-by.png')} -->
+<a href='https://www.flickr.com/photos/alexander_mueller_photolover/21659104782' targer='_blank'>
+Photo Credit - Alexander Mueller
+</a>
+</div>
+<script src="assets/javascripts/browser_support.js"></script>
+</footer>
+<!-- Google Tag Manager -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKRKLF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKRKLF');
+</script>
+<!-- Google Tag Manager end -->
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-54838477-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+</body>
+</html>
