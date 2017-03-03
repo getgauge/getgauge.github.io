@@ -12,22 +12,20 @@ credit_link: https://www.flickr.com/photos/acmoraes/8629549600/
       %span.subquote
         Simple. Collaborative. Adaptable.
     .actions
-      %a.btn.btn-primary{:href => "get-started/index.html"} Get Started
-      %a.btn.btn-default{:href => "contribute/index.html"} Contribute
+      %a.btn.btn-primary{:href => "#downloads"} Download
+      %a.btn.btn-default{:href => "contribute.html"} Contribute
     
     .features.qas
       %h2.question
         Why Gauge is better for
-        <span class="features-filter-selector-wrap">
-        <a class="features-selector"><span class="features-selected-value">Testers</span><i class="fa fa-sort-desc"></i></a>
-        <div class="features-filter-values-wrap js-values-wrap">
-        <div class="features-filter-values">
-        <span class="features-filter-value" data-value="qas">Testers</span>
-        <span class="features-filter-value" data-value="developers">Developers</span>
-        </div>
-        </div>
-        </span>
-
+        %span.features-filter-selector-wrap
+          %a.features-selector
+            %span.features-selected-value Testers
+            %i.fa.fa-sort-desc
+          .features-filter-values-wrap.js-values-wrap
+            .features-filter-values
+              %span.features-filter-value{:data => {:value => "qas"}} Testers
+              %span.features-filter-value{:data => {:value => "developers"}} Developers
 
       
       .feature-list.qas.animated.fadeIn
@@ -83,6 +81,98 @@ credit_link: https://www.flickr.com/photos/acmoraes/8629549600/
             %h3 Easy Parallel Execution
             .feature-desc Run your tests in parallel with a single command from the IDE or command line. It works exactly the same across all languages.
 
+  #downloads
+    .download-area
+      .container
+        %h2.sub-title Choose your OS & download
+        %ul.tabs.os
+          %li.mac{:rel => "tab1"}
+            %figure.os-logo
+              = image_tag "download/osx.png", {:title => "Osx", :alt => "Osx"}
+              %figcaption.desc OSX
+          %li.windows{:rel => "tab2"}
+            %figure.os-logo
+              = image_tag "download/windows.png", {:title => "windows", :alt => "windows"}
+              %figcaption.desc Windows
+          %li.linux{:rel => "tab3"}
+            %figure.os-logo
+              = image_tag "download/linux.png", {:title => "linux", :alt => "linux"}
+              %figcaption.desc Linux
+    .os-tab-content
+      .container
+        .tab_container
+          %h3.tab-accordion_heading.mac{ :rel => "tab1"} OSX
+          #tab1.tab_content.mac{ :rel=> "tab1"}
+            .page-block
+              %p.instruction
+                Download the installer below based on your system configuration and just click your way through to install Gauge. 
+              %span.download-title
+                %strong pkg
+                ( latest stable version:
+                %os= data.info.version
+                )
+              .download-section
+                .download-bit
+                  %a.download{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-darwin.x86.pkg"} 32 bit
+                  %span.sha
+                    %strong SHA-1:
+                    #{data.info.darwin86}
+                .download-bit
+                  %a.download{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-darwin.x86_64.pkg"} 64 bit
+                  %span.sha
+                    %strong SHA-1:
+                    #{data.info.darwin86_64}
+
+          %h3.tab-accordion_heading.windows{ :rel => "tab2"} Windows
+          #tab2.tab_content.windows{ :rel => "tab2"}
+            .page-block
+              .instruction  Download the exe based on your system configuration and run it.
+
+              %span.download-title
+                %strong exe
+                %i
+                  (latest stable version:
+                  %os= data.info.version
+                  )
+              .download-section
+                .download-bit
+                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-windows.x86.exe"} 32 bit
+                  %span.sha
+                    %strong SHA-1:
+                    #{data.info.windows86}
+                .download-bit
+                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-windows.x86_64.exe"} 64 bit
+                  %span.sha
+                    %strong SHA-1:
+                    #{data.info.windows86_64}
+
+          %h3.tab-accordion_heading.linux{ :rel => "tab3"} Linux
+          #tab3.tab_content.linux{ :rel => "tab3"}
+            .page-block
+              %p.instruction  Install Gauge by downloading the .zip below. Choose the archive file based on your system configuration.
+
+              %span.download-title
+                %strong zip
+                %i
+                  (latest stable version:
+                  %os= data.info.version
+                  )
+              .download-section
+                .download-bit
+                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-linux.x86.zip"} 32 bit
+                  %span.sha
+                    %strong SHA-1:
+                    #{data.info.linux86}
+                .download-bit
+                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-linux.x86_64.zip"} 64 bit
+                  %span.sha
+                    %strong SHA-1:
+                    #{data.info.linux86_64}
+              %p.instruction
+                Then execute the following command:
+              .code-box
+                %code ~ $ unzip gauge-$VERSION-$OS.$ARCH.zip
+                %code ~ $ ./install.sh
 
 .visiongauge
   %h2.section-title Why we built Gauge
@@ -146,3 +236,6 @@ credit_link: https://www.flickr.com/photos/acmoraes/8629549600/
         <i class="fa fa-quote-right"></i>
         .client_name Vivekanand Jha
         .client Director, Nineleaps Technology Solutions
+
+  = javascript_include_tag  "jquery.client"
+  = javascript_include_tag  "tabs"
