@@ -205,6 +205,7 @@ ul.tabs {
         height: 50px;
         margin: 0 auto 5px;
       }
+
     }
 
     &.active {
@@ -220,7 +221,9 @@ ul.tabs {
         transition: all .2s ease-in-out;
         margin-bottom: 10px;
       }
+
     }
+
   }
 
   @media (max-width:$screen-xs-max) {
@@ -244,8 +247,7 @@ ul.tabs {
 }
 
 .os-tab-content {
-  color: #555555;
-  background: #fff;
+  margin: 20px 0;
 
   .tab-accordion_heading {
     background-color: $green;
@@ -255,6 +257,7 @@ ul.tabs {
   }
 
   .tab_content {
+    // border: 1px solid #fff;
     padding: 20px;
   }
 
@@ -285,6 +288,9 @@ ul.tabs {
       @media (min-width:$screen-tablet) {
         padding: 30px 50px;
       }
+
     }
+
   }
+
 }
