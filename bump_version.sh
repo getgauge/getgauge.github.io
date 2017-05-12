@@ -10,5 +10,5 @@ else
    linux86_64=`openssl sha1 deploy/gauge-$1-linux.x86_64.zip | cut -d " " -f2`
    windows86=`openssl sha1 deploy/gauge-$1-windows.x86.exe | cut -d " " -f2`
    windows86_64=`openssl sha1 deploy/gauge-$1-windows.x86_64.exe | cut -d " " -f2`
-   echo "version: $1\ndarwin86: $darwin86\ndarwin86_64: $darwin86_64\nlinux86: $linux86\nlinux86_64: $linux86_64\nwindows86: $windows86\nwindows86_64: $windows86_64" > data/info.yml
+   echo -e "version: $1\ndarwin86: $darwin86\ndarwin86_64: $darwin86_64\nlinux86: $linux86\nlinux86_64: $linux86_64\nwindows86: $windows86\nwindows86_64: $windows86_64" > data/info.yml
 fi
