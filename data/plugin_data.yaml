@@ -85,6 +85,13 @@
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/spectacle/releases"
+    Flash:
+      repo_link: "https://docs.getgauge.io/reports.html#flash"
+      description: "Real-time execution reporting plugin."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/flash/releases"
   Others:
     Maven:
       title: "Maven"
