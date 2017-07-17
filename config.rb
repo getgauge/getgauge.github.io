@@ -17,7 +17,7 @@ set :layouts_dir, 'layouts'
 
 set :haml, { ugly: true }
 
-redirect 'download/index.html', to: '../get-started/index.html'
+redirect 'download/index.html', to: '../get-started.html'
 
 helpers do
 	def is_home_page()
