@@ -48,14 +48,9 @@ title: Gauge | ThoughtWorks
                 %li
                   = nav_bar_link 'Plugins', 'plugins.html', :class => "link-plugins"
             %li.dropdown
-              = nav_bar_link 'Contribute', 'contribute.html', :class => "toplink-contribute"
-              %ul.level1
-                %li
-                  = nav_bar_link 'Contribute', 'contribute.html', :class => "link-contribute"
-                %li
-                  = nav_bar_link 'CLA', 'cla.html', :class => "link-cla"
-            %li.dropdown
-              = link_to 'Documentation', 'https://docs.getgauge.io', :class => "link-documentation"
+              = link_to 'Documentation', '//docs.getgauge.io', :class => "link-documentation"
+            %li
+              = link_to 'Blog', '//blog.getgauge.io', :class => "link-blog"
 
         %button.navbtn.menu.collapse
           %span
@@ -73,7 +68,7 @@ title: Gauge | ThoughtWorks
                 %i.icon.join-us
                 Join Us
             %li
-              %a.contribute{:href => "https://gitter.im/getgauge/chat", :target => "_blank"}
+              %a.chat{:href => "https://gitter.im/getgauge/chat", :target => "_blank"}
                 %i.icon.develop-with-us
                 Talk to Us
             %li
