@@ -247,17 +247,16 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
             .page-block
               %h3 Install Gauge
               %p.instruction
-                Run the following command to install gauge to
+                Install Gauge to
                 %span.path /usr/local/bin
-                directory.
+                by running
               .code-box
                 %code $ curl -SsL https://downloads.getgauge.io/stable | sh
               %p.instruction
-                To install it to custom location, run the following command after replacing
-                %span.path {path}
-                with the desired location.
+                or a
+                %span.path [custom path]
               .code-box
-                %code $ curl -SsL https://downloads.getgauge.io/stable | sh -s -- --location={path}
+                %code $ curl -SsL https://downloads.getgauge.io/stable | sh -s -- --location=[custom path]
             .page-block
               %h3 Install core plugins
               %p.instruction  Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.
