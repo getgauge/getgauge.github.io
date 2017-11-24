@@ -201,8 +201,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
               %p.instruction
                 Then execute the following command:
               .code-box
-                %code $ unzip gauge-$VERSION-$OS.$ARCH.zip
-                %code $ ./install.sh
+                %code $ unzip gauge-$VERSION-$OS.$ARCH.zip -d /usr/local/bin
             .page-block
               %h3 Install core plugins
               %p.instruction  Gauge has a rich plugin repository. Language runners, IDEs, and reports are all plugins. Since Gauge is a first class command line tool, you only *need* one plugin to get your Gauge tests running. That is your language runner plugin.
