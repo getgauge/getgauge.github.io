@@ -289,14 +289,13 @@ p {
  * Syntax highlight and pre
  */
 pre {
-  border: solid 1px #ddd;
-  background: #fff;
   padding: 0;
   margin-bottom: 30px;
   white-space: pre;
   overflow-x: auto;
   word-break: inherit;
   word-wrap: inherit;
+  color: white;
 }
 
 .highlight {
