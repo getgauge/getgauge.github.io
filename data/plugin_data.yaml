@@ -43,6 +43,12 @@
       action: "Download"
       action_link: "https://github.com/getgauge-contrib/gauge-go/releases"
   IDE plugins:
+    Visual Studio Code:
+      repo_link: "https://github.com/getgauge/gauge-vscode"
+      description: "Lets you use VS Code to write tests in Javascript."
+      contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/gauge-vscode/releases"
     IntelliJ:
       repo_link: "https://docs.getgauge.io/using.html#intellij-idea"
       description: "Lets you use IntelliJ to write tests in Java."
@@ -57,12 +63,6 @@
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92"
-    Eclipse:
-      repo_link: "https://github.com/getgauge-contrib/Gauge-Eclipse"
-      description: "Lets you use Eclipse to write tests in Java."
-      contributor_link: "http://www.thoughtworks.com/products/"
-      action: "Download"
-      action_link: "https://github.com/getgauge/Gauge-Eclipse/releases"
   Reports:
     HTML report:
       repo_link: "https://docs.getgauge.io/reports.html#html-reports"
