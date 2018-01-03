@@ -46,6 +46,7 @@
     Visual Studio Code:
       repo_link: "https://github.com/getgauge/gauge-vscode"
       description: "Lets you use VS Code to write tests in Javascript."
+      attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-vscode/releases"
