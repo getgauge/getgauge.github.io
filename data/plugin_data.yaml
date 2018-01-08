@@ -1,21 +1,21 @@
 ---
   Language runners:
     Java runner:
-      repo_link: "https://docs.getgauge.io/language.html"
+      repo_link: "https://docs.gauge.org/language.html"
       description: "Plugin that lets you write your tests in Java."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-java/releases"
     C# runner:
-      repo_link: "https://docs.getgauge.io/language.html"
+      repo_link: "https://docs.gauge.org/language.html"
       description: "Plugin that lets you write your tests in C#."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-csharp/releases"
     Ruby runner:
-      repo_link: "https://docs.getgauge.io/language.html"
+      repo_link: "https://docs.gauge.org/language.html"
       description: "Plugin that lets you write your tests in Ruby."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -51,14 +51,14 @@
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-vscode/releases"
     IntelliJ:
-      repo_link: "https://docs.getgauge.io/using.html#intellij-idea"
+      repo_link: "https://docs.gauge.org/using.html#intellij-idea"
       description: "Lets you use IntelliJ to write tests in Java."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/Intellij-Plugin/releases"
     Visual Studio:
-      repo_link: "https://docs.getgauge.io/using.html#visual-studio"
+      repo_link: "https://docs.gauge.org/using.html#visual-studio"
       description: "Lets you use Visual Studio to write tests in C#."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -66,28 +66,28 @@
       action_link: "https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92"
   Reports:
     HTML report:
-      repo_link: "https://docs.getgauge.io/reports.html#html-reports"
+      repo_link: "https://docs.gauge.org/reports.html#html-reports"
       description: "Generate an HTML report for test execution."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/html-report/releases"
     XML report:
-      repo_link: "https://docs.getgauge.io/reports.html#xml-report"
+      repo_link: "https://docs.gauge.org/reports.html#xml-report"
       description: "Generate an XML report for test execution."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/xml-report/releases"
     Spectacle:
-      repo_link: "https://docs.getgauge.io/reports.html#spectacle"
+      repo_link: "https://docs.gauge.org/reports.html#spectacle"
       description: "Export specifications to HTML."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/spectacle/releases"
     Flash:
-      repo_link: "https://docs.getgauge.io/reports.html#flash"
+      repo_link: "https://docs.gauge.org/reports.html#flash"
       description: "Real-time execution reporting plugin."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -96,7 +96,7 @@
   Others:
     Maven:
       title: "Maven"
-      repo_link: "https://docs.getgauge.io/configuration.html#maven"
+      repo_link: "https://docs.gauge.org/configuration.html#maven"
       description: "To build and manage project dependencies."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -104,7 +104,7 @@
       action_link: "https://github.com/getgauge/gauge-maven-plugin/releases"
     Gradle:
       title: "Gradle"
-      repo_link: "https://docs.getgauge.io/configuration.html#gradle"
+      repo_link: "https://docs.gauge.org/configuration.html#gradle"
       description: "To build and manage project dependencies."
       attribution: "Manu Sunny"
       contributor_link: "https://github.com/manupsunny"
