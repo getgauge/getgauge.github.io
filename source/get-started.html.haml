@@ -37,34 +37,8 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
         .tab_container
           %h3.tab-accordion_heading.mac{ :rel => "tab1"} macOS
           #tab1.tab_content.mac{ :rel=> "tab1"}
-            %p.instruction
-              There are multiple ways to get started with Gauge on a Mac. Here we show you a simple 4 step process to get you running with Gauge on a Mac. You can read our
-              %a{:href=>"https://docs.gauge.org/installing.html", :target => "_blank"} detailed documentation
-              for other methods of installation.
-            .page-block
-              %h3 Install Gauge
-              %p.instruction
-                Download the installer below based on your system configuration and just click your way through to install Gauge. You will need to use this method if your setup or organization does not allow
-                %a{:href => "http://brew.sh/", :target => "_blank"} brew.
-              %span.download-title
-                %strong single-binary
-                ( latest stable version:
-                %os= data.info.version
-                )
-              .download-section
-                .download-bit
-                  %a.download{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-darwin.x86.zip"} 32 bit
-                  %span.sha
-                    %strong SHA-1:
-                    #{data.info.darwin86}
-                .download-bit
-                  %a.download{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-darwin.x86_64.zip"} 64 bit
-                  %span.sha
-                    %strong SHA-1:
-                    #{data.info.darwin86_64}
-
-
-              %p.instruction We would recommend using brew for a very simple straightforward installation using this command.
+            %P.instruction
+              We would recommended using brew on MacOS. For other installation options Read %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}more
               .code-box
                 %code $ brew update
                 %code $ brew install gauge
@@ -89,7 +63,7 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
           %h3.tab-accordion_heading.windows{ :rel => "tab2"} Windows
           #tab2.tab_content.windows{ :rel => "tab2"}
             %P.instruction
-              The recommended way to install Gauge on Windows is using the package manager %a{:href => "https://chocolatey.org"}Chocolatey. For other installation options Read %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}more
+              We would recommended using the package manager %a{:href => "https://chocolatey.org"}Chocolatey Gauge on Windows. For other installation options Read %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}more
             .page-block
               %h3  Install Gauge
               .code-box
