@@ -24,17 +24,17 @@
     Javascript runner:
       repo_link: "https://github.com/getgauge-contrib/gauge-js"
       description: "Plugin that lets you write your tests in Javascript."
-      attribution: "Renjith"
-      contributor_link: "https://github.com/renjithgr"
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
-      action_link: "https://github.com/getgauge-contrib/gauge-js/releases"
+      action_link: https://github.com/getgauge/gauge-js/releases
     Python runner:
       repo_link: "http://gauge-python.readthedocs.io/en/latest/"
       description: "Plugin that lets you write your tests in Python."
-      attribution: "Kashish Munjal"
-      contributor_link: "https://github.com/kashishm"
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
-      action_link: "https://github.com/kashishm/gauge-python/releases"
+      action_link: "https://github.com/getgauge/gauge-python/releases"
     Golang runner:
       repo_link: "https://github.com/getgauge-contrib/gauge-go"
       description: "Plugin that lets you write your tests in Golang."
