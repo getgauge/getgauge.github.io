@@ -99,29 +99,25 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
             %P.instruction Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.
             .page-block
               %h3 Install Gauge
-              %p.instruction  Install Gauge by downloading the .zip below. Choose the archive file based on your system configuration.
-
-              %span.download-title
-                %strong zip
-                %i
-                  (latest stable version:
-                  %os= data.info.version
-                  )
-              .download-section
-                .download-bit
-                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-linux.x86.zip"} 32 bit
-                  %span.sha
-                    %strong SHA-1:
-                    #{data.info.linux86}
-                .download-bit
-                  %a.download.button{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-linux.x86_64.zip"} 64 bit
-                  %span.sha
-                    %strong SHA-1:
-                    #{data.info.linux86_64}
               %p.instruction
-                Then execute the following command:
+                Install Gauge using apt-get
               .code-box
-                %code $ unzip gauge-$VERSION-$OS.$ARCH.zip -d /usr/local/bin
+                %pre
+                  $ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
+                  $ echo deb https://dl.bintray.com/gauge/gauge-deb stable main | sudo tee -a /etc/apt/sources.list
+                  $ sudo apt-get update
+                  $ sudo apt-get install gauge
+              %p.instruction
+                Install Gauge using dnf
+              .code-box
+                %pre
+                  $ [gauge-stable]
+                  name=gauge-stable
+                  baseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable
+                  gpgcheck=0
+                  enabled=1
+                  $ echo -e "[gauge-stable]\nname=gauge-stable\nbaseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable\ngpgcheck=0\nenabled=1" | sudo tee /etc/yum.repos.d/gauge-stable.repo
+                  $ sudo dnf install gauge
             .page-block
               %h3 See Gauge working
               .instruction
