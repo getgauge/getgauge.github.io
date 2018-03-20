@@ -37,16 +37,24 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
         .tab_container
           %h3.tab-accordion_heading.mac{ :rel => "tab1"} macOS
           #tab1.tab_content.mac{ :rel=> "tab1"}
-            %P.instruction
-              We would recommended using
-              %a{:href => "https://brew.sh/"}Homebrew
-              on MacOS. For other installation options
-              %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}Read more
             .page-block
               %h3 Install Gauge
+              %p.instruction
+                Install Gauge using
+                %a{:href => "https://brew.sh/", :target => "_blank" }Homebrew.
               .code-box
                 %code $ brew update
                 %code $ brew install gauge
+              %p.instruction
+                For
+                %b signed
+                binaries download the
+                %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-darwin.x86_64.zip"}zip
+                installer and the run following command
+              .code-box
+                %code $ unzip -o gauge-#{data.info.version}-darwin.x86_64.zip -d /usr/local/bin
+              %p.instruction
+                %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}Other installers
             .page-block
               %h3 See Gauge working
               %p.instruction
@@ -67,15 +75,21 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
               %p.instruction You're all set. Start testing!
           %h3.tab-accordion_heading.windows{ :rel => "tab2"} Windows
           #tab2.tab_content.windows{ :rel => "tab2"}
-            %P.instruction
-              We would recommended using the package manager
-              %a{:href => "https://chocolatey.org"}Chocolatey
-              Gauge on Windows. For other installation options
-              %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}Read more
             .page-block
               %h3  Install Gauge
+              %p.instruction
+                Install Gauge using
+                %a{:href => "https://chocolatey.org"}Chocolatey
               .code-box
                 %code > choco install gauge
+              %p.instruction
+                or download the
+                %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-windows.x86_64.zip"}zip
+                installer and the run following command in powershell
+              .code-box
+                %code PS> Expand-Archive -Path gauge-#{data.info.version}-windows.x86_64.zip -DestinationPath custom_path
+              %p.instruction
+                %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}Other installers
             .page-block
               %h3 See Gauge working
               %P.instruction
@@ -111,13 +125,16 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 Install Gauge using dnf
               .code-box
                 %pre
-                  $ [gauge-stable]
-                  name=gauge-stable
-                  baseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable
-                  gpgcheck=0
-                  enabled=1
                   $ echo -e "[gauge-stable]\nname=gauge-stable\nbaseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable\ngpgcheck=0\nenabled=1" | sudo tee /etc/yum.repos.d/gauge-stable.repo
                   $ sudo dnf install gauge
+              %p.instruction
+                or download the
+                %a{:href => "https://github.com/getgauge/gauge/releases/download/v#{data.info.version}/gauge-#{data.info.version}-linux.x86_64.zip"}zip
+                installer and the run following command
+              .code-box
+                %code $ unzip -o gauge-#{data.info.version}-linux.x86_64.zip -d /usr/local/bin
+              %p.instruction
+                %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}Other installers
             .page-block
               %h3 See Gauge working
               .instruction
