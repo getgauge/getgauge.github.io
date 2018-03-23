@@ -46,6 +46,8 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
             .code-box
               %code $ brew update
               %code $ brew install gauge
+            #get-started.center
+              %a.btn.btn-primary{:href => "https://docs.gauge.org/quickstart.html#creating-a-project"} Let's Get Started!
           %h3.tab-accordion_heading.windows{ :rel => "tab2"} Windows
           #tab2.tab_content.windows{ :rel => "tab2"}
             %P.instruction
@@ -56,6 +58,8 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
             %h3  Install Gauge
             .code-box
               %code > choco install gauge
+            #get-started.center
+              %a.btn.btn-primary{:href => "https://docs.gauge.org/quickstart.html#creating-a-project"} Let's Get Started!
           %h3.tab-accordion_heading.linux{ :rel => "tab3"} Linux
           #tab3.tab_content.linux{ :rel => "tab3"}
             %P.instruction Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.
@@ -76,6 +80,8 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
                 enabled=1
                 $ echo -e "[gauge-stable]\nname=gauge-stable\nbaseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable\ngpgcheck=0\nenabled=1" | sudo tee /etc/yum.repos.d/gauge-stable.repo
                 $ sudo dnf install gauge
+            #get-started.center
+              %a.btn.btn-primary{:href => "https://docs.gauge.org/quickstart.html#creating-a-project"} Let's Get Started!
           %h3.tab-accordion_heading.curl{ :rel => "tab4"} Curl
           #tab4.tab_content.curl{ :rel => "tab4"}
             %h3 Install Gauge to /usr/local/bin
@@ -84,6 +90,8 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
             %h3 Install Gauge to a custom path
             .code-box
               %code $ curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=[custom path]
+            #get-started.center
+              %a.btn.btn-primary{:href => "https://docs.gauge.org/quickstart.html#creating-a-project"} Let's Get Started!
 
           = javascript_include_tag  "jquery.client"
           = javascript_include_tag  "tabs"
