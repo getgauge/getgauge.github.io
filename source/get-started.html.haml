@@ -42,29 +42,10 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
               %a{:href => "https://brew.sh/"}Homebrew
               on MacOS. For other installation options
               %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}Read more
-            .page-block
-              %h3 Install Gauge
-              .code-box
-                %code $ brew update
-                %code $ brew install gauge
-            .page-block
-              %h3 See Gauge working
-              %p.instruction
-                Initialize a new Gauge project in the language of your choice. You can read more about initialization
-                %a{:href => "https://docs.gauge.org/quickstart.html#creating-a-project", :target => "_blank" }here.
-                This creates a template with a sample test specification and installs the required language runner. The example below shows how to execute test specifications in Javascript, but the same applies to all supported languages.
-              .code-box
-                %code $ gauge init js
-              %p.instruction Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.
-              .code-box
-                %code $ gauge run specs
-                %pre
-                  :preserve
-                    Specifications:	1 executed	1 passed	0 failed	0 skipped
-                    Scenarios:    	2 executed	2 passed	0 failed	0 skipped
-
-                    Total time taken: 80ms
-              %p.instruction You're all set. Start testing!
+            %h3 Install Gauge
+            .code-box
+              %code $ brew update
+              %code $ brew install gauge
           %h3.tab-accordion_heading.windows{ :rel => "tab2"} Windows
           #tab2.tab_content.windows{ :rel => "tab2"}
             %P.instruction
@@ -72,103 +53,37 @@ credit_link: https://www.flickr.com/photos/scarygami/5568844961
               %a{:href => "https://chocolatey.org"}Chocolatey
               Gauge on Windows. For other installation options
               %a{:href => "https://docs.gauge.org/installing.html#alternate-methods"}Read more
-            .page-block
-              %h3  Install Gauge
-              .code-box
-                %code > choco install gauge
-            .page-block
-              %h3 See Gauge working
-              %P.instruction
-                Initialize a new Gauge project in the language of your choice. This will also install the required language runner. You can read more about initialization
-                %a{:href => "https://docs.gauge.org/quickstart.html#creating-a-project", :target => "_blank" }here.
-                This creates a template with a sample test specification. The example below shows how to execute test specifications in Python, but the same applies to all supported languages.
-              .code-box
-                %code > gauge init python
-              %P.instruction Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.
-              .code-box
-                %code > gauge run specs
-                %pre
-                  :preserve
-                    Specifications:	1 executed	1 passed	0 failed	0 skipped
-                    Scenarios:    	2 executed	2 passed	0 failed	0 skipped
-
-                    Total time taken: 80ms
-              %P.instruction You're all set. Start testing!
+            %h3  Install Gauge
+            .code-box
+              %code > choco install gauge
           %h3.tab-accordion_heading.linux{ :rel => "tab3"} Linux
           #tab3.tab_content.linux{ :rel => "tab3"}
             %P.instruction Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.
-            .page-block
-              %h3 Install Gauge
-              %p.instruction
-                Install Gauge using apt-get
-              .code-box
-                %pre
-                  $ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
-                  $ echo deb https://dl.bintray.com/gauge/gauge-deb stable main | sudo tee -a /etc/apt/sources.list
-                  $ sudo apt-get update
-                  $ sudo apt-get install gauge
-              %p.instruction
-                Install Gauge using dnf
-              .code-box
-                %pre
-                  $ [gauge-stable]
-                  name=gauge-stable
-                  baseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable
-                  gpgcheck=0
-                  enabled=1
-                  $ echo -e "[gauge-stable]\nname=gauge-stable\nbaseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable\ngpgcheck=0\nenabled=1" | sudo tee /etc/yum.repos.d/gauge-stable.repo
-                  $ sudo dnf install gauge
-            .page-block
-              %h3 See Gauge working
-              .instruction
-                Initialize a new Gauge project in the language of your choice. You can read more about initialization
-                %a{:href => "https://docs.gauge.org/quickstart.html#creating-a-project", :target => "_blank" }here.
-                This creates a template with a sample test specification. The example below shows how to execute test specifications in Ruby, but the same applies to all supported languages.
-              .code-box
-                %code $ gauge init ruby
-              %P.instruction Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.
-              .code-box
-                %code $ gauge run specs
-                %pre
-                  :preserve
-                    Specifications:	1 executed	1 passed	0 failed	0 skipped
-                    Scenarios:    	2 executed	2 passed	0 failed	0 skipped
-
-                    Total time taken: 80ms
-              %p.instruction You're all set. Start testing!
+            %h3 Install Gauge using apt-get
+            .code-box
+              %pre
+                $ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
+                $ echo deb https://dl.bintray.com/gauge/gauge-deb stable main | sudo tee -a /etc/apt/sources.list
+                $ sudo apt-get update
+                $ sudo apt-get install gauge
+            %h3 Install Gauge using dnf
+            .code-box
+              %pre
+                $ [gauge-stable]
+                name=gauge-stable
+                baseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable
+                gpgcheck=0
+                enabled=1
+                $ echo -e "[gauge-stable]\nname=gauge-stable\nbaseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable\ngpgcheck=0\nenabled=1" | sudo tee /etc/yum.repos.d/gauge-stable.repo
+                $ sudo dnf install gauge
           %h3.tab-accordion_heading.curl{ :rel => "tab4"} Curl
           #tab4.tab_content.curl{ :rel => "tab4"}
-            .page-block
-              %h3 Install Gauge
-              %p.instruction
-                Install Gauge to
-                %span.path /usr/local/bin
-                by running
-              .code-box
-                %code $ curl -SsL https://downloads.gauge.org/stable | sh
-              %p.instruction
-                or a
-                %span.path [custom path]
-              .code-box
-                %code $ curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=[custom path]
-            .page-block
-              %h3 See Gauge working
-              .instruction
-                Initialize a new Gauge project in the language of your choice. You can read more about initialization
-                %a{:href => "https://docs.gauge.org/quickstart.html#creating-a-project", :target => "_blank" }here.
-                This creates a template with a sample test specification. The example below shows how to execute test specifications in Ruby, but the same applies to all supported languages.
-              .code-box
-                %code $ gauge init ruby
-              %p.instruction Now run the sample specification to see how Gauge works.
-              .code-box
-                %code $ gauge run specs
-                %pre
-                  :preserve
-                    Specifications:	1 executed	1 passed	0 failed	0 skipped
-                    Scenarios:    	2 executed	2 passed	0 failed	0 skipped
-
-                    Total time taken: 80ms
-              %p.instruction You're all set. Start testing!
+            %h3 Install Gauge to /usr/local/bin
+            .code-box
+              %code $ curl -SsL https://downloads.gauge.org/stable | sh
+            %h3 Install Gauge to a custom path
+            .code-box
+              %code $ curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=[custom path]
 
           = javascript_include_tag  "jquery.client"
           = javascript_include_tag  "tabs"
