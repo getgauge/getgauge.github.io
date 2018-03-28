@@ -55,9 +55,12 @@
   }
 
   h3::before {
+    counter-increment: section;
+    content: counter(section);
     left: -50px;
     font-size: 17px;
     top: -1px;
+    left: -47px;
     margin-right: 10px;
     background: #EFD332;
     font-weight: 600;
