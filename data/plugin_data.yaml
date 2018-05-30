@@ -44,21 +44,21 @@
       action_link: "https://github.com/getgauge-contrib/gauge-go/releases"
   IDE plugins:
     Visual Studio Code:
-      repo_link: "https://github.com/getgauge/gauge-vscode"
+      repo_link: "https://marketplace.visualstudio.com/items?itemName=getgauge.gauge"
       description: "Lets you use VS Code to write tests in Javascript."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-vscode/releases"
     IntelliJ:
-      repo_link: "https://docs.gauge.org/using.html#intellij-idea"
+      repo_link: "https://github.com/getgauge/Intellij-Plugin/blob/master/README.md"
       description: "Lets you use IntelliJ to write tests in Java."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/Intellij-Plugin/releases"
     Visual Studio:
-      repo_link: "https://docs.gauge.org/using.html#visual-studio"
+      repo_link: "https://github.com/getgauge/gauge-visualstudio/blob/master/README.md"
       description: "Lets you use Visual Studio to write tests in C#."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -66,17 +66,24 @@
       action_link: "https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92"
   Reports:
     HTML report:
-      repo_link: "https://docs.gauge.org/reports.html#html-reports"
+      repo_link: "https://github.com/getgauge/html-report/blob/master/README.md"
       description: "Generate an HTML report for test execution."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/html-report/releases"
     XML report:
-      repo_link: "https://docs.gauge.org/reports.html#xml-report"
+      repo_link: "https://github.com/getgauge/xml-report/blob/master/README.md"
       description: "Generate an XML report for test execution."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
+      action: "Download"
+      action_link: "https://github.com/getgauge/xml-report/releases"
+    JSON report:
+      repo_link: "https://github.com/apoorvam/json-report/blob/master/README.md"
+      description: "Generate a JSON report for test execution."
+      attribution: "ThoughtWorks Inc."
+      contributor_link: "https://github.com/apoorvam/"
       action: "Download"
       action_link: "https://github.com/getgauge/xml-report/releases"
     Spectacle:

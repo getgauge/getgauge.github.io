@@ -48,7 +48,20 @@ title: Gauge | ThoughtWorks
                 %li
                   = nav_bar_link 'Plugins', 'plugins.html', :class => "link-plugins"
             %li.dropdown
-              = link_to 'Documentation', '//docs.getgauge.io', :class => "link-documentation"
+              = link_to 'Documentation', '//docs.gauge.org', :class => "link-documentation"
+              %ul.level1
+                %li
+                  = nav_bar_link 'Examples', '//docs.gauge.org/examples.html'
+                %li
+                  = nav_bar_link 'Write Specifications', '//docs.gauge.org/writing-specifications.html'
+                %li
+                  = nav_bar_link 'Run Specifications', '//docs.gauge.org/execution.html'
+                %li
+                  = nav_bar_link 'Configuration', '//docs.gauge.org/configuration.html'
+                %li
+                  = nav_bar_link 'FAQs', '//docs.gauge.org/faqs.html'
+                %li
+                  = nav_bar_link 'Manual', '//manpage.gauge.org'
             %li
               = link_to 'Blog', '//blog.getgauge.io', :class => "link-blog"
 
