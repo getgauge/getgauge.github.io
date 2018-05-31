@@ -1,21 +1,21 @@
 ---
   Language runners:
     Java runner:
-      repo_link: "https://docs.gauge.org/language.html"
+      repo_link: "https://github.com/getgauge/gauge-java/#gauge-java"
       description: "Plugin that lets you write your tests in Java."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-java/releases"
     C# runner:
-      repo_link: "https://docs.gauge.org/language.html"
+      repo_link: "https://github.com/getgauge/gauge-csharp#gauge-csharp"
       description: "Plugin that lets you write your tests in C#."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/gauge-csharp/releases"
     Ruby runner:
-      repo_link: "https://docs.gauge.org/language.html"
+      repo_link: "https://github.com/getgauge/gauge-ruby#gauge-ruby"
       description: "Plugin that lets you write your tests in Ruby."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -29,7 +29,7 @@
       action: "Download"
       action_link: https://github.com/getgauge/gauge-js/releases
     Python runner:
-      repo_link: "http://gauge-python.readthedocs.io/en/latest/"
+      repo_link: "https://github.com/getgauge/gauge-python"
       description: "Plugin that lets you write your tests in Python."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -87,14 +87,14 @@
       action: "Download"
       action_link: "https://github.com/getgauge/xml-report/releases"
     Spectacle:
-      repo_link: "https://docs.gauge.org/reports.html#spectacle"
+      repo_link: "https://github.com/getgauge/spectacle#spectacle"
       description: "Export specifications to HTML."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
       action: "Download"
       action_link: "https://github.com/getgauge/spectacle/releases"
     Flash:
-      repo_link: "https://docs.gauge.org/reports.html#flash"
+      repo_link: "https://github.com/getgauge/Flash#flash"
       description: "Real-time execution reporting plugin."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -103,7 +103,7 @@
   Others:
     Maven:
       title: "Maven"
-      repo_link: "https://docs.gauge.org/configuration.html#maven"
+      repo_link: "https://github.com/getgauge/gauge-maven-plugin#gauge-maven-plugin"
       description: "To build and manage project dependencies."
       attribution: "ThoughtWorks Inc."
       contributor_link: "http://www.thoughtworks.com/products/"
@@ -111,7 +111,7 @@
       action_link: "https://github.com/getgauge/gauge-maven-plugin/releases"
     Gradle:
       title: "Gradle"
-      repo_link: "https://docs.gauge.org/configuration.html#gradle"
+      repo_link: "https://github.com/getgauge/gauge-maven-plugin#gauge-maven-plugin"
       description: "To build and manage project dependencies."
       attribution: "Manu Sunny"
       contributor_link: "https://github.com/manupsunny"
