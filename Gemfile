@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'middleman'
 gem 'nokogiri'
-
+gem 'rake'
 gem 'middleman-autoprefixer'
 gem 'middleman-sprockets'
 gem 'bootstrap-sass'
